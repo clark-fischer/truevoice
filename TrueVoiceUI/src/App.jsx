@@ -15,6 +15,9 @@ import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
 import BgInfo from "./pages/BgInfo";
 import Profile from "./pages/Profile";
+import Utah from "./pages/Utah";
+import Colorado from "./pages/Colorado";
+import Nevada from "./pages/Nevada";
 
 //router and routes
 const router = createBrowserRouter(
@@ -23,6 +26,9 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="bgInfo" element={<BgInfo />} />
       <Route path="profile" element={<Profile />} />
+      <Route path="ut" element={<Utah />} />
+      <Route path="co" element={<Colorado />} />
+      <Route path="nv" element={<Nevada />} />
     </Route>
   )
 );

@@ -1,18 +1,13 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
-//Leaflet/Map
-import { MapContainer, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+
+//react USA Map
+import USAMap from "../components/Map";
 
 export default function Dashboard() {
   return (
     <>
-      <MapContainer center={[48.8566, 2.3522]} zoom={13}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-      </MapContainer>
       <Container>
+        <USAMap></USAMap>
         <Heading my="30px" p="10px">
           Dashboard
         </Heading>
