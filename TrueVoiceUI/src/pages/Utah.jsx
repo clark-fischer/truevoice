@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 // Leaflet/Map
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+
+import utCong2021 from "./ut_cong_2021.json"; // Adjust the path as necessary
 
 // Switch
 import { Switch, FormControl, FormLabel, Box } from "@chakra-ui/react";
@@ -36,6 +38,8 @@ export default function Colorado() {
     },
   };
 
+  
+
   return (
     <>
       <h1>UTAH</h1>
@@ -49,6 +53,7 @@ export default function Colorado() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <GeoJSON data={utCong2021} />
         </MapContainer>
         <Box style={styles.switchContainer}>
           <FormControl display="flex" alignItems="center">
