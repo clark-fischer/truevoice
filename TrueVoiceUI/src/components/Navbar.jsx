@@ -9,7 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 //For Nav Buttons
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { Tabs, TabList, Tab } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
