@@ -15,6 +15,43 @@ export default function Colorado() {
     setActiveSwitch(value);
   };
 
+  const w = 2;
+  const utah_districts = {
+
+    1: {
+        color: "red",
+        fillColor: "red",
+        "weight": w,
+        opacity: 0.8,
+        fillOpacity: 0.8
+    },
+    2: {
+        color: "red",
+        fillColor: "red",
+        "weight": w,
+        opacity: 0.6,
+        fillOpacity: 0.6
+    },
+    3: {
+        color: "red",
+        fillColor: "red",
+        "weight": w,
+        opacity: .8,
+        fillOpacity: 0.8
+    },
+    4: {
+        color: "red",
+        fillColor: "red",
+        "weight": w,
+        opacity: .8,
+        fillOpacity: 0.8
+    }
+
+  };
+  const geojson_style = (feature) => {
+    return utah_districts[feature.properties.DISTRICTNO];
+  };
+
   const styles = {
     mapWrapper: {
       padding: "5%",
@@ -53,7 +90,7 @@ export default function Colorado() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <GeoJSON data={utCong2021} />
+          <GeoJSON data={utCong2021} style={geojson_style} />
         </MapContainer>
         <Box style={styles.switchContainer}>
           <FormControl display="flex" alignItems="center">

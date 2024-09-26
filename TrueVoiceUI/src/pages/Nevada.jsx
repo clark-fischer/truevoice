@@ -13,6 +13,41 @@ export default function Colorado() {
     setActiveSwitch(value);
   };
 
+  const w = 1;
+  const nevada_districts = { 
+    "1": {
+        "color": "blue",
+        "fillColor": "blue",
+        "weight": w,
+        "opacity": 1,
+        "fillOpacity": 0.8
+    },
+    "2" : {
+        "color": "red",
+        "fillColor": "red",
+        "weight": w,
+        "opacity": 1,
+        "fillOpacity": 0.4
+        },
+    "3" : {
+        "color": "blue",
+        "fillColor": "blue",
+        "weight": w,
+        "opacity": 1,
+        "fillOpacity": 0.3
+    },
+    "4" : {
+        "color": "blue",
+        "fillColor": "blue",
+        "weight": w,
+        "opacity": 1,
+        "fillOpacity": 0.5
+    }
+  }
+  const geojson_style = (feature) => {
+    return nevada_districts[feature.properties.DISTRICTNO];
+  }
+
   const styles = {
     mapWrapper: {
       padding: "5%",
@@ -49,7 +84,7 @@ export default function Colorado() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <GeoJSON data={nvCong2021} />
+          <GeoJSON data={nvCong2021} style={geojson_style}/>
         </MapContainer>
         <Box style={styles.switchContainer}>
           <FormControl display="flex" alignItems="center">
