@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // Leaflet/Map
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-
+import coCong2021 from "./co_cong_2021.json";
 // Switch
 import { Switch, FormControl, FormLabel, Box } from "@chakra-ui/react";
 
@@ -49,6 +49,7 @@ export default function Colorado() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <GeoJSON data={coCong2021} />
         </MapContainer>
         <Box style={styles.switchContainer}>
           <FormControl display="flex" alignItems="center">
