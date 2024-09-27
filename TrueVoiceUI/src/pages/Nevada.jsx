@@ -3,6 +3,8 @@ import React from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import nvCong2021 from "./nv_cong_2021.json";
+import nv_2mmd from "./nv_2mmd.json";
+import nv_4mmd from "./nv_4mmd.json";
 
 
 export default function Colorado() {
@@ -89,39 +91,47 @@ export default function Colorado() {
     }
   };
 
-  const clark = () => console.log("Clark County");
+
   
+
+  const [geoJsonData, setGeoJsonData] = React.useState(nvCong2021);
+
+  const handleButtonClick = (data) => {
+    setGeoJsonData(data);
+    console.log("geojson changed")
+  };
 
   return (
     <>
       <h1>NEVADA</h1>
 
       <div style={styles.gridContainer}>
-        {/* Column 1: Map with buttons below */}
+        
         <div style={styles.mapWrapper}>
           <div style={styles.mapContainer}>
             <MapContainer
-              center={[39.876019, -117.224121]}
-              zoom={7}
-              style={{ height: "100%", width: "100%", }}
+              key={JSON.stringify(geoJsonData)} // Force re-render by changing key
+              center={[38.876019, -117.224121]}
+              zoom={6}
+              style={{ height: "100%", width: "100%" }}
+              zoomControl={true}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <GeoJSON data={nvCong2021} style={geojson_style} />
+              <GeoJSON data={geoJsonData} style={geojson_style} />
             </MapContainer>
           </div>
 
-          {/* Row of Buttons below the map */}
+          {/* Row of Buttons below the map */}}
           <div style={styles.buttonRow}>
-            <button onClick={clark} style={styles.button}>SMD, Single Rep.</button>
-            <button onClick={clark} style={styles.button}>MMD, 2 Reps.</button>
-            <button onClick={clark} style={styles.button}>MMD, 3 Reps.</button>
-            <button onClick={clark} style={styles.button}>MMD, 4 Reps.</button>
+            <button onClick={() => handleButtonClick(nvCong2021)} style={styles.button}>SMD, Single Rep.</button>
+            <button onClick={() => handleButtonClick(nv_2mmd)} style={styles.button}>MMD, 2 Reps.</button>
+            <button onClick={() => handleButtonClick(nvCong2021)} style={styles.button}>MMD, 3 Reps.</button>
+            <button onClick={() => handleButtonClick(nv_4mmd)} style={styles.button}>MMD, 4 Reps.</button>
           </div>
         </div>
-
 
         <div style={styles.controlsContainer}>
           <legend>Overlay Ethnicity Data</legend>
