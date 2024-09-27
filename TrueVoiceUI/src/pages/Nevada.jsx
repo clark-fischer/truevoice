@@ -2,14 +2,15 @@ import React from "react";
 // Leaflet/Map
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import nvCong2021 from "./nv_cong_2021.json";
+import nv_smd from "./nv_smd.json";
 import nv_2mmd from "./nv_2mmd.json";
+import nv_3mmd from "./nv_3mmd.json";
 import nv_4mmd from "./nv_4mmd.json";
 
 
 export default function Colorado() {
 
-  const w = 1;
+  const w = 10;
   const nevada_districts = {
     "1": {
       "color": "blue",
@@ -94,11 +95,42 @@ export default function Colorado() {
 
   
 
-  const [geoJsonData, setGeoJsonData] = React.useState(nvCong2021);
+  const getGeoJsonStyle = (data) => {
+    if (data === nv_smd) {
+      return (feature) => nevada_districts[feature.properties.DISTRICTNO];
+    } else if (data === nv_2mmd) {
+      return (feature) => ({
+        color: "green",
+        fillColor: "green",
+        weight: w,
+        opacity: 1,
+        fillOpacity: 0.6
+      });
+    } else if (data === nv_4mmd) {
+      return (feature) => ({
+        color: "purple",
+        fillColor: "purple",
+        weight: w,
+        opacity: 1,
+        fillOpacity: 0.7
+      });
+    }
+    return (feature) => ({
+      color: "gray",
+      fillColor: "gray",
+      weight: w,
+      opacity: 1,
+      fillOpacity: 0.5
+    });
+  };
+
+  const [geoJsonData, setGeoJsonData] = React.useState(nv_smd);
+  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(nv_smd));
 
   const handleButtonClick = (data) => {
     setGeoJsonData(data);
-    console.log("geojson changed")
+    setGeoJsonStyle(() => getGeoJsonStyle(data));
+    console.log("geojson changed");
   };
 
   return (
@@ -120,15 +152,15 @@ export default function Colorado() {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <GeoJSON data={geoJsonData} style={geojson_style} />
+              <GeoJSON data={geoJsonData} style={geoJsonStyle} />
             </MapContainer>
           </div>
 
-          {/* Row of Buttons below the map */}}
+          
           <div style={styles.buttonRow}>
-            <button onClick={() => handleButtonClick(nvCong2021)} style={styles.button}>SMD, Single Rep.</button>
+            <button onClick={() => handleButtonClick(nv_smd)} style={styles.button}>SMD, Single Rep.</button>
             <button onClick={() => handleButtonClick(nv_2mmd)} style={styles.button}>MMD, 2 Reps.</button>
-            <button onClick={() => handleButtonClick(nvCong2021)} style={styles.button}>MMD, 3 Reps.</button>
+            <button onClick={() => handleButtonClick(nv_3mmd)} style={styles.button}>MMD, 3 Reps.</button>
             <button onClick={() => handleButtonClick(nv_4mmd)} style={styles.button}>MMD, 4 Reps.</button>
           </div>
         </div>
