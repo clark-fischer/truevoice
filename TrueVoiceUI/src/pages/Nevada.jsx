@@ -39,13 +39,6 @@ export default function Colorado() {
       opacity: 1,
       fillOpacity: 0.3,
     },
-    "4": {
-      "color": "blue",
-      "fillColor": "blue",
-      "weight": w,
-      "opacity": 1,
-      "fillOpacity": 0.5
-    }
   }
 
   Object.keys(nevada_districts).forEach(district => {
@@ -92,8 +85,10 @@ export default function Colorado() {
       textAlign: "center",
       border: "1px solid #f0f0f0",
 
+
       '&:hover': {
         textDecoration: 'underline',
+
       },
     },
     controlsContainer: {
@@ -104,6 +99,7 @@ export default function Colorado() {
       boxSizing: "border-box",
     },
   };
+
 
 
 
@@ -167,6 +163,7 @@ export default function Colorado() {
     black: { 0.1: 'pink', 1: 'purple' },
     asian: { 0.1: 'cyan', 1: 'blue' },
     hispanic: { 0.1: 'lime', 1: 'green' }
+
   };
 
   return (
@@ -224,6 +221,8 @@ export default function Colorado() {
             </MapContainer>
           </div>
 
+
+          {/* Row of Buttons below the map */}
           <div style={styles.buttonRow}>
             <Tooltip label="These are Nevada's districts, as of 2024.">
               <button
@@ -266,6 +265,7 @@ export default function Colorado() {
           <legend style={{fontSize: "18px", fontWeight: "bold", marginBottom: "10px"}}>Overlay Ethnicity Data</legend>
           <input id="race--white" type='checkbox' onChange={handleCheckboxChange} />
           <label htmlFor="race--white" style={{ paddingLeft: "5px" }}>White</label>
+
 
           <br />
 
