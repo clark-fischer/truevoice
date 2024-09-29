@@ -1,39 +1,16 @@
-// import React from "react";
-// import USAMap from "react-simple-maps";
-// import { useNavigate } from "react-router-dom";
-
-// export default function MapComponent() {
-//   // Customize the color for specific states
-//   const threeStates = {
-//     CO: { fill: "#51cf4e" }, // New Jersey in red
-//     UT: { fill: "#308a2f" }, // New York in green
-//     NV: { fill: "#7de07b" }, // California in blue
-//   };
-
-//   // Handle click events on the states
-//   const navigate = useNavigate();
-//   const mapHandler = (event) => {
-//     navigate(event.target.dataset.name);
-//   };
-
-//   return (
-//     <div>
-//       <USAMap customize={threeStates} onClick={mapHandler} />
-//     </div>
-//   );
-// }
 import React from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { useNavigate } from "react-router-dom";
+import { Tooltip } from "@chakra-ui/react";
 
 // You can use a topology file for US States
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
-// Mapping full state names to the colors
+// Mapping full state names to the colors and tooltip labels
 const stateNameMap = {
-  Colorado: "#51cf4e",
-  Utah: "#308a2f",
-  Nevada: "#7de07b",
+  Colorado: { fill: "#51cf4e", tooltip: "Colorado" },
+  Utah: { fill: "#51cf4e", tooltip: "Utah" },
+  Nevada: { fill: "#51cf4e", tooltip: "Nevada" },
 };
 
 export default function MapComponent() {
@@ -47,27 +24,33 @@ export default function MapComponent() {
   };
 
   return (
-    <div style={{ width: "100%", maxWidth: "800px", margin: "auto" }}>
-      <ComposableMap projection="geoAlbersUsa">
+    <div style={{ width: "100%", margin: "auto", paddingBottom: "20px" }}>
+      <ComposableMap projection="geoAlbersUsa" width={1200} height={550}>
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
             geographies.map((geo) => {
               const stateName = geo.properties.name; // Use full state name
-              const fillColor = stateNameMap[stateName] || "#DDD"; // Default color for other states
+              const stateInfo = stateNameMap[stateName]; // Get color and tooltip for specific states
 
               return (
-                <Geography
+                <Tooltip
                   key={geo.rsmKey}
-                  geography={geo}
-                  fill={fillColor}
-                  stroke="#FFF"
-                  style={{
-                    default: { outline: "none" },
-                    hover: { opacity: 0.8, outline: "none" },
-                    pressed: { outline: "none" },
-                  }}
-                  onClick={() => mapHandler(stateName)} // Navigate on click
-                />
+                  label={stateInfo?.tooltip || ""}
+                  isDisabled={!stateInfo} // Disable tooltip for states without custom info
+                >
+                  <Geography
+                    geography={geo}
+                    fill={stateInfo?.fill || "#DDD"} // Default color for other states
+                    stroke="black"
+                    strokeWidth="1.2px"
+                    style={{
+                      default: { outline: "none" },
+                      hover: { opacity: 0.6, outline: "none" },
+                      pressed: { outline: "none" },
+                    }}
+                    onClick={() => mapHandler(stateName)} // Navigate on click
+                  />
+                </Tooltip>
               );
             })
           }
