@@ -14,10 +14,13 @@ export default function Dashboard() {
   return (
     <>
       <Container>
-        <USAMap></USAMap>
         <Heading my="30px" p="10px">
           Colorado, Utah, Nevada
         </Heading>
+      </Container>
+      <USAMap></USAMap>
+      <Container>
+        {" "}
         <Text>
           Colorado, Utah, and Nevada each have unique congressional districts,
           reflecting their population sizes, demographics, and political
