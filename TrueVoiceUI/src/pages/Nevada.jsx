@@ -67,7 +67,7 @@ export default function Colorado() {
     mapWrapper: {
       display: "flex",
       flexDirection: "column",
-      height: "100%",
+      height: "900px",
     },
     mapContainer: {
       flexGrow: 1, // Map takes up remaining space
@@ -197,8 +197,8 @@ export default function Colorado() {
               zoomControl={true}
             >
               <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+    url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
               />
 
               {Object.keys(heatmapData).map((race) => (
@@ -225,16 +225,16 @@ export default function Colorado() {
           </div>
 
           <div style={styles.buttonRow}>
-            <Tooltip label="Mayby a graph here">
+            <Tooltip label="These are Nevada's districts, as of 2024.">
               <button
-                onClick={() => handleButtonClick(nvCong2021)}
+                onClick={() => handleButtonClick(nv_smd)}
                 style={styles.button}
               >
-                SMD, Single Rep.
+                SMD, Single Rep. (current)
               </button>
             </Tooltip>
 
-            <Tooltip label="Mayby a graph here">
+            <Tooltip label="Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district.">
               <button
                 onClick={() => handleButtonClick(nv_2mmd)}
                 style={styles.button}
@@ -242,26 +242,23 @@ export default function Colorado() {
                 MMD, 2 Reps.
               </button>
             </Tooltip>
-            <Tooltip label="Mayby a graph here">
+            <Tooltip label="Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district.">
               <button
-                onClick={() => handleButtonClick(nvCong2021)}
+                onClick={() => handleButtonClick(nv_3mmd)}
                 style={styles.button}
               >
                 MMD, 3 Reps.
               </button>
             </Tooltip>
-            <Tooltip label="Mayby a graph here">
+            <Tooltip label="This would be the offical prescription of the FRA.">
               <button
                 onClick={() => handleButtonClick(nv_4mmd)}
                 style={styles.button}
               >
-                MMD, 4 Reps.
+                MMD, 4 Reps. (FRA official)
               </button>
             </Tooltip>
-            <button onClick={() => handleButtonClick(nv_smd)} style={styles.button}>SMD, Single Rep.</button>
-            <button onClick={() => handleButtonClick(nv_2mmd)} style={styles.button}>MMD, 2 Reps.</button>
-            <button onClick={() => handleButtonClick(nv_3mmd)} style={styles.button}>MMD, 3 Reps.</button>
-            <button onClick={() => handleButtonClick(nv_4mmd)} style={styles.button}>MMD, 4 Reps.</button>
+            
           </div>
         </div>
 
@@ -295,7 +292,7 @@ export default function Colorado() {
         </div>
       </div>
 
-      <Image
+      {/* <Image
         src="/plot.png"
         alt="Example Image"
         width="700px"
@@ -303,7 +300,7 @@ export default function Colorado() {
         objectFit="cover"
         border="1px solid black"
         marginLeft="30px"
-      />
+      /> */}
     </>
   );
 }
