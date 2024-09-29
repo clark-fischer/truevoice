@@ -6,14 +6,3 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-
-
-
-env instructions
-1. node
-2. npm install
-3. npm create vite@latest my-react-app -- --template react
-4. npm create vite@latest my-react-app -- --template react-swc
-5. cd TrueVoiceUI
-6. npm run dev
