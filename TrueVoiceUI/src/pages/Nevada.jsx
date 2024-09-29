@@ -1,12 +1,23 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+
 // Leaflet/Map
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+import { HeatmapLayer } from 'react-leaflet-heatmap-layer-v3'
+
+// data
 import "leaflet/dist/leaflet.css";
-import nvCong2021 from "./nv_cong_2021.json";
+import nv_smd from "./nv_smd.json";
 import nv_2mmd from "./nv_2mmd.json";
+import nv_3mmd from "./nv_3mmd.json";
 import nv_4mmd from "./nv_4mmd.json";
+
+
+import nv_race_data from "./nv_race_chloro_data.json"
+
 import { Flex, Heading, Button, Tooltip, Image } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
+
 
 export default function Colorado() {
   const w = 1;
@@ -39,7 +50,13 @@ export default function Colorado() {
       opacity: 1,
       fillOpacity: 0.5,
     },
-  };
+  }
+
+  Object.keys(nevada_districts).forEach(district => {
+    nevada_districts[district].fillOpacity /= 2;
+  });
+
+
   const geojson_style = (feature) => {
     return nevada_districts[feature.properties.DISTRICTNO];
   };
@@ -70,6 +87,7 @@ export default function Colorado() {
       // padding: "10px",
       height: "10%", // Take up 10% of the container height
       background: "#ffffff",
+
     },
     button: {
       flexBasis: "25%", // Each button takes up about 22.5% of the width (to account for spacing)
@@ -78,8 +96,10 @@ export default function Colorado() {
       textAlign: "center",
       border: "1px solid #f0f0f0",
 
-      "&:hover": {
-        textDecoration: "underline",
+
+      '&:hover': {
+        textDecoration: 'underline',
+
       },
     },
     controlsContainer: {
@@ -91,11 +111,70 @@ export default function Colorado() {
     },
   };
 
-  const [geoJsonData, setGeoJsonData] = React.useState(nvCong2021);
+
+
+
+
+  const getGeoJsonStyle = (data) => {
+    if (data === nv_smd) {
+      return (feature) => nevada_districts[feature.properties.DISTRICTNO];
+    } else if (data === nv_2mmd) {
+      return (feature) => ({
+        color: "green",
+        fillColor: "green",
+        weight: w,
+        opacity: 1,
+        fillOpacity: 0.6
+      });
+    } else if (data === nv_4mmd) {
+      return (feature) => ({
+        color: "purple",
+        fillColor: "purple",
+        weight: w,
+        opacity: 1,
+        fillOpacity: 0.7
+      });
+    }
+    return (feature) => ({
+      color: "gray",
+      fillColor: "gray",
+      weight: w,
+      opacity: 1,
+      fillOpacity: 0.5
+    });
+  };
+
+  const [geoJsonData, setGeoJsonData] = React.useState(nv_smd);
+  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(nv_smd));
 
   const handleButtonClick = (data) => {
     setGeoJsonData(data);
+    setGeoJsonStyle(() => getGeoJsonStyle(data));
     console.log("geojson changed");
+  };
+
+  const [heatmapData, setHeatmapData] = React.useState({
+    white: [],
+    black: [],
+    asian: [],
+    hispanic: []
+  });
+
+  const handleCheckboxChange = (event) => {
+    const { id, checked } = event.target;
+    const race = id.split('--')[1];
+    setHeatmapData((prevData) => ({
+      ...prevData,
+      [race]: checked ? nv_race_data[race] : []
+    }));
+  };
+
+  const heatmapGradient = {
+    white: { 0.1: 'yellow', 1: 'orange' },
+    black: { 0.1: 'pink', 1: 'purple' },
+    asian: { 0.1: 'cyan', 1: 'blue' },
+    hispanic: { 0.1: 'lime', 1: 'green' }
+
   };
 
   return (
@@ -115,6 +194,7 @@ export default function Colorado() {
         </Heading>
       </Flex>
       <div style={styles.gridContainer}>
+
         <div style={styles.mapWrapper}>
           <div style={styles.mapContainer}>
             <MapContainer
@@ -128,9 +208,30 @@ export default function Colorado() {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <GeoJSON data={geoJsonData} style={geojson_style} />
+
+              {Object.keys(heatmapData).map((race) => (
+                heatmapData[race] && heatmapData[race].length > 0 && (
+                  <HeatmapLayer
+                    key={race}
+                    fitBoundsOnLoad={false}
+                    fitBoundsOnUpdate={false}
+                    points={heatmapData[race]}
+                    longitudeExtractor={(m) => m[1]}
+                    latitudeExtractor={(m) => m[0]}
+                    intensityExtractor={(m) => parseFloat(m[2])}
+                    radius={10}
+                    max={100}
+                    minOpacity={.7}
+                    useLocalExtrema={true}
+                    gradient={heatmapGradient[race]}
+                  />
+                )
+              ))}
+
+              <GeoJSON data={geoJsonData} style={geoJsonStyle} />
             </MapContainer>
           </div>
+
 
           {/* Row of Buttons below the map */}
           <div style={styles.buttonRow}>
@@ -167,44 +268,40 @@ export default function Colorado() {
                 MMD, 4 Reps.
               </button>
             </Tooltip>
+
           </div>
         </div>
 
         <div style={styles.controlsContainer}>
-          <legend>Overlay Ethnicity Data</legend>
+          <legend style={{fontSize: "18px", fontWeight: "bold", marginBottom: "10px"}}>Overlay Ethnicity Data</legend>
+          <input id="race--white" type='checkbox' onChange={handleCheckboxChange} />
+          <label htmlFor="race--white" style={{ paddingLeft: "5px" }}>White</label>
 
-          <input
-            id="race--white"
-            type="checkbox"
-            onClick="handleClick(this);"
-          />
-          <label htmlFor="race--white">White</label>
+
           <br />
 
-          <input
-            id="race--black"
-            type="checkbox"
-            onClick="handleClick(this);"
-          />
-          <label htmlFor="race--black">African-American</label>
+          <input id="race--black" type='checkbox' onChange={handleCheckboxChange} />
+          <label htmlFor="race--black" style={{ paddingLeft: "5px" }}>African-American</label>
+
           <br />
 
-          <input
-            id="race--asian"
-            type="checkbox"
-            onClick="handleClick(this);"
-          />
-          <label htmlFor="race--asian">Asian-American</label>
+
+          <input id="race--asian" type='checkbox' onChange={handleCheckboxChange} />
+          <label htmlFor="race--asian" style={{ paddingLeft: "5px" }}>Asian-American</label>
+
           <br />
 
-          <input
-            id="race--latino"
-            type="checkbox"
-            onClick="handleClick(this);"
-          />
-          <label htmlFor="race--latino">Latino/Hispanic</label>
+
+          <input id="race--hispanic" type='checkbox' onChange={handleCheckboxChange} />
+          <label htmlFor="race--hispanic" style={{ paddingLeft: "5px" }}>Latino/Hispanic</label>
+
           <br />
+
+          <button onClick={() => setGeoJsonData(geoJsonData ? null : nv_smd)} style={styles.button}>
+            {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
+          </button>
         </div>
+
       </div>
 
       <Image
@@ -216,6 +313,7 @@ export default function Colorado() {
         border="1px solid black"
         marginLeft="30px"
       />
+
     </>
   );
 }
