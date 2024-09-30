@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'WeThePeople';
+    src: local('WeThePeople'), url(./WeThePeople.ttf) format('truetype');
+    /* other formats include: 'woff2', 'truetype', 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
+
+
+.marquee-container:hover {
+    color: green;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}

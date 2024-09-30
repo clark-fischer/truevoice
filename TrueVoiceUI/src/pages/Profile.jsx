@@ -17,13 +17,13 @@ export default function Profile() {
   const profiles = [
     {
       name: "Clark Fischer",
-      role: "Group Leader",
+      role: "Front-End Developer",
       studentId: "12345678",
       email: "clark.fischer@stonybrook.edu",
     },
     {
       name: "Melissa Sanchez",
-      role: "Back-End Developer",
+      role: "SeaWulf Developer",
       studentId: "23456789",
       email: "melissa.sanchezpena@stonybrook.edu",
     },
@@ -35,7 +35,7 @@ export default function Profile() {
     },
     {
       name: "Hanseung Choi",
-      role: "SeaWulf",
+      role: "Back-End Developer",
       studentId: "45678901",
       email: "hanseung.choi@stonybrook.edu",
     },
