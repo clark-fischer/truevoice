@@ -12,7 +12,8 @@ import {
   useDisclosure,
   Divider,
   AbsoluteCenter,
-  Link
+  Link,
+  Stack, Tabs, TabList, TabPanels, Tab, TabPanel
 } from "@chakra-ui/react";
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip as ChartTooltip, Legend } from 'chart.js';
@@ -255,12 +256,12 @@ export default function Colorado() {
 
   return (
     <>
-      <Box position='relative' style={{marginBottom:"5px"}} padding='10'>
+      <Box position='relative' style={{ marginBottom: "5px" }} padding='10'>
         <Divider />
         <AbsoluteCenter bg='white' px='4'>
-        <Heading textAlign="center" flex="1">
-          Nevada
-        </Heading>
+          <Heading textAlign="center" flex="1">
+            Nevada
+          </Heading>
         </AbsoluteCenter>
       </Box>
 
@@ -304,6 +305,8 @@ export default function Colorado() {
               </MapContainer>
             </div>
 
+
+            {/* /* Row of Buttons below the map */}
             <div style={styles.buttonRow}>
               <Tooltip label="These are Nevada's districts, as of 2024.">
                 <button
@@ -347,6 +350,7 @@ export default function Colorado() {
             <input id="race--white" type='checkbox' onChange={handleCheckboxChange} />
             <label htmlFor="race--white" style={{ paddingLeft: "5px" }}>White</label>
 
+
             <br />
 
             <input id="race--black" type='checkbox' onChange={handleCheckboxChange} />
@@ -354,33 +358,14 @@ export default function Colorado() {
 
             <br />
 
+
             <input id="race--asian" type='checkbox' onChange={handleCheckboxChange} />
             <label htmlFor="race--asian" style={{ paddingLeft: "5px" }}>Asian-American</label>
 
             <br />
 
+
             <input id="race--hispanic" type='checkbox' onChange={handleCheckboxChange} />
-            <label htmlFor="race--hispanic" style={{ paddingLeft: "5px" }}>Latino/Hispanic</label>
-
-            <br />
-
-            <button onClick={() => setGeoJsonData(geoJsonData ? null : nv_smd)} style={styles.button}>
-              {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
-            </button>
-
-            <div>
-              <br></br>
-              <b>Selected District:</b>
-
-              <p id="selected-district"><i>None</i></p>
-            </div>
-
-            <div>
-              <br></br>
-              <b>Race Breakdown:</b>
-            </div>
-
-            <Box margin="0px auto"></Box>
             <label htmlFor="race--hispanic" style={{ paddingLeft: "5px" }}>Latino/Hispanic</label>
 
             <br />
@@ -440,19 +425,88 @@ export default function Colorado() {
       <Heading style={{ marginLeft: "56px", marginTop: "36px" }}>
         Metrics
       </Heading>
+      
+      <p style={{ margin:"20px 60px" }}>Here, we present the metrics for Nevada's congressional districts, under different scenarios.</p>
+      
+      
+      <Heading as='h4' size='md' style={{ margin:"20px 60px" }}>
+    Box and Whisker Fairness Plot
+    </Heading>
 
-      <Image
-        src="/plot.png"
-        alt="Example Image"
-        // width="700px"
-        // height="900px"
-        objectFit="cover"
-        border="1px solid black"
-        marginLeft="30px"
-      />
+      <Tabs variant="enclosed" style={{ margin:"20px 60px" }}>
+        <TabList>
+          <Tab>SMD (current state)</Tab>
+          <Tab>MMD, 2 Reps.</Tab>
+          <Tab>MMD, 3 Reps.</Tab>
+          <Tab>MMD, 4 Reps. (FRA Offical)</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            <Image
+              src="/plot.png"
+              alt="Example Image"
+              objectFit="cover"
+              border="1px solid black"
+            />
+          </TabPanel>
+          <TabPanel>
+            <Image
+              src="/plot.png"
+              alt="Example Image"
+              objectFit="cover"
+              border="1px solid black"
+            />
+          </TabPanel>
+          <TabPanel>
+            <Image
+              src="/plot.png"
+              alt="Example Image"
+              objectFit="cover"
+              border="1px solid black"
+            />
+          </TabPanel>
+          <TabPanel>
+            <Image
+              src="/plot.png"
+              alt="Example Image"
+              objectFit="cover"
+              border="1px solid black"
+            />
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
 
-    <Box style={{margin:"0px 56px 30px 56px"}}>
-      The Fair Representation Act aims to reform the way U.S. elections are conducted by implementing ranked choice voting for all elections of Senators and Members of the House of Representatives. It also requires states with six or more Representatives to create multi-member districts, electing three to five Representatives per district, while states with fewer Representatives will elect them at-large. Additionally, the Act mandates that congressional redistricting be handled by independent commissions or, if necessary, by a U.S. District Court panel. The Election Assistance Commission will provide funding to states to implement these changes.
+      <Box style={{ margin: "50px 56px 30px 56px" }}>
+        <Heading>
+          The Fair Representation Act
+        </Heading>
+        What exactly does the FRA propose?
+        <UnorderedList style={{ margin: "0px 20px 30px 40px" }}>
+          <ListItem>The Fair Representation Act aims to reform U.S. elections with ranked choice voting for all elections of Senators and House members.</ListItem>
+          <ListItem>States with six or more Representatives must create multi-member districts, electing 3-5 Representatives per district.</ListItem>
+          <ListItem>States with fewer Representatives will elect them at-large.</ListItem>
+          <ListItem>Congressional redistricting must be handled by independent commissions or a U.S. District Court panel.</ListItem>
+          <ListItem>The Election Assistance Commission will fund states to implement these changes.</ListItem>
+        </UnorderedList>
+
+        <br />
+        To learn more, you can read the bill yourself at <Link color='teal.500' href='https://www.congress.gov/bill/117th-congress/house-bill/3863'>Congress.gov</Link>. Or Google it...
+      </Box>
+
+      <Box bg="gray.800" color="gray.200" py={10}>
+        <Stack direction={{ base: 'column', md: 'row' }} justify="space-between" align="center" px={8}>
+          <Text fontSize="sm">&copy; {new Date().getFullYear()} TrueVoice</Text>
+          <Stack direction="row" spacing={6}>
+            <Link href="/about" _hover={{ textDecoration: 'none', color: 'gray.400' }}>
+              About Us
+            </Link>
+
+          </Stack>
+        </Stack>
+        <Divider mt={6} />
+        <Text textAlign="center" mt={6} fontSize="xs" color="gray.500">
+          CSE416: GUI Deliverable 1
+        </Text>
       </Box>
     </>
   );
