@@ -45,7 +45,7 @@ export default function MapComponent() {
                     strokeWidth="1.2px"
                     style={{
                       default: { outline: "none" },
-                      hover: { opacity: 0.6, outline: "none" },
+                      hover: {filter: "brightness(110%)", outline: "none" },
                       pressed: { outline: "none" },
                     }}
                     onClick={() => mapHandler(stateName)} // Navigate on click
