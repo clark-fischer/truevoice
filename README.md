@@ -6,6 +6,7 @@ pip install geopandas
 pip install pyrankvote
 pip install gerrychain
 pip install mplcursors
+pip install seaborn
 
 MGGG
 go to project directory
