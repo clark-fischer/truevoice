@@ -45,23 +45,6 @@ export default function Colorado() {
   }
 
   const styles = {
-    stateTitle: {
-        marginLeft: "35px", 
-        gridColumn: "1 / 2", 
-        fontSize: "30px",
-    },
-
-    district_img :{
-      stextAlign: "center", 
-      marginTop: "20px" 
-    },
-    img_ :{
-      isplay: "block",
-       margin: "0 auto", 
-       width: "300px"
-      
-    },
-
     gridContainer: {
       display: "grid",
       gridTemplateColumns: "2fr 1fr", // Two columns
@@ -120,7 +103,7 @@ export default function Colorado() {
 
   return (
     <>
-      <h1 style={styles.stateTitle}>NEVADA</h1>
+      <h1>NEVADA</h1>
 
       <div style={styles.gridContainer}>
         
@@ -173,9 +156,7 @@ export default function Colorado() {
 
       </div>
     
-      <div style={styles.district_img}>
-        <img src=".png" alt="nv_box_and_whisker_plot" style={styles.img_} />
-      </div>
+  
     </>
   );
 }
