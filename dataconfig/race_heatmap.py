@@ -1,7 +1,6 @@
 import geopandas as gpd
 import numpy as np
 import json
-import math
 
 # Read the shapefile
 shapefile_path = 'nv_race_2022_bg.shp'
@@ -15,8 +14,6 @@ centroids = gdf.geometry.centroid
 # Extract latitude and longitude
 latitudes = centroids.y
 longitudes = centroids.x
-
-10000
 
 
 print(latitudes)
@@ -43,8 +40,7 @@ race_dict = {}
 for row_i, row in enumerate(all_races):
     race_dict[names[row_i]] =[]
     for i, perc in enumerate(row):
-        if not math.isnan(perc):
-            race_dict[names[row_i]].append( [latitudes[i], longitudes[i], perc])
+        race_dict[names[row_i]].append( [latitudes[i], longitudes[i], perc])
     
 with open("nv_race_chloro_data.json", "w") as outfile: 
     json.dump(race_dict, outfile)
