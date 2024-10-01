@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 
 
@@ -7,17 +8,18 @@ import {
   Text,
   UnorderedList,
   ListItem,
-  Center,
+  ScaleFade,
+  useDisclosure,
   Divider,
   AbsoluteCenter,
   Link,
-  Stack, Tabs, TabList, TabPanels, Tab, TabPanel
+  Stack,
 } from "@chakra-ui/react";
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip as ChartTooltip, Legend } from 'chart.js';
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 
-import DistrictTable from "./DistrictTable";
 // Leaflet/Map
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { HeatmapLayer } from 'react-leaflet-heatmap-layer-v3'
@@ -31,11 +33,6 @@ import nv_4mmd from "./nv_4mmd.json";
 import { Flex, Heading, Button, Tooltip, Image } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import nv_race_data from "./nv_race_chloro_data.json"
-
-
-
-
-
 
 export default function Colorado() {
 
@@ -257,23 +254,26 @@ export default function Colorado() {
 
 
 
+  
+
   return (
     <>
-      <Box position='relative' mb={5} p={10}>
+      <Box position='relative' style={{ marginBottom: "5px" }} padding='10'>
         <Divider />
-        <AbsoluteCenter bg='white' px={4}>
+        <AbsoluteCenter bg='white' px='4'>
           <Heading textAlign="center" flex="1">
             Nevada
           </Heading>
         </AbsoluteCenter>
       </Box>
 
-      <Container centerContent minWidth="100%" p={0} m={0}>
+      <Container centerContent minWidth={"100%"} padding={0} margin={0}>
         <div style={styles.gridContainer}>
+
           <div style={styles.mapWrapper}>
             <div style={styles.mapContainer}>
               <MapContainer
-                key={JSON.stringify(geoJsonData)}
+                key={JSON.stringify(geoJsonData)} // Force re-render by changing key
                 center={[38.876019, -117.224121]}
                 zoom={6}
                 style={{ height: "100%", width: "100%" }}
@@ -296,7 +296,7 @@ export default function Colorado() {
                       intensityExtractor={(m) => parseFloat(m[2])}
                       radius={10}
                       max={100}
-                      minOpacity={0.7}
+                      minOpacity={.7}
                       useLocalExtrema={true}
                       gradient={heatmapGradient[race]}
                     />
@@ -307,27 +307,38 @@ export default function Colorado() {
               </MapContainer>
             </div>
 
+            {/* Row of Buttons below the map */}
             <div style={styles.buttonRow}>
               <Tooltip label="These are Nevada's districts, as of 2024.">
-                <button onClick={() => handleButtonClick(nv_smd)} style={styles.button}>
+                <button
+                  onClick={() => handleButtonClick(nv_smd)}
+                  style={styles.button}
+                >
                   SMD, Single Rep. (current)
                 </button>
               </Tooltip>
 
               <Tooltip label="Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district.">
-                <button onClick={() => handleButtonClick(nv_2mmd)} style={styles.button}>
+                <button
+                  onClick={() => handleButtonClick(nv_2mmd)}
+                  style={styles.button}
+                >
                   MMD, 2 Reps.
                 </button>
               </Tooltip>
-
               <Tooltip label="Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district.">
-                <button onClick={() => handleButtonClick(nv_3mmd)} style={styles.button}>
+                <button
+                  onClick={() => handleButtonClick(nv_3mmd)}
+                  style={styles.button}
+                >
                   MMD, 3 Reps.
                 </button>
               </Tooltip>
-
               <Tooltip label="This would be the official prescription of the FRA.">
-                <button onClick={() => handleButtonClick(nv_4mmd)} style={styles.button}>
+                <button
+                  onClick={() => handleButtonClick(nv_4mmd)}
+                  style={styles.button}
+                >
                   MMD, 4 Reps. (FRA official)
                 </button>
               </Tooltip>
@@ -338,49 +349,62 @@ export default function Colorado() {
             <legend style={{ fontSize: "18px", fontWeight: "bold", marginBottom: "10px" }}>Overlay Ethnicity Data</legend>
             <input id="race--white" type='checkbox' onChange={handleCheckboxChange} />
             <label htmlFor="race--white" style={{ paddingLeft: "5px" }}>White</label>
+
             <br />
+
             <input id="race--black" type='checkbox' onChange={handleCheckboxChange} />
             <label htmlFor="race--black" style={{ paddingLeft: "5px" }}>African-American</label>
+
             <br />
+
             <input id="race--asian" type='checkbox' onChange={handleCheckboxChange} />
             <label htmlFor="race--asian" style={{ paddingLeft: "5px" }}>Asian-American</label>
+
             <br />
+
             <input id="race--hispanic" type='checkbox' onChange={handleCheckboxChange} />
             <label htmlFor="race--hispanic" style={{ paddingLeft: "5px" }}>Latino/Hispanic</label>
+
             <br />
+
             <button onClick={() => setGeoJsonData(geoJsonData ? null : nv_smd)} style={styles.button}>
               {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
             </button>
 
             <div>
-              <br />
+              <br></br>
               <b>Selected District:</b>
               <p id="selected-district"><i>None</i></p>
             </div>
 
             <div>
-              <br />
+              <br></br>
               <b>Race Breakdown:</b>
             </div>
 
-            <Box m="0 auto">
+            <Box margin="0px auto">
               <Bar data={chartData} options={{ responsive: true, maintainAspectRatio: false }} />
             </Box>
-
             <div>
-              <br />
+              <br></br>
               <b>Party Breakdown:</b>
             </div>
 
-            <Box m="0 auto">
+            <Box margin="0px auto"></Box>
               <Bar data={partyData} options={{ responsive: true, maintainAspectRatio: false }} />
             </Box>
           </div>
         </div>
+        </div>
       </Container>
 
-      <Flex justify="space-between" align="center" h="50px" mx={14} my={2}>
-        <Heading />
+      <Flex
+        justify="space-between"
+        align="center"
+        height="50px"
+        style={{ margin: "6px 67px 10px 56px" }}
+      >
+        <Heading></Heading>
         <Text>
           In Nevada, congressional district boundaries are drawn by{' '}
           <Link color='teal.500' href='https://ballotpedia.org/Redistricting_in_Nevada'>
@@ -389,35 +413,25 @@ export default function Colorado() {
         </Text>
       </Flex>
 
-      <Heading ml={14} mt={9}>
+      <Heading style={{ marginLeft: "56px", marginTop: "36px" }}>
         Metrics
       </Heading>
-      
-      <Text mx={15} my={5}>
-        Here, we present the metrics for Nevada&apos;s congressional districts, under different scenarios.
-      </Text>
-      
-      <Heading as='h4' size='md' mx={15} my={5}>
-        Box and Whisker Fairness Plot
-      </Heading>
 
-      <Tabs variant="enclosed" mx={15} my={5}>
+      <Tabs variant="enclosed" style={{ marginLeft: "30px", marginTop: "20px" }}>
         <TabList>
-          <Tab>SMD (current state)</Tab>
-          <Tab>MMD, 2 Reps.</Tab>
-          <Tab>MMD, 3 Reps.</Tab>
-          <Tab>MMD, 4 Reps. (FRA Official)</Tab>
+          <Tab>Tab 1</Tab>
+          <Tab>Tab 2</Tab>
+          <Tab>Tab 3</Tab>
+          <Tab>Tab 4</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
-            <Center>
-              <Image
-                src="/Nevada_SMD_box_and_whisker_plot.png"
-                alt="Example Image"
-                objectFit="cover"
-                border="1px solid black"
-              />
-            </Center>
+            <Image
+              src="/plot.png"
+              alt="Example Image"
+              objectFit="cover"
+              border="1px solid black"
+            />
           </TabPanel>
           <TabPanel>
             <Image
@@ -446,61 +460,21 @@ export default function Colorado() {
         </TabPanels>
       </Tabs>
 
-      <Heading as='h4' size='md' mx={15} my={5}>
-        Pie Charts for MMD Scenarios
-      </Heading>
-      <Text mx={15} my={5}>
-        Although political party is not the ideal metric for representation, it is certainly one metric. These pie charts illustrate the party win breakdown of various SMD/MMD plans.
-      </Text>
-      <Flex justify="center" align="center" mx={15} my={5}>
-        <Image
-          src="/Nevada_MMD_2_pie_chart.png"
-          alt="MMD 2 Reps Pie Chart"
-          objectFit="cover"
-          boxSize="500px"
-        />
-        <Image
-          src="/Nevada_MMD_3_pie_chart.png"
-          alt="MMD 3 Reps Pie Chart"
-          objectFit="cover"
-          boxSize="500px"
-        />
-        <Image
-          src="/Nevada_MMD_4_pie_chart.png"
-          alt="MMD 4 Reps Pie Chart"
-          objectFit="cover"
-          boxSize="500px"
-        />
-      </Flex>
-
-      <Heading as='h4' size='md' mx={15} my={5}>
-        Breakdown by Race and Party Wins in Each District
-      </Heading>
-      <Container maxW="container.lg" >
-        <Center>
-        <Box overflowX="auto">
-            <DistrictTable />
-        </Box>
-        </Center>
-      </Container>
-
-      <Box mx={14} my={7}>
+      <Box style={{ margin: "50px 56px 30px 56px" }}>
         <Heading>
           The Fair Representation Act
         </Heading>
-        <Text>
-          What exactly does the FRA propose?
-        </Text>
-        <UnorderedList mx={5} my={7}>
+        What exactly does the FRA propose?
+        <UnorderedList style={{ margin: "0px 20px 30px 40px" }}>
           <ListItem>The Fair Representation Act aims to reform U.S. elections with ranked choice voting for all elections of Senators and House members.</ListItem>
           <ListItem>States with six or more Representatives must create multi-member districts, electing 3-5 Representatives per district.</ListItem>
           <ListItem>States with fewer Representatives will elect them at-large.</ListItem>
           <ListItem>Congressional redistricting must be handled by independent commissions or a U.S. District Court panel.</ListItem>
           <ListItem>The Election Assistance Commission will fund states to implement these changes.</ListItem>
         </UnorderedList>
-        <Text>
-          To learn more, you can read the bill yourself at <Link color='teal.500' href='https://www.congress.gov/bill/117th-congress/house-bill/3863'>Congress.gov</Link>. Or Google it...
-        </Text>
+
+        <br />
+        To learn more, you can read the bill yourself at <Link color='teal.500' href='https://www.congress.gov/bill/117th-congress/house-bill/3863'>Congress.gov</Link>. 
       </Box>
 
       <Box bg="gray.800" color="gray.200" py={10}>
@@ -518,5 +492,5 @@ export default function Colorado() {
         </Text>
       </Box>
     </>
-  );
+  );</Stack>
 }
