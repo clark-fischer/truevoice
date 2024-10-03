@@ -1,4 +1,4 @@
-import { Box, Button, Flex, HStack, Heading, Spacer } from "@chakra-ui/react";
+import { Button, Flex, HStack, Heading, Spacer } from "@chakra-ui/react";
 //For Nav Buttons
 import { NavLink } from "react-router-dom";
 

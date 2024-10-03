@@ -46,9 +46,9 @@ export default function Profile() {
 
   return (
     <>
-      <Button as={NavLink} to="/" colorScheme="green" ml="30px" my="20px">
+      {/* <Button as={NavLink} to="/" colorScheme="green" ml="30px" my="20px">
         Home
-      </Button>
+      </Button> */}
 
       {/* List of profiles to click */}
       <Flex justify="center" flexWrap="nowrap" gap="30px">
@@ -120,7 +120,10 @@ export default function Profile() {
                 height="200px"
                 borderColor="green.500"
               />
-              <Button colorScheme="green">Submit</Button>
+              <Button colorScheme="green" marginBottom="30%">
+                {/* Have to resolve footer location */}
+                Submit
+              </Button>
             </VStack>
           </HStack>
         </Box>
