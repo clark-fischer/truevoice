@@ -33,13 +33,13 @@ import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data
 import "leaflet/dist/leaflet.css";
-import nv_smd from "./nv_smd.json";
-import nv_2mmd from "./nv_2mmd.json";
-import nv_3mmd from "./nv_3mmd.json";
-import nv_4mmd from "./nv_4mmd.json";
+import nv_smd from "../datafiles/nv_smd.json";
+import nv_2mmd from "../datafiles/nv_2mmd.json";
+import nv_3mmd from "../datafiles/nv_3mmd.json";
+import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Button, Tooltip, Image } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
-import nv_race_data from "./nv_race_chloro_data.json";
+import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
 export default function Colorado() {
   ChartJS.register(

@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 
-
 import {
   Box,
   Container,
@@ -18,7 +17,6 @@ import {
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip as ChartTooltip, Legend } from 'chart.js';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-
 
 // Leaflet/Map
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
@@ -140,7 +138,6 @@ export default function Colorado() {
     nevada_districts[district].fillOpacity /= 2;
   });
 
-
   const geojson_style = (feature) => {
     return nevada_districts[feature.properties.DISTRICTNO];
   };
@@ -251,10 +248,6 @@ export default function Colorado() {
     hispanic: { 0.1: 'lime', 1: 'green' }
 
   };
-
-
-
-  
 
   return (
     <>
@@ -474,7 +467,7 @@ export default function Colorado() {
         </UnorderedList>
 
         <br />
-        To learn more, you can read the bill yourself at <Link color='teal.500' href='https://www.congress.gov/bill/117th-congress/house-bill/3863'>Congress.gov</Link>. 
+        To learn more, you can read the bill yourself at <Link color='teal.500' href='https://www.congress.gov/bill/117th-congress/house-bill/3863'>Congress.gov</Link>.
       </Box>
 
       <Box bg="gray.800" color="gray.200" py={10}>
