@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "WeThePeople";
+  src: local("WeThePeople"), url("./WeThePeople.ttf") format("truetype");
+  /* other formats include: 'woff2', 'truetype', 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
