@@ -37,8 +37,7 @@ import nv_smd from "../datafiles/nv_smd.json";
 import nv_2mmd from "../datafiles/nv_2mmd.json";
 import nv_3mmd from "../datafiles/nv_3mmd.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
-import { Flex, Heading, Button, Tooltip, Image } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
+import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
 export default function Colorado() {
