@@ -38,7 +38,6 @@ export default function Dashboard() {
           </span>
         </Container>
       </ScaleFade>
-
       <Marquee />
       <USAMap></USAMap>
       <Container>
