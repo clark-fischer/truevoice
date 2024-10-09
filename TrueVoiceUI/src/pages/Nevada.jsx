@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 
 import {
   Box,
@@ -262,7 +263,21 @@ export default function Colorado() {
     asian: { 0.1: "cyan", 1: "blue" },
     hispanic: { 0.1: "lime", 1: "green" },
   };
+  useEffect(() => {
+    // Function to fetch data from the Spring server
+    const fetchDistrictsData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:8080/nevada/districts/all"
+        );
+        console.log("Fetched data:", response.data); // Log the fetched data to the console
+      } catch (error) {
+        console.error("Error fetching data:", error); // Log any error
+      }
+    };
 
+    fetchDistrictsData(); // Call the function to fetch data
+  }, []);
   return (
     <>
       <Box position="relative" mb={5} p={10}>
