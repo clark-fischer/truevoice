@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import com.truevoice.truevoice.Nevada.Collections.NevDistrict;
 
 @Repository
-public interface NevRespository extends MongoRepository<NevDistrict, ObjectId>{
+public interface NevRepository extends MongoRepository<NevDistrict, ObjectId>{
 }
