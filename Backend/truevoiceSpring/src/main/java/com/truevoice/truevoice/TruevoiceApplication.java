@@ -11,5 +11,4 @@ public class TruevoiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TruevoiceApplication.class, args);
 	}
-
 }
