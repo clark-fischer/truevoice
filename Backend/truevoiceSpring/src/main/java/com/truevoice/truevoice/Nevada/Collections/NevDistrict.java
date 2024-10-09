@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Document(collection = "nevada")
 public class NevDistrict {
-    private ObjectId id;
+    private ObjectId _id;
     private String type; 
     private String name;  
     private NevCrs crs;

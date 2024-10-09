@@ -16,6 +16,9 @@ import java.util.List;
 public class NevController {
     @Autowired
     private NevService nevService;
+    public NevController(NevService nevService) {
+        this.nevService = nevService;
+    }
 
     // @GetMapping("/test")
     // @ResponseBody
