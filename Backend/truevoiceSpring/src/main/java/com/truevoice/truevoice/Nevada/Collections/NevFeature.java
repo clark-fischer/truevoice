@@ -1,34 +1,27 @@
-package com.truevoice.truevoice;
+package com.truevoice.truevoice.Nevada.Collections;
 
 import java.util.Map;
 
-public class Feature {
+public class NevFeature {
     private String type;  // This should be "Feature"
     private Map<String, Object> properties;  // A map to store properties like DISTRICTNO, ADJPOP, etc.
-    private Geometry geometry;  // Geometry object to store the shape
-
-    // Getters and Setters
+    private NevGeometry nevgeometry;  // Geometry object to store the shape
     public String getType() {
         return type;
     }
-
     public void setType(String type) {
         this.type = type;
     }
-
     public Map<String, Object> getProperties() {
         return properties;
     }
-
     public void setProperties(Map<String, Object> properties) {
         this.properties = properties;
     }
-
-    public Geometry getGeometry() {
-        return geometry;
+    public NevGeometry getGeometry() {
+        return nevgeometry;
     }
-
-    public void setGeometry(Geometry geometry) {
-        this.geometry = geometry;
+    public void setGeometry(NevGeometry nevgeometry) {
+        this.nevgeometry = nevgeometry;
     }
 }
