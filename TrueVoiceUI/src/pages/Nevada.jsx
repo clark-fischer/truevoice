@@ -34,16 +34,18 @@ import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data
 import "leaflet/dist/leaflet.css";
-import nv_smd_local from "../datafiles/nv_smd.json";
-import nv_2mmd from "../datafiles/nv_2mmd.json";
-import nv_3mmd from "../datafiles/nv_3mmd.json";
-import nv_4mmd from "../datafiles/nv_4mmd.json";
+// import nv_smd_local from "../datafiles/nv_smd.json";
+// import nv_2mmd from "../datafiles/nv_2mmd.json";
+// import nv_3mmd from "../datafiles/nv_3mmd.json";
+// import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
 export default function Colorado() {
-
-  const [nv_smd, set_nv_smd] = React.useState({});
+  const [nv_smd, set_nv_smd] = React.useState(null);
+  const [nv_2mmd, set_nv_2mmd] = React.useState(null);
+  const [nv_3mmd, set_nv_3mmd] = React.useState(null);
+  const [nv_4mmd, set_nv_4mmd] = React.useState(null);
 
   ChartJS.register(
     BarElement,
@@ -160,7 +162,6 @@ export default function Colorado() {
   const geojson_style = (feature) => {
     return nevada_districts[feature.properties.DISTRICTNO];
   };
-  
 
   const styles = {
     gridContainer: {
@@ -269,20 +270,22 @@ export default function Colorado() {
   };
 
   useEffect(() => {
-    // Function to fetch data from the Spring server
     const fetchDistrictsData = async () => {
       try {
         const response = await axios.get(
           "http://localhost:8080/nevada/districts/all"
         );
-        console.log("Fetched data:", response.data); // Log the fetched data to the console
-        set_nv_smd(response.data);
+        console.log("Fetched data:", response.data);
+        set_nv_smd(response.data[0]);
+        set_nv_4mmd(response.data[1]);
+        set_nv_3mmd(response.data[2]);
+        set_nv_2mmd(response.data[3]);
       } catch (error) {
-        console.error("Error fetching data:", error); // Log any error
+        console.error("Error fetching data:", error);
       }
     };
 
-    fetchDistrictsData(); // Call the function to fetch data
+    fetchDistrictsData();
   }, []);
 
   return (
