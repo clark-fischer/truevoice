@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
 
 import {
   Box,
@@ -17,7 +16,8 @@ import {
   Tab,
   TabPanel,
 } from "@chakra-ui/react";
-import { Bar } from "react-chartjs-2";
+
+
 import {
   Chart as ChartJS,
   BarElement,
@@ -26,25 +26,80 @@ import {
   Tooltip as ChartTooltip,
   Legend,
 } from "chart.js";
+import { Bar } from "react-chartjs-2";
 
 import DistrictTable from "./DistrictTable";
-// Leaflet/Map
+
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
-// data
+// data -- start
 import "leaflet/dist/leaflet.css";
-import nv_smd_local from "../datafiles/nv_smd.json";
+import state_smd_local from "../datafiles/nv_smd.json";
 import nv_2mmd from "../datafiles/nv_2mmd.json";
 import nv_3mmd from "../datafiles/nv_3mmd.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
-export default function Colorado() {
+const heatmapGradient = {
+  white: { 0.1: "yellow", 1: "orange" },
+  black: { 0.1: "pink", 1: "purple" },
+  asian: { 0.1: "cyan", 1: "blue" },
+  hispanic: { 0.1: "lime", 1: "green" },
+};
 
-  const [nv_smd, set_nv_smd] = React.useState({});
+const styles = {
+  gridContainer: {
+    display: "grid",
+    gridTemplateColumns: "2.3fr 1fr", // Two columns
+    // height: "60vh",
+    margin: "0px",
+  },
+  mapWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    height: "700px",
+  },
+  mapContainer: {
+    flexGrow: 1, // Map takes up remaining space
+    width: "100%",
+  },
 
+  buttonRow: {
+    display: "flex",
+    justifyContent: "space-between",
+    // padding: "10px",
+    height: "10%", // Take up 10% of the container height
+    background: "#ffffff",
+  },
+  button: {
+    flexBasis: "25%", // Each button takes up about 22.5% of the width (to account for spacing)
+    // padding: "1  0px",
+    fontSize: "16px",
+    textAlign: "center",
+    border: "1px solid #f0f0f0",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
+  controlsContainer: {
+    padding: "20px",
+    background: "#f8f8f8",
+    width: "400px",
+    height: "100%", // Full-height controls column
+    boxSizing: "border-box",
+  },
+};
+
+// data --  end
+
+export default function State() {
+
+  const [state_smd, set_state_smd] = React.useState(state_smd_local);
+
+
+  // charting functionality -- BEGIN
   ChartJS.register(
     BarElement,
     CategoryScale,
@@ -53,7 +108,8 @@ export default function Colorado() {
     Legend
   );
 
-  const [chartData, setChartData] = React.useState({
+
+  const [raceData, setRaceData] = React.useState({
     labels: ["White", "Non-White"],
     datasets: [
       {
@@ -65,6 +121,7 @@ export default function Colorado() {
       },
     ],
   });
+
 
   const [partyData, setPartyData] = React.useState({
     labels: ["Republican", "Democrat"],
@@ -79,7 +136,8 @@ export default function Colorado() {
     ],
   });
 
-  const updateChartData = (districtNo) => {
+
+  const updateChartData = (chartData, setChartData) => {
     const newData = [...chartData.datasets[0].data];
     newData[0] = Math.floor(Math.random() * 60) + 1;
     newData[1] = 100 - newData[0];
@@ -94,60 +152,45 @@ export default function Colorado() {
     });
   };
 
-  const updatePartyData = (districtNo) => {
-    const newData = [...partyData.datasets[0].data];
-    newData[0] = Math.floor(Math.random() * 60) + 1;
-    newData[1] = 100 - newData[0];
-    setPartyData({
-      ...partyData,
-      datasets: [
-        {
-          ...partyData.datasets[0],
-          data: newData,
-        },
-      ],
-    });
-  };
-
   const eachDistrict = (feature, layer) => {
     const districtNo = feature.properties.DISTRICTNO;
-    layer.on("mouseover", function (e) {
+    layer.on("mouseover", function () {
       // layer.bindPopup(`District ${districtNo}`).openPopup();
       document.getElementById(
         "selected-district"
       ).innerText = `District ${districtNo}`;
-      updateChartData(districtNo);
-      updatePartyData(districtNo);
+      updateChartData(raceData, setRaceData);
+      updateChartData(partyData, setPartyData);
     });
   };
 
-  const w = 1;
+
   const nevada_districts = {
     1: {
       color: "blue",
       fillColor: "blue",
-      weight: w,
+      weight: 1,
       opacity: 1,
       fillOpacity: 0.8,
     },
     2: {
       color: "red",
       fillColor: "red",
-      weight: w,
+      weight: 1,
       opacity: 1,
       fillOpacity: 0.4,
     },
     3: {
       color: "blue",
       fillColor: "blue",
-      weight: w,
+      weight: 1,
       opacity: 1,
       fillOpacity: 0.3,
     },
     4: {
       color: "blue",
       fillColor: "blue",
-      weight: w,
+      weight: 1,
       opacity: 1,
       fillOpacity: 0.3,
     },
@@ -157,102 +200,47 @@ export default function Colorado() {
     nevada_districts[district].fillOpacity /= 2;
   });
 
-  const geojson_style = (feature) => {
-    return nevada_districts[feature.properties.DISTRICTNO];
-  };
-  
-
-  const styles = {
-    gridContainer: {
-      display: "grid",
-      gridTemplateColumns: "2.3fr 1fr", // Two columns
-      // height: "60vh",
-      margin: "0px",
-    },
-    mapWrapper: {
-      display: "flex",
-      flexDirection: "column",
-      height: "700px",
-    },
-    mapContainer: {
-      flexGrow: 1, // Map takes up remaining space
-      width: "100%",
-    },
-
-    buttonRow: {
-      display: "flex",
-      justifyContent: "space-between",
-      // padding: "10px",
-      height: "10%", // Take up 10% of the container height
-      background: "#ffffff",
-    },
-    button: {
-      flexBasis: "25%", // Each button takes up about 22.5% of the width (to account for spacing)
-      // padding: "1  0px",
-      fontSize: "16px",
-      textAlign: "center",
-      border: "1px solid #f0f0f0",
-      "&:hover": {
-        textDecoration: "underline",
-      },
-    },
-    controlsContainer: {
-      padding: "20px",
-      background: "#f8f8f8",
-      width: "400px",
-      height: "100%", // Full-height controls column
-      boxSizing: "border-box",
-    },
-  };
 
   const getGeoJsonStyle = (data) => {
-    if (data === nv_smd) {
+    if (data === state_smd) {
       return (feature) => nevada_districts[feature.properties.DISTRICTNO];
     } else if (data === nv_2mmd) {
-      return (feature) => ({
+      return () => ({
         color: "green",
         fillColor: "green",
-        weight: w,
+        weight: 1,
         opacity: 1,
         fillOpacity: 0.6,
       });
     } else if (data === nv_4mmd) {
-      return (feature) => ({
+      return () => ({
         color: "purple",
         fillColor: "purple",
-        weight: w,
+        weight: 1,
         opacity: 1,
         fillOpacity: 0.7,
       });
     }
-    return (feature) => ({
+    return () => ({
       color: "gray",
       fillColor: "gray",
-      weight: w,
+      weight: 1,
       opacity: 1,
       fillOpacity: 0.5,
     });
   };
 
-  const [geoJsonData, setGeoJsonData] = React.useState(nv_smd);
-  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() =>
-    getGeoJsonStyle(nv_smd)
-  );
+  const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
+  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd));
 
-  const handleButtonClick = (data) => {
+  const changeDistrictMap = (data) => {
     setGeoJsonData(data);
     setGeoJsonStyle(() => getGeoJsonStyle(data));
-    console.log("geojson changed");
   };
 
-  const [heatmapData, setHeatmapData] = React.useState({
-    white: [],
-    black: [],
-    asian: [],
-    hispanic: [],
-  });
+  const [heatmapData, setHeatmapData] = React.useState([]);
 
-  const handleCheckboxChange = (event) => {
+  const changeRaceMap = (event) => {
     const { id, checked } = event.target;
     const race = id.split("--")[1];
     setHeatmapData((prevData) => ({
@@ -261,29 +249,64 @@ export default function Colorado() {
     }));
   };
 
-  const heatmapGradient = {
-    white: { 0.1: "yellow", 1: "orange" },
-    black: { 0.1: "pink", 1: "purple" },
-    asian: { 0.1: "cyan", 1: "blue" },
-    hispanic: { 0.1: "lime", 1: "green" },
+  const renderHeatmapLayers = () => {
+    return Object.keys(heatmapData).map(
+      (race) =>
+        heatmapData[race] &&
+        heatmapData[race].length > 0 && (
+          <HeatmapLayer
+            key={race}
+            fitBoundsOnLoad={false}
+            fitBoundsOnUpdate={false}
+            points={heatmapData[race]}
+            longitudeExtractor={(m) => m[1]}
+            latitudeExtractor={(m) => m[0]}
+            intensityExtractor={(m) => parseFloat(m[2])}
+            radius={10}
+            max={100}
+            minOpacity={0.7}
+            useLocalExtrema={true}
+            gradient={heatmapGradient[race]}
+          />
+        )
+    );
   };
 
-  useEffect(() => {
-    // Function to fetch data from the Spring server
-    const fetchDistrictsData = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:8080/nevada/districts/all"
-        );
-        console.log("Fetched data:", response.data); // Log the fetched data to the console
-        set_nv_smd(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error); // Log any error
-      }
-    };
+  const renderDistrictButtons = () => {
+    const districtMaps = [
+      { label: "SMD, Single Rep. (current)", data: state_smd, tooltip: "These are Nevada's districts, as of 2024." },
+      { label: "MMD, 2 Reps.", data: nv_2mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
+      { label: "MMD, 3 Reps.", data: nv_3mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
+      { label: "MMD, 4 Reps. (FRA official)", data: nv_4mmd, tooltip: "This would be the official prescription of the FRA." },
+    ];
 
-    fetchDistrictsData(); // Call the function to fetch data
-  }, []);
+    return districtMaps.map((map, index) => (
+      <Tooltip key={index} label={map.tooltip}>
+        <button onClick={() => changeDistrictMap(map.data)} style={styles.button}>
+          {map.label}
+        </button>
+      </Tooltip>
+    ));
+  };
+
+  const renderRaceCheckboxes = () => {
+    const races = [
+      { id: "race--white", label: "White" },
+      { id: "race--black", label: "African-American" },
+      { id: "race--asian", label: "Asian-American" },
+      { id: "race--hispanic", label: "Latino/Hispanic" },
+    ];
+
+    return races.map((race) => (
+      <div key={race.id}>
+        <input id={race.id} type="checkbox" onChange={changeRaceMap} />
+        <label htmlFor={race.id} style={{ paddingLeft: "5px" }}>
+          {race.label}
+        </label>
+        <br />
+      </div>
+    ));
+  };
 
   return (
     <>
@@ -311,28 +334,7 @@ export default function Colorado() {
                   attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
                   url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
                 />
-
-                {Object.keys(heatmapData).map(
-                  (race) =>
-                    heatmapData[race] &&
-                    heatmapData[race].length > 0 && (
-                      <HeatmapLayer
-                        key={race}
-                        fitBoundsOnLoad={false}
-                        fitBoundsOnUpdate={false}
-                        points={heatmapData[race]}
-                        longitudeExtractor={(m) => m[1]}
-                        latitudeExtractor={(m) => m[0]}
-                        intensityExtractor={(m) => parseFloat(m[2])}
-                        radius={10}
-                        max={100}
-                        minOpacity={0.7}
-                        useLocalExtrema={true}
-                        gradient={heatmapGradient[race]}
-                      />
-                    )
-                )}
-
+                {renderHeatmapLayers()}
                 <GeoJSON
                   data={geoJsonData}
                   style={geoJsonStyle}
@@ -342,41 +344,7 @@ export default function Colorado() {
             </div>
 
             <div style={styles.buttonRow}>
-              <Tooltip label="These are Nevada's districts, as of 2024.">
-                <button
-                  onClick={() => handleButtonClick(nv_smd)}
-                  style={styles.button}
-                >
-                  SMD, Single Rep. (current)
-                </button>
-              </Tooltip>
-
-              <Tooltip label="Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district.">
-                <button
-                  onClick={() => handleButtonClick(nv_2mmd)}
-                  style={styles.button}
-                >
-                  MMD, 2 Reps.
-                </button>
-              </Tooltip>
-
-              <Tooltip label="Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district.">
-                <button
-                  onClick={() => handleButtonClick(nv_3mmd)}
-                  style={styles.button}
-                >
-                  MMD, 3 Reps.
-                </button>
-              </Tooltip>
-
-              <Tooltip label="This would be the official prescription of the FRA.">
-                <button
-                  onClick={() => handleButtonClick(nv_4mmd)}
-                  style={styles.button}
-                >
-                  MMD, 4 Reps. (FRA official)
-                </button>
-              </Tooltip>
+              {renderDistrictButtons()}
             </div>
           </div>
 
@@ -390,44 +358,9 @@ export default function Colorado() {
             >
               Overlay Ethnicity Data
             </legend>
-            <input
-              id="race--white"
-              type="checkbox"
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor="race--white" style={{ paddingLeft: "5px" }}>
-              White
-            </label>
-            <br />
-            <input
-              id="race--black"
-              type="checkbox"
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor="race--black" style={{ paddingLeft: "5px" }}>
-              African-American
-            </label>
-            <br />
-            <input
-              id="race--asian"
-              type="checkbox"
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor="race--asian" style={{ paddingLeft: "5px" }}>
-              Asian-American
-            </label>
-            <br />
-            <input
-              id="race--hispanic"
-              type="checkbox"
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor="race--hispanic" style={{ paddingLeft: "5px" }}>
-              Latino/Hispanic
-            </label>
-            <br />
+            {renderRaceCheckboxes()}
             <button
-              onClick={() => setGeoJsonData(geoJsonData ? null : nv_smd)}
+              onClick={() => setGeoJsonData(geoJsonData ? null : state_smd)}
               style={styles.button}
             >
               {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
@@ -448,7 +381,7 @@ export default function Colorado() {
 
             <Box m="0 auto">
               <Bar
-                data={chartData}
+                data={raceData}
                 options={{ responsive: true, maintainAspectRatio: false }}
               />
             </Box>
@@ -494,79 +427,7 @@ export default function Colorado() {
         Box and Whisker Fairness Plot
       </Heading>
 
-      <Tabs variant="enclosed" mx={15} my={5}>
-        <TabList>
-          <Tab>SMD (current state)</Tab>
-          <Tab>MMD, 2 Reps.</Tab>
-          <Tab>MMD, 3 Reps.</Tab>
-          <Tab>MMD, 4 Reps. (FRA Official)</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <Center>
-              <Image
-                src="/Nevada_SMD_box_and_whisker_plot.png"
-                alt="Example Image"
-                objectFit="cover"
-                border="1px solid black"
-              />
-            </Center>
-          </TabPanel>
-          <TabPanel>
-            <Image
-              src="/plot.png"
-              alt="Example Image"
-              objectFit="cover"
-              border="1px solid black"
-            />
-          </TabPanel>
-          <TabPanel>
-            <Image
-              src="/plot.png"
-              alt="Example Image"
-              objectFit="cover"
-              border="1px solid black"
-            />
-          </TabPanel>
-          <TabPanel>
-            <Image
-              src="/plot.png"
-              alt="Example Image"
-              objectFit="cover"
-              border="1px solid black"
-            />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-
-      <Heading as="h4" size="md" mx={15} my={5}>
-        Pie Charts for MMD Scenarios
-      </Heading>
-      <Text mx={15} my={5}>
-        Although political party is not the ideal metric for representation, it
-        is certainly one metric. These pie charts illustrate the party win
-        breakdown of various SMD/MMD plans.
-      </Text>
-      <Flex justify="center" align="center" mx={15} my={5}>
-        <Image
-          src="/Nevada_MMD_2_pie_chart.png"
-          alt="MMD 2 Reps Pie Chart"
-          objectFit="cover"
-          boxSize="500px"
-        />
-        <Image
-          src="/Nevada_MMD_3_pie_chart.png"
-          alt="MMD 3 Reps Pie Chart"
-          objectFit="cover"
-          boxSize="500px"
-        />
-        <Image
-          src="/Nevada_MMD_4_pie_chart.png"
-          alt="MMD 4 Reps Pie Chart"
-          objectFit="cover"
-          boxSize="500px"
-        />
-      </Flex>
+      <ChartData />
 
       <Heading as="h4" size="md" mx={15} my={5}>
         Breakdown by Race and Party Wins in Each District
@@ -579,42 +440,80 @@ export default function Colorado() {
         </Center>
       </Container>
 
-      <Box mx={14} my={7}>
-        <Heading>The Fair Representation Act</Heading>
-        <Text>What exactly does the FRA propose?</Text>
-        <UnorderedList mx={5} my={7}>
-          <ListItem>
-            The Fair Representation Act aims to reform U.S. elections with
-            ranked choice voting for all elections of Senators and House
-            members.
-          </ListItem>
-          <ListItem>
-            States with six or more Representatives must create multi-member
-            districts, electing 3-5 Representatives per district.
-          </ListItem>
-          <ListItem>
-            States with fewer Representatives will elect them at-large.
-          </ListItem>
-          <ListItem>
-            Congressional redistricting must be handled by independent
-            commissions or a U.S. District Court panel.
-          </ListItem>
-          <ListItem>
-            The Election Assistance Commission will fund states to implement
-            these changes.
-          </ListItem>
-        </UnorderedList>
-        <Text>
-          To learn more, you can read the bill yourself at{" "}
-          <Link
-            color="teal.500"
-            href="https://www.congress.gov/bill/117th-congress/house-bill/3863"
-          >
-            Congress.gov
-          </Link>
-          . Or Google it...
-        </Text>
-      </Box>
+      <MoreAbout />
     </>
+  );
+}
+
+
+function MoreAbout() {
+  return (<Box mx={14} my={7}>
+    <Heading>The Fair Representation Act</Heading>
+    <Text>What exactly does the FRA propose?</Text>
+    <UnorderedList mx={5} my={7}>
+      <ListItem>
+        The Fair Representation Act aims to reform U.S. elections with
+        ranked choice voting for all elections of Senators and House
+        members.
+      </ListItem>
+      <ListItem>
+        States with six or more Representatives must create multi-member
+        districts, electing 3-5 Representatives per district.
+      </ListItem>
+      <ListItem>
+        States with fewer Representatives will elect them at-large.
+      </ListItem>
+      <ListItem>
+        Congressional redistricting must be handled by independent
+        commissions or a U.S. District Court panel.
+      </ListItem>
+      <ListItem>
+        The Election Assistance Commission will fund states to implement
+        these changes.
+      </ListItem>
+    </UnorderedList>
+    <Text>
+      To learn more, you can read the bill yourself at{" "}
+      <Link
+        color="teal.500"
+        href="https://www.congress.gov/bill/117th-congress/house-bill/3863"
+      >
+        Congress.gov
+      </Link>
+      . Or Google it...
+    </Text>
+  </Box>)
+}
+
+function ChartData() {
+  const tabs = [
+    { label: "SMD (current state)", image: "/Nevada_SMD_box_and_whisker_plot.png" },
+    { label: "MMD, 2 Reps.", image: "/plot2.png" },
+    { label: "MMD, 3 Reps.", image: "/plot3.png" },
+    { label: "MMD, 4 Reps. (FRA Official)", image: "/plot4.png" },
+  ];
+
+  return (
+    <Tabs variant="enclosed" mx={15} my={5}>
+      <TabList>
+        {tabs.map((tab, idx) => (
+          <Tab key={idx}>{tab.label}</Tab>
+        ))}
+      </TabList>
+      <TabPanels>
+        {tabs.map((tab, idx) => (
+          <TabPanel key={idx}>
+            <Center>
+              <Image
+                src={tab.image}
+                alt="Example Image"
+                objectFit="cover"
+                border="1px solid black"
+              />
+            </Center>
+          </TabPanel>
+        ))}
+      </TabPanels>
+    </Tabs>
   );
 }
