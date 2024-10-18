@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import utCong2021 from "./ut_cong_2021.json"; // Adjust the path as necessary
+import utCong2021 from "../datafiles/ut_cong_2021.json"; // Adjust the path as necessary
 
 // Switch
 import { Switch, FormControl, FormLabel, Box } from "@chakra-ui/react";
@@ -17,36 +17,34 @@ export default function Colorado() {
 
   const w = 2;
   const utah_districts = {
-
     1: {
-        color: "red",
-        fillColor: "red",
-        "weight": w,
-        opacity: 0.8,
-        fillOpacity: 0.8
+      color: "red",
+      fillColor: "red",
+      weight: w,
+      opacity: 0.8,
+      fillOpacity: 0.8,
     },
     2: {
-        color: "red",
-        fillColor: "red",
-        "weight": w,
-        opacity: 0.6,
-        fillOpacity: 0.6
+      color: "red",
+      fillColor: "red",
+      weight: w,
+      opacity: 0.6,
+      fillOpacity: 0.6,
     },
     3: {
-        color: "red",
-        fillColor: "red",
-        "weight": w,
-        opacity: .8,
-        fillOpacity: 0.8
+      color: "red",
+      fillColor: "red",
+      weight: w,
+      opacity: 0.8,
+      fillOpacity: 0.8,
     },
     4: {
-        color: "red",
-        fillColor: "red",
-        "weight": w,
-        opacity: .8,
-        fillOpacity: 0.8
-    }
-
+      color: "red",
+      fillColor: "red",
+      weight: w,
+      opacity: 0.8,
+      fillOpacity: 0.8,
+    },
   };
   const geojson_style = (feature) => {
     return utah_districts[feature.properties.DISTRICTNO];
@@ -74,8 +72,6 @@ export default function Colorado() {
       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Optional: shadow for depth
     },
   };
-
-  
 
   return (
     <>

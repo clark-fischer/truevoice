@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+//Chakra UI
 import {
   Box,
   Container,
@@ -5,19 +7,41 @@ import {
   Text,
   UnorderedList,
   ListItem,
+  ScaleFade,
+  useDisclosure,
 } from "@chakra-ui/react";
-
 //react USA Map
 import USAMap from "../components/Map";
+//Marquee(Fancy moving text)
+import Marquee from "../components/Marquee";
 
 export default function Dashboard() {
+  // useEffect(() => {
+  //   setIsOpen(true);
+  // }, []);
+  const { isOpen, onToggle } = useDisclosure();
+  // const [hasLoaded, setHasLoaded] = useState(false);
+
+  useEffect(() => {
+    // setHasLoaded(true);
+    if (!isOpen) onToggle();
+  }, [isOpen, onToggle]);
+
   return (
     <>
+      <ScaleFade initialScale={0.7} in={isOpen}>
+        <Container centerContent maxW="1000px">
+          <Heading>Explore Gerrymandering in your state.</Heading>
+          <span>
+            Click on a state to learn more about the effects of SMDs and how the
+            FRA aims to help.
+          </span>
+        </Container>
+      </ScaleFade>
+      <Marquee />
+      <USAMap></USAMap>
       <Container>
-        <USAMap></USAMap>
-        <Heading my="30px" p="10px">
-          Colorado, Utah, Nevada
-        </Heading>
+        {" "}
         <Text>
           Colorado, Utah, and Nevada each have unique congressional districts,
           reflecting their population sizes, demographics, and political

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // Leaflet/Map
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import coCong2021 from "./co_cong_2021.json";
+import coCong2021 from "../datafiles/co_cong_2021.json";
 // Switch
 import { Switch, FormControl, FormLabel, Box } from "@chakra-ui/react";
 
