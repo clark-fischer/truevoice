@@ -17,6 +17,7 @@
     "@vgrid/react-leaflet-heatmap-layer": "^4.0.3",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.4",
     "framer-motion": "^11.7.0",
     "leaflet": "^1.9.4",
     "leaflet.heat": "^0.2.0",
