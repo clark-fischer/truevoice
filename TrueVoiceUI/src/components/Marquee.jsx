@@ -9,7 +9,7 @@ export default function Marquee() {
         href="https://fonts.cdnfonts.com/css/constitution"
         rel="stylesheet"
       ></link>
-      <marquee
+      <p
         // aria-hidden="true"
         behavior="alternate"
         style={{
@@ -18,16 +18,16 @@ export default function Marquee() {
           top: "50%",
           transform: "translateY(-50%)",
           zIndex: -1,
+          whiteSpace: "nowrap",
         }}
         direction="right"
       >
-        We the People of the United States, in Order to form a more perfect
-        Union, establish Justice, insure domestic Tranquility, provide for the
+        Tranquility, provide for the
         common defense, promote the general Welfare, and secure the Blessings of
         Liberty to ourselves and our Posterity, do ordain and establish this
         Constitution for the United States of America.
-      </marquee>
-      <marquee
+      </p>
+      <p
         aria-hidden="true"
         behavior="alternate"
         style={{
@@ -37,6 +37,7 @@ export default function Marquee() {
           top: "65%",
           transform: "translateY(-85%)",
           zIndex: -1,
+          whiteSpace: "nowrap",
         }}
         direction="left"
       >
@@ -45,7 +46,7 @@ export default function Marquee() {
         common defense, promote the general Welfare, and secure the Blessings of
         Liberty to ourselves and our Posterity, do ordain and establish this
         Constitution for the United States of America.
-      </marquee>
+      </p>
     </>
   );
 }
