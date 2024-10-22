@@ -42,10 +42,10 @@ import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
 export default function Colorado() {
-  const [nv_smd, set_nv_smd] = React.useState(null);
-  const [nv_2mmd, set_nv_2mmd] = React.useState(null);
-  const [nv_3mmd, set_nv_3mmd] = React.useState(null);
-  const [nv_4mmd, set_nv_4mmd] = React.useState(null);
+  const [nv_smd, set_nv_smd] = React.useState([]);
+  const [nv_2mmd, set_nv_2mmd] = React.useState([]);
+  const [nv_3mmd, set_nv_3mmd] = React.useState([]);
+  const [nv_4mmd, set_nv_4mmd] = React.useState([]);
 
   ChartJS.register(
     BarElement,
@@ -154,6 +154,7 @@ export default function Colorado() {
       fillOpacity: 0.3,
     },
   };
+
 
   Object.keys(nevada_districts).forEach((district) => {
     nevada_districts[district].fillOpacity /= 2;
@@ -270,12 +271,16 @@ export default function Colorado() {
   };
 
   useEffect(() => {
+  
     const fetchDistrictsData = async () => {
+
+
       try {
         const response = await axios.get(
           "http://localhost:8080/nevada/districts/all"
         );
         console.log("Fetched data:", response.data);
+        
         set_nv_smd(response.data[0]);
         set_nv_4mmd(response.data[1]);
         set_nv_3mmd(response.data[2]);
@@ -287,6 +292,7 @@ export default function Colorado() {
 
     fetchDistrictsData();
   }, []);
+
 
   return (
     <>
