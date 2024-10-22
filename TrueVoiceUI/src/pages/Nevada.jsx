@@ -68,13 +68,14 @@ const styles = {
 
   buttonRow: {
     display: "flex",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
     // padding: "10px",
     height: "10%", // Take up 10% of the container height
     background: "#ffffff",
   },
   button: {
-    flexBasis: "25%", // Each button takes up about 22.5% of the width (to account for spacing)
+
+    flexBasis: "50%", // Each button takes up about 22.5% of the width (to account for spacing)
     // padding: "1  0px",
     fontSize: "16px",
     textAlign: "center",
@@ -96,6 +97,8 @@ const styles = {
 
 export default function State() {
 
+  // clark -- temp removed axios
+  // eslint-disable-next-line no-unused-vars
   const [state_smd, set_state_smd] = React.useState(state_smd_local);
 
 
@@ -155,7 +158,6 @@ export default function State() {
   const eachDistrict = (feature, layer) => {
     const districtNo = feature.properties.DISTRICTNO;
     layer.on("mouseover", function () {
-      // layer.bindPopup(`District ${districtNo}`).openPopup();
       document.getElementById(
         "selected-district"
       ).innerText = `District ${districtNo}`;
@@ -275,8 +277,8 @@ export default function State() {
   const renderDistrictButtons = () => {
     const districtMaps = [
       { label: "SMD, Single Rep. (current)", data: state_smd, tooltip: "These are Nevada's districts, as of 2024." },
-      { label: "MMD, 2 Reps.", data: nv_2mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
-      { label: "MMD, 3 Reps.", data: nv_3mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
+      // { label: "MMD, 2 Reps.", data: nv_2mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
+      // { label: "MMD, 3 Reps.", data: nv_3mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
       { label: "MMD, 4 Reps. (FRA official)", data: nv_4mmd, tooltip: "This would be the official prescription of the FRA." },
     ];
 
@@ -440,7 +442,7 @@ export default function State() {
         </Center>
       </Container>
 
-      <MoreAbout />
+      <MoreAbout /> 
     </>
   );
 }
