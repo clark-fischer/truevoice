@@ -15,7 +15,6 @@ def party_percentages(election_data):
     total_votes = votes_aggreatation['votes'].sum()
     votes_aggreatation['%'] = round(votes_aggreatation['votes']/total_votes * 100,1)
     return votes_aggreatation
-
 def state_vote_aggregation(election_data): 
     #percenatge of each party at a state level(filtered by house of representatives)
     election_data = election_data[election_data['office'].isin(['US HOUSE'])]
@@ -33,15 +32,12 @@ def seat_share(election_data):
     seat_share = district_winners.groupby('party_simplified').size().reset_index(name='seats')
     seat_share['seat_share'] = seat_share['seats'] / seat_share['seats'].sum() * 100
     return seat_share
-
-
 def get_opposite_party(party):
     if party == 'DEMOCRAT':
         return 'REPUBLICAN'
     elif party == 'REPUBLICAN':
         return 'DEMOCRAT'
     return None
-
 def party_share_at_district_level(election_data, state):
     #calculate the percentage of each party at a district level
     if state == 'nv' or state == 'ut':

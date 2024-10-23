@@ -4,12 +4,13 @@ import pandas as pd
 from utils import party_share_at_district_level, SMD_seat_allocation
 
 nv_election_data = pd.read_csv('Nevada/2020-nv-precinct-general.csv', low_memory=False)
+
 nv_ = party_share_at_district_level(nv_election_data, 'nv')
 
-co_election_data = pd.read_csv('Colorado/2020-co-precinct-general.csv')
-co_ = party_share_at_district_level(co_election_data, 'co')
-ut_election_data = pd.read_csv('Utah/2020-ut-precinct-general.csv')
-ut_ = party_share_at_district_level(ut_election_data, 'ut')
+#co_election_data = pd.read_csv('Colorado/2020-co-precinct-general.csv')
+#co_ = party_share_at_district_level(co_election_data, 'co')
+#ut_election_data = pd.read_csv('Utah/2020-ut-precinct-general.csv')
+#ut_ = party_share_at_district_level(ut_election_data, 'ut')
 
 def box_and_whisker_plot(election_data, state, district_plan, mem_num):
     party_colors = {'DEMOCRAT': '#0015bc', 'REPUBLICAN': '#FF0000'}
@@ -59,15 +60,13 @@ def box_and_whisker_plot(election_data, state, district_plan, mem_num):
     elif district_plan == 'MMD':
         plt.savefig(f'box_and_whisker_plots/{state}_{district_plan}_{mem_num}_rep_box_and_whisker_plot.png')
 
-
-
 nv_smd = SMD_seat_allocation(nv_election_data)
-co_smd = SMD_seat_allocation(co_election_data)
-ut_smd = SMD_seat_allocation(ut_election_data)
+#co_smd = SMD_seat_allocation(co_election_data)
+#ut_smd = SMD_seat_allocation(ut_election_data)
 
 
 
-
-box_and_whisker_plot(nv_, 'Nevada', 'SMD')
-box_and_whisker_plot(co_, 'Colorado', 'SMD')
-box_and_whisker_plot(ut_, 'Utah', 'SMD')
+print(nv_election_data.columns)
+#box_and_whisker_plot(nv_, 'Nevada', 'SMD')
+#box_and_whisker_plot(co_, 'Colorado', 'SMD')
+#box_and_whisker_plot(ut_, 'Utah', 'SMD')
