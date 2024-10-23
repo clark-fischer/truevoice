@@ -305,6 +305,12 @@ export default function Colorado() {
               </MapContainer>
             </div>
 
+          {/* Row of Buttons below the map */}
+          <div style={styles.buttonRow}>
+            <button onClick={() => handleButtonClick(nvCong2021)} style={styles.button}>SMD, Single Rep.</button>
+            <button onClick={() => handleButtonClick(nv_2mmd)} style={styles.button}>MMD, 2 Reps.</button>
+            <button onClick={() => handleButtonClick(nvCong2021)} style={styles.button}>MMD, 3 Reps.</button>
+            <button onClick={() => handleButtonClick(nv_4mmd)} style={styles.button}>MMD, 4 Reps.</button>
 
             {/* /* Row of Buttons below the map */}
             <div style={styles.buttonRow}>
@@ -399,6 +405,11 @@ export default function Colorado() {
             </Box>
           </div>
         </div>
+
+
+      </div>
+    
+  
       </Container>
 
       <Flex

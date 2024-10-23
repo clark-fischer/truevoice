@@ -1,0 +1,4 @@
+Nevada/tl_rd22_08_tabblock20.zip filter=lfs diff=lfs merge=lfs -text
+Colorado/2020-co-precinct-general.csv filter=lfs diff=lfs merge=lfs -text
+Utah/2020-ut-precinct-general.csv filter=lfs diff=lfs merge=lfs -text
+Nevada/nv_pl2020_b.csv filter=lfs diff=lfs merge=lfs -text

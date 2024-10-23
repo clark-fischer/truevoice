@@ -33,15 +33,12 @@ def seat_share(election_data):
     seat_share = district_winners.groupby('party_simplified').size().reset_index(name='seats')
     seat_share['seat_share'] = seat_share['seats'] / seat_share['seats'].sum() * 100
     return seat_share
-
-
 def get_opposite_party(party):
     if party == 'DEMOCRAT':
         return 'REPUBLICAN'
     elif party == 'REPUBLICAN':
         return 'DEMOCRAT'
     return None
-
 def party_share_at_district_level(election_data, state):
     #calculate the percentage of each party at a district level
     if state == 'nv' or state == 'ut':
