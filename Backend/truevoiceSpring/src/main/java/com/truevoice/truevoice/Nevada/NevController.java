@@ -26,10 +26,10 @@ public class NevController {
     }
     @GetMapping("/{state_division}/{name}")
     public List<NevDistrict> getAllDistrictsTest(
-        @PathVariable String state_division
+        @PathVariable String state_division,
         @PathVariable String name
-    ){
-        if(state_division.equals('district')){
+    ) {
+        if (state_division.equals("district")) {
             return nevService.allDistricts();
         }
         return null;
