@@ -1,4 +1,3 @@
-import React from "react";
 import "./index.css";
 
 export default function Marquee() {
@@ -10,8 +9,6 @@ export default function Marquee() {
         rel="stylesheet"
       ></link>
       <p
-        // aria-hidden="true"
-        behavior="alternate"
         style={{
           fontSize: "50px",
           position: "absolute",
@@ -19,6 +16,7 @@ export default function Marquee() {
           transform: "translateY(-50%)",
           zIndex: -1,
           whiteSpace: "nowrap",
+          overflowX: "hidden",
         }}
         direction="right"
       >
@@ -29,7 +27,7 @@ export default function Marquee() {
       </p>
       <p
         aria-hidden="true"
-        behavior="alternate"
+
         style={{
           fontSize: "50px",
           fontFamily: "WeThePeople",
@@ -38,6 +36,7 @@ export default function Marquee() {
           transform: "translateY(-85%)",
           zIndex: -1,
           whiteSpace: "nowrap",
+          overflowX: "hidden",
         }}
         direction="left"
       >

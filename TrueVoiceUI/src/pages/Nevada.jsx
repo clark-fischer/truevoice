@@ -15,6 +15,7 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  border,
 } from "@chakra-ui/react";
 
 
@@ -36,8 +37,6 @@ import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 // data -- start
 import "leaflet/dist/leaflet.css";
 import state_smd_local from "../datafiles/nv_smd.json";
-import nv_2mmd from "../datafiles/nv_2mmd.json";
-import nv_3mmd from "../datafiles/nv_3mmd.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
@@ -86,9 +85,10 @@ const styles = {
   },
   controlsContainer: {
     padding: "20px",
-    background: "#f8f8f8",
-    width: "400px",
-    height: "100%", // Full-height controls column
+    // background: "#f8f8f8",
+    width: "600px",
+    // height: "100px",
+    border: "1px solid red",
     boxSizing: "border-box",
   },
 };
@@ -206,14 +206,6 @@ export default function State() {
   const getGeoJsonStyle = (data) => {
     if (data === state_smd) {
       return (feature) => nevada_districts[feature.properties.DISTRICTNO];
-    } else if (data === nv_2mmd) {
-      return () => ({
-        color: "green",
-        fillColor: "green",
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.6,
-      });
     } else if (data === nv_4mmd) {
       return () => ({
         color: "purple",
@@ -312,16 +304,19 @@ export default function State() {
 
   return (
     <>
-      <Box position="relative" mb={5} p={10}>
-        <Divider />
-        <AbsoluteCenter bg="white" px={4}>
+      {/* <Box position="relative" mb={5} p={10}> */}
+      {/* */}
+      {/* <AbsoluteCenter bg="white" px={4}>
           <Heading textAlign="center" flex="1">
             Nevada
           </Heading>
-        </AbsoluteCenter>
-      </Box>
+        </AbsoluteCenter> */}
+      {/* </Box> */}
+
+      <Divider my={2} />
 
       <Container centerContent minWidth="100%" p={0} m={0}>
+
         <div style={styles.gridContainer}>
           <div style={styles.mapWrapper}>
             <div style={styles.mapContainer}>
@@ -345,63 +340,112 @@ export default function State() {
               </MapContainer>
             </div>
 
+
+
             <div style={styles.buttonRow}>
               {renderDistrictButtons()}
             </div>
           </div>
 
-          <div style={styles.controlsContainer}>
-            <legend
-              style={{
-                fontSize: "18px",
-                fontWeight: "bold",
-                marginBottom: "10px",
-              }}
-            >
-              Overlay Ethnicity Data
-            </legend>
-            {renderRaceCheckboxes()}
-            <button
-              onClick={() => setGeoJsonData(geoJsonData ? null : state_smd)}
-              style={styles.button}
-            >
-              {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
-            </button>
+          <Tabs mx={0} my={0}>
+            <TabList >
+              <Tab key={1}>Heatmap Explorer</Tab>
+              <Tab key={2}>County Explorer</Tab>
+              <Tab key={2}>Plot Explorer</Tab>
+            </TabList>
+            <TabPanels key={1}>
+              <TabPanel padding={0} >
+                <div style={styles.controlsContainer}>
+                  <legend
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Overlay Ethnicity Data
+                  </legend>
+                  {renderRaceCheckboxes()}
+                  <button
+                    onClick={() => setGeoJsonData(geoJsonData ? null : state_smd)}
+                    style={styles.button}
+                  >
+                    {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
+                  </button>
 
-            <div>
-              <br />
-              <b>Selected District:</b>
-              <p id="selected-district">
-                <i>None</i>
-              </p>
-            </div>
 
-            <div>
-              <br />
-              <b>Race Breakdown:</b>
-            </div>
+                </div>
+              </TabPanel>
 
-            <Box m="0 auto">
-              <Bar
-                data={raceData}
-                options={{ responsive: true, maintainAspectRatio: false }}
-              />
-            </Box>
+              <TabPanel padding={0} >
+                <div style={styles.controlsContainer}>
+                  <div>
+                    <b>Selected District:</b>
+                    <p id="selected-district">
+                      <i>None</i>
+                    </p>
+                    <b>Current Rep:</b>
+                    <p id="selected-district">
+                      <i>None</i>
+                    </p>
+                  </div>
 
-            <div>
-              <br />
-              <b>Party Breakdown:</b>
-            </div>
+                  <div>
+                    <br />
+                    <b>Race Breakdown:</b>
+                  </div>
 
-            <Box m="0 auto">
-              <Bar
-                data={partyData}
-                options={{ responsive: true, maintainAspectRatio: false }}
-              />
-            </Box>
-          </div>
+                  <Box m="0 auto">
+                    <Bar
+                      data={raceData}
+                      options={{ responsive: true, maintainAspectRatio: false }}
+                    />
+                  </Box>
+
+                  <div>
+                    <br />
+                    <b>Party Breakdown:</b>
+                  </div>
+
+                  <Box m="0 auto">
+                    <Bar
+                      data={partyData}
+                      options={{ responsive: true, maintainAspectRatio: false }}
+                    />
+                  </Box>
+                </div>
+              </TabPanel>
+
+              <TabPanel padding={0} >
+                <div style={styles.controlsContainer}>
+                </div>
+              </TabPanel>
+
+            </TabPanels>
+
+          </Tabs>
         </div>
       </Container>
+
+      <Tabs>
+        <TabList>
+          <Tab>One</Tab>
+          <Tab>Two</Tab>
+          <Tab>Three</Tab>
+        </TabList>
+
+        <TabPanels>
+          <TabPanel>
+            <p>one!</p>
+          </TabPanel>
+          <TabPanel>
+            <p>two!</p>
+          </TabPanel>
+          <TabPanel>
+            <p>three!</p>
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
 
       <Flex justify="space-between" align="center" h="50px" mx={14} my={2}>
         <Heading />
@@ -442,7 +486,7 @@ export default function State() {
         </Center>
       </Container>
 
-      <MoreAbout /> 
+      <MoreAbout />
     </>
   );
 }
