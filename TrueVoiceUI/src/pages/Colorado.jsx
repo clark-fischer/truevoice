@@ -392,43 +392,12 @@ export default function State() {
 
   return (
     <>
-      {/* <Box position="relative" mb={5} p={10}> */}
-      {/* */}
-      {/* <AbsoluteCenter bg="white" px={4}>
-          <Heading textAlign="center" flex="1">
-            Nevada
-          </Heading>
-        </AbsoluteCenter> */}
-      {/* </Box> */}
-
       <Divider my={2} />
 
       <Container centerContent minWidth="100%" p={0} m={0}>
         <div style={styles.gridContainer}>
           <div style={styles.mapWrapper}>
             <div style={styles.mapContainer}>
-              {/* <MapContainer
-                key={JSON.stringify(geoJsonData)}
-                center={
-                  selectedState === "NV"
-                    ? [38.876019, -117.224121]
-                    : [39.113014, -105.358887]
-                }
-                zoom={6}
-                style={{ height: "100%", width: "100%" }}
-                zoomControl={true}
-              >
-                <TileLayer
-                  attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
-                  url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
-                />
-                {renderHeatmapLayers()}
-                <GeoJSON
-                  data={geoJsonData}
-                  style={geoJsonStyle}
-                  onEachFeature={eachDistrict}
-                />
-              </MapContainer> */}
               <StateMap state={selectedState}></StateMap>
             </div>
 
@@ -440,9 +409,10 @@ export default function State() {
               <Tab key={1}>Heatmap Explorer</Tab>
               <Tab key={2}>District Explorer</Tab>
               <Tab key={3}>Plot Explorer</Tab>
+              <Tab key={4}>Random Plan Explorer</Tab>
             </TabList>
-            <TabPanels key={1}>
-              <TabPanel padding={0}>
+            <TabPanels>
+              <TabPanel key={1} padding={0}>
                 <div style={styles.controlsContainer}>
                   <legend
                     style={{
@@ -465,7 +435,7 @@ export default function State() {
                 </div>
               </TabPanel>
 
-              <TabPanel padding={0}>
+              <TabPanel key={2} padding={0}>
                 <div style={styles.controlsContainer}>
                   <div>
                     <b>Selected District:</b>
@@ -504,8 +474,12 @@ export default function State() {
                 </div>
               </TabPanel>
 
-              <TabPanel padding={0}>
+              <TabPanel key={3} padding={0}>
                 <div style={styles.controlsContainer}></div>
+              </TabPanel>
+
+              <TabPanel key={4} padding={0}>
+                <div style={styles.controlsContainer}>hi</div>
               </TabPanel>
             </TabPanels>
           </Tabs>
