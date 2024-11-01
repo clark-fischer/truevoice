@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
-export default function StateMap() {
+export default function StateMap(state) {
   const nevada_districts = {
     0: {
       color: "blue",
@@ -47,13 +47,14 @@ export default function StateMap() {
   const [geoJsonData, setGeoJsonData] = useState(null);
   if (geoJsonData != null) {
     geoJsonData.features.forEach((feature) => {
-      console.log(feature.properties.LATIN);
+      console.log(feature.geometry);
     });
   }
 
   // Load GeoJSON data using fetch inside useEffect
   useEffect(() => {
     fetch("/mock_district.geojson")
+      // fetch("/modified_co_cong_2021.geojson")
       .then((response) => response.json())
       .then((data) => setGeoJsonData(data))
       .catch((error) => console.error("Error loading GeoJSON:", error));
@@ -61,6 +62,9 @@ export default function StateMap() {
 
   return (
     <MapContainer
+      // center={
+      //   state === "NV" ? [38.876019, -117.224121] : [39.113014, -105.358887]
+      // }
       center={[38.876019, -117.224121]}
       zoom={6}
       style={{ height: "100%", width: "100%" }}
