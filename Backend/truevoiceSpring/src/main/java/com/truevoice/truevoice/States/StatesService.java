@@ -16,18 +16,14 @@ public class StatesService {
     }
 
     /**
-     * Retrieves state information based on the provided state code.
-     *
-     * @param state The state code to search for.
-     * @return The States object containing information about the specified state.
-     * @throws IllegalArgumentException if the state is not found.
+     * @param state 
+     * @return 
+     * @throws IllegalArgumentException
      */
     public States getSummaryByState(String state) {
-        // Validate the input
         if (state == null || state.isEmpty()) {
             throw new IllegalArgumentException("State cannot be null or empty");
         }
-
         // Retrieve the state information
         Optional<States> stateData = statesRepository.findByState(state);
 
