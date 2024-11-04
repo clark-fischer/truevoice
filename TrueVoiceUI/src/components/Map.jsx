@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Tooltip } from "@chakra-ui/react";
 
 // You can use a topology file for US States
+
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
 // Mapping full state names to the colors and tooltip labels
