@@ -16,12 +16,11 @@ public class States {
 
     @Id
     private ObjectId id;
-
     private String state;
-    private int total_population;
-    private int voting_population;
-    private Map<String, Integer> demographic_group; // Map for demographic groups like WHITE, BLACK, etc.
+    private int totalPopulation;
+    private int votingPopulation;
+    private Map<String, Integer> demographicGroup;
     private int seats;
-    private double Republicans;
-    private double Democrats;
+    private double republicans;
+    private double democrats;
 }
