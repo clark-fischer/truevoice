@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.truevoice.truevoice.States.Collections.States;
+import com.truevoice.truevoice.Enum.StateCode;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:5173")
@@ -19,7 +20,7 @@ public class StatesController {
     }
 
 @GetMapping("/{state}/summary")
-public States getSummary(@PathVariable String state) {
+public States getSummary(@PathVariable StateCode state) {
     return statesService.getSummaryByState(state);
 }
 }

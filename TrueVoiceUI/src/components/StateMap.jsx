@@ -3,28 +3,28 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 export default function StateMap(state) {
   const nevada_districts = {
-    0: {
+    1: {
       color: "blue",
-      fillColor: "blue",
+      fillColor: "green",
       weight: 1,
       opacity: 1,
       fillOpacity: 0.4,
     },
-    1: {
+    2: {
       color: "red",
-      fillColor: "red",
+      fillColor: "purple",
       weight: 1,
       opacity: 1,
       fillOpacity: 0.2,
     },
-    2: {
+    3: {
       color: "red",
       fillColor: "red",
       weight: 1,
       opacity: 1,
       fillOpacity: 0.15,
     },
-    3: {
+    4: {
       color: "blue",
       fillColor: "blue",
       weight: 1,
