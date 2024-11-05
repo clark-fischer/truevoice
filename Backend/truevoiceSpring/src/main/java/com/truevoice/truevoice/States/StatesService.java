@@ -4,6 +4,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.truevoice.truevoice.States.Collections.States;
+import com.truevoice.truevoice.Enum.StateCode;
 
 @Service
 public class StatesService {
@@ -20,10 +21,7 @@ public class StatesService {
      * @return 
      * @throws IllegalArgumentException
      */
-    public States getSummaryByState(String state) {
-        if (state == null || state.isEmpty()) {
-            throw new IllegalArgumentException("State cannot be null or empty");
-        }
+    public States getSummaryByState(StateCode state) {
         // Retrieve the state information
         Optional<States> stateData = statesRepository.findByState(state);
 
