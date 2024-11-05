@@ -24,6 +24,7 @@ public class NevController {
     public List<NevDistrict> getAllDistricts(){
         return nevService.allDistricts();
     }
+
     @GetMapping("/{state_division}/{name}")
     public List<NevDistrict> getAllDistrictsTest(
         @PathVariable String state_division,

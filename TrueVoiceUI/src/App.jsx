@@ -10,7 +10,6 @@ import "./App.css";
 import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import Utah from "./pages/Utah";
 import Colorado from "./pages/Colorado";
 import Nevada from "./pages/Nevada";
 
@@ -20,7 +19,6 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="profile" element={<Profile />} />
-      <Route path="utah" element={<Utah />} />
       <Route path="colorado" element={<Colorado />} />
       <Route path="nevada" element={<Nevada />} />
     </Route>
