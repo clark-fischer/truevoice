@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import {
   Box,
@@ -35,7 +36,8 @@ import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data -- start
 import "leaflet/dist/leaflet.css";
-import state_smd_local from "../datafiles/nv_smd.json";
+// import state_smd_local from "../datafiles/nv_smd.json";
+import state_smd_local from "../datafiles/NEVSMDFAIR.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
@@ -95,8 +97,27 @@ const styles = {
 
 export default function State() {
   // clark -- temp removed axios
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/NEV/SMD/FAIR");
+        setData(response.data); // Set the data to state
+        set_state_smd(response.data);
+      } catch (err) {
+        setError(err); // Handle any error that occurs during the request
+      }
+    };
+
+    fetchData(); // Call the function
+  }, []);
+
   // eslint-disable-next-line no-unused-vars
-  const [state_smd, set_state_smd] = React.useState(state_smd_local);
+  // const [state_smd, set_state_smd] = React.useState(state_smd_local);
+
+  const [state_smd, set_state_smd] = React.useState(null);
 
   // charting functionality -- BEGIN
   ChartJS.register(
@@ -350,7 +371,7 @@ export default function State() {
             <TabList>
               <Tab key={1}>Heatmap Explorer</Tab>
               <Tab key={2}>County Explorer</Tab>
-              <Tab key={2}>Plot Explorer</Tab>
+              <Tab key={3}>Plot Explorer</Tab>
             </TabList>
             <TabPanels key={1}>
               <TabPanel padding={0}>
@@ -483,6 +504,14 @@ export default function State() {
       </Container>
 
       <MoreAbout />
+      {/* <div>
+        {error && <p>Error: {error.message}</p>}
+        {data ? (
+          <pre>{JSON.stringify(data, null, 2)}</pre> // Display JSON data in a formatted way
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div> */}
     </>
   );
 }
