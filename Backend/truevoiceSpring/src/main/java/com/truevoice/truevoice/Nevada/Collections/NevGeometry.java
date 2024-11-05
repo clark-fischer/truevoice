@@ -2,7 +2,6 @@ package com.truevoice.truevoice.Nevada.Collections;
 
 
 import java.util.List;
-import java.util.Map;
 
 public class NevGeometry {
     private String type;  // Could be "Polygon" or "MultiPolygon"
