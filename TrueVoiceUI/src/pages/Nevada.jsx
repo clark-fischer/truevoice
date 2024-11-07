@@ -8,14 +8,12 @@ import {
   ListItem,
   Center,
   Divider,
-  AbsoluteCenter,
   Link,
   Tabs,
   TabList,
   TabPanels,
   Tab,
   TabPanel,
-  border,
 } from "@chakra-ui/react";
 
 
@@ -41,12 +39,22 @@ import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
+import nv_race_by_district from "../datafiles/myJson.json"
+import race_stats from "../datafiles/nv_race_chloro_data2_precinct.json"
+
 const heatmapGradient = {
   white: { 0.1: "yellow", 1: "orange" },
   black: { 0.1: "pink", 1: "purple" },
   asian: { 0.1: "cyan", 1: "blue" },
   hispanic: { 0.1: "lime", 1: "green" },
 };
+
+const state_representatives = [
+  "Dina Titus",
+  "Mark Amodei",
+  "Susie Lee",
+  "Steven Horsford",
+];
 
 const styles = {
   gridContainer: {
@@ -88,7 +96,7 @@ const styles = {
     // background: "#f8f8f8",
     width: "600px",
     // height: "100px",
-    border: "1px solid red",
+    // border: "1px solid red",
     boxSizing: "border-box",
   },
 };
@@ -158,9 +166,15 @@ export default function State() {
   const eachDistrict = (feature, layer) => {
     const districtNo = feature.properties.DISTRICTNO;
     layer.on("mouseover", function () {
+
       document.getElementById(
         "selected-district"
       ).innerText = `District ${districtNo}`;
+
+      document.getElementById(
+        "selected-rep"
+      ).innerText = `Rep. ${state_representatives[districtNo - 1]}`;
+
       updateChartData(raceData, setRaceData);
       updateChartData(partyData, setPartyData);
     });
@@ -226,6 +240,36 @@ export default function State() {
 
   const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
   const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd));
+
+  const styleFeature = (feature) => {
+    const tractId = feature.properties.GEOID; // assuming GEOID links to your data
+    const data = race_stats[tractId];
+
+    const races = [
+      { id: "race--white", color: "blue" },
+      { id: "race--black", label: "African-American" },
+      { id: "race--asian", label: "Asian-American" },
+      { id: "race--hispanic", label: "Latino/Hispanic" },
+    ];
+
+    for (let i = 0; i < races.length; i++) {
+
+    }
+
+    if (!data) return { fillColor: '#ccc', color: '#333', weight: 1, fillOpacity: 0.5 };
+
+    // Example color scaling based on 'white' demographic percentage, as an example
+    const percentage = data.white; // Change 'white' to other demographic keys as needed
+    const fillColor = `rgba(0, 0, 0, ${percentage})`;
+
+    return {
+      fillColor,
+      color: '#333',
+      weight: 1,
+      fillOpacity: percentage,
+    };
+  };
+
 
   const changeDistrictMap = (data) => {
     setGeoJsonData(data);
@@ -337,6 +381,10 @@ export default function State() {
                   style={geoJsonStyle}
                   onEachFeature={eachDistrict}
                 />
+                <GeoJSON
+                  data={nv_race_by_district}
+                  style={styleFeature}
+                />
               </MapContainer>
             </div>
 
@@ -351,7 +399,7 @@ export default function State() {
             <TabList >
               <Tab key={1}>Heatmap Explorer</Tab>
               <Tab key={2}>County Explorer</Tab>
-              <Tab key={2}>Plot Explorer</Tab>
+              <Tab key={2}>State</Tab>
             </TabList>
             <TabPanels key={1}>
               <TabPanel padding={0} >
@@ -374,6 +422,7 @@ export default function State() {
                   </button>
 
 
+
                 </div>
               </TabPanel>
 
@@ -385,7 +434,7 @@ export default function State() {
                       <i>None</i>
                     </p>
                     <b>Current Rep:</b>
-                    <p id="selected-district">
+                    <p id="selected-rep">
                       <i>None</i>
                     </p>
                   </div>
@@ -418,7 +467,34 @@ export default function State() {
 
               <TabPanel padding={0} >
                 <div style={styles.controlsContainer}>
+                  
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", margin: "10px" }}>
+                    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
+                      <Heading size="md">Dem Favored</Heading>
+                      <Text mt={4}>Content for card 1</Text>
+                    </Box>
+                    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
+                      <Heading size="md">Repb Favored</Heading>
+                      <Text mt={4}>Content for card 2</Text>
+                    </Box>
+                    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
+                      <Heading size="md">Average</Heading>
+                      <Text mt={4}>Content for card 3</Text>
+                    </Box>
+                    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
+                      <Heading size="md">Fair</Heading>
+                      <Text mt={4}>Content for card 4</Text>
+                    </Box>
+                  </div>
+
+                  <hr />  
+
+                  <br></br>
+                  <bold>District Plan Summary Data</bold>
+                  <DistrictTable />
                 </div>
+
+
               </TabPanel>
 
             </TabPanels>
