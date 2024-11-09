@@ -22,5 +22,6 @@ public class NevController {
     public List<NevDistrict> getAllDistricts(){
         return nevService.allDistricts();
     }
+    
 
 }
