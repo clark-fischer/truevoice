@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import {
   Box,
@@ -15,7 +16,6 @@ import {
   Tab,
   TabPanel,
 } from "@chakra-ui/react";
-
 
 import {
   Chart as ChartJS,
@@ -34,7 +34,8 @@ import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data -- start
 import "leaflet/dist/leaflet.css";
-import state_smd_local from "../datafiles/nv_smd.json";
+// import state_smd_local from "../datafiles/nv_smd.json";
+import state_smd_local from "../datafiles/NEVSMDFAIR.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
@@ -81,7 +82,6 @@ const styles = {
     background: "#ffffff",
   },
   button: {
-
     flexBasis: "50%", // Each button takes up about 22.5% of the width (to account for spacing)
     // padding: "1  0px",
     fontSize: "16px",
@@ -104,11 +104,28 @@ const styles = {
 // data --  end
 
 export default function State() {
-
   // clark -- temp removed axios
-  // eslint-disable-next-line no-unused-vars
-  const [state_smd, set_state_smd] = React.useState(state_smd_local);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/NEV/SMD/FAIR");
+        setData(response.data); // Set the data to state
+        set_state_smd(response.data);
+      } catch (err) {
+        setError(err); // Handle any error that occurs during the request
+      }
+    };
+
+    fetchData(); // Call the function
+  }, []);
+
+  // eslint-disable-next-line no-unused-vars
+  // const [state_smd, set_state_smd] = React.useState(state_smd_local);
+
+  const [state_smd, set_state_smd] = React.useState(null);
 
   // charting functionality -- BEGIN
   ChartJS.register(
@@ -118,7 +135,6 @@ export default function State() {
     ChartTooltip,
     Legend
   );
-
 
   const [raceData, setRaceData] = React.useState({
     labels: ["White", "Non-White"],
@@ -133,7 +149,6 @@ export default function State() {
     ],
   });
 
-
   const [partyData, setPartyData] = React.useState({
     labels: ["Republican", "Democrat"],
     datasets: [
@@ -146,7 +161,6 @@ export default function State() {
       },
     ],
   });
-
 
   const updateChartData = (chartData, setChartData) => {
     const newData = [...chartData.datasets[0].data];
@@ -179,7 +193,6 @@ export default function State() {
       updateChartData(partyData, setPartyData);
     });
   };
-
 
   const nevada_districts = {
     1: {
@@ -215,7 +228,6 @@ export default function State() {
   Object.keys(nevada_districts).forEach((district) => {
     nevada_districts[district].fillOpacity /= 2;
   });
-
 
   const getGeoJsonStyle = (data) => {
     if (data === state_smd) {
@@ -294,7 +306,7 @@ export default function State() {
         heatmapData[race].length > 0 && (
           <HeatmapLayer
             key={race}
-            fitBoundsOnLoad={false}
+            fitBoundsOnLoad={true}
             fitBoundsOnUpdate={false}
             points={heatmapData[race]}
             longitudeExtractor={(m) => m[1]}
@@ -312,15 +324,26 @@ export default function State() {
 
   const renderDistrictButtons = () => {
     const districtMaps = [
-      { label: "SMD, Single Rep. (current)", data: state_smd, tooltip: "These are Nevada's districts, as of 2024." },
+      {
+        label: "SMD, Single Rep. (current)",
+        data: state_smd,
+        tooltip: "These are Nevada's districts, as of 2024.",
+      },
       // { label: "MMD, 2 Reps.", data: nv_2mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
       // { label: "MMD, 3 Reps.", data: nv_3mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
-      { label: "MMD, 4 Reps. (FRA official)", data: nv_4mmd, tooltip: "This would be the official prescription of the FRA." },
+      {
+        label: "MMD, 4 Reps. (FRA official)",
+        data: nv_4mmd,
+        tooltip: "This would be the official prescription of the FRA.",
+      },
     ];
 
     return districtMaps.map((map, index) => (
       <Tooltip key={index} label={map.tooltip}>
-        <button onClick={() => changeDistrictMap(map.data)} style={styles.button}>
+        <button
+          onClick={() => changeDistrictMap(map.data)}
+          style={styles.button}
+        >
           {map.label}
         </button>
       </Tooltip>
@@ -360,7 +383,6 @@ export default function State() {
       <Divider my={2} />
 
       <Container centerContent minWidth="100%" p={0} m={0}>
-
         <div style={styles.gridContainer}>
           <div style={styles.mapWrapper}>
             <div style={styles.mapContainer}>
@@ -388,21 +410,17 @@ export default function State() {
               </MapContainer>
             </div>
 
-
-
-            <div style={styles.buttonRow}>
-              {renderDistrictButtons()}
-            </div>
+            <div style={styles.buttonRow}>{renderDistrictButtons()}</div>
           </div>
 
           <Tabs mx={0} my={0}>
-            <TabList >
+            <TabList>
               <Tab key={1}>Heatmap Explorer</Tab>
               <Tab key={2}>County Explorer</Tab>
-              <Tab key={2}>State</Tab>
+              <Tab key={3}>State</Tab>
             </TabList>
             <TabPanels key={1}>
-              <TabPanel padding={0} >
+              <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
                   <legend
                     style={{
@@ -415,7 +433,9 @@ export default function State() {
                   </legend>
                   {renderRaceCheckboxes()}
                   <button
-                    onClick={() => setGeoJsonData(geoJsonData ? null : state_smd)}
+                    onClick={() =>
+                      setGeoJsonData(geoJsonData ? null : state_smd)
+                    }
                     style={styles.button}
                   >
                     {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
@@ -426,7 +446,7 @@ export default function State() {
                 </div>
               </TabPanel>
 
-              <TabPanel padding={0} >
+              <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
                   <div>
                     <b>Selected District:</b>
@@ -496,9 +516,7 @@ export default function State() {
 
 
               </TabPanel>
-
             </TabPanels>
-
           </Tabs>
         </div>
       </Container>
@@ -563,53 +581,64 @@ export default function State() {
       </Container>
 
       <MoreAbout />
+      {/* <div>
+        {error && <p>Error: {error.message}</p>}
+        {data ? (
+          <pre>{JSON.stringify(data, null, 2)}</pre> // Display JSON data in a formatted way
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div> */}
     </>
   );
 }
 
-
 function MoreAbout() {
-  return (<Box mx={14} my={7}>
-    <Heading>The Fair Representation Act</Heading>
-    <Text>What exactly does the FRA propose?</Text>
-    <UnorderedList mx={5} my={7}>
-      <ListItem>
-        The Fair Representation Act aims to reform U.S. elections with
-        ranked choice voting for all elections of Senators and House
-        members.
-      </ListItem>
-      <ListItem>
-        States with six or more Representatives must create multi-member
-        districts, electing 3-5 Representatives per district.
-      </ListItem>
-      <ListItem>
-        States with fewer Representatives will elect them at-large.
-      </ListItem>
-      <ListItem>
-        Congressional redistricting must be handled by independent
-        commissions or a U.S. District Court panel.
-      </ListItem>
-      <ListItem>
-        The Election Assistance Commission will fund states to implement
-        these changes.
-      </ListItem>
-    </UnorderedList>
-    <Text>
-      To learn more, you can read the bill yourself at{" "}
-      <Link
-        color="teal.500"
-        href="https://www.congress.gov/bill/117th-congress/house-bill/3863"
-      >
-        Congress.gov
-      </Link>
-      . Or Google it...
-    </Text>
-  </Box>)
+  return (
+    <Box mx={14} my={7}>
+      <Heading>The Fair Representation Act</Heading>
+      <Text>What exactly does the FRA propose?</Text>
+      <UnorderedList mx={5} my={7}>
+        <ListItem>
+          The Fair Representation Act aims to reform U.S. elections with ranked
+          choice voting for all elections of Senators and House members.
+        </ListItem>
+        <ListItem>
+          States with six or more Representatives must create multi-member
+          districts, electing 3-5 Representatives per district.
+        </ListItem>
+        <ListItem>
+          States with fewer Representatives will elect them at-large.
+        </ListItem>
+        <ListItem>
+          Congressional redistricting must be handled by independent commissions
+          or a U.S. District Court panel.
+        </ListItem>
+        <ListItem>
+          The Election Assistance Commission will fund states to implement these
+          changes.
+        </ListItem>
+      </UnorderedList>
+      <Text>
+        To learn more, you can read the bill yourself at{" "}
+        <Link
+          color="teal.500"
+          href="https://www.congress.gov/bill/117th-congress/house-bill/3863"
+        >
+          Congress.gov
+        </Link>
+        . Or Google it...
+      </Text>
+    </Box>
+  );
 }
 
 function ChartData() {
   const tabs = [
-    { label: "SMD (current state)", image: "/Nevada_SMD_box_and_whisker_plot.png" },
+    {
+      label: "SMD (current state)",
+      image: "/Nevada_SMD_box_and_whisker_plot.png",
+    },
     { label: "MMD, 2 Reps.", image: "/plot2.png" },
     { label: "MMD, 3 Reps.", image: "/plot3.png" },
     { label: "MMD, 4 Reps. (FRA Official)", image: "/plot4.png" },
