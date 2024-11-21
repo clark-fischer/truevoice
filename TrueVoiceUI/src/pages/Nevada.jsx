@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+
+
 import {
   Box,
   Container,
@@ -29,19 +31,22 @@ import { Bar } from "react-chartjs-2";
 
 import DistrictTable from "./DistrictTable";
 
+import TabStatePlans from "./TabStatePlans";
+
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data -- start
 import "leaflet/dist/leaflet.css";
 // import state_smd_local from "../datafiles/nv_smd.json";
-import state_smd_local from "../datafiles/NEVSMDFAIR.json";
+// import state_smd_local from "../datafiles/NEVSMDFAIR.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
 import nv_race_by_district from "../datafiles/myJson.json"
 import race_stats from "../datafiles/nv_race_chloro_data2_precinct.json"
+import TabPlanSummary from "./TabPlanSummary";
 
 const heatmapGradient = {
   white: { 0.1: "yellow", 1: "orange" },
@@ -126,6 +131,7 @@ export default function State() {
   // const [state_smd, set_state_smd] = React.useState(state_smd_local);
 
   const [state_smd, set_state_smd] = React.useState(null);
+  
 
   // charting functionality -- BEGIN
   ChartJS.register(
@@ -350,23 +356,17 @@ export default function State() {
     ));
   };
 
-  const renderRaceCheckboxes = () => {
-    const races = [
-      { id: "race--white", label: "White" },
-      { id: "race--black", label: "African-American" },
-      { id: "race--asian", label: "Asian-American" },
-      { id: "race--hispanic", label: "Latino/Hispanic" },
-    ];
 
-    return races.map((race) => (
-      <div key={race.id}>
-        <input id={race.id} type="checkbox" onChange={changeRaceMap} />
-        <label htmlFor={race.id} style={{ paddingLeft: "5px" }}>
-          {race.label}
-        </label>
-        <br />
-      </div>
-    ));
+
+  
+
+  const [selectedBoxes, setSelectedBoxes] = useState([false, false, false, false]);
+
+  const handleBoxClick = (index) => {
+    const updatedBoxes = [...selectedBoxes];
+    updatedBoxes[index] = !updatedBoxes[index];
+    setSelectedBoxes(updatedBoxes);
+    console.log(`Box ${index + 1} clicked`);
   };
 
   return (
@@ -415,38 +415,19 @@ export default function State() {
 
           <Tabs mx={0} my={0}>
             <TabList>
-              <Tab key={1}>Heatmap Explorer</Tab>
-              <Tab key={2}>County Explorer</Tab>
+              <Tab key={1}>Demographics</Tab>
+              <Tab key={2}>Plan Summary</Tab>
+              {/* <Tab key={2}>County Explorer</Tab> */}
               <Tab key={3}>State</Tab>
+              <Tab key={3}>SMD vs. MMD</Tab>
+              <Tab key={3}>Vote Share</Tab>
             </TabList>
             <TabPanels key={1}>
-              <TabPanel padding={0}>
-                <div style={styles.controlsContainer}>
-                  <legend
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "bold",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    Overlay Ethnicity Data
-                  </legend>
-                  {renderRaceCheckboxes()}
-                  <button
-                    onClick={() =>
-                      setGeoJsonData(geoJsonData ? null : state_smd)
-                    }
-                    style={styles.button}
-                  >
-                    {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
-                  </button>
+              <TabDemographics />
 
+              <TabPlanSummary />
 
-
-                </div>
-              </TabPanel>
-
-              <TabPanel padding={0}>
+              {/* <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
                   <div>
                     <b>Selected District:</b>
@@ -483,37 +464,47 @@ export default function State() {
                     />
                   </Box>
                 </div>
+              </TabPanel> */}
+
+              <TabStatePlans />
+
+              <TabPanel padding={0}>
+                <div style={styles.controlsContainer}>
+                  <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                    <thead>
+                      <tr>
+                        <th style={{ border: "1px solid black", padding: "8px", width: "20%" }}></th>
+                        <th style={{ border: "1px solid black", padding: "8px" }}>SMD</th>
+                        <th style={{ border: "1px solid black", padding: "8px" }}>MMD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>Rep/Dem Split</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>60:40</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>65:35</td>
+                      </tr>
+                      <tr>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>Opp Reps</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>1</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>2</td>
+                      </tr>
+                      <tr>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>...</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>...</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </TabPanel>
 
-              <TabPanel padding={0} >
+              <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
-                  
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", margin: "10px" }}>
-                    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
-                      <Heading size="md">Dem Favored</Heading>
-                      <Text mt={4}>Content for card 1</Text>
-                    </Box>
-                    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
-                      <Heading size="md">Repb Favored</Heading>
-                      <Text mt={4}>Content for card 2</Text>
-                    </Box>
-                    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
-                      <Heading size="md">Average</Heading>
-                      <Text mt={4}>Content for card 3</Text>
-                    </Box>
-                    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={5}>
-                      <Heading size="md">Fair</Heading>
-                      <Text mt={4}>Content for card 4</Text>
-                    </Box>
-                  </div>
-
-                  <hr />  
-
-                  <br></br>
-                  <bold>District Plan Summary Data</bold>
-                  <DistrictTable />
+                  <h1>Lorem Ipsum</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                  <Center><img src="/Nevada_SMD_box_and_whisker_plot.png" /></Center>
                 </div>
-
 
               </TabPanel>
             </TabPanels>
@@ -582,13 +573,13 @@ export default function State() {
 
       <MoreAbout />
       {/* <div>
-        {error && <p>Error: {error.message}</p>}
-        {data ? (
-          <pre>{JSON.stringify(data, null, 2)}</pre> // Display JSON data in a formatted way
-        ) : (
-          <p>Loading...</p>
-        )}
-      </div> */}
+                      {error && <p>Error: {error.message}</p>}
+                      {data ? (
+                        <pre>{JSON.stringify(data, null, 2)}</pre> // Display JSON data in a formatted way
+                      ) : (
+                        <p>Loading...</p>
+                      )}
+                      </div> */}
     </>
   );
 }
