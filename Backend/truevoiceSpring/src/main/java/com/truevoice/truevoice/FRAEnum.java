@@ -1,15 +1,19 @@
 package com.truevoice.truevoice;
 
-public class Enum {
-    public enum StateCode {
-        NEV, COL
+public class FRAEnum {
+    public enum FIPS {
+        NV, CO
     }
-    
-    public enum PlanType{
+
+    public enum ElectionType{
         SMD, MMD
     }
 
     public enum Characteristic{
         ENACTED, REPFAVORED, DEMFAVORED, AVERAGE, FAIR
+    }
+
+    public enum Party{
+        REP, DEM
     }
 }

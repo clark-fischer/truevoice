@@ -1,37 +1,10 @@
 package com.truevoice.truevoice.RandomPlans;
 
-// package com.truevoice.truevoice.RandomPlans;
-
-// import java.util.Optional;
-
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.web.bind.annotation.CrossOrigin;
-// import org.springframework.web.bind.annotation.GetMapping;
-// import org.springframework.web.bind.annotation.PathVariable;
-// import org.springframework.web.bind.annotation.RestController;
-
-// import com.truevoice.truevoice.Enum.StateCode;
-// import com.truevoice.truevoice.RandomPlans.Collections.Plans;
-
-// @RestController
-// @CrossOrigin(origins = "http://localhost:5173")
-// public class PlansController {
-//     @Autowired
-//     private PlansService plansService;
-//     public PlansController(PlansService plansService) {
-//         this.plansService = plansService;
-//     }
-
-// @GetMapping("/{state}/{type}/{characteristic}")
-// public Optional<Plans> getSummary(@PathVariable StateCode state) {
-//     return plansService.getSummaryByState(state);
-// }
-// }
-import com.truevoice.truevoice.Enum.PlanType;
-import com.truevoice.truevoice.Enum.StateCode;
-import com.truevoice.truevoice.Enum.Characteristic;
-
-import com.truevoice.truevoice.RandomPlans.Collections.Plans;
+import com.truevoice.truevoice.FRAEnum.Characteristic;
+import com.truevoice.truevoice.FRAEnum.ElectionType;
+import com.truevoice.truevoice.FRAEnum.FIPS;
+import com.truevoice.truevoice.RandomPlans.Collections.DistrictPlan;
+import com.truevoice.truevoice.RandomPlans.Collections.SeatVoteShare;
 
 import java.util.Optional;
 
@@ -52,17 +25,24 @@ public class PlansController {
         this.plansService = plansService;
     }
 
-    @GetMapping("/{state}/{type}/{characteristic}")
-    public Optional<Plans> getSummary(
-        @PathVariable StateCode state,
-        @PathVariable PlanType type,
-        @PathVariable Characteristic characteristic) {
+    @GetMapping("/{fips}/{electionType}/{characteristic}")
+    public Optional<DistrictPlan> getDistrictPlan(
+        @PathVariable("fips") FIPS fips,
+        @PathVariable("electionType") ElectionType electionType,
+        @PathVariable("characteristic") Characteristic characteristic) {
         
-        System.out.println("Received state: " + state);
-        System.out.println("Received type: " + type);
-        System.out.println("Received characteristic: " + characteristic);
     
-        return plansService.getSummaryByStateTypeAndCharacteristic(state, type, characteristic);
+        return plansService.getPlanFromDB(fips, electionType, characteristic);
+    }
+
+    @GetMapping("/{fips}/{electionType}/{characteristic}/SEATVOTE")
+    public SeatVoteShare getSeatVoteCurve(
+        @PathVariable("fips") FIPS fips,
+        @PathVariable("electionType") ElectionType electionType,
+        @PathVariable("characteristic") Characteristic characteristic) {
+        
+    
+        return plansService.getCurveFromDB(fips, electionType, characteristic);
     }
     
 }
