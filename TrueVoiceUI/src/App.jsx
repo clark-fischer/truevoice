@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import "./App.css";
 
+
+
 //layout and pages
 import RootLayout from "./layouts/RootLayout";
 import Home from "./pages/Home";
