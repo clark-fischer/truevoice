@@ -1,11 +1,4 @@
-import {
-  Button,
-  Flex,
-  HStack,
-  Heading,
-  Spacer,
-  Center,
-} from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 //For Nav Buttons
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -36,8 +29,6 @@ import { NavLink, useLocation } from "react-router-dom";
 //     </>
 //   );
 // }
-
-import React from "react";
 
 const Navbar = () => {
   const location = useLocation();
