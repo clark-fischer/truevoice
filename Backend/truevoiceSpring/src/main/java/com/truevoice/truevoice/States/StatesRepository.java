@@ -6,12 +6,12 @@ import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;
 import com.truevoice.truevoice.States.Collections.States;
-import com.truevoice.truevoice.Enum.StateCode;
+import com.truevoice.truevoice.FRAEnum.FIPS;
 
 @Repository
 public interface StatesRepository extends MongoRepository<States, ObjectId> {
 
     // Custom method to find a state document by its 'state' field using @Query
-    @Query("{ 'state': ?0 }")
-    Optional<States> findByState(StateCode state);
+    @Query("{ 'fips': ?0 }")
+    Optional<States> findByState(FIPS fips);
 }

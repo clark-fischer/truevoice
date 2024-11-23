@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 
+
+
 import {
   Box,
   Container,
@@ -9,7 +11,6 @@ import {
   ListItem,
   Center,
   Divider,
-  AbsoluteCenter,
   Link,
   Tabs,
   TabList,
@@ -28,12 +29,19 @@ import {
 } from "chart.js";
 
 import DistrictTable from "./DistrictTable";
+<<<<<<< HEAD
 // Leaflet/Map
+=======
+
+import TabStatePlans from "./TabStatePlans";
+
+>>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data
 import "leaflet/dist/leaflet.css";
+<<<<<<< HEAD
 // import nv_smd_local from "../datafiles/nv_smd.json";
 // import nv_2mmd from "../datafiles/nv_2mmd.json";
 // import nv_3mmd from "../datafiles/nv_3mmd.json";
@@ -47,6 +55,104 @@ export default function Colorado() {
   const [nv_3mmd, set_nv_3mmd] = React.useState([]);
   const [nv_4mmd, set_nv_4mmd] = React.useState([]);
 
+=======
+// import state_smd_local from "../datafiles/nv_smd.json";
+// import state_smd_local from "../datafiles/NEVSMDFAIR.json";
+import nv_4mmd from "../datafiles/nv_4mmd.json";
+import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
+import nv_race_data from "../datafiles/nv_race_chloro_data.json";
+
+import nv_race_by_district from "../datafiles/myJson.json"
+import race_stats from "../datafiles/nv_race_chloro_data2_precinct.json"
+import TabPlanSummary from "./TabPlanSummary";
+
+const heatmapGradient = {
+  white: { 0.1: "yellow", 1: "orange" },
+  black: { 0.1: "pink", 1: "purple" },
+  asian: { 0.1: "cyan", 1: "blue" },
+  hispanic: { 0.1: "lime", 1: "green" },
+};
+
+const state_representatives = [
+  "Dina Titus",
+  "Mark Amodei",
+  "Susie Lee",
+  "Steven Horsford",
+];
+
+const styles = {
+  gridContainer: {
+    display: "grid",
+    gridTemplateColumns: "2.3fr 1fr", // Two columns
+    // height: "60vh",
+    margin: "0px",
+  },
+  mapWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    height: "700px",
+  },
+  mapContainer: {
+    flexGrow: 1, // Map takes up remaining space
+    width: "100%",
+  },
+
+  buttonRow: {
+    display: "flex",
+    // justifyContent: "space-between",
+    // padding: "10px",
+    height: "10%", // Take up 10% of the container height
+    background: "#ffffff",
+  },
+  button: {
+    flexBasis: "50%", // Each button takes up about 22.5% of the width (to account for spacing)
+    // padding: "1  0px",
+    fontSize: "16px",
+    textAlign: "center",
+    border: "1px solid #f0f0f0",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
+  controlsContainer: {
+    padding: "20px",
+    // background: "#f8f8f8",
+    width: "600px",
+    // height: "100px",
+    // border: "1px solid red",
+    boxSizing: "border-box",
+  },
+};
+
+// data --  end
+
+export default function State() {
+  // clark -- temp removed axios
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/NEV/SMD/FAIR");
+        setData(response.data); // Set the data to state
+        set_state_smd(response.data);
+      } catch (err) {
+        setError(err); // Handle any error that occurs during the request
+      }
+    };
+
+    fetchData(); // Call the function
+  }, []);
+
+  // eslint-disable-next-line no-unused-vars
+  // const [state_smd, set_state_smd] = React.useState(state_smd_local);
+
+  const [state_smd, set_state_smd] = React.useState(null);
+  
+
+  // charting functionality -- BEGIN
+>>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
   ChartJS.register(
     BarElement,
     CategoryScale,
@@ -96,6 +202,7 @@ export default function Colorado() {
     });
   };
 
+<<<<<<< HEAD
   const updatePartyData = (districtNo) => {
     const newData = [...partyData.datasets[0].data];
     newData[0] = Math.floor(Math.random() * 60) + 1;
@@ -108,6 +215,22 @@ export default function Colorado() {
           data: newData,
         },
       ],
+=======
+  const eachDistrict = (feature, layer) => {
+    const districtNo = feature.properties.DISTRICTNO;
+    layer.on("mouseover", function () {
+
+      document.getElementById(
+        "selected-district"
+      ).innerText = `District ${districtNo}`;
+
+      document.getElementById(
+        "selected-rep"
+      ).innerText = `Rep. ${state_representatives[districtNo - 1]}`;
+
+      updateChartData(raceData, setRaceData);
+      updateChartData(partyData, setPartyData);
+>>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
     });
   };
 
@@ -236,10 +359,45 @@ export default function Colorado() {
     });
   };
 
+<<<<<<< HEAD
   const [geoJsonData, setGeoJsonData] = React.useState(nv_smd);
   const [geoJsonStyle, setGeoJsonStyle] = React.useState(() =>
     getGeoJsonStyle(nv_smd)
   );
+=======
+  const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
+  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd));
+
+  const styleFeature = (feature) => {
+    const tractId = feature.properties.GEOID; // assuming GEOID links to your data
+    const data = race_stats[tractId];
+
+    const races = [
+      { id: "race--white", color: "blue" },
+      { id: "race--black", label: "African-American" },
+      { id: "race--asian", label: "Asian-American" },
+      { id: "race--hispanic", label: "Latino/Hispanic" },
+    ];
+
+    for (let i = 0; i < races.length; i++) {
+
+    }
+
+    if (!data) return { fillColor: '#ccc', color: '#333', weight: 1, fillOpacity: 0.5 };
+
+    // Example color scaling based on 'white' demographic percentage, as an example
+    const percentage = data.white; // Change 'white' to other demographic keys as needed
+    const fillColor = `rgba(0, 0, 0, ${percentage})`;
+
+    return {
+      fillColor,
+      color: '#333',
+      weight: 1,
+      fillOpacity: percentage,
+    };
+  };
+
+>>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
 
   const handleButtonClick = (data) => {
     setGeoJsonData(data);
@@ -275,6 +433,7 @@ export default function Colorado() {
     const fetchDistrictsData = async () => {
 
 
+<<<<<<< HEAD
       try {
         const response = await axios.get(
           "http://localhost:8080/nevada/districts/all"
@@ -293,6 +452,20 @@ export default function Colorado() {
     fetchDistrictsData();
   }, []);
 
+=======
+
+
+  
+
+  const [selectedBoxes, setSelectedBoxes] = useState([false, false, false, false]);
+
+  const handleBoxClick = (index) => {
+    const updatedBoxes = [...selectedBoxes];
+    updatedBoxes[index] = !updatedBoxes[index];
+    setSelectedBoxes(updatedBoxes);
+    console.log(`Box ${index + 1} clicked`);
+  };
+>>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
 
   return (
     <>
@@ -347,6 +520,10 @@ export default function Colorado() {
                   style={geoJsonStyle}
                   onEachFeature={eachDistrict}
                 />
+                <GeoJSON
+                  data={nv_race_by_district}
+                  style={styleFeature}
+                />
               </MapContainer>
             </div>
 
@@ -389,6 +566,7 @@ export default function Colorado() {
             </div>
           </div>
 
+<<<<<<< HEAD
           <div style={styles.controlsContainer}>
             <legend
               style={{
@@ -449,6 +627,34 @@ export default function Colorado() {
                 <i>None</i>
               </p>
             </div>
+=======
+          <Tabs mx={0} my={0}>
+            <TabList>
+              <Tab key={1}>Demographics</Tab>
+              <Tab key={2}>Plan Summary</Tab>
+              {/* <Tab key={2}>County Explorer</Tab> */}
+              <Tab key={3}>State</Tab>
+              <Tab key={3}>SMD vs. MMD</Tab>
+              <Tab key={3}>Vote Share</Tab>
+            </TabList>
+            <TabPanels key={1}>
+              <TabDemographics />
+
+              <TabPlanSummary />
+
+              {/* <TabPanel padding={0}>
+                <div style={styles.controlsContainer}>
+                  <div>
+                    <b>Selected District:</b>
+                    <p id="selected-district">
+                      <i>None</i>
+                    </p>
+                    <b>Current Rep:</b>
+                    <p id="selected-rep">
+                      <i>None</i>
+                    </p>
+                  </div>
+>>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
 
             <div>
               <br />
@@ -467,6 +673,7 @@ export default function Colorado() {
               <b>Party Breakdown:</b>
             </div>
 
+<<<<<<< HEAD
             <Box m="0 auto">
               <Bar
                 data={partyData}
@@ -474,6 +681,60 @@ export default function Colorado() {
               />
             </Box>
           </div>
+=======
+                  <Box m="0 auto">
+                    <Bar
+                      data={partyData}
+                      options={{ responsive: true, maintainAspectRatio: false }}
+                    />
+                  </Box>
+                </div>
+              </TabPanel> */}
+
+              <TabStatePlans />
+
+              <TabPanel padding={0}>
+                <div style={styles.controlsContainer}>
+                  <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                    <thead>
+                      <tr>
+                        <th style={{ border: "1px solid black", padding: "8px", width: "20%" }}></th>
+                        <th style={{ border: "1px solid black", padding: "8px" }}>SMD</th>
+                        <th style={{ border: "1px solid black", padding: "8px" }}>MMD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>Rep/Dem Split</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>60:40</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>65:35</td>
+                      </tr>
+                      <tr>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>Opp Reps</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>1</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>2</td>
+                      </tr>
+                      <tr>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>...</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>...</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </TabPanel>
+
+              <TabPanel padding={0}>
+                <div style={styles.controlsContainer}>
+                  <h1>Lorem Ipsum</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                  <Center><img src="/Nevada_SMD_box_and_whisker_plot.png" /></Center>
+                </div>
+
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+>>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
         </div>
       </Container>
 
@@ -588,6 +849,7 @@ export default function Colorado() {
         </Center>
       </Container>
 
+<<<<<<< HEAD
       <Box mx={14} my={7}>
         <Heading>The Fair Representation Act</Heading>
         <Text>What exactly does the FRA propose?</Text>
@@ -624,6 +886,17 @@ export default function Colorado() {
           . Or Google it...
         </Text>
       </Box>
+=======
+      <MoreAbout />
+      {/* <div>
+                      {error && <p>Error: {error.message}</p>}
+                      {data ? (
+                        <pre>{JSON.stringify(data, null, 2)}</pre> // Display JSON data in a formatted way
+                      ) : (
+                        <p>Loading...</p>
+                      )}
+                      </div> */}
+>>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
     </>
   );
 }
