@@ -1,45 +1,16 @@
-// package com.truevoice.truevoice.RandomPlans;
-
-// import java.util.Optional;
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.stereotype.Service;
-// import com.truevoice.truevoice.Enum.StateCode;
-// import com.truevoice.truevoice.RandomPlans.Collections.Plans;
-
-// @Service
-// public class PlansService {
-
-//     @Autowired
-//     private PlansRepository plansRepository;
-
-//     public PlansService(PlansRepository plansRepository) {
-//         this.plansRepository = plansRepository;
-//     }
-
-//     /**
-//      * @param state 
-//      * @return 
-//      * @throws IllegalArgumentException
-//      */
-//     public Optional<Plans> getSummaryByState(StateCode state) {
-//         // Retrieve the state information
-//         Optional<Plans> stateData = plansRepository.findByState(state);
-
-//         // Return the found state or throw an exception if not found
-//         return stateData;
-//     }
-// }
 package com.truevoice.truevoice.RandomPlans;
-import com.truevoice.truevoice.Enum.PlanType;
-import com.truevoice.truevoice.Enum.StateCode;
+import com.truevoice.truevoice.FRAEnum.Characteristic;
+import com.truevoice.truevoice.FRAEnum.ElectionType;
+import com.truevoice.truevoice.FRAEnum.FIPS;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.truevoice.truevoice.Enum.Characteristic;
-import com.truevoice.truevoice.RandomPlans.Collections.Plans;
+import com.truevoice.truevoice.RandomPlans.Collections.DistrictPlan;
+import com.truevoice.truevoice.RandomPlans.Collections.SeatVoteShare;
 
 @Service
 public class PlansService {
@@ -51,8 +22,14 @@ public class PlansService {
         this.plansRepository = plansRepository;
     }
 
-    public Optional<Plans> getSummaryByStateTypeAndCharacteristic(StateCode state, PlanType type, Characteristic characteristic) {
-        return plansRepository.findByStateAndPlanTypeAndCharacteristic(state, type, characteristic);
+    @Cacheable
+    public Optional<DistrictPlan> getPlanFromDB(FIPS fips, ElectionType electionType, Characteristic characteristic) {
+        return plansRepository.findDistrictPlan(fips, electionType, characteristic);
+    }
+
+    @Cacheable
+    public SeatVoteShare getCurveFromDB(FIPS fips, ElectionType electionType, Characteristic characteristic) {
+       return plansRepository.findVoteSeatPlot(fips, electionType, characteristic).getSeatVoteShare();
     }
     
 }

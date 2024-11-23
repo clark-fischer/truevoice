@@ -4,7 +4,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.truevoice.truevoice.States.Collections.States;
-import com.truevoice.truevoice.Enum.StateCode;
+import com.truevoice.truevoice.FRAEnum.FIPS;
 
 @Service
 public class StatesService {
@@ -17,15 +17,15 @@ public class StatesService {
     }
 
     /**
-     * @param state 
+     * @param fips 
      * @return 
      * @throws IllegalArgumentException
      */
-    public States getSummaryByState(StateCode state) {
+    public States getSummaryByState(FIPS fips) {
         // Retrieve the state information
-        Optional<States> stateData = statesRepository.findByState(state);
+        Optional<States> stateData = statesRepository.findByState(fips);
 
         // Return the found state or throw an exception if not found
-        return stateData.orElseThrow(() -> new IllegalArgumentException("State not found: " + state));
+        return stateData.orElseThrow(() -> new IllegalArgumentException("State not found: " + fips));
     }
 }
