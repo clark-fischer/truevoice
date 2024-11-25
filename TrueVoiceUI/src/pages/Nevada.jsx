@@ -1,7 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
-
 
 import {
   Box,
@@ -31,6 +30,7 @@ import { Bar } from "react-chartjs-2";
 
 import DistrictTable from "./DistrictTable";
 
+import Demographics from "./Demographics";
 import TabStatePlans from "./TabStatePlans";
 
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
@@ -38,7 +38,7 @@ import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data -- start
 import "leaflet/dist/leaflet.css";
-// import state_smd_local from "../datafiles/nv_smd.json";
+import state_smd_local from "../datafiles/nv_smd.json";
 // import state_smd_local from "../datafiles/NEVSMDFAIR.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
@@ -47,6 +47,7 @@ import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 import nv_race_by_district from "../datafiles/myJson.json"
 import race_stats from "../datafiles/nv_race_chloro_data2_precinct.json"
 import TabPlanSummary from "./TabPlanSummary";
+import Ensemble from "./Ensemble";
 
 const heatmapGradient = {
   white: { 0.1: "yellow", 1: "orange" },
@@ -109,39 +110,6 @@ const styles = {
 // data --  end
 
 export default function State() {
-  // clark -- temp removed axios
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://localhost:8080/NEV/SMD/FAIR");
-        setData(response.data); // Set the data to state
-        set_state_smd(response.data);
-      } catch (err) {
-        setError(err); // Handle any error that occurs during the request
-      }
-    };
-
-    fetchData(); // Call the function
-  }, []);
-
-  // eslint-disable-next-line no-unused-vars
-  // const [state_smd, set_state_smd] = React.useState(state_smd_local);
-
-  const [state_smd, set_state_smd] = React.useState(null);
-  
-
-  // charting functionality -- BEGIN
-  ChartJS.register(
-    BarElement,
-    CategoryScale,
-    LinearScale,
-    ChartTooltip,
-    Legend
-  );
-
   const [raceData, setRaceData] = React.useState({
     labels: ["White", "Non-White"],
     datasets: [
@@ -187,9 +155,35 @@ export default function State() {
     const districtNo = feature.properties.DISTRICTNO;
     layer.on("mouseover", function () {
 
+      // district no
       document.getElementById(
         "selected-district"
       ).innerText = `District ${districtNo}`;
+
+      document.getElementById(
+        "race--white2"
+      ).innerText = `${feature.properties.demographics.white}`;
+
+      document.getElementById(
+        "race--black2"
+      ).innerText = `${feature.properties.demographics.black}`;
+
+      document.getElementById(
+        "race--hispanic2"
+      ).innerText = `${feature.properties.demographics.latin}`;
+
+      document.getElementById(
+        "race--asian2"
+      ).innerText = `${feature.properties.demographics.asian}`;
+
+      
+
+      document.getElementById(
+        "race--other2"
+      ).innerText = `${feature.properties.demographics.other}`;
+
+
+
 
       document.getElementById(
         "selected-rep"
@@ -236,7 +230,7 @@ export default function State() {
   });
 
   const getGeoJsonStyle = (data) => {
-    if (data === state_smd) {
+    if (data === state_smd_local) {
       return (feature) => nevada_districts[feature.properties.DISTRICTNO];
     } else if (data === nv_4mmd) {
       return () => ({
@@ -256,37 +250,81 @@ export default function State() {
     });
   };
 
-  const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
-  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd));
+  const [geoJsonData, setGeoJsonData] = React.useState(state_smd_local);
+  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd_local));
 
-  const styleFeature = (feature) => {
-    const tractId = feature.properties.GEOID; // assuming GEOID links to your data
-    const data = race_stats[tractId];
-
-    const races = [
-      { id: "race--white", color: "blue" },
-      { id: "race--black", label: "African-American" },
-      { id: "race--asian", label: "Asian-American" },
-      { id: "race--hispanic", label: "Latino/Hispanic" },
-    ];
-
-    for (let i = 0; i < races.length; i++) {
-
-    }
-
-    if (!data) return { fillColor: '#ccc', color: '#333', weight: 1, fillOpacity: 0.5 };
-
-    // Example color scaling based on 'white' demographic percentage, as an example
-    const percentage = data.white; // Change 'white' to other demographic keys as needed
-    const fillColor = `rgba(0, 0, 0, ${percentage})`;
-
-    return {
-      fillColor,
-      color: '#333',
-      weight: 1,
-      fillOpacity: percentage,
+  function mixColors(colors) {
+    // Parse hex color to RGB
+    const hexToRgb = (hex) => {
+      hex = hex.replace('#', '');
+      return {
+        r: parseInt(hex.slice(0, 2), 16),
+        g: parseInt(hex.slice(2, 4), 16),
+        b: parseInt(hex.slice(4, 6), 16)
+      };
     };
-  };
+
+    const rgbToHex = ({ r, g, b }) => {
+      const toHex = (value) => value.toString(16).padStart(2, '0');
+      return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+    };
+
+    // Normalize percentages if not summing to 1
+    const totalWeight = colors.reduce((sum, { weight }) => sum + weight, 0);
+    const normalizedColors = colors.map(({ hex, weight }) => ({
+      rgb: hexToRgb(hex),
+      weight: weight / totalWeight
+    }));
+
+    // Calculate the weighted average of each channel
+    const mixedRgb = normalizedColors.reduce(
+      (acc, { rgb, weight }) => {
+        acc.r += rgb.r * weight;
+        acc.g += rgb.g * weight;
+        acc.b += rgb.b * weight;
+        return acc;
+      },
+      { r: 0, g: 0, b: 0 }
+    );
+
+    // Round channels and convert to hex
+    const resultRgb = {
+      r: Math.round(mixedRgb.r),
+      g: Math.round(mixedRgb.g),
+      b: Math.round(mixedRgb.b)
+    };
+
+    return rgbToHex(resultRgb);
+  }
+
+  // Example usage:
+  // const colors = [
+  //     { hex: '#ff0000', weight: 0.4 }, // red 40%
+  //     { hex: '#00ff00', weight: 0.3 }, // green 30%
+  //     { hex: '#0000ff', weight: 0.3 }  // blue 30%
+  // ];
+
+  // console.log(mixColors(colors)); // Outputs a blended color
+
+  function buildHeatmap(i) {
+
+    return (feature) => {
+      const tractId = feature.properties.GEOID; // assuming GEOID links to your data
+      const data = race_stats[tractId];
+      // console.log("buuldin")
+      // console.log(data);
+      const percentage = data[races[i]["label"]];
+
+      return {
+        color: races[i]['hex'],
+        weight: 0,
+        fillOpacity: percentage,
+        
+      };
+    };
+
+  }
+
 
 
   const changeDistrictMap = (data) => {
@@ -295,15 +333,6 @@ export default function State() {
   };
 
   const [heatmapData, setHeatmapData] = React.useState([]);
-
-  const changeRaceMap = (event) => {
-    const { id, checked } = event.target;
-    const race = id.split("--")[1];
-    setHeatmapData((prevData) => ({
-      ...prevData,
-      [race]: checked ? nv_race_data[race] : [],
-    }));
-  };
 
   const renderHeatmapLayers = () => {
     return Object.keys(heatmapData).map(
@@ -332,11 +361,9 @@ export default function State() {
     const districtMaps = [
       {
         label: "SMD, Single Rep. (current)",
-        data: state_smd,
+        data: state_smd_local,
         tooltip: "These are Nevada's districts, as of 2024.",
       },
-      // { label: "MMD, 2 Reps.", data: nv_2mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
-      // { label: "MMD, 3 Reps.", data: nv_3mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
       {
         label: "MMD, 4 Reps. (FRA official)",
         data: nv_4mmd,
@@ -356,29 +383,33 @@ export default function State() {
     ));
   };
 
+  const [races, setRaces] = useState([
+    { id: "race--white", label: "white", hex: 'blue', checked: 0 },
+    { id: "race--black", label: "black", hex: 'red', checked: 0 },
+    { id: "race--asian", label: "asian", hex: 'green', checked: 0 },
+    { id: "race--hispanic", label: "hispanic", hex: 'yellow', checked: 0 },
+    { id: "race--other", label: "other", hex: 'brown', checked: 0 },
+  ]);
+
+  const toggle_map = (index) => { 
+    const nextRaces = races.map((c, i) => {
+
+      const copy = { ...c };
+
+      if (i === index) {
+        // Increment the clicked counter
+        copy.checked = !copy.checked;
+      } 
+
+      return copy;
+    });
 
 
-  
-
-  const [selectedBoxes, setSelectedBoxes] = useState([false, false, false, false]);
-
-  const handleBoxClick = (index) => {
-    const updatedBoxes = [...selectedBoxes];
-    updatedBoxes[index] = !updatedBoxes[index];
-    setSelectedBoxes(updatedBoxes);
-    console.log(`Box ${index + 1} clicked`);
-  };
+    setRaces(nextRaces);
+  }
 
   return (
     <>
-      {/* <Box position="relative" mb={5} p={10}> */}
-      {/* */}
-      {/* <AbsoluteCenter bg="white" px={4}>
-          <Heading textAlign="center" flex="1">
-            Nevada
-          </Heading>
-        </AbsoluteCenter> */}
-      {/* </Box> */}
 
       <Divider my={2} />
 
@@ -397,15 +428,23 @@ export default function State() {
                   attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
                   url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
                 />
-                {renderHeatmapLayers()}
+                {/* {renderHeatmapLayers()} */}
+
+                {
+                  races.map((race, i) => {
+
+                    return race["checked"] ? <GeoJSON
+                      data={nv_race_by_district}
+                      style={buildHeatmap(i)}
+                      key={i*10 + race["checked"] }
+                    /> : <></>
+                  })
+                }
+
                 <GeoJSON
                   data={geoJsonData}
                   style={geoJsonStyle}
                   onEachFeature={eachDistrict}
-                />
-                <GeoJSON
-                  data={nv_race_by_district}
-                  style={styleFeature}
                 />
               </MapContainer>
             </div>
@@ -415,58 +454,19 @@ export default function State() {
 
           <Tabs mx={0} my={0}>
             <TabList>
+
+              <Tab key={4}>SMD vs. MMD</Tab>
+
               <Tab key={1}>Demographics</Tab>
-              <Tab key={2}>Plan Summary</Tab>
+              <Tab key={2}>Plans</Tab>
               {/* <Tab key={2}>County Explorer</Tab> */}
               <Tab key={3}>State</Tab>
-              <Tab key={3}>SMD vs. MMD</Tab>
-              <Tab key={3}>Vote Share</Tab>
+
+
+              {/* <Tab key={5}>Vote Share</Tab> */}
+              <Tab key={5}>Ensemble</Tab>
             </TabList>
             <TabPanels key={1}>
-              <TabDemographics />
-
-              <TabPlanSummary />
-
-              {/* <TabPanel padding={0}>
-                <div style={styles.controlsContainer}>
-                  <div>
-                    <b>Selected District:</b>
-                    <p id="selected-district">
-                      <i>None</i>
-                    </p>
-                    <b>Current Rep:</b>
-                    <p id="selected-rep">
-                      <i>None</i>
-                    </p>
-                  </div>
-
-                  <div>
-                    <br />
-                    <b>Race Breakdown:</b>
-                  </div>
-
-                  <Box m="0 auto">
-                    <Bar
-                      data={raceData}
-                      options={{ responsive: true, maintainAspectRatio: false }}
-                    />
-                  </Box>
-
-                  <div>
-                    <br />
-                    <b>Party Breakdown:</b>
-                  </div>
-
-                  <Box m="0 auto">
-                    <Bar
-                      data={partyData}
-                      options={{ responsive: true, maintainAspectRatio: false }}
-                    />
-                  </Box>
-                </div>
-              </TabPanel> */}
-
-              <TabStatePlans />
 
               <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
@@ -490,172 +490,38 @@ export default function State() {
                         <td style={{ border: "1px solid black", padding: "8px" }}>2</td>
                       </tr>
                       <tr>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>...</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>...</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}></td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>Vote share</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>sample</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>sample</td>
+                      </tr>
+                      <tr>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>Seat share</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>sample</td>
+                        <td style={{ border: "1px solid black", padding: "8px" }}>sample</td>
                       </tr>
                     </tbody>
                   </table>
-                </div>
-              </TabPanel>
 
-              <TabPanel padding={0}>
-                <div style={styles.controlsContainer}>
-                  <h1>Lorem Ipsum</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                  <Center><img src="/Nevada_SMD_box_and_whisker_plot.png" /></Center>
+                  {/* <Heading>
+                  Ensemble Data
+                </Heading> */}
                 </div>
 
+
               </TabPanel>
+
+
+              <Demographics races={races} setRaces={setRaces} toggle_map={toggle_map} />
+
+              <TabPlanSummary />
+              <TabStatePlans />
+
+
+              <Ensemble />
             </TabPanels>
           </Tabs>
         </div>
       </Container>
-
-      <Tabs>
-        <TabList>
-          <Tab>One</Tab>
-          <Tab>Two</Tab>
-          <Tab>Three</Tab>
-        </TabList>
-
-        <TabPanels>
-          <TabPanel>
-            <p>one!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>two!</p>
-          </TabPanel>
-          <TabPanel>
-            <p>three!</p>
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-
-      <Flex justify="space-between" align="center" h="50px" mx={14} my={2}>
-        <Heading />
-        <Text>
-          In Nevada, congressional district boundaries are drawn by{" "}
-          <Link
-            color="teal.500"
-            href="https://ballotpedia.org/Redistricting_in_Nevada"
-          >
-            the state legislature.
-          </Link>
-        </Text>
-      </Flex>
-
-      <Heading ml={14} mt={9}>
-        Metrics
-      </Heading>
-
-      <Text mx={15} my={5}>
-        Here, we present the metrics for Nevada&apos;s congressional districts,
-        under different scenarios.
-      </Text>
-
-      <Heading as="h4" size="md" mx={15} my={5}>
-        Box and Whisker Fairness Plot
-      </Heading>
-
-      <ChartData />
-
-      <Heading as="h4" size="md" mx={15} my={5}>
-        Breakdown by Race and Party Wins in Each District
-      </Heading>
-      <Container maxW="container.lg">
-        <Center>
-          <Box overflowX="auto">
-            <DistrictTable />
-          </Box>
-        </Center>
-      </Container>
-
-      <MoreAbout />
-      {/* <div>
-                      {error && <p>Error: {error.message}</p>}
-                      {data ? (
-                        <pre>{JSON.stringify(data, null, 2)}</pre> // Display JSON data in a formatted way
-                      ) : (
-                        <p>Loading...</p>
-                      )}
-                      </div> */}
-    </>
-  );
-}
-
-function MoreAbout() {
-  return (
-    <Box mx={14} my={7}>
-      <Heading>The Fair Representation Act</Heading>
-      <Text>What exactly does the FRA propose?</Text>
-      <UnorderedList mx={5} my={7}>
-        <ListItem>
-          The Fair Representation Act aims to reform U.S. elections with ranked
-          choice voting for all elections of Senators and House members.
-        </ListItem>
-        <ListItem>
-          States with six or more Representatives must create multi-member
-          districts, electing 3-5 Representatives per district.
-        </ListItem>
-        <ListItem>
-          States with fewer Representatives will elect them at-large.
-        </ListItem>
-        <ListItem>
-          Congressional redistricting must be handled by independent commissions
-          or a U.S. District Court panel.
-        </ListItem>
-        <ListItem>
-          The Election Assistance Commission will fund states to implement these
-          changes.
-        </ListItem>
-      </UnorderedList>
-      <Text>
-        To learn more, you can read the bill yourself at{" "}
-        <Link
-          color="teal.500"
-          href="https://www.congress.gov/bill/117th-congress/house-bill/3863"
-        >
-          Congress.gov
-        </Link>
-        . Or Google it...
-      </Text>
-    </Box>
-  );
-}
-
-function ChartData() {
-  const tabs = [
-    {
-      label: "SMD (current state)",
-      image: "/Nevada_SMD_box_and_whisker_plot.png",
-    },
-    { label: "MMD, 2 Reps.", image: "/plot2.png" },
-    { label: "MMD, 3 Reps.", image: "/plot3.png" },
-    { label: "MMD, 4 Reps. (FRA Official)", image: "/plot4.png" },
-  ];
-
-  return (
-    <Tabs variant="enclosed" mx={15} my={5}>
-      <TabList>
-        {tabs.map((tab, idx) => (
-          <Tab key={idx}>{tab.label}</Tab>
-        ))}
-      </TabList>
-      <TabPanels>
-        {tabs.map((tab, idx) => (
-          <TabPanel key={idx}>
-            <Center>
-              <Image
-                src={tab.image}
-                alt="Example Image"
-                objectFit="cover"
-                border="1px solid black"
-              />
-            </Center>
-          </TabPanel>
-        ))}
-      </TabPanels>
-    </Tabs>
+    </> 
   );
 }
