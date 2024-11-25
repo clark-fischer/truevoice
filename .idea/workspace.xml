@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e2f1a06-4739-447e-9c07-148b3e68c0d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/truevoice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Colorado/2020-co-precinct-general.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/public/Nevada_MMD_2_pie_chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/public/Nevada_MMD_3_pie_chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/public/Nevada_MMD_4_pie_chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/public/Nevada_SMD_box_and_whisker_plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/public/plot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/output.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/ WeThePeople-ReadMe.rtf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/DistrictTable.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/Untitled-2.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/Untitled-3.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/WeThePeople.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/nv_3mmd.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/nv_race_chloro_data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrueVoiceUI/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utah/2020-ut-precinct-general.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nv_3mmd.qmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/src/components/Map.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/src/components/Map.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/src/pages/Nevada.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/Nevada.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/src/pages/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrueVoiceUI/src/pages/nv_cong_2021.json" beforeDir="false" afterPath="$PROJECT_DIR$/TrueVoiceUI/src/pages/nv_smd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataconfig/nv_race_chloro_data.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2nAuJSDmYKFDdkO7C2G3atFuys6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging graph-testing",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e2f1a06-4739-447e-9c07-148b3e68c0d6" name="Changes" comment="" />
+      <created>1728428131078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728428131078</updated>
+      <workItem from="1728428133332" duration="2730000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

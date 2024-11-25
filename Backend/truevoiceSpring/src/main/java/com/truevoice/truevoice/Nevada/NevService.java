@@ -12,12 +12,15 @@ public class NevService {
 
     @Autowired
     private NevRepository nevRepository;
+
     public NevService(NevRepository nevRepository) {
         this.nevRepository = nevRepository;
     }
     public List<NevDistrict> allDistricts() {
         return nevRepository.findAll();
     }
+    
+ 
 }
 
 // package com.truevoice.truevoice.Nevada;

@@ -19,3 +19,4 @@ public class NevDistrict {
     private NevCrs crs;
     private List<NevFeature> features; 
 }
+
