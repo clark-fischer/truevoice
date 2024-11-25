@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 
 export default function BgInfo() {
+
+
   return (
     <Card>
       <CardHeader>
