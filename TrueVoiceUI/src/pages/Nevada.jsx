@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+// import state_smd_local from "../datafiles/nv_smd.json";
+// import state_smd_local from "../datafiles/NEVSMDFAIR.json";/import nv_4mmd from "../datafiles/nv_4mmd.json";
+import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
+import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
+import nv_race_by_district from "../datafiles/myJson.json"
+import race_stats from "../datafiles/nv_race_chloro_data2_precinct.json"
+import TabPlanSummary from "./TabPlanSummary";
 
 
 import {
@@ -29,42 +36,33 @@ import {
 } from "chart.js";
 
 import DistrictTable from "./DistrictTable";
-<<<<<<< HEAD
+
 // Leaflet/Map
-=======
+
 
 import TabStatePlans from "./TabStatePlans";
 
->>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
+
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data
 import "leaflet/dist/leaflet.css";
-<<<<<<< HEAD
 // import nv_smd_local from "../datafiles/nv_smd.json";
 // import nv_2mmd from "../datafiles/nv_2mmd.json";
 // import nv_3mmd from "../datafiles/nv_3mmd.json";
 // import nv_4mmd from "../datafiles/nv_4mmd.json";
-import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
-import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
-export default function Colorado() {
+
+
+function Colorado() {
   const [nv_smd, set_nv_smd] = React.useState([]);
   const [nv_2mmd, set_nv_2mmd] = React.useState([]);
   const [nv_3mmd, set_nv_3mmd] = React.useState([]);
   const [nv_4mmd, set_nv_4mmd] = React.useState([]);
 
-=======
-// import state_smd_local from "../datafiles/nv_smd.json";
-// import state_smd_local from "../datafiles/NEVSMDFAIR.json";
-import nv_4mmd from "../datafiles/nv_4mmd.json";
-import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
-import nv_race_data from "../datafiles/nv_race_chloro_data.json";
+}
 
-import nv_race_by_district from "../datafiles/myJson.json"
-import race_stats from "../datafiles/nv_race_chloro_data2_precinct.json"
-import TabPlanSummary from "./TabPlanSummary";
 
 const heatmapGradient = {
   white: { 0.1: "yellow", 1: "orange" },
@@ -152,7 +150,7 @@ export default function State() {
   
 
   // charting functionality -- BEGIN
->>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
+
   ChartJS.register(
     BarElement,
     CategoryScale,
@@ -202,7 +200,7 @@ export default function State() {
     });
   };
 
-<<<<<<< HEAD
+
   const updatePartyData = (districtNo) => {
     const newData = [...partyData.datasets[0].data];
     newData[0] = Math.floor(Math.random() * 60) + 1;
@@ -215,7 +213,9 @@ export default function State() {
           data: newData,
         },
       ],
-=======
+    });
+  };
+{/*
   const eachDistrict = (feature, layer) => {
     const districtNo = feature.properties.DISTRICTNO;
     layer.on("mouseover", function () {
@@ -230,10 +230,10 @@ export default function State() {
 
       updateChartData(raceData, setRaceData);
       updateChartData(partyData, setPartyData);
->>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
+
     });
   };
-
+*/}
   const eachDistrict = (feature, layer) => {
     const districtNo = feature.properties.DISTRICTNO;
     layer.on("mouseover", function (e) {
@@ -245,6 +245,7 @@ export default function State() {
       updatePartyData(districtNo);
     });
   };
+
 
   const w = 1;
   const nevada_districts = {
@@ -359,14 +360,14 @@ export default function State() {
     });
   };
 
-<<<<<<< HEAD
-  const [geoJsonData, setGeoJsonData] = React.useState(nv_smd);
-  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() =>
+
+  const [geoJsonData_smd, setGeoJsonData_smd] = React.useState(nv_smd);
+  const [geoJsonStyle_smd, setGeoJsonStyle_smd] = React.useState(() =>
     getGeoJsonStyle(nv_smd)
   );
-=======
-  const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
-  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd));
+
+  const [geoJsonData_mmd, setGeoJsonData_mmd] = React.useState(state_smd);
+  const [geoJsonStyle_mmd, setGeoJsonStyle_mmd] = React.useState(() => getGeoJsonStyle(state_smd));
 
   const styleFeature = (feature) => {
     const tractId = feature.properties.GEOID; // assuming GEOID links to your data
@@ -397,7 +398,7 @@ export default function State() {
     };
   };
 
->>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
+
 
   const handleButtonClick = (data) => {
     setGeoJsonData(data);
@@ -433,7 +434,7 @@ export default function State() {
     const fetchDistrictsData = async () => {
 
 
-<<<<<<< HEAD
+
       try {
         const response = await axios.get(
           "http://localhost:8080/nevada/districts/all"
@@ -452,7 +453,7 @@ export default function State() {
     fetchDistrictsData();
   }, []);
 
-=======
+
 
 
   
@@ -465,7 +466,7 @@ export default function State() {
     setSelectedBoxes(updatedBoxes);
     console.log(`Box ${index + 1} clicked`);
   };
->>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
+
 
   return (
     <>
@@ -565,8 +566,8 @@ export default function State() {
               </Tooltip>
             </div>
           </div>
+          </div>
 
-<<<<<<< HEAD
           <div style={styles.controlsContainer}>
             <legend
               style={{
@@ -627,7 +628,7 @@ export default function State() {
                 <i>None</i>
               </p>
             </div>
-=======
+
           <Tabs mx={0} my={0}>
             <TabList>
               <Tab key={1}>Demographics</Tab>
@@ -642,7 +643,7 @@ export default function State() {
 
               <TabPlanSummary />
 
-              {/* <TabPanel padding={0}>
+             {/*  <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
                   <div>
                     <b>Selected District:</b>
@@ -654,7 +655,7 @@ export default function State() {
                       <i>None</i>
                     </p>
                   </div>
->>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
+
 
             <div>
               <br />
@@ -673,7 +674,7 @@ export default function State() {
               <b>Party Breakdown:</b>
             </div>
 
-<<<<<<< HEAD
+
             <Box m="0 auto">
               <Bar
                 data={partyData}
@@ -681,17 +682,19 @@ export default function State() {
               />
             </Box>
           </div>
-=======
+
                   <Box m="0 auto">
                     <Bar
                       data={partyData}
                       options={{ responsive: true, maintainAspectRatio: false }}
                     />
                   </Box>
-                </div>
-              </TabPanel> */}
+              
+            </TabPanel>
 
+            */}
               <TabStatePlans />
+              
 
               <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
@@ -732,9 +735,10 @@ export default function State() {
                 </div>
 
               </TabPanel>
+
             </TabPanels>
           </Tabs>
->>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
+
         </div>
       </Container>
 
@@ -841,6 +845,7 @@ export default function State() {
       <Heading as="h4" size="md" mx={15} my={5}>
         Breakdown by Race and Party Wins in Each District
       </Heading>
+
       <Container maxW="container.lg">
         <Center>
           <Box overflowX="auto">
@@ -849,7 +854,7 @@ export default function State() {
         </Center>
       </Container>
 
-<<<<<<< HEAD
+
       <Box mx={14} my={7}>
         <Heading>The Fair Representation Act</Heading>
         <Text>What exactly does the FRA propose?</Text>
@@ -886,7 +891,7 @@ export default function State() {
           . Or Google it...
         </Text>
       </Box>
-=======
+
       <MoreAbout />
       {/* <div>
                       {error && <p>Error: {error.message}</p>}
@@ -896,7 +901,7 @@ export default function State() {
                         <p>Loading...</p>
                       )}
                       </div> */}
->>>>>>> 735197f69e027a4deacc708dd68bf32f3cb5a0ba
+
     </>
   );
 }
