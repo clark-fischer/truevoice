@@ -14,6 +14,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Colorado from "./pages/Colorado";
 import Nevada from "./pages/Nevada";
+// import VoteShareSeatSharePlot from "../../testing_11_04/VoteSharePlot";
 
 //router and routes
 const router = createBrowserRouter(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="colorado" element={<Colorado />} />
       <Route path="nevada" element={<Nevada />} />
+      {/* <Route path="test" element={<VoteShareSeatSharePlot />} /> */}
     </Route>
   )
 );

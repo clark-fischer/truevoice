@@ -1,0 +1,7792 @@
+{
+    "32023960412": {
+        "white": 0.75,
+        "black": 0.03,
+        "native": 0.03,
+        "asian": 0.01,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3555.0
+    },
+    "32031003519": {
+        "white": 0.73,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.13,
+        "hawaiian": 0.02,
+        "other": 0.04,
+        "total_population": 4998.0
+    },
+    "32031002303": {
+        "white": 0.77,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3398.0
+    },
+    "32031003516": {
+        "white": 0.86,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.02,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 3467.0
+    },
+    "32031003520": {
+        "white": 0.55,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2549.0
+    },
+    "32031002414": {
+        "white": 0.73,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1436.0
+    },
+    "32031002413": {
+        "white": 0.68,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.2,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2915.0
+    },
+    "32031003310": {
+        "white": 0.74,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.15,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 1584.0
+    },
+    "32031003206": {
+        "white": 0.91,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.07,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1289.0
+    },
+    "32003005440": {
+        "white": 0.39,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.38,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5215.0
+    },
+    "32003005362": {
+        "white": 0.69,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3276.0
+    },
+    "32003005860": {
+        "white": 0.38,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.25,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 10250.0
+    },
+    "32003005112": {
+        "white": 0.41,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3051.0
+    },
+    "32003005876": {
+        "white": 0.8,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2037.0
+    },
+    "32003003661": {
+        "white": 0.3,
+        "black": 0.22,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.27,
+        "hawaiian": 0.04,
+        "other": 0.0,
+        "total_population": 4384.0
+    },
+    "32003005720": {
+        "white": 0.57,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3204.0
+    },
+    "32003007802": {
+        "white": 0.49,
+        "black": 0.24,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 470.0
+    },
+    "32003005361": {
+        "white": 0.71,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4433.0
+    },
+    "32003003267": {
+        "white": 0.67,
+        "black": 0.04,
+        "native": 0.03,
+        "asian": 0.03,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4245.0
+    },
+    "32003005110": {
+        "white": 0.28,
+        "black": 0.38,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3001.0
+    },
+    "32003005858": {
+        "white": 0.43,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.2,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 11593.0
+    },
+    "32003005866": {
+        "white": 0.34,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.3,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 7639.0
+    },
+    "32003002901": {
+        "white": 0.24,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.35,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4864.0
+    },
+    "32003005865": {
+        "white": 0.3,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.38,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5781.0
+    },
+    "32003003649": {
+        "white": 0.17,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.31,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 2616.0
+    },
+    "32003005364": {
+        "white": 0.62,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6864.0
+    },
+    "32003005717": {
+        "white": 0.58,
+        "black": 0.06,
+        "native": 0.01,
+        "asian": 0.12,
+        "hispanic": 0.14,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6741.0
+    },
+    "32003001615": {
+        "white": 0.23,
+        "black": 0.22,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.44,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4245.0
+    },
+    "32003001614": {
+        "white": 0.34,
+        "black": 0.33,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2142.0
+    },
+    "32003002998": {
+        "white": 0.35,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.33,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4270.0
+    },
+    "32003002849": {
+        "white": 0.4,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3908.0
+    },
+    "32003005867": {
+        "white": 0.44,
+        "black": 0.04,
+        "native": 0.02,
+        "asian": 0.21,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5812.0
+    },
+    "32003005857": {
+        "white": 0.48,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.21,
+        "hispanic": 0.12,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6389.0
+    },
+    "32003005874": {
+        "white": 0.41,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.25,
+        "hawaiian": 0.01,
+        "other": 0.08,
+        "total_population": 5056.0
+    },
+    "32003007900": {
+        "white": 0.42,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.23,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 3501.0
+    },
+    "32003002850": {
+        "white": 0.33,
+        "black": 0.13,
+        "native": 0.04,
+        "asian": 0.2,
+        "hispanic": 0.2,
+        "hawaiian": 0.06,
+        "other": 0.0,
+        "total_population": 3547.0
+    },
+    "32003005114": {
+        "white": 0.4,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.29,
+        "hawaiian": 0.0,
+        "other": 0.04,
+        "total_population": 4635.0
+    },
+    "32003005363": {
+        "white": 0.55,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 2229.0
+    },
+    "32003005862": {
+        "white": 0.45,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.25,
+        "hawaiian": 0.05,
+        "other": 0.01,
+        "total_population": 6562.0
+    },
+    "32003005441": {
+        "white": 0.63,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.19,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 7212.0
+    },
+    "32003002851": {
+        "white": 0.25,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.42,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 7260.0
+    },
+    "32003002853": {
+        "white": 0.45,
+        "black": 0.07,
+        "native": 0.01,
+        "asian": 0.13,
+        "hispanic": 0.16,
+        "hawaiian": 0.08,
+        "other": 0.0,
+        "total_population": 3424.0
+    },
+    "32003003666": {
+        "white": 0.32,
+        "black": 0.25,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4353.0
+    },
+    "32003005861": {
+        "white": 0.59,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 1757.0
+    },
+    "32003002902": {
+        "white": 0.24,
+        "black": 0.12,
+        "native": 0.02,
+        "asian": 0.43,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4883.0
+    },
+    "32003005113": {
+        "white": 0.35,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3268.0
+    },
+    "32003002997": {
+        "white": 0.5,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3625.0
+    },
+    "32003005721": {
+        "white": 0.78,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.13,
+        "hispanic": 0.04,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3190.0
+    },
+    "32003005365": {
+        "white": 0.58,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3741.0
+    },
+    "32003005869": {
+        "white": 0.52,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3813.0
+    },
+    "32003003268": {
+        "white": 0.67,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3777.0
+    },
+    "32003003656": {
+        "white": 0.34,
+        "black": 0.29,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3267.0
+    },
+    "32003003322": {
+        "white": 0.7,
+        "black": 0.07,
+        "native": 0.02,
+        "asian": 0.02,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3915.0
+    },
+    "32003003657": {
+        "white": 0.13,
+        "black": 0.45,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3447.0
+    },
+    "32003003650": {
+        "white": 0.26,
+        "black": 0.19,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.51,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3531.0
+    },
+    "32003003651": {
+        "white": 0.28,
+        "black": 0.25,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 5791.0
+    },
+    "32003005863": {
+        "white": 0.38,
+        "black": 0.1,
+        "native": 0.02,
+        "asian": 0.22,
+        "hispanic": 0.2,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2626.0
+    },
+    "32003005868": {
+        "white": 0.45,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.31,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5623.0
+    },
+    "32003005871": {
+        "white": 0.27,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1909.0
+    },
+    "32003003645": {
+        "white": 0.33,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.38,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4522.0
+    },
+    "32003003263": {
+        "white": 0.56,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.18,
+        "hawaiian": 0.06,
+        "other": 0.0,
+        "total_population": 5008.0
+    },
+    "32003003269": {
+        "white": 0.49,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.3,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2617.0
+    },
+    "32003005719": {
+        "white": 0.59,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4547.0
+    },
+    "32003003648": {
+        "white": 0.28,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.53,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4688.0
+    },
+    "32003005872": {
+        "white": 0.61,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 7567.0
+    },
+    "32003003654": {
+        "white": 0.21,
+        "black": 0.22,
+        "native": 0.01,
+        "asian": 0.17,
+        "hispanic": 0.26,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 3374.0
+    },
+    "32003003652": {
+        "white": 0.18,
+        "black": 0.46,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.29,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4764.0
+    },
+    "32003005859": {
+        "white": 0.46,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3725.0
+    },
+    "32003002852": {
+        "white": 0.52,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.24,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1043.0
+    },
+    "32003005111": {
+        "white": 0.46,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 6156.0
+    },
+    "32003005116": {
+        "white": 0.62,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.2,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5131.0
+    },
+    "32003003646": {
+        "white": 0.22,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.53,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5045.0
+    },
+    "32003003655": {
+        "white": 0.18,
+        "black": 0.25,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.4,
+        "hawaiian": 0.02,
+        "other": 0.03,
+        "total_population": 5947.0
+    },
+    "32003005722": {
+        "white": 0.65,
+        "black": 0.12,
+        "native": 0.01,
+        "asian": 0.12,
+        "hispanic": 0.02,
+        "hawaiian": 0.0,
+        "other": 0.06,
+        "total_population": 2845.0
+    },
+    "32003003270": {
+        "white": 0.54,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3117.0
+    },
+    "32003003665": {
+        "white": 0.28,
+        "black": 0.29,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.23,
+        "hawaiian": 0.05,
+        "other": 0.0,
+        "total_population": 5294.0
+    },
+    "32003003664": {
+        "white": 0.35,
+        "black": 0.12,
+        "native": 0.1,
+        "asian": 0.08,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3292.0
+    },
+    "32003005718": {
+        "white": 0.45,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2033.0
+    },
+    "32003003663": {
+        "white": 0.44,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2400.0
+    },
+    "32003003660": {
+        "white": 0.3,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5270.0
+    },
+    "32003005877": {
+        "white": 0.45,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.16,
+        "hispanic": 0.16,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 7023.0
+    },
+    "32003003653": {
+        "white": 0.33,
+        "black": 0.19,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.39,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2327.0
+    },
+    "32003003658": {
+        "white": 0.21,
+        "black": 0.43,
+        "native": 0.0,
+        "asian": 0.24,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1595.0
+    },
+    "32003003266": {
+        "white": 0.48,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 5434.0
+    },
+    "32003003647": {
+        "white": 0.26,
+        "black": 0.22,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5486.0
+    },
+    "32003003659": {
+        "white": 0.23,
+        "black": 0.3,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2717.0
+    },
+    "32003005442": {
+        "white": 0.56,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3880.0
+    },
+    "32003003264": {
+        "white": 0.55,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.17,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 6633.0
+    },
+    "32003003265": {
+        "white": 0.47,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.18,
+        "hawaiian": 0.06,
+        "other": 0.0,
+        "total_population": 8357.0
+    },
+    "32003003662": {
+        "white": 0.56,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5073.0
+    },
+    "32003005864": {
+        "white": 0.36,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.25,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6522.0
+    },
+    "32003005366": {
+        "white": 0.76,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3888.0
+    },
+    "32003007801": {
+        "white": 0.56,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1235.0
+    },
+    "32003003323": {
+        "white": 0.64,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 1634.0
+    },
+    "32031001203": {
+        "white": 0.67,
+        "black": 0.05,
+        "native": 0.01,
+        "asian": 0.07,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2723.0
+    },
+    "32031001019": {
+        "white": 0.37,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.49,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 1906.0
+    },
+    "32031003002": {
+        "white": 0.36,
+        "black": 0.02,
+        "native": 0.03,
+        "asian": 0.01,
+        "hispanic": 0.46,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2792.0
+    },
+    "32031002218": {
+        "white": 0.79,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.06,
+        "hawaiian": 0.06,
+        "other": 0.0,
+        "total_population": 3776.0
+    },
+    "32031001018": {
+        "white": 0.4,
+        "black": 0.08,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.47,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2322.0
+    },
+    "32031003112": {
+        "white": 0.49,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.35,
+        "hawaiian": 0.06,
+        "other": 0.0,
+        "total_population": 3109.0
+    },
+    "32031002621": {
+        "white": 0.49,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.49,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2193.0
+    },
+    "32031000701": {
+        "white": 0.57,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2692.0
+    },
+    "32031000104": {
+        "white": 0.57,
+        "black": 0.08,
+        "native": 0.01,
+        "asian": 0.19,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2626.0
+    },
+    "32031001204": {
+        "white": 0.57,
+        "black": 0.05,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2071.0
+    },
+    "32031000301": {
+        "white": 0.81,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.06,
+        "total_population": 1678.0
+    },
+    "32031000302": {
+        "white": 0.73,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1928.0
+    },
+    "32031001017": {
+        "white": 0.64,
+        "black": 0.01,
+        "native": 0.02,
+        "asian": 0.04,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 937.0
+    },
+    "32031003522": {
+        "white": 0.83,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3670.0
+    },
+    "32023960408": {
+        "white": 0.85,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.07,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6358.0
+    },
+    "32023960416": {
+        "white": 0.72,
+        "black": 0.05,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.14,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 3685.0
+    },
+    "32023960411": {
+        "white": 0.62,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3481.0
+    },
+    "32023960413": {
+        "white": 0.77,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.16,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 3563.0
+    },
+    "32023960410": {
+        "white": 0.72,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.17,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5359.0
+    },
+    "32023960415": {
+        "white": 0.77,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2238.0
+    },
+    "32023960414": {
+        "white": 0.9,
+        "black": 0.01,
+        "native": 0.02,
+        "asian": 0.01,
+        "hispanic": 0.03,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 1968.0
+    },
+    "32023960409": {
+        "white": 0.56,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.21,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6338.0
+    },
+    "32023960407": {
+        "white": 0.62,
+        "black": 0.05,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3609.0
+    },
+    "32031003108": {
+        "white": 0.66,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.24,
+        "hawaiian": 0.0,
+        "other": 0.05,
+        "total_population": 3319.0
+    },
+    "32031003507": {
+        "white": 0.66,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.28,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4436.0
+    },
+    "32031002500": {
+        "white": 0.81,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.1,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5462.0
+    },
+    "32019960206": {
+        "white": 0.81,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 1338.0
+    },
+    "32019960106": {
+        "white": 0.82,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4924.0
+    },
+    "32019960205": {
+        "white": 0.89,
+        "black": 0.0,
+        "native": 0.06,
+        "asian": 0.0,
+        "hispanic": 0.04,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1841.0
+    },
+    "32019960204": {
+        "white": 0.75,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2137.0
+    },
+    "32019960108": {
+        "white": 0.69,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5152.0
+    },
+    "32019960304": {
+        "white": 0.75,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5586.0
+    },
+    "32019960305": {
+        "white": 0.64,
+        "black": 0.0,
+        "native": 0.03,
+        "asian": 0.02,
+        "hispanic": 0.29,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5817.0
+    },
+    "32019960902": {
+        "white": 0.71,
+        "black": 0.02,
+        "native": 0.11,
+        "asian": 0.0,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3188.0
+    },
+    "32019960801": {
+        "white": 0.71,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2769.0
+    },
+    "32019960802": {
+        "white": 0.77,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1806.0
+    },
+    "32019960901": {
+        "white": 0.7,
+        "black": 0.01,
+        "native": 0.07,
+        "asian": 0.0,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2367.0
+    },
+    "32019960203": {
+        "white": 0.87,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2206.0
+    },
+    "32019960104": {
+        "white": 0.62,
+        "black": 0.0,
+        "native": 0.05,
+        "asian": 0.0,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4084.0
+    },
+    "32019960107": {
+        "white": 0.83,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3037.0
+    },
+    "32019960105": {
+        "white": 0.68,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.2,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4081.0
+    },
+    "32023980500": {
+        "white": 0.0,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.0,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 0.0
+    },
+    "32031001701": {
+        "white": 0.43,
+        "black": 0.03,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.36,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 3349.0
+    },
+    "32003003307": {
+        "white": 0.43,
+        "black": 0.13,
+        "native": 0.02,
+        "asian": 0.08,
+        "hispanic": 0.19,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6195.0
+    },
+    "32003003634": {
+        "white": 0.35,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.39,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4358.0
+    },
+    "32003003635": {
+        "white": 0.28,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.38,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6098.0
+    },
+    "32003003644": {
+        "white": 0.18,
+        "black": 0.34,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.32,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5043.0
+    },
+    "32003003642": {
+        "white": 0.13,
+        "black": 0.47,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4767.0
+    },
+    "32031000105": {
+        "white": 0.66,
+        "black": 0.09,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.16,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 2391.0
+    },
+    "32031000106": {
+        "white": 0.65,
+        "black": 0.14,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.12,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 1020.0
+    },
+    "32031000702": {
+        "white": 0.53,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3417.0
+    },
+    "32031003001": {
+        "white": 0.38,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.57,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5250.0
+    },
+    "32031001903": {
+        "white": 0.34,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.56,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4200.0
+    },
+    "32031001904": {
+        "white": 0.52,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.3,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2007.0
+    },
+    "32031003517": {
+        "white": 0.66,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.25,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5231.0
+    },
+    "32003005829": {
+        "white": 0.36,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.23,
+        "hispanic": 0.18,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6521.0
+    },
+    "32003002981": {
+        "white": 0.22,
+        "black": 0.25,
+        "native": 0.0,
+        "asian": 0.2,
+        "hispanic": 0.24,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4467.0
+    },
+    "32031002208": {
+        "white": 0.59,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.24,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3161.0
+    },
+    "32031001010": {
+        "white": 0.73,
+        "black": 0.03,
+        "native": 0.01,
+        "asian": 0.07,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4385.0
+    },
+    "32031000201": {
+        "white": 0.2,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.63,
+        "hawaiian": 0.06,
+        "other": 0.0,
+        "total_population": 4096.0
+    },
+    "32031003510": {
+        "white": 0.55,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.11,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3408.0
+    },
+    "32031003305": {
+        "white": 0.85,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 826.0
+    },
+    "32003004602": {
+        "white": 0.05,
+        "black": 0.23,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.7,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2882.0
+    },
+    "32003004601": {
+        "white": 0.09,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.66,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5656.0
+    },
+    "32003005014": {
+        "white": 0.27,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.44,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5097.0
+    },
+    "32003005354": {
+        "white": 0.63,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 7317.0
+    },
+    "32003005353": {
+        "white": 0.57,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5253.0
+    },
+    "32003005360": {
+        "white": 0.64,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5698.0
+    },
+    "32003002841": {
+        "white": 0.49,
+        "black": 0.06,
+        "native": 0.01,
+        "asian": 0.18,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5411.0
+    },
+    "32003005356": {
+        "white": 0.43,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.17,
+        "hawaiian": 0.02,
+        "other": 0.02,
+        "total_population": 3150.0
+    },
+    "32003003247": {
+        "white": 0.57,
+        "black": 0.15,
+        "native": 0.03,
+        "asian": 0.08,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3730.0
+    },
+    "32003005905": {
+        "white": 0.78,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.09,
+        "hawaiian": 0.04,
+        "other": 0.0,
+        "total_population": 2236.0
+    },
+    "32031990000": {
+        "white": 0.0,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.0,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 0.0
+    },
+    "32003005434": {
+        "white": 0.65,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5419.0
+    },
+    "32003005439": {
+        "white": 0.42,
+        "black": 0.06,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.4,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 3859.0
+    },
+    "32003005615": {
+        "white": 0.75,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.07,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1876.0
+    },
+    "32003001501": {
+        "white": 0.25,
+        "black": 0.26,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.42,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3242.0
+    },
+    "32003002848": {
+        "white": 0.49,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.32,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3560.0
+    },
+    "32003005435": {
+        "white": 0.61,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3413.0
+    },
+    "32003000528": {
+        "white": 0.14,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.75,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2444.0
+    },
+    "32003001402": {
+        "white": 0.14,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.79,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4153.0
+    },
+    "32003003431": {
+        "white": 0.14,
+        "black": 0.18,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.53,
+        "hawaiian": 0.01,
+        "other": 0.02,
+        "total_population": 3181.0
+    },
+    "32003000107": {
+        "white": 0.17,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.55,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3859.0
+    },
+    "32003003430": {
+        "white": 0.12,
+        "black": 0.33,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.47,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2912.0
+    },
+    "32003003616": {
+        "white": 0.06,
+        "black": 0.3,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.58,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4382.0
+    },
+    "32003000401": {
+        "white": 0.34,
+        "black": 0.26,
+        "native": 0.03,
+        "asian": 0.09,
+        "hispanic": 0.19,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2585.0
+    },
+    "32003000527": {
+        "white": 0.09,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.79,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3686.0
+    },
+    "32003002995": {
+        "white": 0.16,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.45,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2402.0
+    },
+    "32003002302": {
+        "white": 0.48,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.18,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 549.0
+    },
+    "32031003207": {
+        "white": 0.85,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.03,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3887.0
+    },
+    "32031002216": {
+        "white": 0.62,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.24,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2926.0
+    },
+    "32031002215": {
+        "white": 0.67,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2927.0
+    },
+    "32031001704": {
+        "white": 0.49,
+        "black": 0.03,
+        "native": 0.02,
+        "asian": 0.04,
+        "hispanic": 0.41,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3058.0
+    },
+    "32031003205": {
+        "white": 0.75,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4320.0
+    },
+    "32031002217": {
+        "white": 0.61,
+        "black": 0.02,
+        "native": 0.03,
+        "asian": 0.19,
+        "hispanic": 0.06,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3685.0
+    },
+    "32031003311": {
+        "white": 0.76,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1698.0
+    },
+    "32031002219": {
+        "white": 0.71,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4813.0
+    },
+    "32031003521": {
+        "white": 0.57,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3057.0
+    },
+    "32031002214": {
+        "white": 0.42,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.31,
+        "hispanic": 0.19,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2884.0
+    },
+    "32031002620": {
+        "white": 0.54,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.29,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3695.0
+    },
+    "32031002623": {
+        "white": 0.61,
+        "black": 0.06,
+        "native": 0.02,
+        "asian": 0.05,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3719.0
+    },
+    "32031003518": {
+        "white": 0.76,
+        "black": 0.02,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3179.0
+    },
+    "32031002622": {
+        "white": 0.34,
+        "black": 0.04,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.56,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4833.0
+    },
+    "32031002304": {
+        "white": 0.86,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.07,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4228.0
+    },
+    "32031001016": {
+        "white": 0.45,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.27,
+        "hawaiian": 0.03,
+        "other": 0.01,
+        "total_population": 2664.0
+    },
+    "32031000401": {
+        "white": 0.67,
+        "black": 0.05,
+        "native": 0.02,
+        "asian": 0.01,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2536.0
+    },
+    "32031000103": {
+        "white": 0.6,
+        "black": 0.07,
+        "native": 0.09,
+        "asian": 0.1,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 985.0
+    },
+    "32031001504": {
+        "white": 0.58,
+        "black": 0.07,
+        "native": 0.02,
+        "asian": 0.09,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4006.0
+    },
+    "32031002213": {
+        "white": 0.71,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.07,
+        "hawaiian": 0.04,
+        "other": 0.04,
+        "total_population": 5286.0
+    },
+    "32031000402": {
+        "white": 0.83,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2582.0
+    },
+    "32003005013": {
+        "white": 0.12,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.62,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4596.0
+    },
+    "32003002996": {
+        "white": 0.11,
+        "black": 0.22,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.42,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 3760.0
+    },
+    "32003002206": {
+        "white": 0.13,
+        "black": 0.23,
+        "native": 0.02,
+        "asian": 0.12,
+        "hispanic": 0.47,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3729.0
+    },
+    "32003002207": {
+        "white": 0.04,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.81,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4057.0
+    },
+    "32003002605": {
+        "white": 0.31,
+        "black": 0.52,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 416.0
+    },
+    "32003004402": {
+        "white": 0.09,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.68,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3571.0
+    },
+    "32003004301": {
+        "white": 0.03,
+        "black": 0.08,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.83,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1622.0
+    },
+    "32003004302": {
+        "white": 0.05,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.86,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3967.0
+    },
+    "32005001000": {
+        "white": 0.83,
+        "black": 0.0,
+        "native": 0.03,
+        "asian": 0.02,
+        "hispanic": 0.07,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2789.0
+    },
+    "32005002100": {
+        "white": 0.74,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 2229.0
+    },
+    "32003000108": {
+        "white": 0.21,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.68,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4259.0
+    },
+    "32003005834": {
+        "white": 0.45,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.21,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3439.0
+    },
+    "32003005349": {
+        "white": 0.62,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4916.0
+    },
+    "32003002846": {
+        "white": 0.26,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.29,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5509.0
+    },
+    "32003002844": {
+        "white": 0.39,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.34,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5181.0
+    },
+    "32003005346": {
+        "white": 0.52,
+        "black": 0.06,
+        "native": 0.01,
+        "asian": 0.17,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5994.0
+    },
+    "32003000402": {
+        "white": 0.12,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.52,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3048.0
+    },
+    "32003002842": {
+        "white": 0.46,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.15,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 7648.0
+    },
+    "32003002964": {
+        "white": 0.31,
+        "black": 0.33,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.21,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4759.0
+    },
+    "32003002968": {
+        "white": 0.18,
+        "black": 0.23,
+        "native": 0.0,
+        "asian": 0.27,
+        "hispanic": 0.24,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2615.0
+    },
+    "32003002969": {
+        "white": 0.46,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 1891.0
+    },
+    "32003005837": {
+        "white": 0.56,
+        "black": 0.08,
+        "native": 0.01,
+        "asian": 0.16,
+        "hispanic": 0.13,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 4500.0
+    },
+    "32003005830": {
+        "white": 0.33,
+        "black": 0.16,
+        "native": 0.01,
+        "asian": 0.2,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4141.0
+    },
+    "32003005831": {
+        "white": 0.39,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.18,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 6612.0
+    },
+    "32003002838": {
+        "white": 0.47,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5583.0
+    },
+    "32003005845": {
+        "white": 0.58,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.17,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 3984.0
+    },
+    "32003005825": {
+        "white": 0.47,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.16,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5145.0
+    },
+    "32003005849": {
+        "white": 0.28,
+        "black": 0.25,
+        "native": 0.0,
+        "asian": 0.17,
+        "hispanic": 0.18,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 4029.0
+    },
+    "32003005826": {
+        "white": 0.41,
+        "black": 0.13,
+        "native": 0.01,
+        "asian": 0.12,
+        "hispanic": 0.27,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 3879.0
+    },
+    "32510000502": {
+        "white": 0.72,
+        "black": 0.0,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2821.0
+    },
+    "32510000501": {
+        "white": 0.48,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.41,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5960.0
+    },
+    "32510000900": {
+        "white": 0.62,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.34,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5854.0
+    },
+    "32510000701": {
+        "white": 0.57,
+        "black": 0.12,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4338.0
+    },
+    "32007951700": {
+        "white": 0.2,
+        "black": 0.01,
+        "native": 0.29,
+        "asian": 0.0,
+        "hispanic": 0.43,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 2543.0
+    },
+    "32013010501": {
+        "white": 0.76,
+        "black": 0.02,
+        "native": 0.09,
+        "asian": 0.0,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2540.0
+    },
+    "32013010502": {
+        "white": 0.64,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3796.0
+    },
+    "32031001703": {
+        "white": 0.42,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.35,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 2772.0
+    },
+    "32031003111": {
+        "white": 0.57,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1665.0
+    },
+    "32031001503": {
+        "white": 0.34,
+        "black": 0.05,
+        "native": 0.01,
+        "asian": 0.18,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3636.0
+    },
+    "32013010701": {
+        "white": 0.56,
+        "black": 0.01,
+        "native": 0.02,
+        "asian": 0.03,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4758.0
+    },
+    "32003005903": {
+        "white": 0.84,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3482.0
+    },
+    "32003005016": {
+        "white": 0.34,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.38,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5382.0
+    },
+    "32003002604": {
+        "white": 0.32,
+        "black": 0.13,
+        "native": 0.01,
+        "asian": 0.16,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2015.0
+    },
+    "32005001900": {
+        "white": 0.89,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1422.0
+    },
+    "32003003621": {
+        "white": 0.8,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.03,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2987.0
+    },
+    "32003003619": {
+        "white": 0.36,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.35,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4900.0
+    },
+    "32003000520": {
+        "white": 0.08,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.88,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1976.0
+    },
+    "32003000522": {
+        "white": 0.11,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.66,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3245.0
+    },
+    "32003002974": {
+        "white": 0.34,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.21,
+        "hispanic": 0.28,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 7553.0
+    },
+    "32003002975": {
+        "white": 0.32,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.29,
+        "hispanic": 0.18,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 6319.0
+    },
+    "32003005351": {
+        "white": 0.59,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5471.0
+    },
+    "32003005350": {
+        "white": 0.64,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3640.0
+    },
+    "32003004925": {
+        "white": 0.17,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.58,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5999.0
+    },
+    "32015000302": {
+        "white": 0.69,
+        "black": 0.0,
+        "native": 0.03,
+        "asian": 0.01,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3404.0
+    },
+    "32015000301": {
+        "white": 0.7,
+        "black": 0.0,
+        "native": 0.03,
+        "asian": 0.0,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2324.0
+    },
+    "32023960405": {
+        "white": 0.68,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4560.0
+    },
+    "32023960100": {
+        "white": 0.73,
+        "black": 0.0,
+        "native": 0.05,
+        "asian": 0.0,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2817.0
+    },
+    "32023960200": {
+        "white": 0.74,
+        "black": 0.08,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1942.0
+    },
+    "32023960300": {
+        "white": 0.66,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2225.0
+    },
+    "32001950100": {
+        "white": 0.77,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2265.0
+    },
+    "32001950400": {
+        "white": 0.14,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.58,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1004.0
+    },
+    "32001950500": {
+        "white": 0.43,
+        "black": 0.01,
+        "native": 0.38,
+        "asian": 0.0,
+        "hispanic": 0.1,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 1425.0
+    },
+    "32001950600": {
+        "white": 0.78,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5505.0
+    },
+    "32003005904": {
+        "white": 0.9,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.05,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3919.0
+    },
+    "32510000702": {
+        "white": 0.72,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3967.0
+    },
+    "32510001002": {
+        "white": 0.8,
+        "black": 0.01,
+        "native": 0.02,
+        "asian": 0.01,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4267.0
+    },
+    "32510001001": {
+        "white": 0.26,
+        "black": 0.0,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.57,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4488.0
+    },
+    "32003004500": {
+        "white": 0.04,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.84,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 4898.0
+    },
+    "32031003513": {
+        "white": 0.69,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4082.0
+    },
+    "32031980000": {
+        "white": 0.48,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.2,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 138.0
+    },
+    "32031002211": {
+        "white": 0.28,
+        "black": 0.08,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.57,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3884.0
+    },
+    "32003004917": {
+        "white": 0.24,
+        "black": 0.07,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.5,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3710.0
+    },
+    "32003004918": {
+        "white": 0.21,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.26,
+        "hispanic": 0.42,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3993.0
+    },
+    "32003004919": {
+        "white": 0.47,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.34,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3941.0
+    },
+    "32003004920": {
+        "white": 0.2,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.66,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5637.0
+    },
+    "32003004915": {
+        "white": 0.19,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.67,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 3164.0
+    },
+    "32003004916": {
+        "white": 0.26,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.61,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2598.0
+    },
+    "32003005107": {
+        "white": 0.67,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4660.0
+    },
+    "32003004921": {
+        "white": 0.33,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.55,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5063.0
+    },
+    "32003005108": {
+        "white": 0.5,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3784.0
+    },
+    "32003005200": {
+        "white": 0.63,
+        "black": 0.05,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.24,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3929.0
+    },
+    "32003005311": {
+        "white": 0.53,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3567.0
+    },
+    "32003005312": {
+        "white": 0.59,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2565.0
+    },
+    "32003004924": {
+        "white": 0.25,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.69,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3830.0
+    },
+    "32003005006": {
+        "white": 0.44,
+        "black": 0.19,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.3,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4211.0
+    },
+    "32031002107": {
+        "white": 0.26,
+        "black": 0.03,
+        "native": 0.15,
+        "asian": 0.07,
+        "hispanic": 0.45,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1818.0
+    },
+    "32003005010": {
+        "white": 0.19,
+        "black": 0.09,
+        "native": 0.02,
+        "asian": 0.06,
+        "hispanic": 0.56,
+        "hawaiian": 0.01,
+        "other": 0.02,
+        "total_population": 4721.0
+    },
+    "32003004923": {
+        "white": 0.3,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.47,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4082.0
+    },
+    "32003005102": {
+        "white": 0.52,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.23,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 5351.0
+    },
+    "32003005103": {
+        "white": 0.51,
+        "black": 0.07,
+        "native": 0.02,
+        "asian": 0.04,
+        "hispanic": 0.27,
+        "hawaiian": 0.02,
+        "other": 0.02,
+        "total_population": 5519.0
+    },
+    "32003005104": {
+        "white": 0.52,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3150.0
+    },
+    "32003005012": {
+        "white": 0.43,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.39,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2777.0
+    },
+    "32003005316": {
+        "white": 0.53,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.19,
+        "hawaiian": 0.05,
+        "other": 0.0,
+        "total_population": 3823.0
+    },
+    "32003005317": {
+        "white": 0.63,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5419.0
+    },
+    "32003005313": {
+        "white": 0.56,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.16,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 5642.0
+    },
+    "32003005314": {
+        "white": 0.69,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2497.0
+    },
+    "32003000201": {
+        "white": 0.15,
+        "black": 0.26,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.46,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3953.0
+    },
+    "32003000203": {
+        "white": 0.29,
+        "black": 0.26,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.37,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4251.0
+    },
+    "32003000204": {
+        "white": 0.5,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.26,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 1351.0
+    },
+    "32003000302": {
+        "white": 0.1,
+        "black": 0.45,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.42,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4506.0
+    },
+    "32003005011": {
+        "white": 0.18,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.65,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4112.0
+    },
+    "32510000602": {
+        "white": 0.5,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.37,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3053.0
+    },
+    "32510000601": {
+        "white": 0.7,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2799.0
+    },
+    "32003000519": {
+        "white": 0.21,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.65,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5009.0
+    },
+    "32003003610": {
+        "white": 0.23,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.5,
+        "hawaiian": 0.0,
+        "other": 0.04,
+        "total_population": 6268.0
+    },
+    "32003000101": {
+        "white": 0.22,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.62,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6833.0
+    },
+    "32003000600": {
+        "white": 0.37,
+        "black": 0.11,
+        "native": 0.02,
+        "asian": 0.03,
+        "hispanic": 0.43,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2893.0
+    },
+    "32031001201": {
+        "white": 0.7,
+        "black": 0.02,
+        "native": 0.02,
+        "asian": 0.04,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2921.0
+    },
+    "32003003613": {
+        "white": 0.2,
+        "black": 0.26,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.45,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 7973.0
+    },
+    "32003004703": {
+        "white": 0.04,
+        "black": 0.26,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.58,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 6391.0
+    },
+    "32003001003": {
+        "white": 0.36,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.48,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4095.0
+    },
+    "32003001004": {
+        "white": 0.35,
+        "black": 0.04,
+        "native": 0.02,
+        "asian": 0.18,
+        "hispanic": 0.34,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 6813.0
+    },
+    "32003000518": {
+        "white": 0.1,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.72,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5368.0
+    },
+    "32003001005": {
+        "white": 0.61,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.07,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1332.0
+    },
+    "32003001607": {
+        "white": 0.33,
+        "black": 0.27,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.34,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 3726.0
+    },
+    "32003001608": {
+        "white": 0.36,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.47,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 1877.0
+    },
+    "32003001609": {
+        "white": 0.16,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.69,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4067.0
+    },
+    "32003003615": {
+        "white": 0.27,
+        "black": 0.11,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.54,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3036.0
+    },
+    "32003003700": {
+        "white": 0.13,
+        "black": 0.29,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.5,
+        "hawaiian": 0.05,
+        "other": 0.0,
+        "total_population": 3843.0
+    },
+    "32003004707": {
+        "white": 0.09,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.78,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3258.0
+    },
+    "32003000700": {
+        "white": 0.43,
+        "black": 0.26,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.23,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 3773.0
+    },
+    "32003003800": {
+        "white": 0.11,
+        "black": 0.21,
+        "native": 0.03,
+        "asian": 0.0,
+        "hispanic": 0.61,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4201.0
+    },
+    "32003004000": {
+        "white": 0.09,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.86,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3487.0
+    },
+    "32003001610": {
+        "white": 0.18,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.77,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2933.0
+    },
+    "32003004710": {
+        "white": 0.12,
+        "black": 0.19,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.6,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 7410.0
+    },
+    "32003004712": {
+        "white": 0.23,
+        "black": 0.29,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.43,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5084.0
+    },
+    "32003004713": {
+        "white": 0.12,
+        "black": 0.38,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4414.0
+    },
+    "32003004714": {
+        "white": 0.09,
+        "black": 0.13,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.74,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5608.0
+    },
+    "32003004715": {
+        "white": 0.09,
+        "black": 0.25,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.55,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6491.0
+    },
+    "32003004716": {
+        "white": 0.11,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.7,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 3581.0
+    },
+    "32003004717": {
+        "white": 0.16,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.8,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3615.0
+    },
+    "32003001006": {
+        "white": 0.56,
+        "black": 0.06,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4089.0
+    },
+    "32003001100": {
+        "white": 0.28,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.38,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2973.0
+    },
+    "32003001200": {
+        "white": 0.24,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.56,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4154.0
+    },
+    "32003001300": {
+        "white": 0.26,
+        "black": 0.07,
+        "native": 0.02,
+        "asian": 0.04,
+        "hispanic": 0.49,
+        "hawaiian": 0.0,
+        "other": 0.09,
+        "total_population": 4510.0
+    },
+    "32003004100": {
+        "white": 0.03,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.93,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5605.0
+    },
+    "32003004200": {
+        "white": 0.15,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.78,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 4721.0
+    },
+    "32003004910": {
+        "white": 0.18,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.58,
+        "hawaiian": 0.07,
+        "other": 0.0,
+        "total_population": 2814.0
+    },
+    "32003004911": {
+        "white": 0.18,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.58,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4893.0
+    },
+    "32003004912": {
+        "white": 0.16,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.64,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 4674.0
+    },
+    "32003004907": {
+        "white": 0.24,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.6,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3944.0
+    },
+    "32005002200": {
+        "white": 0.9,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.07,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6642.0
+    },
+    "32005002000": {
+        "white": 0.78,
+        "black": 0.0,
+        "native": 0.02,
+        "asian": 0.02,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3448.0
+    },
+    "32005001700": {
+        "white": 0.49,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.36,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 1874.0
+    },
+    "32005001800": {
+        "white": 0.8,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.08,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1886.0
+    },
+    "32005001600": {
+        "white": 0.82,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 1646.0
+    },
+    "32005002500": {
+        "white": 0.77,
+        "black": 0.01,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 1922.0
+    },
+    "32005002300": {
+        "white": 0.81,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3691.0
+    },
+    "32007951404": {
+        "white": 0.92,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.03,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3289.0
+    },
+    "32007951403": {
+        "white": 0.76,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.04,
+        "total_population": 3268.0
+    },
+    "32003000301": {
+        "white": 0.12,
+        "black": 0.38,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.45,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2943.0
+    },
+    "32003005702": {
+        "white": 0.72,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3214.0
+    },
+    "32003005501": {
+        "white": 0.9,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.07,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4036.0
+    },
+    "32003006001": {
+        "white": 0.39,
+        "black": 0.3,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 9057.0
+    },
+    "32003002404": {
+        "white": 0.26,
+        "black": 0.4,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.29,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4818.0
+    },
+    "32003004914": {
+        "white": 0.28,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.58,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 2287.0
+    },
+    "32003005502": {
+        "white": 0.86,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4348.0
+    },
+    "32003005902": {
+        "white": 0.48,
+        "black": 0.01,
+        "native": 0.14,
+        "asian": 0.0,
+        "hispanic": 0.3,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 1113.0
+    },
+    "32003002708": {
+        "white": 0.11,
+        "black": 0.39,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.41,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2938.0
+    },
+    "32003003410": {
+        "white": 0.47,
+        "black": 0.07,
+        "native": 0.02,
+        "asian": 0.05,
+        "hispanic": 0.34,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5375.0
+    },
+    "32003002940": {
+        "white": 0.28,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.3,
+        "hispanic": 0.21,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4200.0
+    },
+    "32003003223": {
+        "white": 0.69,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.24,
+        "hispanic": 0.04,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3360.0
+    },
+    "32003005007": {
+        "white": 0.4,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.21,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2468.0
+    },
+    "32003006204": {
+        "white": 0.25,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.62,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4984.0
+    },
+    "32003005613": {
+        "white": 0.83,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.15,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4435.0
+    },
+    "32003005818": {
+        "white": 0.33,
+        "black": 0.3,
+        "native": 0.02,
+        "asian": 0.01,
+        "hispanic": 0.27,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5869.0
+    },
+    "32003003422": {
+        "white": 0.37,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.39,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6303.0
+    },
+    "32003002831": {
+        "white": 0.37,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.24,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4142.0
+    },
+    "32003000517": {
+        "white": 0.13,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.72,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4755.0
+    },
+    "32003005803": {
+        "white": 0.65,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4873.0
+    },
+    "32003003226": {
+        "white": 0.76,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.04,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 2784.0
+    },
+    "32003005005": {
+        "white": 0.48,
+        "black": 0.18,
+        "native": 0.02,
+        "asian": 0.02,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3650.0
+    },
+    "32003000513": {
+        "white": 0.3,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.6,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3467.0
+    },
+    "32003005703": {
+        "white": 0.66,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 949.0
+    },
+    "32003000510": {
+        "white": 0.07,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.87,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5648.0
+    },
+    "32003000103": {
+        "white": 0.24,
+        "black": 0.07,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.61,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 6493.0
+    },
+    "32003005335": {
+        "white": 0.69,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4922.0
+    },
+    "32003005422": {
+        "white": 0.45,
+        "black": 0.03,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.44,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4389.0
+    },
+    "32003005423": {
+        "white": 0.59,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.24,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 4649.0
+    },
+    "32003005432": {
+        "white": 0.74,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.13,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5451.0
+    },
+    "32003000514": {
+        "white": 0.14,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.71,
+        "hawaiian": 0.01,
+        "other": 0.02,
+        "total_population": 5067.0
+    },
+    "32003000515": {
+        "white": 0.16,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.64,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4868.0
+    },
+    "32003000105": {
+        "white": 0.23,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.66,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3916.0
+    },
+    "32003000516": {
+        "white": 0.16,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.57,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6042.0
+    },
+    "32003001717": {
+        "white": 0.5,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.38,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1565.0
+    },
+    "32003001718": {
+        "white": 0.14,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.74,
+        "hawaiian": 0.04,
+        "other": 0.0,
+        "total_population": 2712.0
+    },
+    "32003005433": {
+        "white": 0.63,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.27,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 5754.0
+    },
+    "32003002201": {
+        "white": 0.26,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.42,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 4659.0
+    },
+    "32003002203": {
+        "white": 0.14,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.57,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4597.0
+    },
+    "32003002403": {
+        "white": 0.35,
+        "black": 0.18,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3370.0
+    },
+    "32003002405": {
+        "white": 0.18,
+        "black": 0.18,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.47,
+        "hawaiian": 0.0,
+        "other": 0.04,
+        "total_population": 3165.0
+    },
+    "32003002406": {
+        "white": 0.32,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.17,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3557.0
+    },
+    "32003002501": {
+        "white": 0.28,
+        "black": 0.19,
+        "native": 0.01,
+        "asian": 0.22,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6679.0
+    },
+    "32003002504": {
+        "white": 0.42,
+        "black": 0.07,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4631.0
+    },
+    "32003002505": {
+        "white": 0.15,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.52,
+        "hawaiian": 0.01,
+        "other": 0.03,
+        "total_population": 2405.0
+    },
+    "32003001708": {
+        "white": 0.37,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.43,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 3620.0
+    },
+    "32003002603": {
+        "white": 0.47,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.23,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4229.0
+    },
+    "32003005318": {
+        "white": 0.73,
+        "black": 0.02,
+        "native": 0.05,
+        "asian": 0.06,
+        "hispanic": 0.09,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3137.0
+    },
+    "32003005319": {
+        "white": 0.63,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.17,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3095.0
+    },
+    "32003005320": {
+        "white": 0.59,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2496.0
+    },
+    "32003005321": {
+        "white": 0.67,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3639.0
+    },
+    "32003005322": {
+        "white": 0.79,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1538.0
+    },
+    "32003005333": {
+        "white": 0.6,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.12,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3174.0
+    },
+    "32003002506": {
+        "white": 0.21,
+        "black": 0.16,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.5,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 4077.0
+    },
+    "32003001801": {
+        "white": 0.27,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.61,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 8038.0
+    },
+    "32003002706": {
+        "white": 0.22,
+        "black": 0.09,
+        "native": 0.01,
+        "asian": 0.16,
+        "hispanic": 0.46,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3966.0
+    },
+    "32003005421": {
+        "white": 0.52,
+        "black": 0.03,
+        "native": 0.03,
+        "asian": 0.02,
+        "hispanic": 0.29,
+        "hawaiian": 0.01,
+        "other": 0.04,
+        "total_population": 3931.0
+    },
+    "32003005336": {
+        "white": 0.54,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.22,
+        "hawaiian": 0.03,
+        "other": 0.01,
+        "total_population": 4314.0
+    },
+    "32003002204": {
+        "white": 0.08,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.64,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4377.0
+    },
+    "32003001611": {
+        "white": 0.18,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.68,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4784.0
+    },
+    "32003005337": {
+        "white": 0.68,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3420.0
+    },
+    "32003001709": {
+        "white": 0.45,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.43,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1633.0
+    },
+    "32003001803": {
+        "white": 0.23,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.58,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2998.0
+    },
+    "32003005338": {
+        "white": 0.87,
+        "black": 0.0,
+        "native": 0.04,
+        "asian": 0.01,
+        "hispanic": 0.04,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 1886.0
+    },
+    "32003005341": {
+        "white": 0.82,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2481.0
+    },
+    "32003005342": {
+        "white": 0.67,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2757.0
+    },
+    "32003005343": {
+        "white": 0.65,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 6301.0
+    },
+    "32003005704": {
+        "white": 0.65,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.27,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2247.0
+    },
+    "32003002814": {
+        "white": 0.45,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5059.0
+    },
+    "32003005805": {
+        "white": 0.65,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3145.0
+    },
+    "32003002823": {
+        "white": 0.37,
+        "black": 0.08,
+        "native": 0.04,
+        "asian": 0.07,
+        "hispanic": 0.39,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4029.0
+    },
+    "32009950100": {
+        "white": 0.63,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.3,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 980.0
+    },
+    "32003002826": {
+        "white": 0.42,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.38,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 2608.0
+    },
+    "32003002827": {
+        "white": 0.36,
+        "black": 0.12,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.46,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3032.0
+    },
+    "32003002825": {
+        "white": 0.32,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.43,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4060.0
+    },
+    "32003002828": {
+        "white": 0.46,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.2,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3441.0
+    },
+    "32003002829": {
+        "white": 0.37,
+        "black": 0.09,
+        "native": 0.01,
+        "asian": 0.26,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4029.0
+    },
+    "32003002824": {
+        "white": 0.52,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 1499.0
+    },
+    "32003002833": {
+        "white": 0.43,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.26,
+        "hispanic": 0.19,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5278.0
+    },
+    "32003002834": {
+        "white": 0.37,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.31,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 5731.0
+    },
+    "32003002956": {
+        "white": 0.43,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2860.0
+    },
+    "32003002830": {
+        "white": 0.49,
+        "black": 0.06,
+        "native": 0.01,
+        "asian": 0.19,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5907.0
+    },
+    "32003002957": {
+        "white": 0.71,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2459.0
+    },
+    "32003002958": {
+        "white": 0.47,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5770.0
+    },
+    "32003002822": {
+        "white": 0.24,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.7,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3849.0
+    },
+    "32003002944": {
+        "white": 0.32,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.3,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5058.0
+    },
+    "32003002946": {
+        "white": 0.4,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.3,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1811.0
+    },
+    "32003002947": {
+        "white": 0.61,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3004.0
+    },
+    "32003002949": {
+        "white": 0.49,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.16,
+        "hispanic": 0.33,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3092.0
+    },
+    "32003002948": {
+        "white": 0.44,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.4,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 3765.0
+    },
+    "32003002961": {
+        "white": 0.6,
+        "black": 0.14,
+        "native": 0.02,
+        "asian": 0.11,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2196.0
+    },
+    "32003003001": {
+        "white": 0.29,
+        "black": 0.08,
+        "native": 0.01,
+        "asian": 0.07,
+        "hispanic": 0.52,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4206.0
+    },
+    "32003003003": {
+        "white": 0.35,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.46,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5511.0
+    },
+    "32003002835": {
+        "white": 0.37,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.16,
+        "hispanic": 0.28,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 2561.0
+    },
+    "32003002836": {
+        "white": 0.34,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.18,
+        "hispanic": 0.32,
+        "hawaiian": 0.02,
+        "other": 0.02,
+        "total_population": 3088.0
+    },
+    "32003002950": {
+        "white": 0.26,
+        "black": 0.22,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5345.0
+    },
+    "32003002952": {
+        "white": 0.28,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.26,
+        "hispanic": 0.19,
+        "hawaiian": 0.04,
+        "other": 0.0,
+        "total_population": 3130.0
+    },
+    "32003002953": {
+        "white": 0.39,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.3,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3805.0
+    },
+    "32003003004": {
+        "white": 0.53,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.29,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 1505.0
+    },
+    "32003002905": {
+        "white": 0.37,
+        "black": 0.22,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4968.0
+    },
+    "32003003005": {
+        "white": 0.36,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.51,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 4171.0
+    },
+    "32003003006": {
+        "white": 0.39,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.48,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3718.0
+    },
+    "32003003102": {
+        "white": 0.26,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.5,
+        "hawaiian": 0.06,
+        "other": 0.0,
+        "total_population": 5323.0
+    },
+    "32003003204": {
+        "white": 0.67,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6543.0
+    },
+    "32029970200": {
+        "white": 0.83,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.05,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4095.0
+    },
+    "32003002954": {
+        "white": 0.19,
+        "black": 0.08,
+        "native": 0.01,
+        "asian": 0.12,
+        "hispanic": 0.57,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4631.0
+    },
+    "32003004709": {
+        "white": 0.12,
+        "black": 0.2,
+        "native": 0.05,
+        "asian": 0.0,
+        "hispanic": 0.62,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5593.0
+    },
+    "32003002915": {
+        "white": 0.49,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4349.0
+    },
+    "32003002916": {
+        "white": 0.67,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2801.0
+    },
+    "32003002919": {
+        "white": 0.28,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.29,
+        "hispanic": 0.29,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4502.0
+    },
+    "32003002935": {
+        "white": 0.23,
+        "black": 0.38,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2229.0
+    },
+    "32003004926": {
+        "white": 0.17,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.16,
+        "hispanic": 0.54,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3903.0
+    },
+    "32003006104": {
+        "white": 0.3,
+        "black": 0.06,
+        "native": 0.05,
+        "asian": 0.15,
+        "hispanic": 0.37,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5284.0
+    },
+    "32003003314": {
+        "white": 0.63,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 8062.0
+    },
+    "32003005843": {
+        "white": 0.52,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.17,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3078.0
+    },
+    "32003003620": {
+        "white": 0.31,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.29,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5307.0
+    },
+    "32003003632": {
+        "white": 0.43,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.25,
+        "hawaiian": 0.05,
+        "other": 0.0,
+        "total_population": 3056.0
+    },
+    "32003003626": {
+        "white": 0.22,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.42,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4529.0
+    },
+    "32003005437": {
+        "white": 0.63,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 5345.0
+    },
+    "32003005347": {
+        "white": 0.66,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.17,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6125.0
+    },
+    "32003005348": {
+        "white": 0.63,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.08,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 5498.0
+    },
+    "32003005711": {
+        "white": 0.72,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4218.0
+    },
+    "32003005855": {
+        "white": 0.4,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 7741.0
+    },
+    "32003005856": {
+        "white": 0.35,
+        "black": 0.06,
+        "native": 0.03,
+        "asian": 0.34,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4948.0
+    },
+    "32003007200": {
+        "white": 0.24,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.45,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4776.0
+    },
+    "32003003317": {
+        "white": 0.61,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2849.0
+    },
+    "32003000526": {
+        "white": 0.08,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.86,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2911.0
+    },
+    "32003005355": {
+        "white": 0.67,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5278.0
+    },
+    "32003002303": {
+        "white": 0.61,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.29,
+        "hispanic": 0.05,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 786.0
+    },
+    "32003005715": {
+        "white": 0.57,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.23,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4814.0
+    },
+    "32003005846": {
+        "white": 0.72,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6034.0
+    },
+    "32003005828": {
+        "white": 0.51,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 9779.0
+    },
+    "32003005839": {
+        "white": 0.46,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.25,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 9119.0
+    },
+    "32003006800": {
+        "white": 0.16,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.48,
+        "hawaiian": 0.04,
+        "other": 0.02,
+        "total_population": 5009.0
+    },
+    "32003007500": {
+        "white": 0.69,
+        "black": 0.02,
+        "native": 0.03,
+        "asian": 0.02,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1399.0
+    },
+    "32003005705": {
+        "white": 0.83,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3016.0
+    },
+    "32003007600": {
+        "white": 0.75,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.22,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4611.0
+    },
+    "32003005804": {
+        "white": 0.56,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.07,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4088.0
+    },
+    "32013010600": {
+        "white": 0.65,
+        "black": 0.0,
+        "native": 0.08,
+        "asian": 0.01,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2393.0
+    },
+    "32019960103": {
+        "white": 0.51,
+        "black": 0.03,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.42,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2333.0
+    },
+    "32019960303": {
+        "white": 0.71,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4891.0
+    },
+    "32019960301": {
+        "white": 0.63,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.33,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1878.0
+    },
+    "32003002936": {
+        "white": 0.4,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.17,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3161.0
+    },
+    "32003002962": {
+        "white": 0.46,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2259.0
+    },
+    "32003001804": {
+        "white": 0.22,
+        "black": 0.09,
+        "native": 0.02,
+        "asian": 0.04,
+        "hispanic": 0.56,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3429.0
+    },
+    "32003003411": {
+        "white": 0.44,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3959.0
+    },
+    "32003005106": {
+        "white": 0.5,
+        "black": 0.04,
+        "native": 0.05,
+        "asian": 0.05,
+        "hispanic": 0.19,
+        "hawaiian": 0.07,
+        "other": 0.04,
+        "total_population": 3411.0
+    },
+    "32031002212": {
+        "white": 0.16,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.7,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4115.0
+    },
+    "32031002210": {
+        "white": 0.73,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4617.0
+    },
+    "32031940200": {
+        "white": 0.27,
+        "black": 0.02,
+        "native": 0.55,
+        "asian": 0.01,
+        "hispanic": 0.12,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 1531.0
+    },
+    "32031990100": {
+        "white": 0.0,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.0,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 0.0
+    },
+    "32003005017": {
+        "white": 0.21,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.23,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 7644.0
+    },
+    "32003002965": {
+        "white": 0.3,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.47,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4171.0
+    },
+    "32003002966": {
+        "white": 0.14,
+        "black": 0.2,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.43,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5848.0
+    },
+    "32003002970": {
+        "white": 0.22,
+        "black": 0.29,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.38,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3556.0
+    },
+    "32003005844": {
+        "white": 0.63,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6264.0
+    },
+    "32003005847": {
+        "white": 0.47,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.16,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 3424.0
+    },
+    "32003005848": {
+        "white": 0.37,
+        "black": 0.3,
+        "native": 0.03,
+        "asian": 0.15,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3665.0
+    },
+    "32003005835": {
+        "white": 0.41,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.24,
+        "hawaiian": 0.01,
+        "other": 0.02,
+        "total_population": 4352.0
+    },
+    "32003005836": {
+        "white": 0.54,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3876.0
+    },
+    "32003002980": {
+        "white": 0.28,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.31,
+        "hispanic": 0.22,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6688.0
+    },
+    "32003002983": {
+        "white": 0.3,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.24,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3850.0
+    },
+    "32003005352": {
+        "white": 0.6,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.16,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4137.0
+    },
+    "32003005438": {
+        "white": 0.58,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2760.0
+    },
+    "32003005614": {
+        "white": 0.47,
+        "black": 0.02,
+        "native": 0.02,
+        "asian": 0.02,
+        "hispanic": 0.43,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2363.0
+    },
+    "32003006900": {
+        "white": 0.59,
+        "black": 0.02,
+        "native": 0.02,
+        "asian": 0.05,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1734.0
+    },
+    "32003007100": {
+        "white": 0.14,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.8,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3566.0
+    },
+    "32510000300": {
+        "white": 0.87,
+        "black": 0.0,
+        "native": 0.05,
+        "asian": 0.02,
+        "hispanic": 0.04,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4078.0
+    },
+    "32510000800": {
+        "white": 0.63,
+        "black": 0.07,
+        "native": 0.05,
+        "asian": 0.07,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5572.0
+    },
+    "32510000200": {
+        "white": 0.76,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4112.0
+    },
+    "32510000100": {
+        "white": 0.87,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3008.0
+    },
+    "32510000400": {
+        "white": 0.69,
+        "black": 0.02,
+        "native": 0.02,
+        "asian": 0.01,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3932.0
+    },
+    "32001950302": {
+        "white": 0.73,
+        "black": 0.03,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.12,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5539.0
+    },
+    "32001950301": {
+        "white": 0.71,
+        "black": 0.02,
+        "native": 0.04,
+        "asian": 0.02,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4127.0
+    },
+    "32001950700": {
+        "white": 0.78,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5544.0
+    },
+    "32007951401": {
+        "white": 0.82,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.12,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 4494.0
+    },
+    "32013010702": {
+        "white": 0.66,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.29,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3779.0
+    },
+    "32007951202": {
+        "white": 0.52,
+        "black": 0.0,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.3,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4032.0
+    },
+    "32007950702": {
+        "white": 0.53,
+        "black": 0.02,
+        "native": 0.13,
+        "asian": 0.0,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5967.0
+    },
+    "32007950701": {
+        "white": 0.6,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.35,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6391.0
+    },
+    "32007951201": {
+        "white": 0.87,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.08,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5566.0
+    },
+    "32021970700": {
+        "white": 0.7,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2794.0
+    },
+    "32021970800": {
+        "white": 0.35,
+        "black": 0.04,
+        "native": 0.44,
+        "asian": 0.0,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1774.0
+    },
+    "32031001901": {
+        "white": 0.26,
+        "black": 0.02,
+        "native": 0.03,
+        "asian": 0.06,
+        "hispanic": 0.57,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 4545.0
+    },
+    "32031003501": {
+        "white": 0.72,
+        "black": 0.01,
+        "native": 0.07,
+        "asian": 0.0,
+        "hispanic": 0.1,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4187.0
+    },
+    "32031001104": {
+        "white": 0.88,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.06,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4666.0
+    },
+    "32031002603": {
+        "white": 0.89,
+        "black": 0.0,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1495.0
+    },
+    "32031002103": {
+        "white": 0.73,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2471.0
+    },
+    "32031002104": {
+        "white": 0.79,
+        "black": 0.0,
+        "native": 0.02,
+        "asian": 0.02,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3735.0
+    },
+    "32031001105": {
+        "white": 0.77,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4122.0
+    },
+    "32031001103": {
+        "white": 0.85,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5290.0
+    },
+    "32011000100": {
+        "white": 0.83,
+        "black": 0.0,
+        "native": 0.04,
+        "asian": 0.01,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1622.0
+    },
+    "32033970200": {
+        "white": 0.66,
+        "black": 0.1,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5999.0
+    },
+    "32033970100": {
+        "white": 0.88,
+        "black": 0.0,
+        "native": 0.1,
+        "asian": 0.0,
+        "hispanic": 0.02,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1273.0
+    },
+    "32033970300": {
+        "white": 0.75,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1725.0
+    },
+    "32031002801": {
+        "white": 0.43,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.45,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5051.0
+    },
+    "32031003503": {
+        "white": 0.77,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4416.0
+    },
+    "32031000900": {
+        "white": 0.27,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.64,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5092.0
+    },
+    "32031001005": {
+        "white": 0.56,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.13,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3374.0
+    },
+    "32031001101": {
+        "white": 0.81,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3233.0
+    },
+    "32031001300": {
+        "white": 0.8,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3416.0
+    },
+    "32031001400": {
+        "white": 0.74,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.15,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3539.0
+    },
+    "32017950100": {
+        "white": 0.84,
+        "black": 0.07,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.05,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2335.0
+    },
+    "32017950200": {
+        "white": 0.84,
+        "black": 0.01,
+        "native": 0.03,
+        "asian": 0.0,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2172.0
+    },
+    "32031003110": {
+        "white": 0.58,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.13,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5208.0
+    },
+    "32031002105": {
+        "white": 0.64,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.22,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 4261.0
+    },
+    "32031002106": {
+        "white": 0.6,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3670.0
+    },
+    "32031002204": {
+        "white": 0.27,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.55,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 4001.0
+    },
+    "32031002401": {
+        "white": 0.62,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.13,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4252.0
+    },
+    "32031002406": {
+        "white": 0.62,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.25,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4762.0
+    },
+    "32031002802": {
+        "white": 0.29,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.65,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6025.0
+    },
+    "32031002901": {
+        "white": 0.59,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.3,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3303.0
+    },
+    "32031002902": {
+        "white": 0.35,
+        "black": 0.0,
+        "native": 0.02,
+        "asian": 0.06,
+        "hispanic": 0.51,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4512.0
+    },
+    "32031003105": {
+        "white": 0.74,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2565.0
+    },
+    "32031003106": {
+        "white": 0.56,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 7290.0
+    },
+    "32003000521": {
+        "white": 0.1,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.64,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3237.0
+    },
+    "32003000523": {
+        "white": 0.12,
+        "black": 0.24,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.54,
+        "hawaiian": 0.01,
+        "other": 0.02,
+        "total_population": 2375.0
+    },
+    "32003000403": {
+        "white": 0.27,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.51,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 2339.0
+    },
+    "32003001401": {
+        "white": 0.21,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.57,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2955.0
+    },
+    "32003001502": {
+        "white": 0.28,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.54,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 3884.0
+    },
+    "32003000525": {
+        "white": 0.11,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.81,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2898.0
+    },
+    "32003000524": {
+        "white": 0.14,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.66,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2331.0
+    },
+    "32003003253": {
+        "white": 0.4,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.34,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4329.0
+    },
+    "32003003260": {
+        "white": 0.41,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.41,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4216.0
+    },
+    "32003003261": {
+        "white": 0.61,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 2409.0
+    },
+    "32003003104": {
+        "white": 0.21,
+        "black": 0.23,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.48,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 4258.0
+    },
+    "32003003228": {
+        "white": 0.48,
+        "black": 0.18,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.15,
+        "hawaiian": 0.07,
+        "other": 0.0,
+        "total_population": 6273.0
+    },
+    "32003003249": {
+        "white": 0.7,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3649.0
+    },
+    "32003003251": {
+        "white": 0.66,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2333.0
+    },
+    "32003003241": {
+        "white": 0.52,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.22,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 4327.0
+    },
+    "32003003244": {
+        "white": 0.52,
+        "black": 0.11,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3681.0
+    },
+    "32003003235": {
+        "white": 0.64,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2643.0
+    },
+    "32003003309": {
+        "white": 0.68,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4429.0
+    },
+    "32003003311": {
+        "white": 0.6,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2918.0
+    },
+    "32003003103": {
+        "white": 0.26,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.55,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3865.0
+    },
+    "32003003637": {
+        "white": 0.29,
+        "black": 0.28,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.3,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4921.0
+    },
+    "32003003643": {
+        "white": 0.17,
+        "black": 0.42,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5678.0
+    },
+    "32003003627": {
+        "white": 0.21,
+        "black": 0.26,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.35,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5579.0
+    },
+    "32003001613": {
+        "white": 0.13,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.72,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4401.0
+    },
+    "32003003313": {
+        "white": 0.57,
+        "black": 0.19,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.09,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 3864.0
+    },
+    "32003003316": {
+        "white": 0.7,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6448.0
+    },
+    "32003003236": {
+        "white": 0.71,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2552.0
+    },
+    "32003003243": {
+        "white": 0.44,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.27,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5497.0
+    },
+    "32003003237": {
+        "white": 0.52,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.21,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 4074.0
+    },
+    "32003003321": {
+        "white": 0.56,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2581.0
+    },
+    "32003003319": {
+        "white": 0.49,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.23,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5684.0
+    },
+    "32003003315": {
+        "white": 0.56,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.22,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 3441.0
+    },
+    "32003001710": {
+        "white": 0.28,
+        "black": 0.09,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.46,
+        "hawaiian": 0.04,
+        "other": 0.0,
+        "total_population": 4159.0
+    },
+    "32003001711": {
+        "white": 0.4,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.4,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3852.0
+    },
+    "32003000106": {
+        "white": 0.26,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.51,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4390.0
+    },
+    "32003000109": {
+        "white": 0.3,
+        "black": 0.14,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.5,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3523.0
+    },
+    "32003001712": {
+        "white": 0.49,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.23,
+        "hawaiian": 0.05,
+        "other": 0.02,
+        "total_population": 4454.0
+    },
+    "32003001713": {
+        "white": 0.38,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.4,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3286.0
+    },
+    "32003001901": {
+        "white": 0.12,
+        "black": 0.24,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.47,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4757.0
+    },
+    "32031001014": {
+        "white": 0.8,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.08,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2907.0
+    },
+    "32031980200": {
+        "white": 0.0,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.0,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 0.0
+    },
+    "32031002704": {
+        "white": 0.42,
+        "black": 0.0,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.53,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5547.0
+    },
+    "32003006700": {
+        "white": 0.68,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 1233.0
+    },
+    "32003001714": {
+        "white": 0.25,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.53,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3702.0
+    },
+    "32003005015": {
+        "white": 0.42,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.25,
+        "hispanic": 0.22,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5108.0
+    },
+    "32003004401": {
+        "white": 0.03,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.9,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2918.0
+    },
+    "32003002985": {
+        "white": 0.34,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.19,
+        "hispanic": 0.18,
+        "hawaiian": 0.03,
+        "other": 0.01,
+        "total_population": 4076.0
+    },
+    "32003002845": {
+        "white": 0.35,
+        "black": 0.08,
+        "native": 0.04,
+        "asian": 0.09,
+        "hispanic": 0.28,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 7515.0
+    },
+    "32003001706": {
+        "white": 0.39,
+        "black": 0.19,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3892.0
+    },
+    "32003001707": {
+        "white": 0.43,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.4,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 1851.0
+    },
+    "32003002978": {
+        "white": 0.42,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 7403.0
+    },
+    "32003003229": {
+        "white": 0.45,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 8293.0
+    },
+    "32003001715": {
+        "white": 0.15,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.75,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3175.0
+    },
+    "32003001716": {
+        "white": 0.23,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.58,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 1897.0
+    },
+    "32003001902": {
+        "white": 0.24,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.46,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 4436.0
+    },
+    "32003003242": {
+        "white": 0.8,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.08,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1917.0
+    },
+    "32003003240": {
+        "white": 0.63,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.18,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4214.0
+    },
+    "32003002000": {
+        "white": 0.48,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4914.0
+    },
+    "32003003239": {
+        "white": 0.61,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3232.0
+    },
+    "32003003245": {
+        "white": 0.5,
+        "black": 0.12,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.25,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 4901.0
+    },
+    "32003005824": {
+        "white": 0.57,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.2,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4134.0
+    },
+    "32003005852": {
+        "white": 0.45,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.22,
+        "hispanic": 0.12,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 6270.0
+    },
+    "32003003320": {
+        "white": 0.54,
+        "black": 0.17,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6438.0
+    },
+    "32003003640": {
+        "white": 0.15,
+        "black": 0.36,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.34,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 6071.0
+    },
+    "32003003641": {
+        "white": 0.15,
+        "black": 0.34,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.4,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6607.0
+    },
+    "32003003638": {
+        "white": 0.22,
+        "black": 0.24,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.35,
+        "hawaiian": 0.0,
+        "other": 0.05,
+        "total_population": 4118.0
+    },
+    "32031002618": {
+        "white": 0.74,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 6473.0
+    },
+    "32031001802": {
+        "white": 0.18,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.11,
+        "hispanic": 0.65,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 3216.0
+    },
+    "32031003306": {
+        "white": 0.44,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.48,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1878.0
+    },
+    "32031000202": {
+        "white": 0.69,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.16,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 2315.0
+    },
+    "32003003248": {
+        "white": 0.56,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3347.0
+    },
+    "32003003246": {
+        "white": 0.44,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.26,
+        "hawaiian": 0.04,
+        "other": 0.0,
+        "total_population": 4134.0
+    },
+    "32003003252": {
+        "white": 0.62,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.18,
+        "hawaiian": 0.04,
+        "other": 0.02,
+        "total_population": 4684.0
+    },
+    "32003003250": {
+        "white": 0.53,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.17,
+        "hispanic": 0.16,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4682.0
+    },
+    "32003005850": {
+        "white": 0.38,
+        "black": 0.08,
+        "native": 0.02,
+        "asian": 0.26,
+        "hispanic": 0.23,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5545.0
+    },
+    "32031003514": {
+        "white": 0.84,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.09,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2811.0
+    },
+    "32031003512": {
+        "white": 0.64,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.22,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5161.0
+    },
+    "32003003633": {
+        "white": 0.24,
+        "black": 0.15,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.48,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4437.0
+    },
+    "32003003631": {
+        "white": 0.37,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.31,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3995.0
+    },
+    "32003005358": {
+        "white": 0.77,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3554.0
+    },
+    "32003005713": {
+        "white": 0.55,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.24,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 7004.0
+    },
+    "32031001011": {
+        "white": 0.81,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.1,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 4285.0
+    },
+    "32031001501": {
+        "white": 0.55,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4893.0
+    },
+    "32031001801": {
+        "white": 0.29,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.48,
+        "hawaiian": 0.05,
+        "other": 0.0,
+        "total_population": 3343.0
+    },
+    "32031002614": {
+        "white": 0.49,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.37,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5405.0
+    },
+    "32031002611": {
+        "white": 0.54,
+        "black": 0.13,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 6360.0
+    },
+    "32003003318": {
+        "white": 0.47,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.24,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6424.0
+    },
+    "32003003308": {
+        "white": 0.63,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2768.0
+    },
+    "32003003427": {
+        "white": 0.14,
+        "black": 0.38,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.43,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4426.0
+    },
+    "32003003426": {
+        "white": 0.3,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.45,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2982.0
+    },
+    "32031002207": {
+        "white": 0.7,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.09,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5614.0
+    },
+    "32031003511": {
+        "white": 0.79,
+        "black": 0.03,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5660.0
+    },
+    "32031002612": {
+        "white": 0.68,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.24,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3737.0
+    },
+    "32031003109": {
+        "white": 0.68,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3091.0
+    },
+    "32031002412": {
+        "white": 0.66,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2439.0
+    },
+    "32003005716": {
+        "white": 0.73,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.16,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4438.0
+    },
+    "32003002976": {
+        "white": 0.43,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.21,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6996.0
+    },
+    "32003003254": {
+        "white": 0.52,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4170.0
+    },
+    "32003003233": {
+        "white": 0.46,
+        "black": 0.22,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6917.0
+    },
+    "32003003234": {
+        "white": 0.38,
+        "black": 0.17,
+        "native": 0.01,
+        "asian": 0.06,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5500.0
+    },
+    "32031980100": {
+        "white": 0.0,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.0,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 0.0
+    },
+    "32031002703": {
+        "white": 0.3,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.65,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2559.0
+    },
+    "32031002610": {
+        "white": 0.56,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.35,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5705.0
+    },
+    "32031002616": {
+        "white": 0.47,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6045.0
+    },
+    "32031002706": {
+        "white": 0.39,
+        "black": 0.0,
+        "native": 0.03,
+        "asian": 0.04,
+        "hispanic": 0.51,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5229.0
+    },
+    "32003003428": {
+        "white": 0.22,
+        "black": 0.17,
+        "native": 0.02,
+        "asian": 0.0,
+        "hispanic": 0.4,
+        "hawaiian": 0.0,
+        "other": 0.05,
+        "total_population": 1878.0
+    },
+    "32003003617": {
+        "white": 0.04,
+        "black": 0.33,
+        "native": 0.02,
+        "asian": 0.01,
+        "hispanic": 0.56,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2172.0
+    },
+    "32003003639": {
+        "white": 0.35,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.41,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4018.0
+    },
+    "32003003636": {
+        "white": 0.27,
+        "black": 0.28,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.35,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3144.0
+    },
+    "32003003630": {
+        "white": 0.35,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.42,
+        "hawaiian": 0.03,
+        "other": 0.0,
+        "total_population": 6855.0
+    },
+    "32003003312": {
+        "white": 0.65,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4917.0
+    },
+    "32003002977": {
+        "white": 0.38,
+        "black": 0.07,
+        "native": 0.01,
+        "asian": 0.37,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4390.0
+    },
+    "32003002982": {
+        "white": 0.3,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.33,
+        "hispanic": 0.13,
+        "hawaiian": 0.04,
+        "other": 0.0,
+        "total_population": 7249.0
+    },
+    "32003005822": {
+        "white": 0.63,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.11,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5910.0
+    },
+    "32003005841": {
+        "white": 0.76,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.07,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5683.0
+    },
+    "32003005842": {
+        "white": 0.7,
+        "black": 0.03,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.1,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3003.0
+    },
+    "32003002821": {
+        "white": 0.35,
+        "black": 0.28,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.16,
+        "hawaiian": 0.07,
+        "other": 0.0,
+        "total_population": 5012.0
+    },
+    "32031003307": {
+        "white": 0.72,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1217.0
+    },
+    "32031002411": {
+        "white": 0.7,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.19,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5540.0
+    },
+    "32003002707": {
+        "white": 0.36,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.4,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4578.0
+    },
+    "32031002407": {
+        "white": 0.5,
+        "black": 0.05,
+        "native": 0.01,
+        "asian": 0.19,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4176.0
+    },
+    "32031002408": {
+        "white": 0.67,
+        "black": 0.02,
+        "native": 0.02,
+        "asian": 0.09,
+        "hispanic": 0.11,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 3022.0
+    },
+    "32003002937": {
+        "white": 0.23,
+        "black": 0.11,
+        "native": 0.01,
+        "asian": 0.16,
+        "hispanic": 0.46,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5675.0
+    },
+    "32003002938": {
+        "white": 0.46,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.27,
+        "hispanic": 0.16,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 1787.0
+    },
+    "32003002808": {
+        "white": 0.49,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.17,
+        "hispanic": 0.21,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2073.0
+    },
+    "32003002810": {
+        "white": 0.33,
+        "black": 0.1,
+        "native": 0.02,
+        "asian": 0.12,
+        "hispanic": 0.38,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 3920.0
+    },
+    "32003002811": {
+        "white": 0.49,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.23,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 4405.0
+    },
+    "32003002939": {
+        "white": 0.59,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1919.0
+    },
+    "32003002941": {
+        "white": 0.28,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.47,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5380.0
+    },
+    "32003002942": {
+        "white": 0.37,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.35,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 4718.0
+    },
+    "32003003208": {
+        "white": 0.63,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.13,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3180.0
+    },
+    "32031001015": {
+        "white": 0.86,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.08,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5546.0
+    },
+    "32031003308": {
+        "white": 0.85,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2144.0
+    },
+    "32031980300": {
+        "white": 1.0,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.0,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 20.0
+    },
+    "32031002302": {
+        "white": 0.87,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.05,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2435.0
+    },
+    "32031001012": {
+        "white": 0.82,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.05,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2996.0
+    },
+    "32031001013": {
+        "white": 0.89,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.03,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 6426.0
+    },
+    "32031003203": {
+        "white": 0.85,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4627.0
+    },
+    "32031002409": {
+        "white": 0.7,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.09,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4563.0
+    },
+    "32031002613": {
+        "white": 0.66,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.24,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 7698.0
+    },
+    "32031002615": {
+        "white": 0.47,
+        "black": 0.04,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.32,
+        "hawaiian": 0.04,
+        "other": 0.0,
+        "total_population": 4048.0
+    },
+    "32031002705": {
+        "white": 0.38,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.59,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5991.0
+    },
+    "32031002707": {
+        "white": 0.49,
+        "black": 0.05,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.41,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5106.0
+    },
+    "32031003508": {
+        "white": 0.61,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.27,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 3801.0
+    },
+    "32003003222": {
+        "white": 0.6,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.17,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4666.0
+    },
+    "32003003418": {
+        "white": 0.33,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3799.0
+    },
+    "32003003218": {
+        "white": 0.61,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.18,
+        "hispanic": 0.12,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5376.0
+    },
+    "32003003419": {
+        "white": 0.31,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.35,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 5268.0
+    },
+    "32003003420": {
+        "white": 0.22,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.64,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 4493.0
+    },
+    "32003003421": {
+        "white": 0.25,
+        "black": 0.13,
+        "native": 0.01,
+        "asian": 0.11,
+        "hispanic": 0.46,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3536.0
+    },
+    "32003003227": {
+        "white": 0.54,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.12,
+        "hispanic": 0.2,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4370.0
+    },
+    "32003003306": {
+        "white": 0.8,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.13,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4202.0
+    },
+    "32003003408": {
+        "white": 0.45,
+        "black": 0.12,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5138.0
+    },
+    "32003003409": {
+        "white": 0.41,
+        "black": 0.12,
+        "native": 0.01,
+        "asian": 0.04,
+        "hispanic": 0.41,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 5503.0
+    },
+    "32003003412": {
+        "white": 0.37,
+        "black": 0.14,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.42,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 4742.0
+    },
+    "32003003413": {
+        "white": 0.34,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.43,
+        "hawaiian": 0.01,
+        "other": 0.02,
+        "total_population": 5669.0
+    },
+    "32003003414": {
+        "white": 0.44,
+        "black": 0.07,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.39,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2852.0
+    },
+    "32003003415": {
+        "white": 0.28,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.52,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 7351.0
+    },
+    "32007951500": {
+        "white": 0.48,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.48,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4694.0
+    },
+    "32007950800": {
+        "white": 0.72,
+        "black": 0.0,
+        "native": 0.03,
+        "asian": 0.04,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1874.0
+    },
+    "32007951000": {
+        "white": 0.68,
+        "black": 0.02,
+        "native": 0.1,
+        "asian": 0.0,
+        "hispanic": 0.14,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 1685.0
+    },
+    "32007950200": {
+        "white": 0.57,
+        "black": 0.07,
+        "native": 0.08,
+        "asian": 0.0,
+        "hispanic": 0.16,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 1894.0
+    },
+    "32003003416": {
+        "white": 0.36,
+        "black": 0.05,
+        "native": 0.0,
+        "asian": 0.1,
+        "hispanic": 0.44,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 3419.0
+    },
+    "32003003423": {
+        "white": 0.25,
+        "black": 0.16,
+        "native": 0.0,
+        "asian": 0.05,
+        "hispanic": 0.5,
+        "hawaiian": 0.01,
+        "other": 0.01,
+        "total_population": 7029.0
+    },
+    "32005001300": {
+        "white": 0.9,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.07,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 1848.0
+    },
+    "32005001500": {
+        "white": 0.71,
+        "black": 0.03,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.2,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 6147.0
+    },
+    "32005001400": {
+        "white": 0.86,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.08,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3140.0
+    },
+    "32005002400": {
+        "white": 0.58,
+        "black": 0.0,
+        "native": 0.2,
+        "asian": 0.03,
+        "hispanic": 0.12,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1539.0
+    },
+    "32003003500": {
+        "white": 0.05,
+        "black": 0.4,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.5,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2677.0
+    },
+    "32003003219": {
+        "white": 0.51,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.11,
+        "hispanic": 0.26,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6951.0
+    },
+    "32005001200": {
+        "white": 0.77,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3834.0
+    },
+    "32005001100": {
+        "white": 0.72,
+        "black": 0.0,
+        "native": 0.01,
+        "asian": 0.01,
+        "hispanic": 0.19,
+        "hawaiian": 0.0,
+        "other": 0.05,
+        "total_population": 5419.0
+    },
+    "32003003210": {
+        "white": 0.91,
+        "black": 0.02,
+        "native": 0.01,
+        "asian": 0.03,
+        "hispanic": 0.02,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2329.0
+    },
+    "32003003211": {
+        "white": 0.82,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.04,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 2918.0
+    },
+    "32003003213": {
+        "white": 0.86,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.04,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 1623.0
+    },
+    "32003003214": {
+        "white": 0.74,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.04,
+        "hawaiian": 0.0,
+        "other": 0.03,
+        "total_population": 1833.0
+    },
+    "32007950900": {
+        "white": 0.58,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.34,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2508.0
+    },
+    "32007951300": {
+        "white": 0.58,
+        "black": 0.0,
+        "native": 0.05,
+        "asian": 0.04,
+        "hispanic": 0.32,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3021.0
+    },
+    "32007951600": {
+        "white": 0.56,
+        "black": 0.01,
+        "native": 0.03,
+        "asian": 0.05,
+        "hispanic": 0.28,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 2374.0
+    },
+    "32003003215": {
+        "white": 0.55,
+        "black": 0.11,
+        "native": 0.0,
+        "asian": 0.08,
+        "hispanic": 0.22,
+        "hawaiian": 0.02,
+        "other": 0.01,
+        "total_population": 4347.0
+    },
+    "32003003303": {
+        "white": 0.38,
+        "black": 0.21,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.27,
+        "hawaiian": 0.02,
+        "other": 0.02,
+        "total_population": 5541.0
+    },
+    "32003003220": {
+        "white": 0.27,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.5,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6818.0
+    },
+    "32003003305": {
+        "white": 0.53,
+        "black": 0.16,
+        "native": 0.01,
+        "asian": 0.05,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6073.0
+    },
+    "32003003262": {
+        "white": 0.84,
+        "black": 0.03,
+        "native": 0.01,
+        "asian": 0.07,
+        "hispanic": 0.05,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2523.0
+    },
+    "32003003609": {
+        "white": 0.41,
+        "black": 0.08,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.38,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 5077.0
+    },
+    "32003005503": {
+        "white": 0.73,
+        "black": 0.04,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 2880.0
+    },
+    "32003005504": {
+        "white": 0.84,
+        "black": 0.02,
+        "native": 0.0,
+        "asian": 0.01,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3604.0
+    },
+    "32003005607": {
+        "white": 0.5,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.0,
+        "hispanic": 0.46,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4385.0
+    },
+    "32003002847": {
+        "white": 0.45,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3755.0
+    },
+    "32003002837": {
+        "white": 0.61,
+        "black": 0.01,
+        "native": 0.02,
+        "asian": 0.13,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 6357.0
+    },
+    "32003002967": {
+        "white": 0.25,
+        "black": 0.37,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.17,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4157.0
+    },
+    "32003005806": {
+        "white": 0.59,
+        "black": 0.1,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.16,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4258.0
+    },
+    "32003005807": {
+        "white": 0.61,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.07,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4481.0
+    },
+    "32003005808": {
+        "white": 0.64,
+        "black": 0.06,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.21,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 3102.0
+    },
+    "32003005809": {
+        "white": 0.48,
+        "black": 0.12,
+        "native": 0.01,
+        "asian": 0.08,
+        "hispanic": 0.27,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4383.0
+    },
+    "32003005612": {
+        "white": 0.76,
+        "black": 0.01,
+        "native": 0.01,
+        "asian": 0.02,
+        "hispanic": 0.15,
+        "hawaiian": 0.0,
+        "other": 0.06,
+        "total_population": 1697.0
+    },
+    "32003005813": {
+        "white": 0.37,
+        "black": 0.17,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.24,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 5006.0
+    },
+    "32003006103": {
+        "white": 0.38,
+        "black": 0.22,
+        "native": 0.03,
+        "asian": 0.02,
+        "hispanic": 0.31,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3217.0
+    },
+    "32003006201": {
+        "white": 0.16,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.64,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4717.0
+    },
+    "32003006202": {
+        "white": 0.23,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.04,
+        "hispanic": 0.63,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4760.0
+    },
+    "32003006203": {
+        "white": 0.36,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.56,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 3197.0
+    },
+    "32003002979": {
+        "white": 0.36,
+        "black": 0.09,
+        "native": 0.0,
+        "asian": 0.37,
+        "hispanic": 0.14,
+        "hawaiian": 0.0,
+        "other": 0.01,
+        "total_population": 4534.0
+    },
+    "32003003429": {
+        "white": 0.22,
+        "black": 0.13,
+        "native": 0.0,
+        "asian": 0.02,
+        "hispanic": 0.59,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 5576.0
+    },
+    "32027960100": {
+        "white": 0.63,
+        "black": 0.04,
+        "native": 0.03,
+        "asian": 0.02,
+        "hispanic": 0.25,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 6587.0
+    },
+    "32510990000": {
+        "white": 0.0,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.0,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 0.0
+    },
+    "32005990000": {
+        "white": 0.0,
+        "black": 0.0,
+        "native": 0.0,
+        "asian": 0.0,
+        "hispanic": 0.0,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 0.0
+    },
+    "32003005875": {
+        "white": 0.45,
+        "black": 0.25,
+        "native": 0.0,
+        "asian": 0.06,
+        "hispanic": 0.15,
+        "hawaiian": 0.02,
+        "other": 0.0,
+        "total_population": 2964.0
+    },
+    "32003005115": {
+        "white": 0.52,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.03,
+        "hispanic": 0.36,
+        "hawaiian": 0.0,
+        "other": 0.02,
+        "total_population": 3003.0
+    },
+    "32003005870": {
+        "white": 0.27,
+        "black": 0.24,
+        "native": 0.0,
+        "asian": 0.14,
+        "hispanic": 0.25,
+        "hawaiian": 0.01,
+        "other": 0.0,
+        "total_population": 4137.0
+    },
+    "32003005873": {
+        "white": 0.7,
+        "black": 0.01,
+        "native": 0.0,
+        "asian": 0.15,
+        "hispanic": 0.06,
+        "hawaiian": 0.0,
+        "other": 0.0,
+        "total_population": 4413.0
+    }
+}
