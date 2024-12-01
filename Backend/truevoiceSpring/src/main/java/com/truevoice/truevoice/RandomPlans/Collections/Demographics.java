@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class Demographics {
-    private int BLACK;
-    private int WHITE;
-    private int LATIN;
-    private int ASIAN;
-    private int OTHER;
+    private int black;
+    private int white;
+    private int latin;
+    private int asian;
+    private int other;
 }

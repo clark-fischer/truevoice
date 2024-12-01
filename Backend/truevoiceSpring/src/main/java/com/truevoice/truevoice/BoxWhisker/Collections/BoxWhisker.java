@@ -1,14 +1,15 @@
-package com.truevoice.truevoice.Ensemble.Collections;
+package com.truevoice.truevoice.BoxWhisker.Collections;
+
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BoxWhiskerData {
+public class BoxWhisker {
     private int totalRepresentatives;
     private List<List<BinData>> boxes;
 }

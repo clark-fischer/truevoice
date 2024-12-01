@@ -1,4 +1,4 @@
-package com.truevoice.truevoice.RandomPlans.Collections;
+package com.truevoice.truevoice.Controllers;
 
 import java.util.List;
 

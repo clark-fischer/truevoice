@@ -17,9 +17,6 @@ public interface EnsembleRepository extends MongoRepository<StateData, ObjectId>
     @Query(value = "{ 'state.fips': ?0, 'state.ensemble.electionType': ?1 }", fields = "{ 'state.ensemble.boxWhisker': 0,  'state.ensemble.ensembleSummary': 0 }")
     Optional<StateData> findEnsembleSummary(FIPS fips, ElectionType electionType);
 
-    @Query(value = "{ 'state.fips': ?0, 'state.ensemble.electionType': ?1 }", fields = "{ 'state.ensemble.ensembleSummary': 0 }")
-    Optional<StateData> findBoxWhiskerData(FIPS fips, ElectionType electionType);
-
     @Query("{ 'state.fips': ?0, 'state.ensemble.electionType': ?1 }")
     Optional<StateData> findStateData(FIPS fips, ElectionType electionType);
 }
