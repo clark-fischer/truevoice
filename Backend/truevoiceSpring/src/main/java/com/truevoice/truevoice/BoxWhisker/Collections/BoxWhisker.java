@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BoxWhisker {
     private int totalRepresentatives;
-    private List<List<BinData>> boxes;
+    private List<BinData> boxes;
 }
