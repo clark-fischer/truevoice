@@ -1,4 +1,4 @@
-package com.truevoice.truevoice.Ensemble.Collections;
+package com.truevoice.truevoice.BoxWhisker.Collections;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

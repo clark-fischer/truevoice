@@ -24,13 +24,6 @@ public class EnsembleController {
         return ensembleService.getEnsembleSummary(fips, electionType);
     }
 
-    @GetMapping("/{fips}/{electionType}/BOXWHIS")
-    public StateData getBoxWhiskerData(
-            @PathVariable("fips") FIPS fips,
-            @PathVariable("electionType") ElectionType electionType) {
-        return ensembleService.getBoxWhiskerData(fips, electionType);
-    }
-
     @GetMapping("/{fips}/{electionType}/BAR")
     public StateData getStateData(
             @PathVariable("fips") FIPS fips,
