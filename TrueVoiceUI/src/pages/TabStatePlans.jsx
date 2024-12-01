@@ -66,15 +66,23 @@ const TabStatePlans = () => {
 
     const [selectedBoxes, setSelectedBoxes] = useState([false, false, false, false]);
 
+    const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
+
     const handleBoxClick = (index) => {
-        const updatedBoxes = [...selectedBoxes];
-        updatedBoxes[index] = !updatedBoxes[index];
-        setSelectedBoxes(updatedBoxes);
-        console.log(`Box ${index + 1} clicked`);
+        const updatedSelectedBoxes = [false, false, false, false];
+        updatedSelectedBoxes[index] = true;
+        setSelectedBoxes(updatedSelectedBoxes);
+
+        const updatedOverlaySelectedBoxes = [...overlaySelectedBoxes];
+        updatedOverlaySelectedBoxes[index] = false;
+        setOverlaySelectedBoxes(updatedOverlaySelectedBoxes);
     };
 
-
-    const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
+    const handleOverlayBoxClick = (index) => {
+        const updatedOverlaySelectedBoxes = [...overlaySelectedBoxes];
+        updatedOverlaySelectedBoxes[index] = !updatedOverlaySelectedBoxes[index];
+        setOverlaySelectedBoxes(updatedOverlaySelectedBoxes);
+    };
 
     return (
         <TabPanel padding={0} >
@@ -128,7 +136,7 @@ const TabStatePlans = () => {
                         margin: "10px",
                     }}
                 >
-                    {["Dem Favored", "Repb Favored", "Average", "Fair"].map((title, index) => (
+                    {["D- Fvrd", "R- Fvrd", "Average", "Fair"].map((title, index) => (
                         <Box
                             key={index}
                             borderWidth="1px"
@@ -150,13 +158,15 @@ const TabStatePlans = () => {
                             <Center>
                                 <img
                                     src={index === 0 ? "/dem.jpeg" : "/rep.jpeg"}
-                                    style={{ width: "25px" }}
+                                    style={{ width: "45px" }}
                                     alt={title}
                                 />
                             </Center>
                         </Box>
                     ))}
                 </div>
+
+                
             </div>
         </TabPanel>
     )

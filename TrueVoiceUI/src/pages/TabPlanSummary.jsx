@@ -6,7 +6,7 @@ import {
     Text,
     UnorderedList,
     ListItem,
-    // Center,
+    Center,
     Divider,
     Link,
     Tabs,
@@ -98,42 +98,8 @@ const TabPlanSummary = () => {
 
                 <hr />
 
-                <div style={{ margin: "10px", border: "10 solid grey" }}>
-                  <div style={{ padding: "10px", background: "lightgrey", width: "100px", borderRadius: "5px" }}>
-                    
-                    <Text fontSize="lg" >
-                      District: 1
-                    </Text>
-
-                  </div>
-                  <br />
-
-
-                  <div style={{ marginLeft: "10px", display: "flex", gap: "90px" }}>
-                    <div >
-                      <Text fontWeight="bold" fontSize="lg">Demographics</Text>
-                      <Text fontSize="lg">White: 50%</Text>
-                      <Text fontSize="lg">Black: 30%</Text>
-                      <Text fontSize="lg">Asian: 10%</Text>
-                      <Text fontSize="lg">Hispanic: 10%</Text>
-                      <Text fontSize="lg">Other: 0%</Text>
-                    </div>
-                    <div style={{ borderLeft: "solid 1px white" }}>
-                      <Text fontWeight="bold" fontSize="lg" >Elected Reps</Text>
-                      <Text style={{ color: "blue" }} fontSize="lg" >Dina Titus</Text>
-                      <Text style={{ color: "red" }} fontSize="lg" >Anot Rep</Text>
-                      <Text style={{ color: "blue" }} fontSize="lg" >Ran Dom</Text>
-                      <Text style={{ color: "red" }} fontSize="lg" >Rep Five</Text>
-                      <Text style={{ color: "red" }} fontSize="lg" >Dom Ran</Text>
-                    </div>
-                  </div>
-
-                  <br />
-                  <br />
-                  <Text fontSize="lg" >
-                    Estimated Vote Split (D/R): 0.5
-                  </Text>
-                </div>
+                <Center><img src="/Nevada_SMD_box_and_whisker_plot.png" /></Center>
+                
 
 
               </TabPanel>
