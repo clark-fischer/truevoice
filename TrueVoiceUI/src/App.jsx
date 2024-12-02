@@ -18,6 +18,10 @@ import VoteShareSeatSharePlot from "./pages/VoteSharePlot";
 import OpportunityRepresentativesPlot from "./pages/opportunityRepresentativePlot";
 import OpportunityDistrictsPlot from "./pages/opportunityDistrictPlot";
 import SMDBoxAndWhiskerPlot from "./pages/SMDboxAnsWhiskerPlot";
+
+// import VoteShareSeatSharePlot from "../../testing_11_04/VoteSharePlot";
+
+//router and routes
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
@@ -25,7 +29,9 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="colorado" element={<Colorado />} />
       <Route path="nevada" element={<Nevada />} />
+
       <Route path="test" element={<OpportunityDistrictsPlot/>} />
+
     </Route>
   )
 );
