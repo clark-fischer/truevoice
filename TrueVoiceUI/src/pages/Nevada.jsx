@@ -119,9 +119,9 @@ export default function State() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/NV/SMD/FAIR");
+        const response = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
         console.log(response); // Set the data to state
-        set_state_smd(response.data);
+        setGeoJsonData(response.data);
       } catch (err) {
         setError(err); // Handle any error that occurs during the request
       }
