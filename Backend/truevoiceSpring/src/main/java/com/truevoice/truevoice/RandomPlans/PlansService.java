@@ -10,7 +10,6 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.truevoice.truevoice.RandomPlans.Collections.DistrictPlan;
-import com.truevoice.truevoice.RandomPlans.Collections.SeatVoteShare;
 
 @Service
 public class PlansService {
@@ -27,9 +26,10 @@ public class PlansService {
         return plansRepository.findDistrictPlan(fips, electionType, characteristic);
     }
 
-    @Cacheable
-    public SeatVoteShare getCurveFromDB(FIPS fips, ElectionType electionType, Characteristic characteristic) {
-       return plansRepository.findVoteSeatPlot(fips, electionType, characteristic).getSeatVoteShare();
-    }
+    // @Cacheable
+    // public Optional<DistrictPlan> getPlanFromDB(FIPS fips, ElectionType electionType, Characteristic characteristic) {
+    //     return plansRepository.    findFirstByCrs_Properties_FipsAndCrs_Properties_ElectionTypeAndCrs_Properties_Characteristic(fips, electionType, characteristic);
+    // }
+
     
 }
