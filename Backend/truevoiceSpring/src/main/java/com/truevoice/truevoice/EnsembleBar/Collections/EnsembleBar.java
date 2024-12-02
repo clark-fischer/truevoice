@@ -21,5 +21,6 @@ public class EnsembleBar {
     private double voteShare;
     private double avgSeatShare;
     private int totalRepresentatives;
+    private int totalDistricts;
     private List<BarData> barData;
 }
