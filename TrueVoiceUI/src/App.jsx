@@ -29,8 +29,7 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="colorado" element={<Colorado />} />
       <Route path="nevada" element={<Nevada />} />
-
-      <Route path="test" element={<OpportunityDistrictsPlot/>} />
+      <Route path="test" element={<OpportunityDistrictsPlot fips={'NV'} electionType={'SMD'} characteristic={'BAR'}/>} />
 
     </Route>
   )

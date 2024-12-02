@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
 
-function VoteShareSeatSharePlot({ title, x_label, y_label }) {
+function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, plan, characteristic}) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/NV/SMD/ENACTED/SEATVOTE');
+        //const response = await axios.get('http://localhost:8080/NV/SMD/ENACTED/SEATVOTE');
+        const response = await axios.get(f`http://localhost:8080/${fips}/${electionType}/${plan}/${characteristic}`);
       
         setData(response.data);
       } catch (err) {

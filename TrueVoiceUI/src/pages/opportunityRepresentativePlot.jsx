@@ -11,8 +11,8 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
     const fetchData = async () => {
       try {
 
-        //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
-        const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+        const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
+        //const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
         setData(response.data);
       } catch (err) {
         console.error("Error fetching data:", err);
@@ -28,12 +28,12 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
 
 
 
-  const opportunityRepresentatives = data.state.ensemble.ensembleSummary.ensembles.map(
+  const opportunityRepresentatives = data.barData.map(
     (plans) => plans.opportunityRepresentatives
   );
-  const totalRepresentatives = data.state.ensemble.ensembleSummary.totalRepresentatives; 
-  const averageSeatShare = Number(data.state.ensemble.ensembleSummary.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
-  const voteShare = Number(data.state.ensemble.ensembleSummary.voteShare * 100).toFixed(2).replace(/\.00$/, '');
+  const totalRepresentatives = data.totalRepresentatives; 
+  const averageSeatShare = Number(data.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
+  const voteShare = Number(data.voteShare * 100).toFixed(2).replace(/\.00$/, '');
   const trace = {
     x: opportunityRepresentatives,
     type: 'histogram',
