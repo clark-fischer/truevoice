@@ -113,7 +113,17 @@ const Demographics = (props) => {
 
         {/* mapping the checkboxes */}
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <div style={{ flexBasis: "30%" }}>
+          <div>
+            <input id="district-based" name="race-map-type" type="radio" />
+            <label htmlFor="district-based" style={{ paddingLeft: "5px" }}>District Based</label>
+            <br />
+            <input id="precinct-based" name="race-map-type"  type="radio" />
+            <label htmlFor="precinct-based" style={{ paddingLeft: "5px" }}>Precinct Based</label>
+
+          </div>
+          
+
+          {/* <div style={{ flexBasis: "30%" }}>
             <Box
               key={1}
               borderWidth="1px"
@@ -160,8 +170,8 @@ const Demographics = (props) => {
                 />
               </Center>
             </Box>
-          </div>
-          <div style={{ flexBasis: "30%" }}>
+          </div> */}
+          <div style={{ flexBasis: "70%" }}>
             {
               races.map((race, i) => (
                 <div key={race.id}>
