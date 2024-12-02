@@ -12,21 +12,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class EnsembleService {
 
-    @Autowired
-    private EnsembleRepository ensembleRepository;
+    // @Autowired
+    // private EnsembleRepository ensembleRepository;
 
-    public EnsembleService(EnsembleRepository ensembleRepository) {
-        this.ensembleRepository = ensembleRepository;
-    }
+    // public EnsembleService(EnsembleRepository ensembleRepository) {
+    //     this.ensembleRepository = ensembleRepository;
+    // }
 
-    @Cacheable
-    public StateData getEnsembleSummary(FIPS fips, ElectionType electionType) {
-        return ensembleRepository.findEnsembleSummary(fips, electionType)
-                .orElseThrow(() -> new RuntimeException("Ensemble summary not found"));
-    }
-    @Cacheable
-    public StateData getStateData(FIPS fips, ElectionType electionType) {
-        return ensembleRepository.findStateData(fips, electionType)
-                .orElseThrow(() -> new RuntimeException("State data not found"));
-    }
+    // @Cacheable
+    // public StateData getStateData(FIPS fips, ElectionType electionType) {
+    //     return ensembleRepository.findStateData(fips, electionType)
+    //             .orElseThrow(() -> new RuntimeException("State data not found"));
+    // }
 }
