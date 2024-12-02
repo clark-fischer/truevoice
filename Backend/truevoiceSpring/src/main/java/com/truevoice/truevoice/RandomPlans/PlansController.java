@@ -4,7 +4,6 @@ import com.truevoice.truevoice.FRAEnum.Characteristic;
 import com.truevoice.truevoice.FRAEnum.ElectionType;
 import com.truevoice.truevoice.FRAEnum.FIPS;
 import com.truevoice.truevoice.RandomPlans.Collections.DistrictPlan;
-import com.truevoice.truevoice.RandomPlans.Collections.SeatVoteShare;
 
 import java.util.Optional;
 
@@ -35,14 +34,5 @@ public class PlansController {
         return plansService.getPlanFromDB(fips, electionType, characteristic);
     }
 
-    @GetMapping("/{fips}/{electionType}/{characteristic}/SEATVOTE")
-    public SeatVoteShare getSeatVoteCurve(
-        @PathVariable("fips") FIPS fips,
-        @PathVariable("electionType") ElectionType electionType,
-        @PathVariable("characteristic") Characteristic characteristic) {
-        
-    
-        return plansService.getCurveFromDB(fips, electionType, characteristic);
-    }
     
 }

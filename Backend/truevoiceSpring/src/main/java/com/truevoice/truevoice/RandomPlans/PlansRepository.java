@@ -18,13 +18,13 @@
 
 package com.truevoice.truevoice.RandomPlans;
 import com.truevoice.truevoice.RandomPlans.Collections.DistrictPlan;
-import com.truevoice.truevoice.RandomPlans.Collections.SeatVoteShare;
 
 import java.util.Optional;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.truevoice.truevoice.FRAEnum.Characteristic;
@@ -34,15 +34,19 @@ import com.truevoice.truevoice.FRAEnum.FIPS;
 @Repository
 public interface PlansRepository extends MongoRepository<DistrictPlan, ObjectId> {
 
-    // Custom query to find by state, planType, and characteristic
-    @Query("{ 'fips': ?0, 'electionType': ?1, 'characteristic': ?2 }")
+    @Query("{ 'crs.properties.fips': ?0, 'crs.properties.electionType': ?1, 'crs.properties.characteristic': ?2 }")
     Optional<DistrictPlan> findDistrictPlan(FIPS fips, ElectionType electionType, Characteristic characteristic);
 
+    //     @Query("{ 'crs.properties.fips': ?0, " +
+    //        "'crs.properties.electionType': ?1, " +
+    //        "'crs.properties.characteristic': ?2 }")
+    // Optional<DistrictPlan> findDistrictPlan(
+    //     @Param("fips") FIPS fips, 
+    //     @Param("electionType") ElectionType electionType, 
+    //     @Param("characteristic") Characteristic characteristic
+    // );
 
-    // @Query(value = "{ 'state': ?0, 'planType': ?1, 'characteristic': ?2 }", fields = "{ 'seatVoteShare': 0 }")
-    // Optional<DistrictPlan> findDistrictPlan(FIPS state, ElectionType type, Characteristic characteristic);
-
-    @Query(value = "{ 'fips': ?0, 'electionType': ?1, 'characteristic': ?2 }", fields = "{ 'seatVoteShare': 1 }")
-    DistrictPlan findVoteSeatPlot(FIPS fips, ElectionType electionType, Characteristic characteristic);
-
+    // Optional<DistrictPlan> findFirstByCrs_Properties_FipsAndCrs_Properties_ElectionTypeAndCrs_Properties_Characteristic(
+    //     FIPS fips, ElectionType electionType, Characteristic characteristic
+    // );
 }
