@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
 
-function SMDBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType, characteristic }) {
+
+function SMDBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType, characteristic ,comparisonBasis}) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -23,58 +24,85 @@ function SMDBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType, cha
   if (error) return <div>Error: {error.message}</div>;
   if (!data) return <div>Loading...</div>;
 
-  // Extract data for boxplot (black)
-  const plotData = data.boxWhisker.boxes.map((district) => [
-    
-    district.black.min,
-    district.black.q1,
-    district.black.median,
-    district.black.q3,
-    district.black.max,
+  
+
+  //get data for boxplot for a compariosn basis (ex: black)
+  const plotData = data.state.ensemble.boxWhisker.boxes[0].map((district) => [
+    district[comparisonBasis].min,
+    district[comparisonBasis].q1,
+    district[comparisonBasis].median,
+    district[comparisonBasis].q3,
+    district[comparisonBasis].max,
   ]);
 
-  const labels = data.boxWhisker.boxes.map((district, index) => 
-    `District ${index + 1} (Reps: ${district.representatives})`
+  const enactedValues = data.state.ensemble.boxWhisker.boxes[0].map((district) => (
+    district[comparisonBasis].enactedValue * 100
+  ));
+
+  const labels = data.state.ensemble.boxWhisker.boxes[0].map((district) => 
+    `District ${district.binNo} `
   );
 
-  // Prepare traces for each district
-  const traces = plotData.map((districtData, index) => ({
+ 
+  const boxTraces = plotData.map((districtData, index) => ({
     y: districtData,
+    x: labels[index],
     name: labels[index],
     type: 'box',
     boxpoints: false, 
+    fillcolor: "rgba(31, 119, 180, 0.5)",
     marker: {
-      color: '#7ff5b8',
+      color: "rgba(31, 119, 180, 0.5)",
     },
     line: {
       color: 'black',
+  
     },
+    showlegend: false,
   }));
 
+  const scatterTrace = {
+    x: labels,
+    y: enactedValues,
+    mode: 'markers',
+    name: 'Enacted Plan',
+    marker: {
+      color: 'red',
+      size: 8,
+    },
+    text: enactedValues.map((value) => value.toFixed(2) ),
+    textposition: "top center",
+  };
+  
+
   const layout = {
-    title: title || 'Nevada MMD Box and Whisker Plot',
+    title: title || `SMD Box and Whisker Plot for ${comparisonBasis}`,
     xaxis: {
       title: x_label || 'Districts',
+      tickangle: 0,
     },
     yaxis: {
       title: y_label || 'Vote Share',
     },
     boxmode: 'group', 
+    showlegend: true,
     margin: {
       l: 50,
       r: 50,
       t: 50,
       b: 50,
     },
-    width: 800,
-    height: 600,
+    height: 500,
+    width: 700,
+    showlegend: true,
+    boxmode: "group",
   };
 
   return (
     <Plot
-      data={traces}
+      data={[...boxTraces, scatterTrace]} 
       layout={layout}
-      style={{ width: '100%', height: '100%' }}
+
       config={{ responsive: true }}
     />
   );

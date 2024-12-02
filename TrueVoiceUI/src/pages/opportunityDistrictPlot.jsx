@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 //opp representative
-function opportunityDistrictsPlot({title ,x_lable, y_lable, fips, electionType, characteristic }){
+function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, characteristic }){
 
     const [data, setData] = useState(null);
     const [error,setError] = useState(null);
@@ -25,32 +25,31 @@ function opportunityDistrictsPlot({title ,x_lable, y_lable, fips, electionType, 
         fetchData();
 
     }, []);
-    
+  
     if(error) return <div>Error: {error.message}</div>;
     if(!data) return <div>Loading...</div>;
 
-    const opportunityDistricts = data.ensembleSummary.map((d) => d.opportunityDistricts);
-    const totalDistricts = data.totalDistricts;
+    const opportunityDistricts = data.state.ensemble.ensembleSummary.ensembles.map((d) => d.opportunityDistricts);
+    const totalDistricts = data.state.ensemble.ensembleSummary.totalDistricts;
     const minDistrict = Math.min(...opportunityDistricts);
     const maxDistrict = Math.max(...opportunityDistricts);
     const bins = Array.from({ length: maxDistrict - minDistrict + 2 }, (_, i) => minDistrict + i);
   
-    const averageSeatShare = (data.avgSeatShare * 100).toFixed(2); 
-    const voteShare = (data.voteShare * 100).toFixed(2); 
-
+    const averageSeatShare = Number(data.state.ensemble.ensembleSummary.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
+    const voteShare = Number(data.state.ensemble.ensembleSummary.voteShare * 100).toFixed(2).replace(/\.00$/, '');
     const trace = {
         x: opportunityDistricts,
         type: 'histogram',
         xbins: {
           start: bins[0],
           end: bins[bins.length - 1],
-          size: 1, // Bin size is 1 to ensure whole integers
+          size: 1, 
         },
         marker: {
           color: '#7ff5b8',
           line: {
             color: 'black',
-            width: 1,
+            width: 0,
           },
         },
       };
@@ -61,29 +60,38 @@ function opportunityDistrictsPlot({title ,x_lable, y_lable, fips, electionType, 
           title: x_label || 'Number of Opportunity Districts',
           tickmode: 'linear',
           tick0: minDistrict,
-          dtick: 1, // Ensure whole integers on the x-axis
+          tickmode: 'linear', 
+          dtick: 1,
+          showline: true,
+          linecolor: 'black', 
+          linewidth: 2, 
         },
         yaxis: {
           title: y_label || 'Frequency',
+          tickmode: 'linear', 
+          dtick: 1,
+          showline: true,
+          linecolor: 'black', 
+          linewidth: 2, 
         },
         annotations: [
-          {
-            x: 0.65,
-            y: 0.8,
-            xref: 'paper',
-            yref: 'paper',
-            text: `Average Seat Share: ${(data.average_seat_share * 100).toFixed(2)}%<br>Vote Share: ${(data.vote_share * 100).toFixed(2)}%`,
-            showarrow: false,
-            font: {
-              size: 12,
+            {
+              x: 1,
+              y: 0.97,
+              xref: 'paper',
+              yref: 'paper',
+              text: `Average Seat Share: ${averageSeatShare}%<br>Vote Share: ${voteShare}%`,
+              showarrow: false,
+              font: {
+                size: 12,
+              },
+              align: 'left',
+              bgcolor: 'white',
+              bordercolor: 'black',
+              borderwidth: 1,
             },
-            align: 'left',
-            bgcolor: 'white',
-            bordercolor: 'black',
-            borderwidth: 1,
-          },
-        ],
-        bargap: 0, // Bars tightly packed
+          ],
+        bargap: 0.2, 
         margin: {
           l: 50,
           r: 50,
@@ -102,10 +110,11 @@ function opportunityDistrictsPlot({title ,x_lable, y_lable, fips, electionType, 
           config={{ responsive: true }}
         />
       );
+      
    
 }
 
-export default opportunityDistrictsPlot;
+export default OpportunityDistrictsPlot;
    
 
 
