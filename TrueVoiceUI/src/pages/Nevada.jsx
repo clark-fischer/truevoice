@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import SideBySideImages from './SideBySideImages';
 
 import {
   Box,
@@ -101,7 +102,7 @@ const styles = {
   controlsContainer: {
     padding: "20px",
     // background: "#f8f8f8",
-    width: "600px",
+    // width: "600px",
     // height: "100px",
     // border: "1px solid red",
     boxSizing: "border-box",
@@ -122,6 +123,7 @@ export default function State() {
         const response = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
         console.log(response); // Set the data to state
         setGeoJsonData(response.data);
+        set_state_smd(response.data);
       } catch (err) {
         setError(err); // Handle any error that occurs during the request
       }
@@ -173,7 +175,8 @@ export default function State() {
   };
 
   const eachDistrict = (feature, layer) => {
-    const districtNo = feature.properties.DISTRICTNO;
+    const districtNo = feature.properties.districtno;
+    console.log(feature.properties)
     layer.on("mouseover", function () {
 
       // district no
@@ -470,10 +473,10 @@ export default function State() {
 
           <Tabs mx={0} my={0}>
             <TabList>
-
+            <Tab key={1}>Demographics</Tab>
               <Tab key={4}>SMD vs. MMD</Tab>
 
-              <Tab key={1}>Demographics</Tab>
+              
               <Tab key={2}>Plans</Tab>
               {/* <Tab key={2}>County Explorer</Tab> */}
               <Tab key={3}>State</Tab>
@@ -483,6 +486,8 @@ export default function State() {
               <Tab key={5}>Ensemble</Tab>
             </TabList>
             <TabPanels key={1}>
+
+            <Demographics races={races} setRaces={setRaces} toggle_map={toggle_map} />
 
               <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
@@ -517,6 +522,14 @@ export default function State() {
                       </tr>
                     </tbody>
                   </table>
+                  <br />
+
+                  <SideBySideImages
+                    image1='2.jpg'
+                    image2='3.jpg'
+                    alt1="First placeholder"
+                    alt2="Second placeholder"
+                  />
 
                   {/* <Heading>
                   Ensemble Data
@@ -529,7 +542,7 @@ export default function State() {
               
 
 
-              <Demographics races={races} setRaces={setRaces} toggle_map={toggle_map} />
+              
 
               <TabPlanSummary />
               <TabStatePlans />
