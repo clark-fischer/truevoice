@@ -66,9 +66,10 @@ const state_representatives = [
 const styles = {
   gridContainer: {
     display: "grid",
-    gridTemplateColumns: "2.3fr 1fr", // Two columns
+    gridTemplateColumns: ".7fr 1fr", // Two columns
     // height: "60vh",
     margin: "0px",
+    width: "100%",
   },
   mapWrapper: {
     display: "flex",
@@ -77,7 +78,7 @@ const styles = {
   },
   mapContainer: {
     flexGrow: 1, // Map takes up remaining space
-    width: "100%",
+    // width: "100%",
   },
 
   buttonRow: {
@@ -509,6 +510,8 @@ export default function State() {
 
 
               </TabPanel>
+
+              
 
 
               <Demographics races={races} setRaces={setRaces} toggle_map={toggle_map} />
