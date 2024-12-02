@@ -38,7 +38,7 @@ import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data -- start
 import "leaflet/dist/leaflet.css";
-import state_smd_local from "../datafiles/nv_smd.json";
+// import state_smd_local from "../datafiles/nv_smd.json";
 // import state_smd_local from "../datafiles/NEVSMDFAIR.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
@@ -66,9 +66,10 @@ const state_representatives = [
 const styles = {
   gridContainer: {
     display: "grid",
-    gridTemplateColumns: "2.3fr 1fr", // Two columns
+    gridTemplateColumns: ".7fr 1fr", // Two columns
     // height: "60vh",
     margin: "0px",
+    width: "100%",
   },
   mapWrapper: {
     display: "flex",
@@ -77,7 +78,7 @@ const styles = {
   },
   mapContainer: {
     flexGrow: 1, // Map takes up remaining space
-    width: "100%",
+    // width: "100%",
   },
 
   buttonRow: {
@@ -110,6 +111,26 @@ const styles = {
 // data --  end
 
 export default function State() {
+
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [state_smd, set_state_smd] = React.useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/NV/SMD/FAIR");
+        console.log(response); // Set the data to state
+        set_state_smd(response.data);
+      } catch (err) {
+        setError(err); // Handle any error that occurs during the request
+      }
+    };
+
+    fetchData(); // Call the function
+  }, []);
+
+
   const [raceData, setRaceData] = React.useState({
     labels: ["White", "Non-White"],
     datasets: [
@@ -176,14 +197,9 @@ export default function State() {
         "race--asian2"
       ).innerText = `${feature.properties.demographics.asian}`;
 
-      
-
       document.getElementById(
         "race--other2"
       ).innerText = `${feature.properties.demographics.other}`;
-
-
-
 
       document.getElementById(
         "selected-rep"
@@ -230,7 +246,7 @@ export default function State() {
   });
 
   const getGeoJsonStyle = (data) => {
-    if (data === state_smd_local) {
+    if (data === state_smd) {
       return (feature) => nevada_districts[feature.properties.DISTRICTNO];
     } else if (data === nv_4mmd) {
       return () => ({
@@ -250,8 +266,8 @@ export default function State() {
     });
   };
 
-  const [geoJsonData, setGeoJsonData] = React.useState(state_smd_local);
-  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd_local));
+  const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
+  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd));
 
   function mixColors(colors) {
     // Parse hex color to RGB
@@ -361,7 +377,7 @@ export default function State() {
     const districtMaps = [
       {
         label: "SMD, Single Rep. (current)",
-        data: state_smd_local,
+        data: state_smd,
         tooltip: "These are Nevada's districts, as of 2024.",
       },
       {
@@ -509,6 +525,8 @@ export default function State() {
 
 
               </TabPanel>
+
+              
 
 
               <Demographics races={races} setRaces={setRaces} toggle_map={toggle_map} />
