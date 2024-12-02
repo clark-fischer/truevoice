@@ -18,5 +18,8 @@ import com.truevoice.truevoice.FRAEnum.FIPS;
 public class EnsembleBar {
     private FIPS fips;
     private ElectionType electionType;
+    private double voteShare;
+    private double avgSeatShare;
+    private int totalRepresentatives;
     private List<BarData> barData;
 }
