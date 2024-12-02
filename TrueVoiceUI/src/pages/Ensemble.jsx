@@ -67,15 +67,59 @@ const Ensemble = (props) => {
 
     return (
         <TabPanel padding={0}>
-            <div style={styles.controlsContainer}>
-                <h1>Lorem Ipsum</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
 
+            <div style={styles.controlsContainer}>
+                
+            < PictureSlider />
             </div>
 
         </TabPanel>
     );
 
 };
+
+
+const PictureSlider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [
+    '1.png',
+    '2.jpg',
+    '3.jpg',
+    '4.jpg',
+    '5.png',
+    '6.png',
+  ];
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => 
+      (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <div>
+        <img 
+          src={images[currentIndex]} 
+          alt={`Slide ${currentIndex + 1}`} 
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
+      </div>
+      <div style={{ marginTop: '10px' }}>
+        <button onClick={handlePrev}>Previous</button>
+        <button onClick={handleNext} style={{ marginLeft: '10px' }}>
+          Next
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
 
 export default Ensemble;
