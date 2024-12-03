@@ -24,7 +24,6 @@ import java.util.Optional;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.truevoice.truevoice.FRAEnum.Characteristic;
@@ -36,17 +35,4 @@ public interface PlansRepository extends MongoRepository<DistrictPlan, ObjectId>
 
     @Query("{ 'crs.properties.fips': ?0, 'crs.properties.electionType': ?1, 'crs.properties.characteristic': ?2 }")
     Optional<DistrictPlan> findDistrictPlan(FIPS fips, ElectionType electionType, Characteristic characteristic);
-
-    //     @Query("{ 'crs.properties.fips': ?0, " +
-    //        "'crs.properties.electionType': ?1, " +
-    //        "'crs.properties.characteristic': ?2 }")
-    // Optional<DistrictPlan> findDistrictPlan(
-    //     @Param("fips") FIPS fips, 
-    //     @Param("electionType") ElectionType electionType, 
-    //     @Param("characteristic") Characteristic characteristic
-    // );
-
-    // Optional<DistrictPlan> findFirstByCrs_Properties_FipsAndCrs_Properties_ElectionTypeAndCrs_Properties_Characteristic(
-    //     FIPS fips, ElectionType electionType, Characteristic characteristic
-    // );
 }
