@@ -16,5 +16,4 @@ public class Demographics {
     private double hawaiian;
     private double other;
     private int total_population;
-    private String p_id;
 }
