@@ -1,22 +1,21 @@
-// package com.truevoice.truevoice.SeatVote;
-// import com.truevoice.truevoice.RandomPlans.Collections.DistrictPlan;
+package com.truevoice.truevoice.SeatVote;
+import com.truevoice.truevoice.SeatVote.Collections.SeatVote;
 
-// import java.util.Optional;
+import java.util.Optional;
 
-// import org.bson.types.ObjectId;
-// import org.springframework.data.mongodb.repository.MongoRepository;
-// import org.springframework.data.mongodb.repository.Query;
-// import org.springframework.data.repository.query.Param;
-// import org.springframework.stereotype.Repository;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+import org.springframework.stereotype.Repository;
 
-// import com.truevoice.truevoice.FRAEnum.Characteristic;
-// import com.truevoice.truevoice.FRAEnum.ElectionType;
-// import com.truevoice.truevoice.FRAEnum.FIPS;
+import com.truevoice.truevoice.FRAEnum.Characteristic;
+import com.truevoice.truevoice.FRAEnum.ElectionType;
+import com.truevoice.truevoice.FRAEnum.FIPS;
 
-// @Repository
-// public interface SeatVoteRepository extends MongoRepository<DistrictPlan, ObjectId> {
+@Repository
+public interface SeatVoteRepository extends MongoRepository<SeatVote, ObjectId> {
 
-//     @Query("{ 'crs.properties.fips': ?0, 'crs.properties.electionType': ?1, 'crs.properties.characteristic': ?2 }")
-//     Optional<DistrictPlan> findSeatVoteCurve(FIPS fips, ElectionType electionType, Characteristic characteristic);
+    @Query("{ 'fips': ?0, 'electionType': ?1, 'characteristic': ?2 }")
+    Optional<SeatVote> findSeatVoteCurve(FIPS fips, ElectionType electionType, Characteristic characteristic);
 
-// }
+}
