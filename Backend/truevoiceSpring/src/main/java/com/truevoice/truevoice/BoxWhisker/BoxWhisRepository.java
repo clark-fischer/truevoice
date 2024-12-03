@@ -10,14 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-// @Repository
-// public interface BoxWhisRepository extends MongoRepository<StateData, ObjectId> {
-
-//     @Query(value = "{ 'fips': ?0, 'electionType': ?1 }")
-//     Optional<BoxWhiskerData> findBoxWhiskerData(FIPS fips, ElectionType electionType);
-
-// }
-
 @Repository
 public interface BoxWhisRepository extends MongoRepository<BoxWhiskerData, ObjectId> {
 
