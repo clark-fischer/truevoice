@@ -17,39 +17,22 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Tooltip,
 } from "@chakra-ui/react";
 
-import {
-  Chart as ChartJS,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-  Tooltip as ChartTooltip,
-  Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
-
-import DistrictTable from "./DistrictTable";
 
 import Demographics from "./Demographics";
 import TabStatePlans from "./TabStatePlans";
 
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data -- start
 import "leaflet/dist/leaflet.css";
-// import state_smd_local from "../datafiles/nv_smd.json";
-// import state_smd_local from "../datafiles/NEVSMDFAIR.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
-import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
-import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
 import nv_race_by_district from "../datafiles/myJson.json"
 import TabPlanSummary from "./TabPlanSummary";
 import Ensemble from "./Ensemble";
-
-
 
 const state_representatives = [
   "Dina Titus",
@@ -104,12 +87,10 @@ const styles = {
   },
 };
 
-// data --  end
 
 export default function State() {
 
   const [state_smd, set_state_smd] = React.useState(null);
-
   const [race_stats, set_race_stats] = React.useState(null);
 
   useEffect(() => {
@@ -126,7 +107,7 @@ export default function State() {
 
 
       } catch (err) {
-        setError(err); // Handle any error that occurs during the request
+        console.log(err);
       }
     };
 
@@ -160,20 +141,6 @@ export default function State() {
     ],
   });
 
-  const updateChartData = (chartData, setChartData) => {
-    const newData = [...chartData.datasets[0].data];
-    newData[0] = Math.floor(Math.random() * 60) + 1;
-    newData[1] = 100 - newData[0];
-    setChartData({
-      ...chartData,
-      datasets: [
-        {
-          ...chartData.datasets[0],
-          data: newData,
-        },
-      ],
-    });
-  };
 
   const eachDistrict = (feature, layer) => {
     const districtNo = feature.properties.districtno;
@@ -208,9 +175,6 @@ export default function State() {
       document.getElementById(
         "selected-rep"
       ).innerText = `Rep. ${state_representatives[districtNo - 1]}`;
-
-      updateChartData(raceData, setRaceData);
-      updateChartData(partyData, setPartyData);
     });
   };
 
