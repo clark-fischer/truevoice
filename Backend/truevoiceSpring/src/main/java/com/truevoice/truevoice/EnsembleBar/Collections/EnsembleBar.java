@@ -18,7 +18,6 @@ public class EnsembleBar {
     private FIPS fips;
     private ElectionType electionType;
     private int totalDistricts;
-    private int totalRepresentatives;
     private double democratAvgVoteShare;
     private double democratAvgSeatShare;
     private double republicanAvgVoteShare;
