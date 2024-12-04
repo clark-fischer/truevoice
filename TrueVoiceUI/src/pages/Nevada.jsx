@@ -90,26 +90,21 @@ const styles = {
 
 export default function State() {
 
-  const [state_smd, set_state_smd] = React.useState(null);
   const [race_stats, set_race_stats] = React.useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
-        // console.log(response); // Set the data to state
+
         setGeoJsonData(response.data);
-        set_state_smd(response.data);
 
         document.getElementById("district-button0").style.color = "blue";
         document.getElementById("district-button0").style.fontWeight = "bold";
-        document.getElementById("district-button1").style.fontWeight = "bold";
-
 
         const response2 = await axios.get("http://localhost:8080/NV/HEATMAP");
         console.log("resp2", response2); // Set the data to state
         set_race_stats(response2.data.precincts)
-
 
       } catch (err) {
         console.log(err);
@@ -119,115 +114,29 @@ export default function State() {
     fetchData(); // Call the function
   }, []);
 
-
-  const [raceData, setRaceData] = React.useState({
-    labels: ["White", "Non-White"],
-    datasets: [
-      {
-        label: "Percentage of Population",
-        data: [0, 0],
-        backgroundColor: ["rgba(75, 192, 192, 0.2)", "rgba(255, 99, 132, 0.2)"],
-        borderColor: ["rgba(75, 192, 192, 1)", "rgba(255, 99, 132, 1)"],
-        borderWidth: 1,
-      },
-    ],
-  });
-
-
   const eachDistrict = (feature, layer) => {
-    const districtNo = feature.properties.districtno;
-    console.log(feature.properties)
-    layer.on("mouseover", function () {
+    const { districtno, demographics } = feature.properties; // Destructure for cleaner code
 
-      // district no
-      document.getElementById(
-        "selected-district"
-      ).innerText = `District ${districtNo}`;
+    const updateInfo = () => {
+      // Update district number and representative
+      document.getElementById("selected-district").innerText = `District ${districtno}`;
+      document.getElementById("selected-rep").innerText = `Rep. ${state_representatives[districtno - 1] || "Unknown"}`;
 
-      document.getElementById(
-        "race--white2"
-      ).innerText = `${feature.properties.demographics.white}`;
+      // Loop through demographics to update race information
+      const raceMapping = {
+        white: "race--white2", black: "race--black2", latin: "race--hispanic2", asian: "race--asian2", other: "race--other2",
+      };
 
-      document.getElementById(
-        "race--black2"
-      ).innerText = `${feature.properties.demographics.black}`;
+      for (const [key, id] of Object.entries(raceMapping)) {
+        document.getElementById(id).innerText = `${demographics[key] || 0}`;
+      }
+    };
 
-      document.getElementById(
-        "race--hispanic2"
-      ).innerText = `${feature.properties.demographics.latin}`;
-
-      document.getElementById(
-        "race--asian2"
-      ).innerText = `${feature.properties.demographics.asian}`;
-
-      document.getElementById(
-        "race--other2"
-      ).innerText = `${feature.properties.demographics.other}`;
-
-      document.getElementById(
-        "selected-rep"
-      ).innerText = `Rep. ${state_representatives[districtNo - 1]}`;
-    });
+    // Attach event handler
+    layer.on("mouseover", updateInfo);
   };
 
-  const nevada_districts = {
-    1: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.8,
-    },
-    2: {
-      color: "red",
-      fillColor: "red",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.4,
-    },
-    3: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.3,
-    },
-    4: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.3,
-    },
-  };
-
-  Object.keys(nevada_districts).forEach((district) => {
-    nevada_districts[district].fillOpacity /= 2;
-  });
-
-  const getGeoJsonStyle = (data) => {
-    if (data === state_smd) {
-      return (feature) => nevada_districts[feature.properties.DISTRICTNO];
-    } else if (data === nv_4mmd) {
-      return () => ({
-        color: "purple",
-        fillColor: "purple",
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.7,
-      });
-    }
-    return () => ({
-      color: "gray",
-      fillColor: "gray",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.5,
-    });
-  };
-
-  const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
-  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd));
+  const [geoJsonData, setGeoJsonData] = React.useState(null);
 
 
   function buildHeatmap(i) {
@@ -248,46 +157,65 @@ export default function State() {
 
   }
 
-
-  const changeDistrictMap = (data) => {
-    setGeoJsonData(data);
-    setGeoJsonStyle(() => getGeoJsonStyle(data));
-  };
-
-
   const renderDistrictButtons = () => {
     const districtMaps = [
       {
         label: "SMD (Enacted)",
-        data: state_smd,
+        path: "http://localhost:8080/NV/SMD/ENACTED",
         tooltip: "These are Nevada's districts, as of 2024.",
+        planOptions: plan_options_smd,
       },
       {
         label: "MMD, 4 Reps. (FRA official)",
-        data: nv_4mmd,
+        path: "http://localhost:8080/NV/MMD/AVERAGE",
         tooltip: "This would be the official prescription of the FRA.",
+        planOptions: plan_options_mmd,
       },
     ];
+
+    const handleButtonClick = (index, map) => {
+      // Reset styles for all buttons
+      districtMaps.forEach((_, i) => {
+        const button = document.getElementById(`district-button${i}`);
+        button.style.color = "black";
+        button.style.fontWeight = "normal";
+      });
+
+      // Highlight the selected button
+      const selectedButton = document.getElementById(`district-button${index}`);
+      selectedButton.style.color = "blue";
+      selectedButton.style.fontWeight = "bold";
+
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(map.path);
+          // console.log(response); // Set the data to state
+          setGeoJsonData(response.data);
+
+
+        } catch (err) {
+          setGeoJsonData(null);
+          console.log(err);
+        }
+
+        document.getElementById("district-button0").innerHTML = "SMD (" + item.title + ")";
+      };
+
+      fetchData(); // Call the function
+      set_plan_options(map.planOptions);
+
+      // Update button text if needed
+      if (index === 0) {
+        selectedButton.innerHTML = map.label;
+      }
+    };
 
     return districtMaps.map((map, index) => (
       <Tooltip key={index} label={map.tooltip}>
         <button
-          onClick={() => {
-            document.getElementById("district-button0").style.color = "black";
-            document.getElementById("district-button1").style.color = "black";
-            document.getElementById("district-button" + index).style.color = "blue";
-            document.getElementById("district-button" + index).style.fontWeight = "bold";
-            changeDistrictMap(map.data);
-            if (index == 0)
-              document.getElementById("district-button0").innerHTML = "SMD (Enacted)";
-              set_plan_options(plan_options_smd);
-            if (index == 1) {
-              set_plan_options(plan_options_mmd)
-            }
-
-          }}
+          id={`district-button${index}`}
           style={styles.button}
-          id={"district-button" + index}
+          onClick={() => handleButtonClick(index, map)}
         >
           {map.label}
         </button>
@@ -332,7 +260,7 @@ export default function State() {
     {
       title: "MMD",
       image: "/dem.jpeg",
-      path: "http://localhost:8080/NV/SMD/ENACTED"
+      path: "http://localhost:8080/NV/MMD/AVERAGE",
     },
     {
       title: "Hide",
@@ -404,7 +332,7 @@ export default function State() {
 
                 <GeoJSON
                   data={geoJsonData}
-                  style={geoJsonStyle}
+
                   onEachFeature={eachDistrict}
                 />
               </MapContainer>
