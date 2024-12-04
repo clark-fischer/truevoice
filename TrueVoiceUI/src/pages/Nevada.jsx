@@ -46,16 +46,10 @@ import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
 import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
 import nv_race_by_district from "../datafiles/myJson.json"
-import race_stats from "../datafiles/nv_race_chloro_data2_precinct.json"
 import TabPlanSummary from "./TabPlanSummary";
 import Ensemble from "./Ensemble";
 
-const heatmapGradient = {
-  white: { 0.1: "yellow", 1: "orange" },
-  black: { 0.1: "pink", 1: "purple" },
-  asian: { 0.1: "cyan", 1: "blue" },
-  hispanic: { 0.1: "lime", 1: "green" },
-};
+
 
 const state_representatives = [
   "Dina Titus",
@@ -76,6 +70,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     height: "700px",
+    // display: "none"
   },
   mapContainer: {
     flexGrow: 1, // Map takes up remaining space
@@ -113,17 +108,23 @@ const styles = {
 
 export default function State() {
 
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
   const [state_smd, set_state_smd] = React.useState(null);
+
+  const [race_stats, set_race_stats] = React.useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
-        console.log(response); // Set the data to state
+        const response = await axios.get("http://localhost:8080/NV/SMD/DEMFAVORED");
+        // console.log(response); // Set the data to state
         setGeoJsonData(response.data);
         set_state_smd(response.data);
+
+        const response2 = await axios.get("http://localhost:8080/NV/HEATMAP");
+        console.log("resp2", response2); // Set the data to state
+        set_race_stats(response2.data.precincts)
+
+
       } catch (err) {
         setError(err); // Handle any error that occurs during the request
       }
@@ -326,7 +327,6 @@ export default function State() {
   // console.log(mixColors(colors)); // Outputs a blended color
 
   function buildHeatmap(i) {
-
     return (feature) => {
       const tractId = feature.properties.GEOID; // assuming GEOID links to your data
       const data = race_stats[tractId];
@@ -353,28 +353,6 @@ export default function State() {
 
   const [heatmapData, setHeatmapData] = React.useState([]);
 
-  const renderHeatmapLayers = () => {
-    return Object.keys(heatmapData).map(
-      (race) =>
-        heatmapData[race] &&
-        heatmapData[race].length > 0 && (
-          <HeatmapLayer
-            key={race}
-            fitBoundsOnLoad={true}
-            fitBoundsOnUpdate={false}
-            points={heatmapData[race]}
-            longitudeExtractor={(m) => m[1]}
-            latitudeExtractor={(m) => m[0]}
-            intensityExtractor={(m) => parseFloat(m[2])}
-            radius={10}
-            max={100}
-            minOpacity={0.7}
-            useLocalExtrema={true}
-            gradient={heatmapGradient[race]}
-          />
-        )
-    );
-  };
 
   const renderDistrictButtons = () => {
     const districtMaps = [
@@ -393,8 +371,15 @@ export default function State() {
     return districtMaps.map((map, index) => (
       <Tooltip key={index} label={map.tooltip}>
         <button
-          onClick={() => changeDistrictMap(map.data)}
+          onClick={() => {
+            document.getElementById("district-button0").style.color="black";
+            document.getElementById("district-button1").style.color="black";
+            document.getElementById("district-button" + index).style.color="blue";
+            document.getElementById("district-button" + index).style.fontWeight="bold";
+            changeDistrictMap(map.data);
+          }}
           style={styles.button}
+          id={"district-button" + index}
         >
           {map.label}
         </button>
@@ -447,7 +432,6 @@ export default function State() {
                   attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
                   url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
                 />
-                {/* {renderHeatmapLayers()} */}
 
                 {
                   races.map((race, i) => {
@@ -491,45 +475,58 @@ export default function State() {
 
               <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
-                  <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                    <thead>
-                      <tr>
-                        <th style={{ border: "1px solid black", padding: "8px", width: "20%" }}></th>
-                        <th style={{ border: "1px solid black", padding: "8px" }}>SMD</th>
-                        <th style={{ border: "1px solid black", padding: "8px" }}>MMD</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>Rep/Dem Split</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>60:40</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>65:35</td>
-                      </tr>
-                      <tr>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>Opp Reps</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>1</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>2</td>
-                      </tr>
-                      <tr>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>Vote share</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>sample</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>sample</td>
-                      </tr>
-                      <tr>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>Seat share</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>sample</td>
-                        <td style={{ border: "1px solid black", padding: "8px" }}>sample</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <br />
+
+                  
+
+                  <div style={{display: "flex", margin: "0"}}>
 
                   <SideBySideImages
                     image1='2.jpg'
                     image2='3.jpg'
                     alt1="First placeholder"
                     alt2="Second placeholder"
+                    
                   />
+                     <table style={{ height: "10px", borderCollapse: "collapse", marginRight: "10px" }}>
+                    <thead>
+                      <tr>
+                        <th style={{ border: "1px solid white",   }}></th>
+                        <th style={{ border: "1px solid white",  }}>SMD</th>
+                        <th style={{ border: "1px solid white",  }}>MMD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style={{ border: "1px solid white",  }}>Rep/Dem Split</td>
+                        <td style={{ border: "1px solid white",  }}>60:40</td>
+                        <td style={{ border: "1px solid white",  }}>65:35</td>
+                      </tr>
+                      <tr>
+                        <td style={{ border: "1px solid white",  }}>Opp Reps</td>
+                        <td style={{ border: "1px solid white",  }}>1</td>
+                        <td style={{ border: "1px solid white",  }}>2</td>
+                      </tr>
+                      <tr>
+                        <td style={{ border: "1px solid white",  }}>Vote share</td>
+                        <td style={{ border: "1px solid white",  }}>sample</td>
+                        <td style={{ border: "1px solid white",  }}>sample</td>
+                      </tr>
+                      <tr>
+                        <td style={{ border: "1px solid white",  }}>Seat share</td>
+                        <td style={{ border: "1px solid white",  }}>sample</td>
+                        <td style={{ border: "1px solid white",  }}>sample</td>
+                      </tr>
+                    </tbody>
+                  </table> 
+
+            
+
+                  </div>
+
+                  
+                  <br />
+
+                  
 
                   {/* <Heading>
                   Ensemble Data
