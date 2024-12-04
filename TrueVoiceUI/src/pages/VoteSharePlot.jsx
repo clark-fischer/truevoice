@@ -9,8 +9,8 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        //const response = await axios.get('http://localhost:8080/NV/SMD/SEATVOTE');
-        const response = await axios.get(f`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
+        const response = await axios.get('http://localhost:8080/NV/SMD/SEATVOTE');
+        //const response = await axios.get(f`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
       
         setData(response.data);
       } catch (err) {
@@ -32,6 +32,7 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
       voteSeatMap[vote].push(seatShare[index]);
     });
 
+
     const uniqueVoteShare = Object.keys(voteSeatMap).map(Number);
     const averagedSeatShare = uniqueVoteShare.map(
       (vote) =>
@@ -42,11 +43,11 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
     return { uniqueVoteShare, averagedSeatShare };
   };
 
-    const demData = data.barData.map((entry) => ({
+    const demData = data.curveData.map((entry) => ({
       voteShare: entry.demVoteShare,
       seatShare: entry.demSeatShare,
     }));
-    const repData = data.barData.map((entry) => ({
+    const repData = data.curveData.map((entry) => ({
       voteShare: entry.repVoteShare,
       seatShare: entry.repSeatShare,
     }));
@@ -74,7 +75,6 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
         (i * (Math.max(...demVoteShare, ...repVoteShare) - Math.min(...demVoteShare, ...repVoteShare))) / 499
     );
 
-
     const interpolate = (x, y) => {
       const interpolatedValues = [];
       smoothX.forEach((sx) => {
@@ -85,16 +85,14 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
           const lowerIndex = x.findIndex((val) => val >= sx) - 1;
           const upperIndex = lowerIndex + 1;
   
-          const slope =
-            (y[upperIndex] - y[lowerIndex]) /
-            (x[upperIndex] - x[lowerIndex]);
-          interpolatedY =
-            y[lowerIndex] + slope * (sx - x[lowerIndex]);
+          const slope = (y[upperIndex] - y[lowerIndex]) / (x[upperIndex] - x[lowerIndex]);
+          interpolatedY = y[lowerIndex] + slope * (sx - x[lowerIndex]);
         }
         interpolatedValues.push(interpolatedY);
       });
       return interpolatedValues;
     };
+  
 
     const demSmoothY = interpolate(demVoteShare, demSeatShare);
     const repSmoothY = interpolate(repVoteShare, repSeatShare);
@@ -125,9 +123,9 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
           },
         ]}
         layout={{
-          title: title || f`${data.electionType} Vote/Seat Share Ensemble`,
-          xaxis: { title: x_label || "Vote Share" },
-          yaxis: { title: y_label || "Seat Share" },
+          title: title || `${data.electionType} Vote/Seat Share Ensemble`,
+          xaxis: { title: x_label || "Vote Share" , range: [0.46, 0.54] },
+          yaxis: { title: y_label || "Seat Share", range: [0, 1] },
           annotations: [
             {
               x: 0.5,

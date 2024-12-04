@@ -69,7 +69,7 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
     yaxis: {
       title: y_label || 'Frequency',
       tickmode: 'linear', 
-      dtick: 10 ,
+      dtick: 100,
       showline: true,
       linecolor: 'black', 
       linewidth: 2, 

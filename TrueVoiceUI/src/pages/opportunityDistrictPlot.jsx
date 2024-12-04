@@ -73,7 +73,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
         },
         yaxis: {
           title: y_label || 'Frequency',
-          dtick: 10,
+          dtick: 100,
           showline: true,
           linecolor: 'black', 
           linewidth: 2, 

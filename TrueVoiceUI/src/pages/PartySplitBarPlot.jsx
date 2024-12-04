@@ -78,7 +78,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
         yaxis: {
           title: y_label || 'Frequency',
           tickmode: 'linear',
-          dtick: 10, // Adjust dynamically if needed
+          dtick: 100, // Adjust dynamically if needed
           showline: true,
           linecolor: 'black',
           linewidth: 2,
