@@ -378,7 +378,7 @@ export default function State() {
                 </div>
               </TabPanel>
               <TabPlanSummary />
-              <TabStatePlans  />
+              <TabStatePlans setGeoJsonData={setGeoJsonData} />
               <Ensemble />
 
             </TabPanels>
