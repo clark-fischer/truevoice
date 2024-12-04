@@ -9,8 +9,8 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        //const response = await axios.get('http://localhost:8080/NV/SMD/ENACTED/SEATVOTE');
-        const response = await axios.get(f`http://localhost:8080/${fips}/${electionType}/${plan}/${characteristic}`);
+        //const response = await axios.get('http://localhost:8080/NV/SMD/SEATVOTE');
+        const response = await axios.get(f`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
       
         setData(response.data);
       } catch (err) {
@@ -19,135 +19,138 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
     };
 
     fetchData();
-  }, []);
+  }, [fips, electionType, plan, characteristic]);
 
   if (error) return <div>Error: {error.message}</div>;
   if (!data) return <div>Loading...</div>;
 
-    //const voteShares = data.electionResults.map((d) => d.voteShare);
-   //const seatShares = data.electionResults.map((d) => d.seatShare);
+  //remove duplicates by averaging seat shares
+  const aggregateVoteSeatData = (voteShare, seatShare) => {
+    const voteSeatMap = {};
+    voteShare.forEach((vote, index) => {
+      if (!voteSeatMap[vote]) voteSeatMap[vote] = [];
+      voteSeatMap[vote].push(seatShare[index]);
+    });
 
+    const uniqueVoteShare = Object.keys(voteSeatMap).map(Number);
+    const averagedSeatShare = uniqueVoteShare.map(
+      (vote) =>
+        voteSeatMap[vote].reduce((sum, value) => sum + value, 0) /
+        voteSeatMap[vote].length
+    );
 
-  const voteShares = Array.from({ length: 100 }, (_, i) => i / 99);
-  const seatShares = voteShares.map((voteShare) => 1 / (1 + Math.exp(-10 * (voteShare - 0.5))));
-
-  const voteShare = data.voteShare;
-  const smdSeatShare = data.smdSeatShare;
-  const mmdSeatShare = data.mmdSeatShare;
-
-  const traceLine = {
-    x: voteShares,
-    y: seatShares,
-    type: 'scatter',
-    mode: 'lines',
-    name: 'Seat-Vote Curve',
-    line: {
-      color: 'black',
-      width: 2,
-    },
+    return { uniqueVoteShare, averagedSeatShare };
   };
 
-  const traceSMD = {
-    x: [voteShare],
-    y: [smdSeatShare],
-    type: 'scatter',
-    mode: 'markers',
-    name: 'SMD Vote/Seat Share',
-    marker: {
-      color: 'red',
-      size: 10,
-    },
-  };
+    const demData = data.barData.map((entry) => ({
+      voteShare: entry.demVoteShare,
+      seatShare: entry.demSeatShare,
+    }));
+    const repData = data.barData.map((entry) => ({
+      voteShare: entry.repVoteShare,
+      seatShare: entry.repSeatShare,
+    }));
 
-  const traceMMD = {
-    x: [voteShare],
-    y: [mmdSeatShare],
-    type: 'scatter',
-    mode: 'markers',
-    name: 'MMD Vote/Seat Share',
-    marker: {
-      color: 'blue',
-      size: 10,
-    },
-  };
+    const {
+      uniqueVoteShare: demVoteShare,
+      averagedSeatShare: demSeatShare,
+    } = aggregateVoteSeatData(
+      demData.map((entry) => entry.voteShare),
+      demData.map((entry) => entry.seatShare)
+    );
+
+    const {
+      uniqueVoteShare: repVoteShare,
+      averagedSeatShare: repSeatShare,
+    } = aggregateVoteSeatData(
+      repData.map((entry) => entry.voteShare),
+      repData.map((entry) => entry.seatShare)
+    );
+
+    const smoothX = Array.from(
+      { length: 500 },
+      (_, i) =>
+        Math.min(...demVoteShare, ...repVoteShare) +
+        (i * (Math.max(...demVoteShare, ...repVoteShare) - Math.min(...demVoteShare, ...repVoteShare))) / 499
+    );
 
 
-  const dataTraces = [traceLine, traceSMD, traceMMD];
+    const interpolate = (x, y) => {
+      const interpolatedValues = [];
+      smoothX.forEach((sx) => {
+        let interpolatedY = 0;
+        if (sx <= x[0]) interpolatedY = y[0];
+        else if (sx >= x[x.length - 1]) interpolatedY = y[y.length - 1];
+        else {
+          const lowerIndex = x.findIndex((val) => val >= sx) - 1;
+          const upperIndex = lowerIndex + 1;
+  
+          const slope =
+            (y[upperIndex] - y[lowerIndex]) /
+            (x[upperIndex] - x[lowerIndex]);
+          interpolatedY =
+            y[lowerIndex] + slope * (sx - x[lowerIndex]);
+        }
+        interpolatedValues.push(interpolatedY);
+      });
+      return interpolatedValues;
+    };
 
-  const layout = {
-    title: title || `Seat-Vote Curve for ${data.state || 'Nevada'}`,
-    xaxis: {
-      title: x_label || 'Vote Share',
-      range: [0, 1],
-    },
-    yaxis: {
-      title: y_label || 'Seat Share',
-      range: [0, 1],
-    },
-    annotations: [
-    
-      {
-        x: 0.05,
-        y: 0.9,
-        xref: 'paper',
-        yref: 'paper',
-        text: `Symmetry: ${data.symmetry}`,
-        showarrow: false,
-        font: {
-          size: 12,
-          color: 'black',
-        },
-        align: 'left',
-      },
-      {
-        x: 0.05,
-        y: 0.85,
-        xref: 'paper',
-        yref: 'paper',
-        text: `Bias: ${data.bias}`,
-        showarrow: false,
-        font: {
-          size: 12,
-          color: 'black',
-        },
-        align: 'left',
-      },
-      {
-        x: 0.05,
-        y: 0.8,
-        xref: 'paper',
-        yref: 'paper',
-        text: `Responsiveness: ${data.responsiveness}`,
-        showarrow: false,
-        font: {
-          size: 12,
-          color: 'black',
-        },
-        align: 'left',
-      },
-    ],
-    legend: {
-      x: 0.8,
-      y: 1,
-    },
-    margin: {
-      l: 60,
-      r: 50,
-      t: 60,
-      b: 60,
-    },
-    width: 800, // Adjusted width for a less wide graph
-    height: 600, // Adjusted height to maintain aspect ratio
-  };
+    const demSmoothY = interpolate(demVoteShare, demSeatShare);
+    const repSmoothY = interpolate(repVoteShare, repSeatShare);
 
-  return (
-    <Plot
-      data={dataTraces}
-      layout={layout}
-      style={{ width: '100%', height: '100%' }}
-      config={{ responsive: true }}
-    />
-  );
-}
+    const bias = data.bias;
+    const symmetry = data.symmetry;
+    const responsiveness = data. responsiveness
+
+
+    return (
+      <Plot
+        data={[
+          {
+            x: smoothX,
+            y: demSmoothY,
+            type: "scatter",
+            mode: "lines",
+            name: "Democrats",
+            line: { color: "blue" },
+          },
+          {
+            x: smoothX,
+            y: repSmoothY,
+            type: "scatter",
+            mode: "lines",
+            name: "Republicans",
+            line: { color: "red" },
+          },
+        ]}
+        layout={{
+          title: title || f`${data.electionType} Vote/Seat Share Ensemble`,
+          xaxis: { title: x_label || "Vote Share" },
+          yaxis: { title: y_label || "Seat Share" },
+          annotations: [
+            {
+              x: 0.5,
+              y: 0.9,
+              xref: "paper",
+              yref: "paper",
+              text: `Bias: ${bias}<br>Responsiveness: ${responsiveness}<br>Symmetry: ${symmetry}`,
+              showarrow: false,
+              font: { size: 12 },
+              align: "left",
+              bgcolor: "white",
+              bordercolor: "black",
+              borderwidth: 1,
+            },
+          ],
+          width: 800,
+          height: 600,
+        }}
+        config={{ responsive: true }}
+      />
+    );
+  }
+  
+
 
 export default VoteShareSeatSharePlot;

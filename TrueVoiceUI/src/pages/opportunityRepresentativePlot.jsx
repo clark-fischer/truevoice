@@ -28,15 +28,21 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
 
 
 
-  const opportunityRepresentatives = data.barData.map(
-    (plans) => plans.opportunityRepresentatives
-  );
+  const opportunityRepresentatives = data.barData.map((d) => d.opportunityRepresentatives);
+  const maxFrequency = Math.max(...opportunityRepresentatives.map((d) => d.frequency || 0));
+  const dtickValue = Math.ceil(maxFrequency / 5);
+
   const totalRepresentatives = data.totalRepresentatives; 
   const averageSeatShare = Number(data.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
   const voteShare = Number(data.voteShare * 100).toFixed(2).replace(/\.00$/, '');
   const trace = {
     x: opportunityRepresentatives,
     type: 'histogram',
+    xbins: {
+      start: 0 - 0.5, 
+      end: totalRepresentatives + 0.5, 
+      size: 1, 
+  },
     marker: {
       color: '#7ff5b8',
       line: {
@@ -47,23 +53,29 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
   };
 
   const layout = {
-    title: title || `${electionType} Ensemble Summary: Opportunity Representatives`,
+    title: title || `${data.electionType} Ensemble Summary: Opportunity Representatives`,
+    font: {
+      size: 14, 
+  },
     xaxis: {
       title: x_label || 'Number of Opportunity Representatives',
-      range: [0, totalRepresentatives + 0.5], 
-      tickmode: 'linear', 
-      dtick: 1,
-      showline: true,
-      linecolor: 'black', 
-      linewidth: 1, 
-    },
-    yaxis: {
-      title: y_label || 'Frequency',
+      range: [0 - 0.5, totalRepresentatives + 0.5], 
       tickmode: 'linear', 
       dtick: 1,
       showline: true,
       linecolor: 'black', 
       linewidth: 2, 
+    },
+    yaxis: {
+      title: y_label || 'Frequency',
+      tickmode: 'linear', 
+      dtick: 10 ,
+      showline: true,
+      linecolor: 'black', 
+      linewidth: 2, 
+      font: {
+        size: 12, 
+    },
     },
     annotations: [
       {

@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.truevoice.truevoice.FRAEnum.ElectionType;
 import com.truevoice.truevoice.FRAEnum.FIPS;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,8 +17,9 @@ import com.truevoice.truevoice.FRAEnum.FIPS;
 public class EnsembleBar {
     private FIPS fips;
     private ElectionType electionType;
-    private double voteShare;
+    private double avgVoteShare;
     private double avgSeatShare;
     private int totalRepresentatives;
+    private int totalDistricts;
     private List<BarData> barData;
 }

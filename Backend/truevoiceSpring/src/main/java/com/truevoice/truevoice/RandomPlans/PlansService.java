@@ -25,11 +25,4 @@ public class PlansService {
     public Optional<DistrictPlan> getPlanFromDB(FIPS fips, ElectionType electionType, Characteristic characteristic) {
         return plansRepository.findDistrictPlan(fips, electionType, characteristic);
     }
-
-    // @Cacheable
-    // public Optional<DistrictPlan> getPlanFromDB(FIPS fips, ElectionType electionType, Characteristic characteristic) {
-    //     return plansRepository.    findFirstByCrs_Properties_FipsAndCrs_Properties_ElectionTypeAndCrs_Properties_Characteristic(fips, electionType, characteristic);
-    // }
-
-    
 }

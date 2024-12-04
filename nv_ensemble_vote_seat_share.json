@@ -1,0 +1,5330 @@
+{
+    "fips": "NV",
+    "electionType": "SMD",
+    "totalDistricts": 0,
+    "symmetry": 0.29835526315789473,
+    "bias": 0.0,
+    "responsiveness": 24.99999999999998,
+    "barData": [
+        {
+            "planId": 1,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 2,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 3,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 4,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 5,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 6,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 7,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 8,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 9,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 10,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 11,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 12,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 13,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 14,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 15,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 16,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 17,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 18,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 19,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 20,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 21,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 22,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 23,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 24,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 25,
+            "demVoteShare": 0.5,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.5,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 26,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 27,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 28,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 29,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 30,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 31,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 32,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 33,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 34,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 35,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 36,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 37,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 38,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 39,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 40,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 41,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 42,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 43,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 44,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 45,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 46,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 47,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 48,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 49,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 50,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 51,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 52,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 53,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 54,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 55,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 56,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 57,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 58,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 59,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 60,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 61,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 62,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 63,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 64,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 65,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 66,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 67,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 68,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 69,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 70,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 71,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 72,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 73,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 74,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 75,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 76,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 77,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 78,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 79,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 80,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 81,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 82,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 83,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 84,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 85,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 86,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 87,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 88,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 89,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 90,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 91,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 92,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 93,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 94,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 95,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 96,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 97,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 98,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 99,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 100,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 101,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 102,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 103,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 104,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 105,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 106,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 107,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 108,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 109,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 110,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 111,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 112,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 113,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 114,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 115,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 116,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 117,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 118,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 119,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 120,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 121,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 122,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 123,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 124,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 125,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 126,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 127,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 128,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 129,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 130,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 131,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 132,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 133,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 134,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 135,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 136,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 137,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 138,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 139,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 140,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 141,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 142,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 143,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 144,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 145,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 146,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 147,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 148,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 149,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 150,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 151,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 152,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 153,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 154,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 155,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 156,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 157,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 158,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 159,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 160,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 161,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 162,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 163,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 164,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 165,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 166,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 167,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 168,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 169,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 170,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 171,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 172,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 173,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 174,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 175,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 176,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 177,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 178,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 179,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 180,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 181,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 182,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 183,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 184,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 185,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 186,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 187,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 188,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 189,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 190,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 191,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 192,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 193,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 194,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 195,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 196,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 197,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 198,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 199,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 200,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 201,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 202,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 203,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 204,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 205,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 206,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 207,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 208,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 209,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 210,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 211,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 212,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 213,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 214,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 215,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 216,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 217,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 218,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 219,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 220,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 221,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 222,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 223,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 224,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 225,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 226,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 227,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 228,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 229,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 230,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 231,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 232,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 233,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 234,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 235,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 236,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 237,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 238,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 239,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 240,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 241,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 242,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 243,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 244,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 245,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 246,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 247,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 248,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 249,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 250,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 251,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 252,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 253,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 254,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 255,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 256,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 257,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 258,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 259,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 260,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 261,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 262,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 263,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 264,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 265,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 266,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 267,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 268,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 269,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 270,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 271,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 272,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 273,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 274,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 275,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 276,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 277,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 278,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 279,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 280,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 281,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 282,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 283,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 284,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 285,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 286,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 287,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 288,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 289,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 290,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 291,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 292,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 293,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 294,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 295,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 296,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 297,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 298,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 299,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 300,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 301,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 302,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 303,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 304,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 305,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 306,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 307,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 308,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 309,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 310,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 311,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 312,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 313,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 314,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 315,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 316,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 317,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 318,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 319,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 320,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 321,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 322,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 323,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 324,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 325,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 326,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 327,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 328,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 329,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 330,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 331,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 332,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 333,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 334,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 335,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 336,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 337,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 338,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 339,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 340,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 341,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 342,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 343,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 344,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 345,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 346,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 347,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 348,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 349,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 350,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 351,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 352,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 353,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 354,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 355,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 356,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 357,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 358,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 359,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 360,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 361,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 362,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 363,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 364,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 365,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 366,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 367,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 368,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 369,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 370,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 371,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 372,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 373,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 374,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 375,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 376,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 377,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 378,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 379,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 380,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 381,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 382,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 383,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 384,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 385,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 386,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 387,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 388,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 389,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 390,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 391,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 392,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 393,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 394,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 395,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 396,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 397,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 398,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 399,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 400,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 401,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 402,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 403,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 404,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 405,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 406,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 407,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 408,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 409,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 410,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 411,
+            "demVoteShare": 0.54,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.46,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 412,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 413,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 414,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 415,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 416,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 417,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 418,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 419,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 420,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 421,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 422,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 423,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 424,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 425,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 426,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 427,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 428,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 429,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 430,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 431,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 432,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 433,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 434,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 435,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 436,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 437,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 438,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 439,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 440,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 441,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 442,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 443,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 444,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 445,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 446,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 447,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 448,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 449,
+            "demVoteShare": 0.54,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.46,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 450,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 451,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 452,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 453,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 454,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 455,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 456,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 457,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 458,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 459,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 460,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 461,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 462,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 463,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 464,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 465,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 466,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 467,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 468,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 469,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 470,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 471,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 472,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 473,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 474,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 475,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 476,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 477,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 478,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 479,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 480,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 481,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 482,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 483,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 484,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 485,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 486,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 487,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 488,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 489,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 490,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 491,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 492,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 493,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 494,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 495,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 496,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 497,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 498,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 499,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 500,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 501,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 502,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 503,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 504,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 505,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 506,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 507,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 508,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 509,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 510,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 511,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 512,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 513,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 514,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 515,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 516,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 517,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 518,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 519,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 520,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 521,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 522,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 523,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 524,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 525,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 526,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 527,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 528,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 529,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 530,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 531,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 532,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 533,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 534,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 535,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 536,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 537,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 538,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 539,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 540,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 541,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 542,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 543,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 544,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 545,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 546,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 547,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 548,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 549,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 550,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 551,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 552,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 553,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 554,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 555,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 556,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 557,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 558,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 559,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 560,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 561,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 562,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 563,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 564,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 565,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 566,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 567,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 568,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 569,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 570,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 571,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 572,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 573,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 574,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 575,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 576,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 577,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 578,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 579,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 580,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 581,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 582,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 583,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 584,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 585,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 586,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 587,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 588,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 589,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 590,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 591,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 592,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 593,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 594,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 595,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 596,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 597,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 598,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 599,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 600,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 601,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 602,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 603,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 604,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 605,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 606,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 607,
+            "demVoteShare": 0.51,
+            "demSeatShare": 1.0,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.0
+        },
+        {
+            "planId": 608,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 609,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 610,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 611,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 612,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 613,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 614,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 615,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 616,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 617,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 618,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 619,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 620,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 621,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 622,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 623,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 624,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 625,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 626,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 627,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 628,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 629,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 630,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 631,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 632,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 633,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 634,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 635,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 636,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 637,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 638,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 639,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 640,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 641,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 642,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 643,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 644,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 645,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 646,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 647,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 648,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 649,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 650,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 651,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 652,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 653,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 654,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 655,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 656,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 657,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 658,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 659,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 660,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 661,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 662,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 663,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 664,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 665,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 666,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 667,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 668,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 669,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 670,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 671,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 672,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 673,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 674,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 675,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 676,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 677,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 678,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 679,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 680,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 681,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 682,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 683,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 684,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 685,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 686,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 687,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 688,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 689,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 690,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 691,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 692,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 693,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 694,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 695,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 696,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 697,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 698,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 699,
+            "demVoteShare": 0.5,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.5,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 700,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 701,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 702,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 703,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 704,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 705,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 706,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 707,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 708,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 709,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 710,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 711,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 712,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 713,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 714,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 715,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 716,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 717,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.25,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.75
+        },
+        {
+            "planId": 718,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 719,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 720,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 721,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 722,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 723,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 724,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 725,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 726,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 727,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 728,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 729,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 730,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 731,
+            "demVoteShare": 0.5,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.5,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 732,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 733,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 734,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 735,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 736,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 737,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 738,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 739,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 740,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 741,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 742,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 743,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 744,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 745,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 746,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 747,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 748,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 749,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 750,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 751,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 752,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 753,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 754,
+            "demVoteShare": 0.53,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.47,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 755,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 756,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 757,
+            "demVoteShare": 0.51,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.49,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 758,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.5,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.5
+        },
+        {
+            "planId": 759,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        },
+        {
+            "planId": 760,
+            "demVoteShare": 0.52,
+            "demSeatShare": 0.75,
+            "repVoteShare": 0.48,
+            "repSeatShare": 0.25
+        }
+    ]
+}

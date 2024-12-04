@@ -1,10 +1,12 @@
 {
     "fips": "NV",
     "electionType": "SMD",
-    "totalDistricts": "4",
-    "avgVoteShare": 0,
-    "avgSeatShare": 0,
-    "ensembles": [
+    "totalDistricts": 4,
+    "democratAvgVoteShare": 0.5179605263157833,
+    "democratAvgSeatShare": 0.6299342105263154,
+    "republicanAvgVoteShare": 0.4820394736842149,
+    "republicanAvgSeatShare": 0.37006578947368407,
+    "barData": [
         {
             "planId": 1,
             "democratsPercentage": 0.51,
@@ -16,29 +18,29 @@
             "planId": 2,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 3,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 4,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 5,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 6,
@@ -58,15 +60,15 @@
             "planId": 8,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 9,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 10,
@@ -79,36 +81,36 @@
             "planId": 11,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 12,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 13,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 14,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 15,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 16,
@@ -128,50 +130,50 @@
             "planId": 18,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 2,
-            "opportunityDistricts": 2
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 19,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 20,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 21,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 22,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 23,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 24,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 25,
@@ -184,15 +186,15 @@
             "planId": 26,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 27,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 28,
@@ -205,43 +207,43 @@
             "planId": 29,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 30,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 31,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 32,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 33,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 34,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 35,
@@ -254,15 +256,15 @@
             "planId": 36,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 37,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 38,
@@ -282,22 +284,22 @@
             "planId": 40,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 41,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 42,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 43,
@@ -310,15 +312,15 @@
             "planId": 44,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 45,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 46,
@@ -338,8 +340,8 @@
             "planId": 48,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 49,
@@ -352,8 +354,8 @@
             "planId": 50,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 51,
@@ -373,8 +375,8 @@
             "planId": 53,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 54,
@@ -408,29 +410,29 @@
             "planId": 58,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 59,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 60,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 61,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 62,
@@ -443,15 +445,15 @@
             "planId": 63,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 64,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 65,
@@ -464,8 +466,8 @@
             "planId": 66,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 67,
@@ -478,22 +480,22 @@
             "planId": 68,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 69,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 70,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 71,
@@ -506,15 +508,15 @@
             "planId": 72,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 73,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 74,
@@ -527,36 +529,36 @@
             "planId": 75,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 76,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 77,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 78,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 2,
-            "opportunityDistricts": 2
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 79,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 80,
@@ -569,43 +571,43 @@
             "planId": 81,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 82,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 83,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 84,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 2,
-            "opportunityDistricts": 2
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 85,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 86,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 87,
@@ -618,50 +620,50 @@
             "planId": 88,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 89,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 90,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 91,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 92,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 93,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 94,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 95,
@@ -674,8 +676,8 @@
             "planId": 96,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 97,
@@ -688,29 +690,29 @@
             "planId": 98,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 99,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 100,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 101,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 102,
@@ -723,29 +725,29 @@
             "planId": 103,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 104,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 105,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 106,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 107,
@@ -772,36 +774,36 @@
             "planId": 110,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 111,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 112,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 113,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 114,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 115,
@@ -814,8 +816,8 @@
             "planId": 116,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 117,
@@ -842,8 +844,8 @@
             "planId": 120,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 121,
@@ -877,8 +879,8 @@
             "planId": 125,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 126,
@@ -891,8 +893,8 @@
             "planId": 127,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 128,
@@ -905,113 +907,113 @@
             "planId": 129,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 130,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 131,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 132,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 133,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 134,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 135,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 136,
             "democratsPercentage": 0.53,
             "republicanPercentage": 0.47,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 137,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 138,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 139,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 140,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 141,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 142,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 143,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 144,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 145,
@@ -1024,8 +1026,8 @@
             "planId": 146,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 147,
@@ -1038,22 +1040,22 @@
             "planId": 148,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 149,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 150,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 151,
@@ -1066,22 +1068,22 @@
             "planId": 152,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 153,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 154,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 155,
@@ -1094,22 +1096,22 @@
             "planId": 156,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 157,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 158,
             "democratsPercentage": 0.52,
             "republicanPercentage": 0.48,
-            "opportunityRepresentatives": 1,
-            "opportunityDistricts": 1
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
         },
         {
             "planId": 159,
@@ -1122,6 +1124,4206 @@
             "planId": 160,
             "democratsPercentage": 0.51,
             "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 161,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 162,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 163,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 164,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 165,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 166,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 167,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 168,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 169,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 170,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 171,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 172,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 173,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 174,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 175,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 176,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 177,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 178,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 179,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 180,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 181,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 182,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 183,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 184,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 185,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 186,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 187,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 188,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 189,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 190,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 191,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 192,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 193,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 194,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 195,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 196,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 197,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 198,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 199,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 200,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 201,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 202,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 203,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 204,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 205,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 206,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 207,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 208,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 209,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 210,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 211,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 212,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 213,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 214,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 215,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 216,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 217,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 218,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 219,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 220,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 221,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 222,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 223,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 224,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 225,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 226,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 227,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 228,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 229,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 230,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 231,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 232,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 233,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 234,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 235,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 236,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 237,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 238,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 239,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 240,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 241,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 242,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 243,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 244,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 245,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 246,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 247,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 248,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 249,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 250,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 251,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 252,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 253,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 254,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 255,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 256,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 257,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 258,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 259,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 260,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 261,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 262,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 263,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 264,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 265,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 266,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 267,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 268,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 269,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 270,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 271,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 272,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 273,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 274,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 275,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 276,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 277,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 278,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 279,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 280,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 281,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 282,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 283,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 284,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 285,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 286,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 287,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 288,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 289,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 290,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 291,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 292,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 293,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 294,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 295,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 296,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 297,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 298,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 299,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 300,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 301,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 302,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 303,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 304,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 305,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 306,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 307,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 308,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 309,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 310,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 311,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 312,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 313,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 314,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 315,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 316,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 317,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 318,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 319,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 320,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 321,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 322,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 323,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 324,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 325,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 326,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 327,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 328,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 329,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 330,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 331,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 332,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 333,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 334,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 335,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 336,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 337,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 338,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 339,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 340,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 341,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 342,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 343,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 344,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 345,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 346,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 347,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 348,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 349,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 350,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 351,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 352,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 353,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 354,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 355,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 356,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 357,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 358,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 359,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 360,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 361,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 362,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 363,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 364,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 365,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 366,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 367,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 368,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 369,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 370,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 371,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 372,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 373,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 374,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 375,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 376,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 377,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 378,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 379,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 380,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 381,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 382,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 383,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 384,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 385,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 386,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 387,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 388,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 389,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 390,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 391,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 392,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 393,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 394,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 395,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 396,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 397,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 398,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 399,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 400,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 401,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 402,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 403,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 404,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 405,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 406,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 407,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 408,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 409,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 410,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 411,
+            "democratsPercentage": 0.54,
+            "republicanPercentage": 0.46,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 412,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 413,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 414,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 415,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 416,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 417,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 418,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 419,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 420,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 421,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 422,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 423,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 424,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 425,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 426,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 427,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 428,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 429,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 430,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 431,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 432,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 433,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 434,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 435,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 436,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 437,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 438,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 439,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 440,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 441,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 442,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 443,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 444,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 445,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 446,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 447,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 448,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 449,
+            "democratsPercentage": 0.54,
+            "republicanPercentage": 0.46,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 450,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 451,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 452,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 453,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 454,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 455,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 456,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 457,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 458,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 459,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 460,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 461,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 462,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 463,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 464,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 465,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 466,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 467,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 468,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 469,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 470,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 471,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 472,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 473,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 474,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 475,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 476,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 477,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 478,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 479,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 480,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 481,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 482,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 483,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 484,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 485,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 486,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 487,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 488,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 489,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 490,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 491,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 492,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 493,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 494,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 495,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 496,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 497,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 498,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 499,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 500,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 501,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 502,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 503,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 504,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 505,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 506,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 507,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 508,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 509,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 510,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 511,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 512,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 513,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 514,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 515,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 516,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 517,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 518,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 519,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 520,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 521,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 522,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 523,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 524,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 525,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 526,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 527,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 528,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 529,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 530,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 531,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 532,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 533,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 534,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 535,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 536,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 537,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 538,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 539,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 540,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 541,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 542,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 543,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 544,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 545,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 546,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 547,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 548,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 549,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 550,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 551,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 552,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 553,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 554,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 555,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 556,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 557,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 558,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 559,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 560,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 561,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 562,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 563,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 564,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 565,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 566,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 567,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 568,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 569,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 570,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 571,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 572,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 573,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 574,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 575,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 576,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 577,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 578,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 579,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 580,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 581,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 582,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 583,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 584,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 585,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 586,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 587,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 588,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 589,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 590,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 591,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 592,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 593,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 594,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 595,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 596,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 597,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 598,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 599,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 600,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 601,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 602,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 603,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 604,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 605,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 606,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 607,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 608,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 609,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 610,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 611,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 612,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 613,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 614,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 615,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 616,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 617,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 618,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 619,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 620,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 621,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 622,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 623,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 624,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 625,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 626,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 627,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 628,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 629,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 630,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 631,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 632,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 633,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 634,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 635,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 636,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 637,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 638,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 639,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 640,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 641,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 642,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 643,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 644,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 645,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 646,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 647,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 648,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 649,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 650,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 651,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 652,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 653,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 654,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 655,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 656,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 657,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 658,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 659,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 660,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 661,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 662,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 663,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 664,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 665,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 666,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 667,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 668,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 669,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 670,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 671,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 672,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 673,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 674,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 675,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 676,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 677,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 678,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 679,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 680,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 681,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 682,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 683,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 684,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 685,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 686,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 687,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 688,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 689,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 690,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 691,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 692,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 693,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 694,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 695,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 696,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 697,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 698,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 699,
+            "democratsPercentage": 0.5,
+            "republicanPercentage": 0.5,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 700,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 701,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 702,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 703,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 704,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 705,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 706,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 707,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 708,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 709,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 710,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 711,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 712,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 713,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 714,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 715,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 716,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 717,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 718,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 719,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 720,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 721,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 722,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 723,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 724,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 725,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 726,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 727,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 728,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 729,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 730,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 731,
+            "democratsPercentage": 0.5,
+            "republicanPercentage": 0.5,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 732,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 733,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 734,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 735,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 736,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 737,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 738,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 739,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 740,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 741,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 742,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 743,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 744,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 745,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 746,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 747,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 748,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 749,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 750,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 751,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 752,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 753,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 754,
+            "democratsPercentage": 0.53,
+            "republicanPercentage": 0.47,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 755,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 756,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 757,
+            "democratsPercentage": 0.51,
+            "republicanPercentage": 0.49,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 758,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 759,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
+            "opportunityRepresentatives": 0,
+            "opportunityDistricts": 0
+        },
+        {
+            "planId": 760,
+            "democratsPercentage": 0.52,
+            "republicanPercentage": 0.48,
             "opportunityRepresentatives": 0,
             "opportunityDistricts": 0
         }

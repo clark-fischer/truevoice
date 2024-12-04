@@ -24,14 +24,16 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
         };
         fetchData();
 
-    }, []);
+    }, [fips, electionType, characteristic]);
   
     if(error) return <div>Error: {error.message}</div>;
     if(!data) return <div>Loading...</div>;
 
     const opportunityDistricts = data.barData.map((d) => d.opportunityDistricts);
-    const totalDistricts = data.totalDistricts;
-
+    //const totalDistricts = data.totalDistricts;
+    const totalDistricts = data.totalRepresentatives;
+    const maxFrequency = Math.max(...opportunityDistricts.map((d) => d.frequency || 0)); 
+    const dtickValue = Math.ceil(maxFrequency / 5);
 
     const averageSeatShare = Number(data.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
     const voteShare = Number(data.voteShare * 100).toFixed(2).replace(/\.00$/, '');
@@ -53,10 +55,9 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
       };
     
       const layout = {
-        title: 
-        title || `${electionType} Ensemble summary: Opportunity Districts` ,
+        title: title || `${data.electionType} Ensemble summary: Opportunity Districts` ,
         font: {
-            size: 12, 
+            size: 14, 
         },
         xaxis: {
           title: x_label || 'Number of Opportunity Districts',
@@ -72,8 +73,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
         },
         yaxis: {
           title: y_label || 'Frequency',
-          tickmode: 'linear', 
-          dtick: 1,
+          dtick: 10,
           showline: true,
           linecolor: 'black', 
           linewidth: 2, 
