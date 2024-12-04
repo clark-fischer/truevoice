@@ -3,66 +3,61 @@ import numpy as np
 import json
 import pprint
 
-# Read the shapefile
-shapefile_path = '/Users/clark/Desktop/truevoice/dataconfig/nv_race_2022_cnty.shp'
+shapefile_path = '/Users/clark/Desktop/truevoice/Colorado/nv_cvap_2022_cd.geojson'
+gdf_df = gpd.read_file(shapefile_path)
 
-
-import geopandas
-myshpfile = geopandas.read_file(shapefile_path)
-myshpfile.to_file('/Users/clark/Desktop/truevoice/TrueVoiceUI/src/datafiles/myJson.json', driver='GeoJSON')
-
-
-gdf = gpd.read_file(shapefile_path)
-
-print(gdf.columns)
-
-# Get the centroid coordinates for each geometry
-centroids = gdf.geometry.centroid
-
-# Extract latitude and longitude
-latitudes = centroids.y
-longitudes = centroids.x
-
-
-print(latitudes)
-print(longitudes)
-
-print(gdf.columns)
-print(gdf["GEOID"][1])
-
-total_population = gdf['TOT_POP22']
-white = gdf['WHT_NHSP22']
-black = gdf['BLK_NHSP22']
-native = gdf['AIA_NHSP22']
-asian = gdf['ASN_NHSP22']
-hispanic = gdf['HSP_POP22']
-hawaiian = gdf['HPI_NHSP22']
-other = gdf['OTH_NHSP22']
-
-
-
-tt = white + black + native + asian + hispanic + hawaiian + other
-
-names = ['white', 'black', 'native', 'asian', 'hispanic', 'hawaiian', 'other', 'total_population']
-all_races = np.divide(np.array([white, black, native, asian, hispanic, hawaiian, other, tt]), np.array(total_population))
-all_races = np.round(all_races,2)
-
+# print(gdf)
 race_dict = {}
-for idx, geoid in enumerate(gdf['GEOID']):
+for i, gdf in enumerate(gdf_df.itertuples()):
+    total_population = gdf.C_TOT22
+    white = gdf.C_WHT22
+    black = gdf.C_BLA22
+    asian = gdf.C_ASI22
+    hispanic = gdf.C_HSP22
 
-    race_dict[geoid] = {
-        'white': float(np.nan_to_num(all_races[0][idx])),
-        'black': float(np.nan_to_num(all_races[1][idx])),
-        'native': float(np.nan_to_num(all_races[2][idx])),
-        'asian': float(np.nan_to_num(all_races[3][idx])),
-        'hispanic': float(np.nan_to_num(all_races[4][idx])),
-        'hawaiian': float(np.nan_to_num(all_races[5][idx])),
-        'other': float(np.nan_to_num(all_races[6][idx])),
-        'total_population': float(np.nan_to_num(total_population[idx]))
+    race_dict[gdf.GEOID20] = {
+        'white': white / total_population,
+        'black': black / total_population,
+        'asian': asian / total_population,
+        'hispanic': hispanic / total_population,
+        'total_population': total_population
     }
 
-pprint.pprint(race_dict)
 
-with open("nv_race_chloro_data2_precinct.json", "w") as outfile: 
+# tt = white + black  + asian + hispanic 
+
+# names = ['white', 'black', 'asian', 'hispanic', 'total_population']
+# all_races = np.divide(np.array([white, black, asian, hispanic, tt]), np.array(total_population))
+# all_races = np.round(all_races,2)
+
+# print(all_races.T)
+
+# 
+
+# for i, races in enumerate(all_races):
+#     race_dict[i] = {
+#         'white': races[0],
+#         'black': races[1],
+#         'asian': races[2],
+#         'hispanic': races[3],
+
+#         'total_population': races[4]
+#     }
+
+# # print(len(gdf))
+# # for idx, geoid in enumerate(gdf):
+
+# #     race_dict[geoid] = {
+# #         'white': float(np.nan_to_num(all_races[0][idx])),
+# #         'black': float(np.nan_to_num(all_races[1][idx])),
+# #         'asian': float(np.nan_to_num(all_races[2][idx])),
+# #         'hispanic': float(np.nan_to_num(all_races[3][idx])),
+
+# #         'total_population': float(np.nan_to_num(total_population[idx]))
+# #     }
+
+# pprint.pprint(race_dict)
+
+with open("nv_race_chloro_data2_district.json", "w") as outfile: 
     json.dump(race_dict, outfile)
 
