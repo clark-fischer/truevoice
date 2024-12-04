@@ -85,8 +85,8 @@ const TabStatePlans = (props) => {
                                         const response = await axios.get(item.path);
                                         // console.log(response); // Set the data to state
                                         props.setGeoJsonData(response.data);
+                                        props.setPlanData(response.data.crs.properties);
 
-                                        
                                     } catch (err) {
                                         props.setGeoJsonData(null);
                                         console.log(err);
