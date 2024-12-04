@@ -1,21 +1,10 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { useState } from 'react';
+
 
 import {
-  Box,
-  Container,
+
   Text,
-  Heading,
-  UnorderedList,
-  ListItem,
-  Center,
-  Divider,
-  Link,
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
+ 
   TabPanel,
 } from "@chakra-ui/react";
 
@@ -65,41 +54,11 @@ const styles = {
 
 const Demographics = (props) => {
 
-
-  let races = props.races;
-  // let setRaces = props.setRaces;
-
-  // const changeRaceMap = () => {
-  //   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  //   checkboxes.forEach((checkbox, i) => {
-  //     if (["race--white", "race--black", "race--asian", "race--hispanic"].includes(checkbox.id)) {
-  //       checkbox.addEventListener('change', (event) => {
-  //     if (event.target.checked) {
-  //       races[i]["checked"] = 1
-  //     } else {
-  //       races[i]["checked"] = 0;
-  //     }
-  //       });
-  //     }
-  //   });
-
-  //   console.log(races);
-
-  //   setRaces(races);
-  // }
-
-
-
-  // const renderRaceCheckboxes = ;
-
+  let raceCheckBoxes = props.raceCheckBoxes;
 
   return (
     <TabPanel padding={0}>
 
-      {/* <div style={{ margin: "20px" }}>
-
-
-      </div> */}
       <div style={styles.controlsContainer}>
         <legend
           style={{
@@ -117,63 +76,14 @@ const Demographics = (props) => {
             <input id="district-based" name="race-map-type" type="radio" />
             <label htmlFor="district-based" style={{ paddingLeft: "5px" }}>District Based</label>
             <br />
-            <input id="precinct-based" name="race-map-type"  type="radio" />
+            <input id="precinct-based" name="race-map-type" type="radio" />
             <label htmlFor="precinct-based" style={{ paddingLeft: "5px" }}>Precinct Based</label>
 
           </div>
-          
 
-          {/* <div style={{ flexBasis: "30%" }}>
-            <Box
-              key={1}
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              p={5}
-              
-              style={{
-                cursor: "pointer",
-                boxShadow: "0 0 10px 2px lightgreen",
-                transition: "box-shadow 0.3s",
-              }}
-            >
-              <Heading size="sd">{"District"}</Heading>
-              <Center>
-                <img
-                  src={"/district.png"}
-                  style={{ width: "80px" }}
-                  alt={"District"}
-                />
-              </Center>
-            </Box>
-          </div>
-          <div style={{ flexBasis: "30%" }}>
-          <Box
-              key={1}
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              p={5}
-              
-              style={{
-                cursor: "pointer",
-                boxShadow: "0 0 10px 2px lightgreen",
-                transition: "box-shadow 0.3s",
-              }}
-            >
-              <Heading size="sd">{"Precinct"}</Heading>
-              <Center>
-                <img
-                  src={"/precinct.png"}
-                  style={{ width: "80px" }}
-                  alt={"District"}
-                />
-              </Center>
-            </Box>
-          </div> */}
           <div style={{ flexBasis: "70%" }}>
             {
-              races.map((race, i) => (
+              raceCheckBoxes.map((race, i) => (
                 <div key={race.id}>
                   <input id={race.id} type="checkbox" onChange={() => props.toggle_map(i)} />
                   <label htmlFor={race.id} style={{ paddingLeft: "5px" }}>

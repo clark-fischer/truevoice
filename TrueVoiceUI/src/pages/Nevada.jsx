@@ -17,39 +17,22 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Tooltip,
 } from "@chakra-ui/react";
 
-import {
-  Chart as ChartJS,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-  Tooltip as ChartTooltip,
-  Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
-
-import DistrictTable from "./DistrictTable";
 
 import Demographics from "./Demographics";
 import TabStatePlans from "./TabStatePlans";
 
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
 
 // data -- start
 import "leaflet/dist/leaflet.css";
-// import state_smd_local from "../datafiles/nv_smd.json";
-// import state_smd_local from "../datafiles/NEVSMDFAIR.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
-import { Flex, Heading, Tooltip, Image } from "@chakra-ui/react";
-import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
 import nv_race_by_district from "../datafiles/myJson.json"
 import TabPlanSummary from "./TabPlanSummary";
 import Ensemble from "./Ensemble";
-
-
 
 const state_representatives = [
   "Dina Titus",
@@ -104,12 +87,10 @@ const styles = {
   },
 };
 
-// data --  end
 
 export default function State() {
 
   const [state_smd, set_state_smd] = React.useState(null);
-
   const [race_stats, set_race_stats] = React.useState(null);
 
   useEffect(() => {
@@ -126,7 +107,7 @@ export default function State() {
 
 
       } catch (err) {
-        setError(err); // Handle any error that occurs during the request
+        console.log(err);
       }
     };
 
@@ -147,33 +128,6 @@ export default function State() {
     ],
   });
 
-  const [partyData, setPartyData] = React.useState({
-    labels: ["Republican", "Democrat"],
-    datasets: [
-      {
-        label: "Population",
-        data: [0, 0],
-        backgroundColor: ["rgba(75, 192, 192, 0.2)", "rgba(255, 99, 132, 0.2)"],
-        borderColor: ["rgba(75, 192, 192, 1)", "rgba(255, 99, 132, 1)"],
-        borderWidth: 1,
-      },
-    ],
-  });
-
-  const updateChartData = (chartData, setChartData) => {
-    const newData = [...chartData.datasets[0].data];
-    newData[0] = Math.floor(Math.random() * 60) + 1;
-    newData[1] = 100 - newData[0];
-    setChartData({
-      ...chartData,
-      datasets: [
-        {
-          ...chartData.datasets[0],
-          data: newData,
-        },
-      ],
-    });
-  };
 
   const eachDistrict = (feature, layer) => {
     const districtNo = feature.properties.districtno;
@@ -208,9 +162,6 @@ export default function State() {
       document.getElementById(
         "selected-rep"
       ).innerText = `Rep. ${state_representatives[districtNo - 1]}`;
-
-      updateChartData(raceData, setRaceData);
-      updateChartData(partyData, setPartyData);
     });
   };
 
@@ -273,58 +224,6 @@ export default function State() {
   const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
   const [geoJsonStyle, setGeoJsonStyle] = React.useState(() => getGeoJsonStyle(state_smd));
 
-  function mixColors(colors) {
-    // Parse hex color to RGB
-    const hexToRgb = (hex) => {
-      hex = hex.replace('#', '');
-      return {
-        r: parseInt(hex.slice(0, 2), 16),
-        g: parseInt(hex.slice(2, 4), 16),
-        b: parseInt(hex.slice(4, 6), 16)
-      };
-    };
-
-    const rgbToHex = ({ r, g, b }) => {
-      const toHex = (value) => value.toString(16).padStart(2, '0');
-      return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
-    };
-
-    // Normalize percentages if not summing to 1
-    const totalWeight = colors.reduce((sum, { weight }) => sum + weight, 0);
-    const normalizedColors = colors.map(({ hex, weight }) => ({
-      rgb: hexToRgb(hex),
-      weight: weight / totalWeight
-    }));
-
-    // Calculate the weighted average of each channel
-    const mixedRgb = normalizedColors.reduce(
-      (acc, { rgb, weight }) => {
-        acc.r += rgb.r * weight;
-        acc.g += rgb.g * weight;
-        acc.b += rgb.b * weight;
-        return acc;
-      },
-      { r: 0, g: 0, b: 0 }
-    );
-
-    // Round channels and convert to hex
-    const resultRgb = {
-      r: Math.round(mixedRgb.r),
-      g: Math.round(mixedRgb.g),
-      b: Math.round(mixedRgb.b)
-    };
-
-    return rgbToHex(resultRgb);
-  }
-
-  // Example usage:
-  // const colors = [
-  //     { hex: '#ff0000', weight: 0.4 }, // red 40%
-  //     { hex: '#00ff00', weight: 0.3 }, // green 30%
-  //     { hex: '#0000ff', weight: 0.3 }  // blue 30%
-  // ];
-
-  // console.log(mixColors(colors)); // Outputs a blended color
 
   function buildHeatmap(i) {
     return (feature) => {
@@ -332,26 +231,23 @@ export default function State() {
       const data = race_stats[tractId];
       // console.log("buuldin")
       // console.log(data);
-      const percentage = data[races[i]["label"]];
+      const percentage = data[raceCheckBoxes[i]["label"]];
 
       return {
-        color: races[i]['hex'],
+        color: raceCheckBoxes[i]['hex'],
         weight: 0,
         fillOpacity: percentage,
-        
+
       };
     };
 
   }
 
 
-
   const changeDistrictMap = (data) => {
     setGeoJsonData(data);
     setGeoJsonStyle(() => getGeoJsonStyle(data));
   };
-
-  const [heatmapData, setHeatmapData] = React.useState([]);
 
 
   const renderDistrictButtons = () => {
@@ -372,10 +268,10 @@ export default function State() {
       <Tooltip key={index} label={map.tooltip}>
         <button
           onClick={() => {
-            document.getElementById("district-button0").style.color="black";
-            document.getElementById("district-button1").style.color="black";
-            document.getElementById("district-button" + index).style.color="blue";
-            document.getElementById("district-button" + index).style.fontWeight="bold";
+            document.getElementById("district-button0").style.color = "black";
+            document.getElementById("district-button1").style.color = "black";
+            document.getElementById("district-button" + index).style.color = "blue";
+            document.getElementById("district-button" + index).style.fontWeight = "bold";
             changeDistrictMap(map.data);
           }}
           style={styles.button}
@@ -387,7 +283,7 @@ export default function State() {
     ));
   };
 
-  const [races, setRaces] = useState([
+  const [raceCheckBoxes, setRaceCheckBoxes] = useState([
     { id: "race--white", label: "white", hex: 'blue', checked: 0 },
     { id: "race--black", label: "black", hex: 'red', checked: 0 },
     { id: "race--asian", label: "asian", hex: 'green', checked: 0 },
@@ -395,30 +291,32 @@ export default function State() {
     { id: "race--other", label: "other", hex: 'brown', checked: 0 },
   ]);
 
-  const toggle_map = (index) => { 
-    const nextRaces = races.map((c, i) => {
+  const toggle_map = (index) => {
+    const nextRaces = raceCheckBoxes.map((c, i) => {
 
       const copy = { ...c };
 
       if (i === index) {
         // Increment the clicked counter
         copy.checked = !copy.checked;
-      } 
+      }
 
       return copy;
     });
 
 
-    setRaces(nextRaces);
+    setRaceCheckBoxes(nextRaces);
   }
 
   return (
     <>
-
       <Divider my={2} />
 
+      {/* Entire Page contained here */}
       <Container centerContent minWidth="100%" p={0} m={0}>
         <div style={styles.gridContainer}>
+
+          {/* This is the map component */}
           <div style={styles.mapWrapper}>
             <div style={styles.mapContainer}>
               <MapContainer
@@ -434,12 +332,12 @@ export default function State() {
                 />
 
                 {
-                  races.map((race, i) => {
+                  raceCheckBoxes.map((race, i) => {
 
                     return race["checked"] ? <GeoJSON
                       data={nv_race_by_district}
                       style={buildHeatmap(i)}
-                      key={i*10 + race["checked"] }
+                      key={i * 10 + race["checked"]}
                     /> : <></>
                   })
                 }
@@ -455,101 +353,38 @@ export default function State() {
             <div style={styles.buttonRow}>{renderDistrictButtons()}</div>
           </div>
 
+          {/* Map ends; Tabs begin */}
           <Tabs mx={0} my={0}>
+
             <TabList>
-            <Tab key={1}>Demographics</Tab>
+              <Tab key={1}>Demographics</Tab>
               <Tab key={4}>SMD vs. MMD</Tab>
-
-              
               <Tab key={2}>Plans</Tab>
-              {/* <Tab key={2}>County Explorer</Tab> */}
               <Tab key={3}>State</Tab>
-
-
-              {/* <Tab key={5}>Vote Share</Tab> */}
               <Tab key={5}>Ensemble</Tab>
             </TabList>
+
             <TabPanels key={1}>
 
-            <Demographics races={races} setRaces={setRaces} toggle_map={toggle_map} />
-
+              <Demographics raceCheckBoxes={raceCheckBoxes} setRaceCheckBoxes={setRaceCheckBoxes} toggle_map={toggle_map} />
               <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
-
-                  
-
-                  <div style={{display: "flex", margin: "0"}}>
-
                   <SideBySideImages
                     image1='2.jpg'
                     image2='3.jpg'
                     alt1="First placeholder"
                     alt2="Second placeholder"
-                    
                   />
-                     <table style={{ height: "10px", borderCollapse: "collapse", marginRight: "10px" }}>
-                    <thead>
-                      <tr>
-                        <th style={{ border: "1px solid white",   }}></th>
-                        <th style={{ border: "1px solid white",  }}>SMD</th>
-                        <th style={{ border: "1px solid white",  }}>MMD</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td style={{ border: "1px solid white",  }}>Rep/Dem Split</td>
-                        <td style={{ border: "1px solid white",  }}>60:40</td>
-                        <td style={{ border: "1px solid white",  }}>65:35</td>
-                      </tr>
-                      <tr>
-                        <td style={{ border: "1px solid white",  }}>Opp Reps</td>
-                        <td style={{ border: "1px solid white",  }}>1</td>
-                        <td style={{ border: "1px solid white",  }}>2</td>
-                      </tr>
-                      <tr>
-                        <td style={{ border: "1px solid white",  }}>Vote share</td>
-                        <td style={{ border: "1px solid white",  }}>sample</td>
-                        <td style={{ border: "1px solid white",  }}>sample</td>
-                      </tr>
-                      <tr>
-                        <td style={{ border: "1px solid white",  }}>Seat share</td>
-                        <td style={{ border: "1px solid white",  }}>sample</td>
-                        <td style={{ border: "1px solid white",  }}>sample</td>
-                      </tr>
-                    </tbody>
-                  </table> 
-
-            
-
-                  </div>
-
-                  
-                  <br />
-
-                  
-
-                  {/* <Heading>
-                  Ensemble Data
-                </Heading> */}
                 </div>
-
-
               </TabPanel>
-
-              
-
-
-              
-
               <TabPlanSummary />
-              <TabStatePlans />
-
-
+              <TabStatePlans setGeoJsonData={setGeoJsonData} />
               <Ensemble />
+
             </TabPanels>
           </Tabs>
         </div>
       </Container>
-    </> 
+    </>
   );
 }
