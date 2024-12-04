@@ -1,12 +1,14 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Box, Heading, Center } from "@chakra-ui/react";
+import axios from "axios";
 
 import {
 
     TabPanel,
   } from "@chakra-ui/react";
 
-const TabStatePlans = () => {
+const TabStatePlans = (props) => {
 
     const styles = {
         gridContainer: {
@@ -57,6 +59,39 @@ const TabStatePlans = () => {
 
     const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
 
+    const plan_options = [
+        {
+            title: "Dem Favored",
+            image: "/dem.jpeg",
+            path: "http://localhost:8080/NV/SMD/ENACTED"
+        },
+        {
+            title: "Dem Favored",
+            image: "/dem.jpeg",
+            path: "http://localhost:8080/NV/SMD/DEMFAVORED"
+        },
+        {
+            title: "Repb Favored",
+            image: "/rep.jpeg",
+            path: "http://localhost:8080/NV/SMD/REPFAVORED"
+        },
+        {
+            title: "Average",
+            image: "/dem.jpeg",
+            path: "http://localhost:8080/NV/SMD/AVERAGE"
+        },
+        {
+            title: "Fair",
+            image: "/dem.jpeg",
+            path: "http://localhost:8080/NV/SMD/FAIR"
+        },
+        {
+            title: "Hide",
+            image: "/dem.jpeg",
+            path: "http://localhost:8080/NV/SMD/Noe"
+        },
+    ]
+
 
     return (
         <TabPanel padding={0} >
@@ -70,26 +105,43 @@ const TabStatePlans = () => {
                         margin: "10px",
                     }}
                 >
-                    {["Dem Favored", "Repb Favored", "Average", "Fair"].map((title, index) => (
+                    {plan_options.map((item, index) => (
                         <Box
                             key={index}
                             borderWidth="1px"
                             borderRadius="lg"
                             overflow="hidden"
                             p={5}
-                            onClick={() => setSelectedBoxes([index === 0, index === 1, index === 2, index === 3])}
+                            onClick={() => {
+                                setSelectedBoxes([index === 0, index === 1, index === 2, index === 3])
+                                const fetchData = async () => {
+                                    try {
+                                      const response = await axios.get(item.path);
+                                      // console.log(response); // Set the data to state
+                                      props.setGeoJsonData(response.data);
+                                                            
+                              
+                                    } catch (err) {
+                                        props.setGeoJsonData(null);
+                                      console.log(err);
+                                    }
+                                  };
+                              
+                                  fetchData(); // Call the function
+
+                            }}
                             style={{
                                 cursor: "pointer",
                                 boxShadow: selectedBoxes[index] ? "0 0 10px 2px lightgreen" : "none",
                                 transition: "box-shadow 0.3s",
                             }}
                         >
-                            <Heading size="md">{title}</Heading>
+                            <Heading size="md">{item.title}</Heading>
                             <Center>
                                 <img
-                                    src={index === 0 ? "/dem.jpeg" : "/rep.jpeg"}
+                                    src={item.image}
                                     style={{ width: "75px" }}
-                                    alt={title}
+                                    alt={item.title}
                                 />
                             </Center>
                         </Box>
@@ -98,7 +150,7 @@ const TabStatePlans = () => {
 
                 <hr />
 
-                <div style={{ margin: "20px 0 0 10px" }}>
+                {/* <div style={{ margin: "20px 0 0 10px" }}>
                     Overlay additional plans below:
                 </div>
 
@@ -138,7 +190,7 @@ const TabStatePlans = () => {
                             </Center>
                         </Box>
                     ))}
-                </div>
+                </div> */}
 
                 
             </div>
