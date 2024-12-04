@@ -11,14 +11,15 @@ const SideBySideImages = ({ image1, image2, alt1 = "Image 1", alt2 = "Image 2" }
 
 const styles = {
   container: {
-    display: 'flex',
+    // display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     gap: '5px', // Adjust spacing between images
+    flexDirection: "row"
   },
   image: {
-    maxWidth: '50%', // Adjust image width
-    height: '150%',
+    // maxWidth: '60%', // Adjust image width
+    maxHeight: '45%',
   },
 };
 
