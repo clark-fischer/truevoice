@@ -57,10 +57,7 @@ const TabStatePlans = (props) => {
 
     const [selectedBoxes, setSelectedBoxes] = useState([false, false, false, false]);
 
-    const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
-
-
-
+    // const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
 
     return (
         <TabPanel padding={0} >
