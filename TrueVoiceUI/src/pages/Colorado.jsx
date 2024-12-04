@@ -307,6 +307,8 @@ export default function State() {
   const changeDistrictMap = (data) => {
     setGeoJsonData(data);
     setGeoJsonStyle(() => getGeoJsonStyle(data));
+
+    
   };
 
   const [heatmapData, setHeatmapData] = React.useState([]);
@@ -362,8 +364,12 @@ export default function State() {
     return districtMaps.map((map, index) => (
       <Tooltip key={index} label={map.tooltip}>
         <button
-          onClick={() => changeDistrictMap(map.data)}
+          onClick={() => {
+            document.getElementById(name).innerText = "None";
+            changeDistrictMap(map.data)
+          }}
           style={styles.button}
+          
         >
           {map.label}
         </button>
