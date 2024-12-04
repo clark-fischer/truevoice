@@ -30,20 +30,18 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
     if(!data) return <div>Loading...</div>;
 
     const opportunityDistricts = data.barData.map((d) => d.opportunityDistricts);
-    //const totalDistricts = data.state.ensemble.ensembleSummary.totalDistricts;
-    const minDistrict = Math.min(...opportunityDistricts);
-    const maxDistrict = Math.max(...opportunityDistricts);
-    const bins = Array.from({ length: maxDistrict - minDistrict + 2 }, (_, i) => minDistrict + i);
-  
+    const totalDistricts = data.totalDistricts;
+
+
     const averageSeatShare = Number(data.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
     const voteShare = Number(data.voteShare * 100).toFixed(2).replace(/\.00$/, '');
     const trace = {
         x: opportunityDistricts,
         type: 'histogram',
         xbins: {
-          start: bins[0],
-          end: bins[bins.length - 1],
-          size: 1, 
+            start: 0 - 0.5, 
+            end: totalDistricts + 0.5, 
+            size: 1, 
         },
         marker: {
           color: '#7ff5b8',
@@ -55,16 +53,22 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
       };
     
       const layout = {
-        title: title || 'Opportunity Districts Distribution',
+        title: 
+        title || `${electionType} Ensemble summary: Opportunity Districts` ,
+        font: {
+            size: 12, 
+        },
         xaxis: {
           title: x_label || 'Number of Opportunity Districts',
           tickmode: 'linear',
-          tick0: minDistrict,
+          
+          range: [0 - 0.5, totalDistricts + 0.5],
           tickmode: 'linear', 
           dtick: 1,
           showline: true,
           linecolor: 'black', 
           linewidth: 2, 
+
         },
         yaxis: {
           title: y_label || 'Frequency',
@@ -73,6 +77,9 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
           showline: true,
           linecolor: 'black', 
           linewidth: 2, 
+          font: {
+            size: 12, 
+        },
         },
         annotations: [
             {
@@ -91,7 +98,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
               borderwidth: 1,
             },
           ],
-        bargap: 0.2, 
+        bargap: 0.1, 
         margin: {
           l: 50,
           r: 50,

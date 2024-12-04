@@ -47,7 +47,7 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
   };
 
   const layout = {
-    title: title || 'Opportunity Representatives',
+    title: title || `${electionType} Ensemble Summary: Opportunity Representatives`,
     xaxis: {
       title: x_label || 'Number of Opportunity Representatives',
       range: [0, totalRepresentatives + 0.5], 
@@ -82,7 +82,7 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
         borderwidth: 1,
       },
     ],
-    bargap: 0.2,
+    bargap: 0.1,
     margin: {
       l: 50,
       r: 50,
