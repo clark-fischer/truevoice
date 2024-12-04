@@ -96,10 +96,15 @@ export default function State() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/NV/SMD/DEMFAVORED");
+        const response = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
         // console.log(response); // Set the data to state
         setGeoJsonData(response.data);
         set_state_smd(response.data);
+
+        document.getElementById("district-button0").style.color = "blue";
+        document.getElementById("district-button0").style.fontWeight = "bold";
+        document.getElementById("district-button1").style.fontWeight = "bold";
+
 
         const response2 = await axios.get("http://localhost:8080/NV/HEATMAP");
         console.log("resp2", response2); // Set the data to state
@@ -253,7 +258,7 @@ export default function State() {
   const renderDistrictButtons = () => {
     const districtMaps = [
       {
-        label: "SMD, Single Rep. (current)",
+        label: "SMD (Enacted)",
         data: state_smd,
         tooltip: "These are Nevada's districts, as of 2024.",
       },
@@ -273,6 +278,13 @@ export default function State() {
             document.getElementById("district-button" + index).style.color = "blue";
             document.getElementById("district-button" + index).style.fontWeight = "bold";
             changeDistrictMap(map.data);
+            if (index == 0)
+              document.getElementById("district-button0").innerHTML = "SMD (Enacted)";
+              set_plan_options(plan_options_smd);
+            if (index == 1) {
+              set_plan_options(plan_options_mmd)
+            }
+
           }}
           style={styles.button}
           id={"district-button" + index}
@@ -282,6 +294,54 @@ export default function State() {
       </Tooltip>
     ));
   };
+
+  const plan_options_smd = [
+    {
+      title: "Enacted",
+      image: "/dem.jpeg",
+      path: "http://localhost:8080/NV/SMD/ENACTED"
+    },
+    {
+      title: "Dem Favored",
+      image: "/dem.jpeg",
+      path: "http://localhost:8080/NV/SMD/DEMFAVORED"
+    },
+    {
+      title: "Repb Favored",
+      image: "/rep.jpeg",
+      path: "http://localhost:8080/NV/SMD/REPFAVORED"
+    },
+    {
+      title: "Average",
+      image: "/dem.jpeg",
+      path: "http://localhost:8080/NV/SMD/AVERAGE"
+    },
+    {
+      title: "Fair",
+      image: "/dem.jpeg",
+      path: "http://localhost:8080/NV/SMD/FAIR"
+    },
+    {
+      title: "Hide",
+      image: "/dem.jpeg",
+      path: "http://localhost:8080/NV/SMD/Noe"
+    },
+  ]
+
+  const plan_options_mmd = [
+    {
+      title: "MMD",
+      image: "/dem.jpeg",
+      path: "http://localhost:8080/NV/SMD/ENACTED"
+    },
+    {
+      title: "Hide",
+      image: "/dem.jpeg",
+      path: "http://localhost:8080/NV/SMD/saas"
+    },
+  ]
+
+  const [plan_options, set_plan_options] = useState(plan_options_smd);
 
   const [raceCheckBoxes, setRaceCheckBoxes] = useState([
     { id: "race--white", label: "white", hex: 'blue', checked: 0 },
@@ -378,7 +438,7 @@ export default function State() {
                 </div>
               </TabPanel>
               <TabPlanSummary />
-              <TabStatePlans setGeoJsonData={setGeoJsonData} />
+              <TabStatePlans plan_options={plan_options} setGeoJsonData={setGeoJsonData} />
               <Ensemble />
 
             </TabPanels>
