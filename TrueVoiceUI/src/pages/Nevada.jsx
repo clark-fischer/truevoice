@@ -34,7 +34,7 @@ import nv_race_by_district from "../datafiles/myJson.json"
 import TabPlanSummary from "./TabPlanSummary";
 import Ensemble from "./Ensemble";
 
-const state_representatives = [
+const stateRepresentives = [
   "Dina Titus",
   "Mark Amodei",
   "Susie Lee",
@@ -90,21 +90,20 @@ const styles = {
 
 export default function State() {
 
-  const [race_stats, set_race_stats] = React.useState(null);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
+        const plan = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
 
-        setGeoJsonData(response.data);
+        setGeoJsonData(plan.data);
+        setPlanData(plan.data.crs.properties);
 
+        const raceResp = await axios.get("http://localhost:8080/NV/HEATMAP");
+        setRaceStats(raceResp.data.precincts)
+
+        // this sucks -- change to css later
         document.getElementById("district-button0").style.color = "blue";
         document.getElementById("district-button0").style.fontWeight = "bold";
-
-        const response2 = await axios.get("http://localhost:8080/NV/HEATMAP");
-        console.log("resp2", response2); // Set the data to state
-        set_race_stats(response2.data.precincts)
 
       } catch (err) {
         console.log(err);
@@ -120,7 +119,7 @@ export default function State() {
     const updateInfo = () => {
       // Update district number and representative
       document.getElementById("selected-district").innerText = `District ${districtno}`;
-      document.getElementById("selected-rep").innerText = `Rep. ${state_representatives[districtno - 1] || "Unknown"}`;
+      document.getElementById("selected-rep").innerText = `Rep. ${stateRepresentives[districtno - 1] || "Unknown"}`;
 
       // Loop through demographics to update race information
       const raceMapping = {
@@ -136,13 +135,15 @@ export default function State() {
     layer.on("mouseover", updateInfo);
   };
 
+  const [raceStats, setRaceStats] = React.useState(null);
   const [geoJsonData, setGeoJsonData] = React.useState(null);
+  const [planData, setPlanData] = React.useState(null);
 
 
   function buildHeatmap(i) {
     return (feature) => {
       const tractId = feature.properties.GEOID; // assuming GEOID links to your data
-      const data = race_stats[tractId];
+      const data = raceStats[tractId];
       // console.log("buuldin")
       // console.log(data);
       const percentage = data[raceCheckBoxes[i]["label"]];
@@ -189,8 +190,9 @@ export default function State() {
       const fetchData = async () => {
         try {
           const response = await axios.get(map.path);
-          // console.log(response); // Set the data to state
+          console.log(response); // Set the data to state
           setGeoJsonData(response.data);
+          setPlanData(response.data.crs.properties);
 
 
         } catch (err) {
@@ -198,7 +200,7 @@ export default function State() {
           console.log(err);
         }
 
-        document.getElementById("district-button0").innerHTML = "SMD (" + item.title + ")";
+        document.getElementById("district-button0").innerHTML = "SMD (" + map.title + ")";
       };
 
       fetchData(); // Call the function
@@ -251,8 +253,8 @@ export default function State() {
     },
     {
       title: "Hide",
-      image: "/dem.jpeg",
-      path: "http://localhost:8080/NV/SMD/Noe"
+      image: "/n.jpeg",
+      path: "http://localhost:8080/NV/SMD/NULL"
     },
   ]
 
@@ -265,7 +267,7 @@ export default function State() {
     {
       title: "Hide",
       image: "/dem.jpeg",
-      path: "http://localhost:8080/NV/SMD/saas"
+      path: "http://localhost:8080/NV/SMD/NULL"
     },
   ]
 
@@ -320,12 +322,12 @@ export default function State() {
                 />
 
                 {
-                  raceCheckBoxes.map((race, i) => {
+                  raceCheckBoxes.map((race, race_index) => {
 
                     return race["checked"] ? <GeoJSON
                       data={nv_race_by_district}
-                      style={buildHeatmap(i)}
-                      key={i * 10 + race["checked"]}
+                      style={buildHeatmap(race_index)}
+                      key={race_index * 10 + race["checked"]}
                     /> : <></>
                   })
                 }
@@ -364,9 +366,9 @@ export default function State() {
                     alt2="Second placeholder"
                   />
                 </div>
-              </TabPanel>
-              <TabPlanSummary />
-              <TabStatePlans plan_options={plan_options} setGeoJsonData={setGeoJsonData} />
+              </TabPanel >
+              <TabPlanSummary planData={planData} />
+              <TabStatePlans plan_options={plan_options} setGeoJsonData={setGeoJsonData} setPlanData={setPlanData} />
               <Ensemble />
 
             </TabPanels>
