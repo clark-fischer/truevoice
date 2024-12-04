@@ -1,19 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Box, Heading, Center } from "@chakra-ui/react";
 
 import {
-    // Box,
-    Container,
-    Text,
-    UnorderedList,
-    ListItem,
-    // Center,
-    Divider,
-    Link,
-    Tabs,
-    TabList,
-    TabPanels,
-    Tab,
+
     TabPanel,
   } from "@chakra-ui/react";
 
@@ -68,21 +57,6 @@ const TabStatePlans = () => {
 
     const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
 
-    const handleBoxClick = (index) => {
-        const updatedSelectedBoxes = [false, false, false, false];
-        updatedSelectedBoxes[index] = true;
-        setSelectedBoxes(updatedSelectedBoxes);
-
-        const updatedOverlaySelectedBoxes = [...overlaySelectedBoxes];
-        updatedOverlaySelectedBoxes[index] = false;
-        setOverlaySelectedBoxes(updatedOverlaySelectedBoxes);
-    };
-
-    const handleOverlayBoxClick = (index) => {
-        const updatedOverlaySelectedBoxes = [...overlaySelectedBoxes];
-        updatedOverlaySelectedBoxes[index] = !updatedOverlaySelectedBoxes[index];
-        setOverlaySelectedBoxes(updatedOverlaySelectedBoxes);
-    };
 
     return (
         <TabPanel padding={0} >
