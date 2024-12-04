@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BinData {
     private int binNo;
-    private int representatives;
+    private DemographicData white;
     private DemographicData black;
+    private DemographicData asian;
     private DemographicData hispanic;
-    private DemographicData democratic;
-    private DemographicData republican;
 }

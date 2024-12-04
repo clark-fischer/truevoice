@@ -11,7 +11,7 @@ function EnsembleSMDboxAndWhiskerPlot({ title, x_label, y_label, fips, electionT
     const fetchData = async () => {
       try {
         //const response = await axios.get(`http://localhost:8000/${fips}/${electionType}/${characteristic}/BOXPLOT`);
-        const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+        const response = await axios.get(`http://localhost:8080/NV/SMD/BOXWHIS`);
         setData(response.data);
       } catch (err) {
         setError(err);

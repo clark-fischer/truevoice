@@ -14,11 +14,10 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Colorado from "./pages/Colorado";
 import Nevada from "./pages/Nevada";
-//import VoteShareSeatSharePlot from "./pages/VoteSharePlot";
+import VoteShareSeatSharePlot from "./pages/VoteSharePlot";
 //import OpportunityRepresentativesPlot from "./pages/opportunityRepresentativePlot";
 //import OpportunityDistrictsPlot from "./pages/opportunityDistrictPlot";
 import EnsembleSMDboxAndWhiskerPlot from "./pages/EnsembleSMDboxAndWhiskerPlot";
-//import PartySplitBarPlot from "./pages/partySplitBarPlot";
 //import PartySplitBarPlot from "./pages/partySplitBarPlot";
 
 
@@ -31,7 +30,7 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="colorado" element={<Colorado />} />
       <Route path="nevada" element={<Nevada />} />
-      <Route path="test" element={<PartySplitBarPlot fips={'NV'} electionType={'SMD'} characteristic={'BAR'}/>} />
+      <Route path="test" element={<EnsembleSMDboxAndWhiskerPlot fips={'NV'} electionType={'SMD'} characteristic={'BAR'}/>} />
 
     </Route>
   )
