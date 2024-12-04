@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 import com.truevoice.truevoice.FRAEnum.ElectionType;
@@ -17,5 +19,6 @@ public class BoxWhiskerData {
     private ObjectId id;
     private FIPS fips;
     private ElectionType electionType;
-    private BoxWhisker boxWhisker;
+    private int totalDistricts;
+    private List<BinData> boxes;
 }
