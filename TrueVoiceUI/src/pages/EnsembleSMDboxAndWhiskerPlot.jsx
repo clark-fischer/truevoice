@@ -10,7 +10,7 @@ function EnsembleSMDboxAndWhiskerPlot({ title, x_label, y_label, fips, electionT
   useEffect(() => {
     const fetchData = async () => {
       try {
-        //const response = await axios.get(`http://localhost:8000/${fips}/${electionType}/${characteristic}/BOXPLOT`);
+        //const response = await axios.get(`http://localhost:8000/${fips}/${electionType}/${comparisonBasis}/BOXPLOT`);
         const response = await axios.get(`http://localhost:8080/NV/SMD/BOXWHIS`);
         setData(response.data);
       } catch (err) {
@@ -19,47 +19,47 @@ function EnsembleSMDboxAndWhiskerPlot({ title, x_label, y_label, fips, electionT
     };
 
     fetchData();
-  }, [fips, electionType, characteristic]);
+  }, [fips, electionType, comparisonBasis]);
 
   if (error) return <div>Error: {error.message}</div>;
   if (!data) return <div>Loading...</div>;
 
   const sortedBoxes = data.boxes.sort(
-    (a, b) => a[characteristic].median - b[characteristic].median
+    (a, b) => a[comparisonBasis].median - b[comparisonBasis].median
   );
 
   const bins = sortedBoxes.map((box) => `District ${box.binNo}`);
-  const minValues = sortedBoxes.map((box) => box[characteristic].min);
-  const q1Values = sortedBoxes.map((box) => box[characteristic].q1);
-  const medianValues = sortedBoxes.map((box) => box[characteristic].median);
-  const q3Values = sortedBoxes.map((box) => box[characteristic].q3);
-  const maxValues = sortedBoxes.map((box) => box[characteristic].max);
-  const enactedValues = sortedBoxes.map((box) => box[characteristic].enactedValue);
+  const minValues = sortedBoxes.map((box) => box[comparisonBasis].min);
+  const q1Values = sortedBoxes.map((box) => box[comparisonBasis].q1);
+  const medianValues = sortedBoxes.map((box) => box[comparisonBasis].median);
+  const q3Values = sortedBoxes.map((box) => box[comparisonBasis].q3);
+  const maxValues = sortedBoxes.map((box) => box[comparisonBasis].max);
+  const enactedValues = sortedBoxes.map((box) => box[comparisonBasis].enactedValue);
 
-  const traces = sortedBoxes.map((box, i) => ({
-    x: [bins[i]],
-    lowerfence: [minValues[i]],
-    q1: [q1Values[i]],
-    median: [medianValues[i]],
-    q3: [q3Values[i]],
-    upperfence: [maxValues[i]],
-    y: enactedValues[i] ? [enactedValues[i]] : [],
-    type: "box",
-    name: `District ${box.binNo}`,
-    boxpoints: "outliers", // Include outliers
-    marker: { color: "blue" },
-    line: { color: "black" },
-    showlegend: false,
-  }));
+  const traces = [
+    {
+      x: bins, 
+      lowerfence: minValues,
+      q1: q1Values,
+      median: medianValues,
+      q3: q3Values,
+      upperfence: maxValues,
+      type: "box",
+      boxpoints: "outliers",
+      marker: { color: "blue" },
+      line: { color: "black" },
+      name: "Ensemble Data",
+    },
+  ];
 
   return (
     <Plot
       data={traces}
       layout={{
-        title: title || `Nevada SMD Ensemble: Box & Whisker Plot for ${characteristic.toUpperCase()} Population Percent`,
+        title: title || `Nevada SMD Ensemble: Box & Whisker Plot for ${comparisonBasis} Population Percent`,
         xaxis: {
           title: x_label || "Districts",
-          tickangle: 45,
+          tickangle: 0,
         },
         yaxis: {
           title: y_label || "Population Percent (%)",

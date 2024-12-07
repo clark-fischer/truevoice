@@ -1,0 +1,36 @@
+{
+    "fips": "NV",
+    "electionType": "SMD",
+    "totalDistricts": 4,
+    "characteristic": "FAIR",
+    "democratsSeats": 4,
+    "republicanSeats": 0,
+    "demTotalVotes": 1347156,
+    "repTotalVotes": 1413610,
+    "curveData": [
+        {
+            "districtId": 1,
+            "demVoteShare": 0.5006481391539691,
+            "repVoteShare": 0.4993518608460309,
+            "totalVotes": 607519
+        },
+        {
+            "districtId": 2,
+            "demVoteShare": 0.5112015685478697,
+            "repVoteShare": 0.4887984314521303,
+            "totalVotes": 634847
+        },
+        {
+            "districtId": 3,
+            "demVoteShare": 0.5127324723018325,
+            "repVoteShare": 0.4872675276981675,
+            "totalVotes": 741554
+        },
+        {
+            "districtId": 4,
+            "demVoteShare": 0.5209566346702194,
+            "repVoteShare": 0.47904336532978065,
+            "totalVotes": 776846
+        }
+    ]
+}
