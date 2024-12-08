@@ -25,7 +25,6 @@ function SMDBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType, cha
 
   // Extract data for boxplot (black)
   const plotData = data.boxWhisker.boxes.map((district) => [
-    
     district.black.min,
     district.black.q1,
     district.black.median,
