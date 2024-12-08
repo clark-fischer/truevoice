@@ -20,9 +20,10 @@ public class SeatVote {
     private FIPS fips;
     private ElectionType electionType;
     private Characteristic characteristic;
-    private double state_vote_share;
-    private double symmetry;
-    private double bias;
-    private double responsiveness;
-    private List<PlotData> ensemble;
+    private int totalDistricts;
+    private int democratsSeats;
+    private int republicanSeats;
+    private int demTotalVotes;
+    private int repTotalVotes;
+    private List<PlotData> curveData;
 }
