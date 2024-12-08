@@ -3,8 +3,11 @@ import numpy as np
 import json
 import pprint
 
-shapefile_path = '/Users/clark/Desktop/truevoice/Colorado/nv_cvap_2022_cd.geojson'
+# Read the shapefile
+shapefile_path = '/Users/clark/Desktop/truevoice/dataconfig/co_cong_adopted_2021 (1)/2021_Approved_Congressional_Plan_w_Final_Adjustments.shp'
+
 gdf_df = gpd.read_file(shapefile_path)
+print(gdf_df.columns)
 
 # print(gdf)
 race_dict = {}
