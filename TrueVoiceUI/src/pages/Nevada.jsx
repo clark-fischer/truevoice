@@ -30,7 +30,7 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 
-import nv_race_by_district from "../datafiles/myJson.json"
+import nv_race_by_district from "../datafiles/precinct.json"
 import TabPlanSummary from "./TabPlanSummary";
 import Ensemble from "./Ensemble";
 
@@ -98,7 +98,7 @@ export default function State() {
         setGeoJsonData(plan.data);
         setPlanData(plan.data.crs.properties);
 
-        const raceResp = await axios.get("http://localhost:8080/NV/HEATMAP");
+        const raceResp = await axios.get("http://localhost:8080/NV/PRECINCT/HEATMAP");
         setRaceStats(raceResp.data.precincts)
 
         // this sucks -- change to css later
@@ -144,8 +144,9 @@ export default function State() {
     return (feature) => {
       const tractId = feature.properties.GEOID; // assuming GEOID links to your data
       const data = raceStats[tractId];
-      // console.log("buuldin")
-      // console.log(data);
+      // console.log(feature);
+      // console.log(tractId);
+      // console.log(data)
       const percentage = data[raceCheckBoxes[i]["label"]];
 
       return {

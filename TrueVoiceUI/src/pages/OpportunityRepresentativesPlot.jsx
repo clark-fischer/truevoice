@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
 
 
 //opp representative
-function opportunityRepresentativesPlot({title ,x_lable, y_lable, fips, electionType, characteristic }){
+function OpportunityRepresentativesPlot(){
 
-    const [data, setData] = useState(null);
-    const [error,setError] = useState(null);
+    const [data, setData] = useState([]);
+    const [error,setError] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -15,6 +15,7 @@ function opportunityRepresentativesPlot({title ,x_lable, y_lable, fips, election
             try{            
                 //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
                 const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+                console.log(response.data);
                 setData(response.data);
 
             }catch (err){
@@ -31,7 +32,7 @@ function opportunityRepresentativesPlot({title ,x_lable, y_lable, fips, election
 
 
 
-   const opportunityRepresentatives = data.ensembleSummary.map((d) => d.opportunityRepresentatives);
+  const opportunityRepresentatives = data.barData.map((d) => d.opportunityRepresentatives);
   const averageSeatShare = (data.avgSeatShare * 100).toFixed(2); // Format as percentage
   const voteShare = (data.voteShare * 100).toFixed(2); // Format as percentage
   const trace = {
@@ -48,12 +49,12 @@ function opportunityRepresentativesPlot({title ,x_lable, y_lable, fips, election
 
 
   const layout = {
-    title: title || 'Opportunity Representatives Distribution',
+    title: 'Opportunity Representatives Distribution',
     xaxis: {
-      title: x_label || 'Number of Opportunity Representatives',
+      title:  'Number of Opportunity Representatives',
     },
     yaxis: {
-      title: y_label || 'Frequency',
+      title:  'Frequency',
     },
     annotations: [
       {
@@ -93,7 +94,7 @@ function opportunityRepresentativesPlot({title ,x_lable, y_lable, fips, election
   );
 }
 
-export default opportunityRepresentativesPlot;
+export default OpportunityRepresentativesPlot;
    
 
 
