@@ -15,10 +15,10 @@ import Profile from "./pages/Profile";
 import Colorado from "./pages/Colorado";
 import Nevada from "./pages/Nevada";
 import VoteShareSeatSharePlot from "./pages/VoteSharePlot";
-//import OpportunityRepresentativesPlot from "./pages/opportunityRepresentativePlot";
-//import OpportunityDistrictsPlot from "./pages/opportunityDistrictPlot";
+import OpportunityRepresentativesPlot from "./pages/opportunityRepresentativePlot";
+import OpportunityDistrictsPlot from "./pages/OpportunityDistrictPlot";
 import EnsembleSMDboxAndWhiskerPlot from "./pages/EnsembleSMDboxAndWhiskerPlot";
-//import PartySplitBarPlot from "./pages/partySplitBarPlot";
+import PartySplitBarPlot from "./pages/partySplitBarPlot";
 import VoteSeatSharePlotPlanSpecific from "./pages/VoteSeatSharePlotPlanSpecific";
 
 

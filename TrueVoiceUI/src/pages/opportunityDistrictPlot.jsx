@@ -4,7 +4,9 @@ import axios from 'axios';
 
 
 //opp representative
+
 function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType}){
+
 
     const [data, setData] = useState(null);
     const [error,setError] = useState(null);
@@ -30,7 +32,9 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType})
     if(!data) return <div>Loading...</div>;
 
     const opportunityDistricts = data.barData.map((d) => d.opportunityDistricts);
+
     //const totalDistricts = data.totalDistricts;
+
     const totalDistricts = data.totalDistricts;
     const maxFrequency = Math.max(...opportunityDistricts.map((d) => d.frequency || 0)); 
     const dtickValue = Math.ceil(maxFrequency / 5);
@@ -56,12 +60,14 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType})
       };
     
       const layout = {
+
         title: title || `${data.electionType} Ensemble summary: Opportunity Districts` ,
         font: {
             size: 14, 
         },
+
         xaxis: {
-          title: x_label || 'Number of Opportunity Districts',
+          title: 'Number of Opportunity Districts',
           tickmode: 'linear',
           
           range: [0 - 0.5, totalDistricts + 0.5],
@@ -81,6 +87,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType})
           font: {
             size: 12, 
         },
+      
         },
         annotations: [
             {
@@ -122,7 +129,10 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType})
    
 }
 
+
 export default OpportunityDistrictsPlot;
+
+
    
 
 
