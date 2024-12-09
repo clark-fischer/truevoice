@@ -25,5 +25,8 @@ public class SeatVote {
     private int republicanSeats;
     private int demTotalVotes;
     private int repTotalVotes;
+    private double bias;
+    private double symmetry;
+    private double responsiveness;
     private List<PlotData> curveData;
 }
