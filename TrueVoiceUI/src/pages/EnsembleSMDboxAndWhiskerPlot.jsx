@@ -8,11 +8,13 @@ function EnsembleSMDboxAndWhiskerPlot({ title, x_label, y_label, fips, electionT
   const [error, setError] = useState(null);
   const [comparisonBasis, setComparisonBasis] = useState("hispanic"); // hispanic is default selection
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         //const response = await axios.get(`http://localhost:8000/${fips}/${electionType}/${comparisonBasis}/BOXPLOT`);
         const response = await axios.get(`http://localhost:8080/NV/SMD/BOXWHIS`);
+
         setData(response.data);
       } catch (err) {
         setError(err);
@@ -20,7 +22,10 @@ function EnsembleSMDboxAndWhiskerPlot({ title, x_label, y_label, fips, electionT
     };
 
     fetchData();
+
+
   }, [fips, electionType, comparisonBasis]);
+
 
   if (error) return <div>Error: {error.message}</div>;
   if (!data) return <div>Loading...</div>;

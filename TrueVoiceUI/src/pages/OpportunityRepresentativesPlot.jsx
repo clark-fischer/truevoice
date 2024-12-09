@@ -1,19 +1,18 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
 
 // Opportunity Representatives Plot
-function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electionType}) {
+function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electionType, characteristic }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-
 
   useEffect(() => {
     const fetchData = async () => {
       try {
 
-        //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
-        const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+        const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
+        //const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
         setData(response.data);
       } catch (err) {
         console.error("Error fetching data:", err);
@@ -21,27 +20,21 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
       }
     };
 
-
- 
-
     fetchData();
   }, [fips, electionType, characteristic]);
-
 
   if (error) return <div>Error: {error.message}</div>;
   if (!data) return <div>Loading...</div>;
 
 
-  const opportunityRepresentatives = data.barData.map((d) => d.opportunityRepresentatives);
 
+  const opportunityRepresentatives = data.barData.map((d) => d.opportunityRepresentatives);
   const maxFrequency = Math.max(...opportunityRepresentatives.map((d) => d.frequency || 0));
   const dtickValue = Math.ceil(maxFrequency / 5);
 
-  const totalRepresentatives = data.totalDistricts; 
-  const averageSeatShare = Number(data.democratAvgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
-  const voteShare = Number(data.democratAvgVoteShare * 100).toFixed(2).replace(/\.00$/, '');
-age
-
+  const totalRepresentatives = data.totalRepresentatives; 
+  const averageSeatShare = Number(data.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
+  const voteShare = Number(data.voteShare * 100).toFixed(2).replace(/\.00$/, '');
   const trace = {
     x: opportunityRepresentatives,
     type: 'histogram',
@@ -60,7 +53,6 @@ age
   };
 
   const layout = {
-
     title: title || `${data.electionType} Ensemble Summary: Opportunity Representatives`,
     font: {
       size: 14, 
@@ -77,7 +69,7 @@ age
     yaxis: {
       title: y_label || 'Frequency',
       tickmode: 'linear', 
-      dtick: 500,
+      dtick: 100,
       showline: true,
       linecolor: 'black', 
       linewidth: 2, 

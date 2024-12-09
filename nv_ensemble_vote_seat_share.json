@@ -2,6 +2,10 @@
     "fips": "NV",
     "electionType": "SMD",
     "totalDistricts": 0,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ac49ed5b (all graphs updated)
     "symmetry": 0.29667721518987344,
     "bias": 0.0,
     "responsiveness": 24.99999999999998,
@@ -22127,4 +22131,13 @@
             "repSeatShare": 0.25
         }
     ]
+<<<<<<< HEAD
+=======
+    "symmetry": 0.5,
+    "bias": 2.5,
+    "responsiveness": 0.75,
+    "barData": []
+>>>>>>> a7d2c6d9 (SMD ensemble gaphs done)
+=======
+>>>>>>> ac49ed5b (all graphs updated)
 }

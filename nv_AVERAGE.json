@@ -10,6 +10,7 @@
     "bias": 0.25,
     "symmetry": 0.0,
     "responsiveness": 0,
+
     "curveData": [
         {
             "districtId": 1,
