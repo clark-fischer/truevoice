@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-
 import OpportunityRepresentativesPlot from './OpportunityRepresentativesPlot';
 import OpportunityDistrictPlot from './OpportunityDistrictPlot';
 import SMDBoxAndWhiskerPlot from './SMDBoxAndWhiskerPlot';
+import VoteShareSeatSharePlot from './VoteShareSeatSharePlot'
 
 import {
     TabPanel,
@@ -19,6 +19,7 @@ const Ensemble = (props) => {
           <OpportunityRepresentativesPlot />
           <OpportunityDistrictPlot />
           <SMDBoxAndWhiskerPlot />
+          <VoteShareSeatSharePlot />
 
         </TabPanel>
     );
