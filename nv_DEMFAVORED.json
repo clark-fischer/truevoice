@@ -7,6 +7,9 @@
     "republicanSeats": 1,
     "demTotalVotes": 1326920,
     "repTotalVotes": 1433846,
+    "bias": 0.25,
+    "symmetry": -0.1667,
+    "responsiveness": 0,
     "curveData": [
         {
             "districtId": 1,

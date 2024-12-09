@@ -19,7 +19,7 @@ import VoteShareSeatSharePlot from "./pages/VoteSharePlot";
 //import OpportunityDistrictsPlot from "./pages/opportunityDistrictPlot";
 import EnsembleSMDboxAndWhiskerPlot from "./pages/EnsembleSMDboxAndWhiskerPlot";
 //import PartySplitBarPlot from "./pages/partySplitBarPlot";
-
+import VoteSeatSharePlotPlanSpecific from "./pages/VoteSeatSharePlotPlanSpecific";
 
 
 //router and routes
@@ -30,7 +30,8 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="colorado" element={<Colorado />} />
       <Route path="nevada" element={<Nevada />} />
-      <Route path="test" element={<EnsembleSMDboxAndWhiskerPlot fips={'NV'} electionType={'SMD'} characteristic={'BAR'}/>} />
+      <Route path="test" element={<EnsembleSMDboxAndWhiskerPlot fips={'NV'} electionType={'SMD'} characteristic={"DEMFAVORED"}  />} />
+      
 
     </Route>
   )

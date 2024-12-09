@@ -11,8 +11,8 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
         const fetchData = async () => {
 
             try{
-                const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
-                //const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+                //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
+                const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
                 setData(response.data);
 
             }catch (err){
@@ -35,8 +35,8 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
     const above50 = diffValues.filter((val) => val >= 0);
 
     
-    const averageSeatShare = Number(data.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
-    const voteShare = Number(data.voteShare * 100).toFixed(2).replace(/\.00$/, '');
+    const averageSeatShare = Number(data.democratAvgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
+    const voteShare = Number(data.democratAvgVoteShare * 100).toFixed(2).replace(/\.00$/, '');
 
     const traces = [
         {
@@ -78,7 +78,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
         yaxis: {
           title: y_label || 'Frequency',
           tickmode: 'linear',
-          dtick: 100, // Adjust dynamically if needed
+          dtick: 500, // Adjust dynamically if needed
           showline: true,
           linecolor: 'black',
           linewidth: 2,

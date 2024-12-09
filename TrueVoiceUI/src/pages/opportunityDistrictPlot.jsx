@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 //opp representative
-function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, characteristic }){
+function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType}){
 
     const [data, setData] = useState(null);
     const [error,setError] = useState(null);
@@ -13,8 +13,8 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
         const fetchData = async () => {
 
             try{
-                const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
-                //const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+                //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
+                const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
                 setData(response.data);
 
             }catch (err){
@@ -24,19 +24,20 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
         };
         fetchData();
 
-    }, [fips, electionType, characteristic]);
+    }, [fips, electionType]);
   
     if(error) return <div>Error: {error.message}</div>;
     if(!data) return <div>Loading...</div>;
 
     const opportunityDistricts = data.barData.map((d) => d.opportunityDistricts);
     //const totalDistricts = data.totalDistricts;
-    const totalDistricts = data.totalRepresentatives;
+    const totalDistricts = data.totalDistricts;
     const maxFrequency = Math.max(...opportunityDistricts.map((d) => d.frequency || 0)); 
     const dtickValue = Math.ceil(maxFrequency / 5);
 
-    const averageSeatShare = Number(data.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
-    const voteShare = Number(data.voteShare * 100).toFixed(2).replace(/\.00$/, '');
+    const averageSeatShare = Number(data.democratAvgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
+    const voteShare = Number(data.democratAvgVoteShare * 100).toFixed(2).replace(/\.00$/, '');
+    console.log(opportunityDistricts);
     const trace = {
         x: opportunityDistricts,
         type: 'histogram',
@@ -73,7 +74,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
         },
         yaxis: {
           title: y_label || 'Frequency',
-          dtick: 100,
+          dtick: dtickValue,
           showline: true,
           linecolor: 'black', 
           linewidth: 2, 

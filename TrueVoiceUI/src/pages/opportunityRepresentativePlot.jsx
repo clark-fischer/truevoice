@@ -11,8 +11,8 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
     const fetchData = async () => {
       try {
 
-        const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
-        //const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+        //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
+        const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
         setData(response.data);
       } catch (err) {
         console.error("Error fetching data:", err);
@@ -32,9 +32,9 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
   const maxFrequency = Math.max(...opportunityRepresentatives.map((d) => d.frequency || 0));
   const dtickValue = Math.ceil(maxFrequency / 5);
 
-  const totalRepresentatives = data.totalRepresentatives; 
-  const averageSeatShare = Number(data.avgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
-  const voteShare = Number(data.voteShare * 100).toFixed(2).replace(/\.00$/, '');
+  const totalRepresentatives = data.totalDistricts; 
+  const averageSeatShare = Number(data.democratAvgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
+  const voteShare = Number(data.democratAvgVoteShare * 100).toFixed(2).replace(/\.00$/, '');
   const trace = {
     x: opportunityRepresentatives,
     type: 'histogram',
@@ -69,7 +69,7 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
     yaxis: {
       title: y_label || 'Frequency',
       tickmode: 'linear', 
-      dtick: 100,
+      dtick: 500,
       showline: true,
       linecolor: 'black', 
       linewidth: 2, 
