@@ -74,13 +74,13 @@ function VoteShareSeatSharePlot({ title, x_label, y_label }) {
   const dataTraces = [traceLine, traceSMD, traceMMD];
 
   const layout = {
-    title: title || `Seat-Vote Curve for ${data.state || 'Nevada'}`,
+    title: `Seat-Vote Curve for ${data.state || 'Nevada'}`,
     xaxis: {
-      title: x_label || 'Vote Share',
+      title:  'Vote Share',
       range: [0, 1],
     },
     yaxis: {
-      title: y_label || 'Seat Share',
+      title:  'Seat Share',
       range: [0, 1],
     },
     annotations: [
