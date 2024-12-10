@@ -32,7 +32,7 @@ const router = createBrowserRouter(
       <Route path="nevada" element={<Nevada />} />
       <Route path="box" element={<EnsembleBoxAndWhiskerPlot fips={"NV"} electionType={"SMD"}   />} />
       <Route path="voteSeat" element={<VoteSeatSharePlotPlanSpecific fips={'NV'} electionType={'SMD'} characteristic={"REPFAVORED"}  />} />
-
+      
     </Route>
   )
 );
