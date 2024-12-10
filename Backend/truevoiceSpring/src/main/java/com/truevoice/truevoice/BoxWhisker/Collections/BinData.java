@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BinData {
-    private int binNo;
+    private String binNo;
     private DemographicData white;
     private DemographicData black;
     private DemographicData asian;
