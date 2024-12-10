@@ -5,7 +5,7 @@ import "chart.js/auto";
 
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ReferenceLine } from "recharts";
 ///{fips}/{electionType}/{characteristic}/SEATVOTE
-function VoteSeatSharePlotPlanSpecific({title, x_label, y_lable, fips, electionType, characteristic}){
+function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionType, characteristic}){
 
     
     const [demData, setDemData] = useState([]);
@@ -99,7 +99,7 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_lable, fips, electionT
 
     return (
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h2 style={{ marginBottom: "10px" }}>{title || `SMD ${characteristic}: Vote-Seat Share`}</h2>
+          <h2 style={{ marginBottom: "10px" }}>{title || `${fips} ${electionType} ${characteristic}: Vote-Seat Share`}</h2>
     
           <LineChart width={1200} height={600} data={demData}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -108,10 +108,13 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_lable, fips, electionT
               domain={[0, 1]}
               dataKey="x"
               tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
+              label={{ value: x_label || "Vote Share (%)", position: "insideBottom", offset: -5 }}
             />
             <YAxis
               domain={[0, 1]}
               tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
+              label={{ value: y_label || "Seat Share (%)", angle: -90, position: "insideLeft" }}
+    
             />
             <Tooltip
               formatter={(value, name) => [`${(value * 100).toFixed(2)}%`, name]}
