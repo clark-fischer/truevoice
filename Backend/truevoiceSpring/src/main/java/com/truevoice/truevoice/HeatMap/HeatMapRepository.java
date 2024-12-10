@@ -13,6 +13,8 @@ import java.util.Optional;
 public interface HeatMapRepository extends MongoRepository<HeatMap, ObjectId> {
 
     @Query("{ 'fips': ?0 }")
-    Optional<HeatMap> findHeatMap(FIPS fips);
+    Optional<HeatMap> findSMDHeatMap(FIPS fips);
 
+    @Query("{ 'fips': ?0, 'electionType': { $exists: false } }")
+    Optional<HeatMap> findPrecinctHeatMap(FIPS fips);
 }

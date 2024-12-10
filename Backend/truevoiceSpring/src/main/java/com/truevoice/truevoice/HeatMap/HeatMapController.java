@@ -17,9 +17,17 @@ public class HeatMapController {
         this.heatMapService = heatMapService;
     }
 
-    @GetMapping("/{fips}/HEATMAP")
-    public HeatMap getEnsembleBar(
+    @GetMapping("/{fips}/SMD/HEATMAP")
+    public HeatMap getSMDHeatMap(
             @PathVariable("fips") FIPS fips) {
-        return heatMapService.getHeatMap(fips);
+        return heatMapService.getSMDHeatMap(fips);
     }
+
+    @GetMapping("/{fips}/PRECINCT/HEATMAP")
+    public HeatMap getPrecinctHeatMap(
+            @PathVariable("fips") FIPS fips) {
+        return heatMapService.getPrecinctHeatMap(fips);
+    }
+
+
 }

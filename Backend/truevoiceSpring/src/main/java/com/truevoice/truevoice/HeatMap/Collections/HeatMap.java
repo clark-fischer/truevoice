@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.truevoice.truevoice.FRAEnum.ElectionType;
 import com.truevoice.truevoice.FRAEnum.FIPS;
 
 
@@ -16,5 +17,6 @@ import com.truevoice.truevoice.FRAEnum.FIPS;
 @Document(collection = "heatmaps")
 public class HeatMap {
     private FIPS fips;
+    private ElectionType electionType=null;
     private Map<String, Demographics> precincts;
 }

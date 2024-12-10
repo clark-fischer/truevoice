@@ -18,8 +18,14 @@ public class HeatMapService {
     }
 
     @Cacheable
-    public HeatMap getHeatMap(FIPS fips) {
-        return heatMapRepository.findHeatMap(fips)
+    public HeatMap getSMDHeatMap(FIPS fips) {
+        return heatMapRepository.findSMDHeatMap(fips)
+                .orElseThrow(() -> new RuntimeException("Heat Map not found"));
+    }
+
+    @Cacheable
+    public HeatMap getPrecinctHeatMap(FIPS fips) {
+        return heatMapRepository.findPrecinctHeatMap(fips)
                 .orElseThrow(() -> new RuntimeException("Heat Map not found"));
     }
 }
