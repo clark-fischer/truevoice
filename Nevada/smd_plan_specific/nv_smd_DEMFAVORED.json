@@ -1,0 +1,39 @@
+{
+    "fips": "NV",
+    "electionType": "SMD",
+    "totalDistricts": 4,
+    "characteristic": "DEMFAVORED",
+    "democratsSeats": 2,
+    "republicanSeats": 2,
+    "demTotalVotes": 1323572,
+    "repTotalVotes": 1437194,
+    "bias": -0.25,
+    "symmetry": -0.0833,
+    "responsiveness": 0,
+    "curveData": [
+        {
+            "districtId": 1,
+            "demVoteShare": 0.6780262933242274,
+            "repVoteShare": 0.32197370667577263,
+            "totalVotes": 464428
+        },
+        {
+            "districtId": 2,
+            "demVoteShare": 0.47902701392902614,
+            "repVoteShare": 0.5209729860709739,
+            "totalVotes": 904380
+        },
+        {
+            "districtId": 3,
+            "demVoteShare": 0.5501474879117437,
+            "repVoteShare": 0.4498525120882563,
+            "totalVotes": 636937
+        },
+        {
+            "districtId": 4,
+            "demVoteShare": 0.44855459795739594,
+            "repVoteShare": 0.5514454020426041,
+            "totalVotes": 755021
+        }
+    ]
+}
