@@ -1,0 +1,27 @@
+{
+    "fips": "CO",
+    "electionType": "MMD",
+    "totalDistricts": 2,
+    "characteristic": "AVERAGE",
+    "democratsSeats": 2,
+    "republicanSeats": 0,
+    "demTotalVotes": 2173013,
+    "repTotalVotes": 2705411,
+    "bias": 0.0,
+    "symmetry": 0,
+    "responsiveness": 0,
+    "curveData": [
+        {
+            "districtId": 1,
+            "demVoteShare": 0.5367958419322786,
+            "repVoteShare": 0.4632041580677214,
+            "totalVotes": 1797429
+        },
+        {
+            "districtId": 2,
+            "demVoteShare": 0.5649340699649704,
+            "repVoteShare": 0.4350659300350296,
+            "totalVotes": 3080995
+        }
+    ]
+}

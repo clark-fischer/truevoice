@@ -1,0 +1,63 @@
+{
+    "fips": "CO",
+    "electionType": "SMD",
+    "totalDistricts": 8,
+    "characteristic": "ENACTED",
+    "democratsSeats": 5,
+    "republicanSeats": 3,
+    "demTotalVotes": 2193352,
+    "repTotalVotes": 2685104,
+    "bias": 0.125,
+    "symmetry": 0.0417,
+    "responsiveness": 0,
+    "curveData": [
+        {
+            "districtId": 1,
+            "demVoteShare": 0.8066065703920328,
+            "repVoteShare": 0.19339342960796724,
+            "totalVotes": 586095
+        },
+        {
+            "districtId": 2,
+            "demVoteShare": 0.6891844078737304,
+            "repVoteShare": 0.31081559212626964,
+            "totalVotes": 618437
+        },
+        {
+            "districtId": 3,
+            "demVoteShare": 0.44546453464534647,
+            "repVoteShare": 0.5545354653546535,
+            "totalVotes": 674144
+        },
+        {
+            "districtId": 4,
+            "demVoteShare": 0.37257307413653495,
+            "repVoteShare": 0.627426925863465,
+            "totalVotes": 583058
+        },
+        {
+            "districtId": 5,
+            "demVoteShare": 0.41719418175129896,
+            "repVoteShare": 0.582805818248701,
+            "totalVotes": 586071
+        },
+        {
+            "districtId": 6,
+            "demVoteShare": 0.5823274278237757,
+            "repVoteShare": 0.41767257217622433,
+            "totalVotes": 615806
+        },
+        {
+            "districtId": 7,
+            "demVoteShare": 0.57277274246393,
+            "repVoteShare": 0.42722725753607005,
+            "totalVotes": 635087
+        },
+        {
+            "districtId": 8,
+            "demVoteShare": 0.5204469736161407,
+            "repVoteShare": 0.4795530263838593,
+            "totalVotes": 579758
+        }
+    ]
+}
