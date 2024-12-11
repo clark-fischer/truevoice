@@ -2,7 +2,7 @@
 import React from 'react';
 
 import OpportunityRepresentativesPlot from '../graphs/OpportunityRepresentativesPlot';
-import OpportunityDistrictPlot from '../graphs/OpportunityDistrictPlot';
+import OpportunityDistrictsPlot from '../graphs/OpportunityDistrictPlot';
 import SMDBoxAndWhiskerPlot from '../graphs/EnsembleBoxAndWhiskerPlot';
 import VoteShareSeatSharePlot from '../graphs/VoteSeatSharePlotPlanSpecific'
 
