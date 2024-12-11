@@ -14,7 +14,7 @@ import com.truevoice.truevoice.FRAEnum.FIPS;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "heatmaps")
-public class HeatMap {
+public class PrecinctHeatMap {
     private FIPS fips;
     private Map<String, Demographics> precincts;
 }

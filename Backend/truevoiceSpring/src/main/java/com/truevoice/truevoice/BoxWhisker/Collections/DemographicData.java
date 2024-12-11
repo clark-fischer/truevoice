@@ -15,5 +15,5 @@ public class DemographicData {
     private double median;
     private double q3;
     private double max;
-    private Double enactedValue=null;
+    private double enactedValue;
 }

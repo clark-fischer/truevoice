@@ -30,9 +30,9 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="colorado" element={<Colorado />} />
       <Route path="nevada" element={<Nevada />} />
-      {/*<Route path="test" element={<EnsembleSMDboxAndWhiskerPlot fips={'NV'} electionType={'SMD'} characteristic={"DEMFAVORED"}  />} />*/}
+      <Route path="box" element={<EnsembleBoxAndWhiskerPlot fips={"NV"} electionType={"SMD"}   />} />
       <Route path="voteSeat" element={<VoteSeatSharePlotPlanSpecific fips={'NV'} electionType={'SMD'} characteristic={"REPFAVORED"}  />} />
-
+      
     </Route>
   )
 );

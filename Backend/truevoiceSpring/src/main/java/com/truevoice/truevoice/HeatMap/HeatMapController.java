@@ -2,8 +2,8 @@ package com.truevoice.truevoice.HeatMap;
 
 import com.truevoice.truevoice.FRAEnum.ElectionType;
 import com.truevoice.truevoice.FRAEnum.FIPS;
-import com.truevoice.truevoice.HeatMap.Collections.DistrictHeatmap;
-import com.truevoice.truevoice.HeatMap.Collections.HeatMap;
+import com.truevoice.truevoice.HeatMap.Collections.PrecinctHeatMap;
+import com.truevoice.truevoice.HeatMap.Collections.SMDHeatMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,15 +19,17 @@ public class HeatMapController {
         this.heatMapService = heatMapService;
     }
 
+    @GetMapping("/{fips}/{electionType}/HEATMAP")
+    public SMDHeatMap getSMDHeatMap(
+        @PathVariable("fips") FIPS fips, @PathVariable("electionType") ElectionType electionType) {
+        return heatMapService.getSMDHeatMap(fips,electionType);
+    }
+
     @GetMapping("/{fips}/PRECINCT/HEATMAP")
-    public HeatMap getPrecinctHeatmap(
+    public PrecinctHeatMap getPrecinctHeatMap(
             @PathVariable("fips") FIPS fips) {
         return heatMapService.getPrecinctHeatMap(fips);
     }
 
-    @GetMapping("/{fips}/{electionType}/HEATMAP")
-    public DistrictHeatmap getDistrictHeatmap(
-            @PathVariable("fips") FIPS fips, @PathVariable("electionType") ElectionType electionType) {
-        return heatMapService.getDistrictHeatMap(fips, electionType);
-    }
+
 }
