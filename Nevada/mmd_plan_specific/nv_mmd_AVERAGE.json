@@ -1,0 +1,21 @@
+{
+    "fips": "NV",
+    "electionType": "MMD",
+    "totalDistricts": 1,
+    "characteristic": "AVERAGE",
+    "democratsSeats": 1,
+    "republicanSeats": 0,
+    "demTotalVotes": 1346616,
+    "repTotalVotes": 1414150,
+    "bias": 0.5,
+    "symmetry": 0.0,
+    "responsiveness": 0,
+    "curveData": [
+        {
+            "districtId": 1,
+            "demVoteShare": 0.512231173400438,
+            "repVoteShare": 0.487768826599562,
+            "totalVotes": 2760766
+        }
+    ]
+}
