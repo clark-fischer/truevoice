@@ -113,8 +113,8 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
             title: y_label || "Population Percent (%)",
             zeroline: false,
           },
-          height: 600,
-          width: 1000,
+          height: 555,
+          width: 700,
           showlegend: true,
         }}
         config={{ responsive: true }}

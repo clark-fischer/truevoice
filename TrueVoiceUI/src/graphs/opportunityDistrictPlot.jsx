@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 //opp representative
-function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType}){
+function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, height=600, width=800, fontSize=14}) {
 
     const [data, setData] = useState(null);
     const [error,setError] = useState(null);
@@ -58,7 +58,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType})
       const layout = {
         title: title || `${data.electionType} Ensemble summary: Opportunity Districts` ,
         font: {
-            size: 14, 
+            size: fontSize, 
         },
         xaxis: {
           title: x_label || 'Number of Opportunity Districts',
@@ -91,7 +91,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType})
               text: `Average Seat Share: ${averageSeatShare}%<br>Vote Share: ${voteShare}%`,
               showarrow: false,
               font: {
-                size: 12,
+                size: 9,
               },
               align: 'left',
               bgcolor: 'white',
@@ -100,14 +100,14 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType})
             },
           ],
         bargap: 0.1, 
-        margin: {
-          l: 50,
-          r: 50,
-          t: 50,
-          b: 50,
-        },
-        width: 800,
-        height: 600,
+        // margin: {
+        //   l: 50,
+        //   r: 50,
+        //   t: 50,
+        //   b: 50,
+        // },
+        width: width,
+        height: height,
       };
     
       return (

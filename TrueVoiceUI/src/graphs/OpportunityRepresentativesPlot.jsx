@@ -3,7 +3,7 @@ import Plot from 'react-plotly.js';
 import axios from 'axios';
 
 // Opportunity Representatives Plot
-function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electionType, characteristic }) {
+function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electionType, characteristic, width=800, height=600, fontSize=14 }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -55,7 +55,7 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
   const layout = {
     title: title || `${data.electionType} Ensemble Summary: Opportunity Representatives`,
     font: {
-      size: 14, 
+      size: fontSize, 
   },
     xaxis: {
       title: x_label || 'Number of Opportunity Representatives',
@@ -95,14 +95,14 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
       },
     ],
     bargap: 0.1,
-    margin: {
-      l: 50,
-      r: 50,
-      t: 50,
-      b: 50,
-    },
-    width: 800,
-    height: 600,
+    // margin: {
+    //   l: 50,
+    //   r: 50,
+    //   t: 50,
+    //   b: 50,
+    // },
+    width: width,
+    height: height,
   };
 
   return (
