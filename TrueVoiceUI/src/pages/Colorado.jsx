@@ -1,71 +1,75 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import SideBySideImages from './SideBySideImages';
 
 import {
   Box,
   Container,
+  Text,
+  UnorderedList,
+  ListItem,
+  Center,
   Divider,
+  Link,
   Tabs,
   TabList,
   TabPanels,
   Tab,
   TabPanel,
+  Tooltip,
 } from "@chakra-ui/react";
 
-import {
-  Chart as ChartJS,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-  Tooltip as ChartTooltip,
-  Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
+
+import Demographics from "./Demographics";
+import TabStatePlans from "./TabStatePlans";
 
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-import { HeatmapLayer } from "react-leaflet-heatmap-layer-v3";
-
-import { useLocation } from "react-router-dom";
 
 // data -- start
 import "leaflet/dist/leaflet.css";
-import state_smd_local from "../datafiles/nv_smd.json";
-import col_smd_local from "../datafiles/co_cong_2021.json";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
-import { Tooltip } from "@chakra-ui/react";
-import nv_race_data from "../datafiles/nv_race_chloro_data.json";
 
-import StateMap from "../components/StateMap";
+import nv_race_by_district from "../datafiles/precinct.json"
+import TabPlanSummary from "./TabPlanSummary";
+import Ensemble from "./Ensemble";
 
-const heatmapGradient = {
-  white: { 0.1: "yellow", 1: "orange" },
-  black: { 0.1: "pink", 1: "purple" },
-  asian: { 0.1: "cyan", 1: "blue" },
-  hispanic: { 0.1: "lime", 1: "green" },
-};
+const stateRepresentives = [
+  "Dina Titus",
+  "Mark Amodei",
+  "Susie Lee",
+  "Steven Horsford",
+];
 
 const styles = {
   gridContainer: {
     display: "grid",
-    gridTemplateColumns: "2.3fr 1fr", // Two columns
+    gridTemplateColumns: ".7fr 1fr", // Two columns
+    // height: "60vh",
     margin: "0px",
+    width: "100%",
   },
   mapWrapper: {
     display: "flex",
     flexDirection: "column",
     height: "700px",
+    // display: "none"
   },
   mapContainer: {
     flexGrow: 1, // Map takes up remaining space
-    width: "100%",
+    // width: "100%",
   },
 
   buttonRow: {
     display: "flex",
+    // justifyContent: "space-between",
+    // padding: "10px",
     height: "10%", // Take up 10% of the container height
     background: "#ffffff",
   },
   button: {
     flexBasis: "50%", // Each button takes up about 22.5% of the width (to account for spacing)
+    // padding: "1  0px",
     fontSize: "16px",
     textAlign: "center",
     border: "1px solid #f0f0f0",
@@ -75,301 +79,146 @@ const styles = {
   },
   controlsContainer: {
     padding: "20px",
-    width: "600px",
+    // background: "#f8f8f8",
+    // width: "600px",
+    // height: "100px",
     // border: "1px solid red",
     boxSizing: "border-box",
   },
 };
 
+
 export default function State() {
-  const selectedState =
-    useLocation().pathname === "/nevada"
-      ? "NV"
-      : useLocation().pathname === "/colorado"
-      ? "CO"
-      : "None";
-  const [state_smd, set_state_smd] = React.useState(
-    selectedState === "NV" ? state_smd_local : col_smd_local
-  );
-  console.log(state_smd.features[0].properties.District);
 
-  // charting functionality -- BEGIN
-  ChartJS.register(
-    BarElement,
-    CategoryScale,
-    LinearScale,
-    ChartTooltip,
-    Legend
-  );
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const plan = await axios.get("http://localhost:8080/CO/SMD/ENACTED");
 
-  const [raceData, setRaceData] = React.useState({
-    labels: ["White", "Non-White"],
-    datasets: [
-      {
-        label: "Percentage of Population",
-        data: [0, 0],
-        backgroundColor: ["rgba(75, 192, 192, 0.2)", "rgba(255, 99, 132, 0.2)"],
-        borderColor: ["rgba(75, 192, 192, 1)", "rgba(255, 99, 132, 1)"],
-        borderWidth: 1,
-      },
-    ],
-  });
+        setGeoJsonData(plan.data);
+        setPlanData(plan.data.crs.properties);
 
-  const [partyData, setPartyData] = React.useState({
-    labels: ["Republican", "Democrat"],
-    datasets: [
-      {
-        label: "Population",
-        data: [0, 0],
-        backgroundColor: ["rgba(75, 192, 192, 0.2)", "rgba(255, 99, 132, 0.2)"],
-        borderColor: ["rgba(75, 192, 192, 1)", "rgba(255, 99, 132, 1)"],
-        borderWidth: 1,
-      },
-    ],
-  });
+        const raceResp = await axios.get("http://localhost:8080/CO/PRECINCT/HEATMAP");
+        setRaceStats(raceResp.data.precincts)
 
-  const updateChartData = (chartData, setChartData) => {
-    const newData = [...chartData.datasets[0].data];
-    newData[0] = Math.floor(Math.random() * 60) + 1;
-    newData[1] = 100 - newData[0];
-    setChartData({
-      ...chartData,
-      datasets: [
-        {
-          ...chartData.datasets[0],
-          data: newData,
-        },
-      ],
-    });
-  };
+        // this sucks -- change to css later
+        document.getElementById("district-button0").style.color = "blue";
+        document.getElementById("district-button0").style.fontWeight = "bold";
 
-  // const eachDistrict = (feature, layer) => {
-  //   const districtNo = feature.properties.DISTRICTNO;
-  //   layer.on("mouseover", function () {
-  //     document.getElementById(
-  //       "selected-district"
-  //     ).innerText = `District ${districtNo}`;
-  //     updateChartData(raceData, setRaceData);
-  //     updateChartData(partyData, setPartyData);
-  //   });
-  // };
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData(); // Call the function
+  }, []);
 
   const eachDistrict = (feature, layer) => {
-    const districtNo =
-      selectedState === "NV"
-        ? feature.properties.DISTRICTNO
-        : feature.properties.CD116FP;
-    layer.on("mouseover", function () {
-      document.getElementById(
-        "selected-district"
-      ).innerText = `District ${districtNo}`;
-      updateChartData(raceData, setRaceData);
-      updateChartData(partyData, setPartyData);
-    });
+    const { districtno, demographics } = feature.properties; // Destructure for cleaner code
+
+    const updateInfo = () => {
+      // Update district number and representative
+      document.getElementById("selected-district").innerText = `District ${districtno}`;
+      document.getElementById("selected-rep_co").innerText = `Rep. ${stateRepresentives[districtno - 1] || "Unknown"}`;
+
+      // Loop through demographics to update race information
+      const raceMapping = {
+        white: "race--white2", black: "race--black2", latin: "race--hispanic2", asian: "race--asian2", other: "race--other2",
+      };
+
+      for (const [key, id] of Object.entries(raceMapping)) {
+        document.getElementById(id).innerText = `${demographics[key] || 0}`;
+      }
+    };
+
+    // Attach event handler
+    layer.on("mouseover", updateInfo);
   };
 
-  const nevada_districts = {
-    1: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.8,
-    },
-    2: {
-      color: "red",
-      fillColor: "red",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.4,
-    },
-    3: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.3,
-    },
-    4: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.3,
-    },
-  };
+  const [raceStats, setRaceStats] = React.useState(null);
+  const [geoJsonData, setGeoJsonData] = React.useState(null);
+  const [planData, setPlanData] = React.useState(null);
 
-  const colorado_districts = {
-    1: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.8,
-    },
-    2: {
-      color: "red",
-      fillColor: "red",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.4,
-    },
-    3: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.3,
-    },
-    4: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.3,
-    },
-    5: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.8,
-    },
-    6: {
-      color: "red",
-      fillColor: "red",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.4,
-    },
-    7: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.3,
-    },
-    8: {
-      color: "blue",
-      fillColor: "blue",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.3,
-    },
-  };
 
-  Object.keys(nevada_districts).forEach((district) => {
-    nevada_districts[district].fillOpacity /= 2;
-  });
+  function buildHeatmap(i) {
+    return (feature) => {
+      const tractId = feature.properties.GEOID; // assuming GEOID links to your data
+      const data = raceStats[tractId];
+      // console.log(feature);
+      // console.log(tractId);
+      // console.log(data)
+      const percentage = data[raceCheckBoxes[i]["label"]];
 
-  // const getGeoJsonStyle = (data) => {
-  //   if (data === state_smd) {
-  //     return (feature) => nevada_districts[feature.properties.DISTRICTNO];
-  //   } else if (data === nv_4mmd) {
-  //     return () => ({
-  //       color: "purple",
-  //       fillColor: "purple",
-  //       weight: 1,
-  //       opacity: 1,
-  //       fillOpacity: 0.7,
-  //     });
-  //   }
-  //   return () => ({
-  //     color: "gray",
-  //     fillColor: "gray",
-  //     weight: 1,
-  //     opacity: 1,
-  //     fillOpacity: 0.5,
-  //   });
-  // };
+      return {
+        color: raceCheckBoxes[i]['hex'],
+        weight: 0,
+        fillOpacity: percentage,
 
-  const getGeoJsonStyle = (data) => {
-    if (selectedState === "NV") {
-      return (feature) => nevada_districts[feature.properties.DISTRICTNO];
-    } else if (selectedState === "CO") {
-      return (feature) => colorado_districts[feature.properties.District];
-    } else {
-      return () => ({
-        color: "gray",
-        fillColor: "gray",
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.5,
-      });
-    }
-  };
+      };
+    };
 
-  const [geoJsonData, setGeoJsonData] = React.useState(state_smd);
-  const [geoJsonStyle, setGeoJsonStyle] = React.useState(() =>
-    getGeoJsonStyle(state_smd)
-  );
-
-  const changeDistrictMap = (data) => {
-    setGeoJsonData(data);
-    setGeoJsonStyle(() => getGeoJsonStyle(data));
-
-    
-  };
-
-  const [heatmapData, setHeatmapData] = React.useState([]);
-
-  const changeRaceMap = (event) => {
-    const { id, checked } = event.target;
-    const race = id.split("--")[1];
-    setHeatmapData((prevData) => ({
-      ...prevData,
-      [race]: checked ? nv_race_data[race] : [],
-    }));
-  };
-
-  const renderHeatmapLayers = () => {
-    return Object.keys(heatmapData).map(
-      (race) =>
-        heatmapData[race] &&
-        heatmapData[race].length > 0 && (
-          <HeatmapLayer
-            key={race}
-            fitBoundsOnLoad={true}
-            fitBoundsOnUpdate={false}
-            points={heatmapData[race]}
-            longitudeExtractor={(m) => m[1]}
-            latitudeExtractor={(m) => m[0]}
-            intensityExtractor={(m) => parseFloat(m[2])}
-            radius={10}
-            max={100}
-            minOpacity={0.7}
-            useLocalExtrema={true}
-            gradient={heatmapGradient[race]}
-          />
-        )
-    );
-  };
+  }
 
   const renderDistrictButtons = () => {
     const districtMaps = [
       {
-        label: "SMD, Single Rep. (current)",
-        data: state_smd,
+        label: "SMD (Enacted)",
+        path: "http://localhost:8080/CO/SMD/ENACTED",
         tooltip: "These are Nevada's districts, as of 2024.",
+        planOptions: plan_options_smd,
       },
-      // { label: "MMD, 2 Reps.", data: nv_2mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
-      // { label: "MMD, 3 Reps.", data: nv_3mmd, tooltip: "Entirely hypothetical. As per the FRA, a small state like Nevada would combine all districts into a single district." },
       {
         label: "MMD, 4 Reps. (FRA official)",
-        data: nv_4mmd,
+        path: "http://localhost:8080/CO/MMD/AVERAGE",
         tooltip: "This would be the official prescription of the FRA.",
+        planOptions: plan_options_mmd,
       },
     ];
+
+    const handleButtonClick = (index, map) => {
+      // Reset styles for all buttons
+      districtMaps.forEach((_, i) => {
+        const button = document.getElementById(`district-button${i}`);
+        button.style.color = "black";
+        button.style.fontWeight = "normal";
+      });
+
+      // Highlight the selected button
+      const selectedButton = document.getElementById(`district-button${index}`);
+      selectedButton.style.color = "blue";
+      selectedButton.style.fontWeight = "bold";
+
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(map.path);
+          // console.log(response); // Set the data to state
+          setGeoJsonData(response.data);
+          setPlanData(response.data.crs.properties);
+
+
+        } catch (err) {
+          setGeoJsonData(null);
+          console.log(err);
+        }
+
+        document.getElementById("district-button0").innerHTML = "SMD (" + map.title + ")";
+      };
+
+      fetchData(); // Call the function
+      set_plan_options(map.planOptions);
+
+      // Update button text if needed
+      if (index === 0) {
+        selectedButton.innerHTML = map.label;
+      }
+    };
 
     return districtMaps.map((map, index) => (
       <Tooltip key={index} label={map.tooltip}>
         <button
-          onClick={() => {
-            document.getElementById(name).innerText = "None";
-            changeDistrictMap(map.data)
-          }}
+          id={`district-button${index}`}
           style={styles.button}
-          
+          onClick={() => handleButtonClick(index, map)}
         >
           {map.label}
         </button>
@@ -377,116 +226,152 @@ export default function State() {
     ));
   };
 
-  const renderRaceCheckboxes = () => {
-    const races = [
-      { id: "race--white", label: "White" },
-      { id: "race--black", label: "African-American" },
-      { id: "race--asian", label: "Asian-American" },
-      { id: "race--hispanic", label: "Latino/Hispanic" },
-    ];
+  const plan_options_smd = [
+    {
+      title: "Enacted",
+      image: "/dem_co.png",
+      path: "http://localhost:8080/CO/SMD/ENACTED"
+    },
+    {
+      title: "Dem Favored",
+      image: "/dem_co.png",
+      path: "http://localhost:8080/CO/SMD/DEMFAVORED"
+    },
+    {
+      title: "Repb Favored",
+      image: "/rep_co.png",
+      path: "http://localhost:8080/CO/SMD/REPFAVORED"
+    },
+    {
+      title: "Average",
+      image: "/dem_co.png",
+      path: "http://localhost:8080/CO/SMD/AVERAGE"
+    },
+    {
+      title: "Fair",
+      image: "/dem_co.png",
+      path: "http://localhost:8080/CO/SMD/FAIR"
+    },
+    {
+      title: "Hide",
+      image: "/hide.png",
+      path: "http://localhost:8080/CO/SMD/NULL"
+    },
+  ]
 
-    return races.map((race) => (
-      <div key={race.id}>
-        <input id={race.id} type="checkbox" onChange={changeRaceMap} />
-        <label htmlFor={race.id} style={{ paddingLeft: "5px" }}>
-          {race.label}
-        </label>
-        <br />
-      </div>
-    ));
-  };
+  const plan_options_mmd = [
+    {
+      title: "MMD",
+      image: "/dem_co.png",
+      path: "http://localhost:8080/CO/MMD/AVERAGE",
+    },
+    {
+      title: "Hide",
+      image: "/dem_co.png",
+      path: "http://localhost:8080/CO/SMD/NULL"
+    },
+  ]
+
+  const [plan_options, set_plan_options] = useState(plan_options_smd);
+
+  const [raceCheckBoxes, setRaceCheckBoxes] = useState([
+    { id: "race--white", label: "white", hex: 'blue', checked: 0 },
+    { id: "race--black", label: "black", hex: 'red', checked: 0 },
+    { id: "race--asian", label: "asian", hex: 'green', checked: 0 },
+    { id: "race--hispanic", label: "hispanic", hex: 'yellow', checked: 0 },
+    { id: "race--other", label: "other", hex: 'brown', checked: 0 },
+  ]);
+
+  const toggle_map = (index) => {
+    const nextRaces = raceCheckBoxes.map((c, i) => {
+
+      const copy = { ...c };
+
+      if (i === index) {
+        // Increment the clicked counter
+        copy.checked = !copy.checked;
+      }
+
+      return copy;
+    });
+
+
+    setRaceCheckBoxes(nextRaces);
+  }
 
   return (
     <>
       <Divider my={2} />
 
+      {/* Entire Page contained here */}
       <Container centerContent minWidth="100%" p={0} m={0}>
         <div style={styles.gridContainer}>
+
+          {/* This is the map component */}
           <div style={styles.mapWrapper}>
             <div style={styles.mapContainer}>
-              <StateMap state={selectedState}></StateMap>
+              <MapContainer
+                key={JSON.stringify(geoJsonData)}
+                center={[39.576019, -105.7821]}
+                zoom={6}
+                style={{ height: "100%", width: "100%" }}
+                zoomControl={true}
+              >
+                <TileLayer
+                  attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
+                  url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+                />
+
+                {
+                  raceCheckBoxes.map((race, race_index) => {
+
+                    return race["checked"] ? <GeoJSON
+                      data={nv_race_by_district}
+                      style={buildHeatmap(race_index)}
+                      key={race_index * 10 + race["checked"]}
+                    /> : <></>
+                  })
+                }
+
+                <GeoJSON
+                  data={geoJsonData}
+
+                  onEachFeature={eachDistrict}
+                />
+              </MapContainer>
             </div>
 
             <div style={styles.buttonRow}>{renderDistrictButtons()}</div>
           </div>
 
+          {/* Map ends; Tabs begin */}
           <Tabs mx={0} my={0}>
+
             <TabList>
-              <Tab key={1}>Heatmap Explorer</Tab>
-              <Tab key={2}>District Explorer</Tab>
-              <Tab key={3}>Plot Explorer</Tab>
-              <Tab key={4}>Random Plan Explorer</Tab>
+              <Tab key={1}>Demographics</Tab>
+              <Tab key={4}>SMD vs. MMD</Tab>
+              <Tab key={2}>Plans</Tab>
+              <Tab key={3}>State</Tab>
+              <Tab key={5}>Ensemble</Tab>
             </TabList>
-            <TabPanels>
-              <TabPanel key={1} padding={0}>
+
+            <TabPanels key={1}>
+
+              <Demographics raceCheckBoxes={raceCheckBoxes} setRaceCheckBoxes={setRaceCheckBoxes} toggle_map={toggle_map} />
+              <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
-                  <legend
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "bold",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    Overlay Ethnicity Data
-                  </legend>
-                  {renderRaceCheckboxes()}
-                  <button
-                    onClick={() =>
-                      setGeoJsonData(geoJsonData ? null : state_smd)
-                    }
-                    style={styles.button}
-                  >
-                    {geoJsonData ? "Disable GeoJSON" : "Enable GeoJSON"}
-                  </button>
+                  <SideBySideImages
+                    image1='2.jpg'
+                    image2='3.jpg'
+                    alt1="First placeholder"
+                    alt2="Second placeholder"
+                  />
                 </div>
-              </TabPanel>
+              </TabPanel >
+              <TabPlanSummary planData={planData} />
+              <TabStatePlans plan_options={plan_options} setGeoJsonData={setGeoJsonData} setPlanData={setPlanData} />
+              <Ensemble />
 
-              <TabPanel key={2} padding={0}>
-                <div style={styles.controlsContainer}>
-                  <div>
-                    <b>Selected District:</b>
-                    <p id="selected-district">
-                      <i>None</i>
-                    </p>
-                    <b>Current Rep:</b>
-                    <p id="selected-district">
-                      <i>None</i>
-                    </p>
-                  </div>
-
-                  <div>
-                    <br />
-                    <b>Race Breakdown:</b>
-                  </div>
-
-                  <Box m="0 auto">
-                    <Bar
-                      data={raceData}
-                      options={{ responsive: true, maintainAspectRatio: false }}
-                    />
-                  </Box>
-
-                  <div>
-                    <br />
-                    <b>Party Breakdown:</b>
-                  </div>
-
-                  <Box m="0 auto">
-                    <Bar
-                      data={partyData}
-                      options={{ responsive: true, maintainAspectRatio: false }}
-                    />
-                  </Box>
-                </div>
-              </TabPanel>
-
-              <TabPanel key={3} padding={0}>
-                <div style={styles.controlsContainer}></div>
-              </TabPanel>
-
-              <TabPanel key={4} padding={0}>
-                <div style={styles.controlsContainer}>hi</div>
-              </TabPanel>
             </TabPanels>
           </Tabs>
         </div>

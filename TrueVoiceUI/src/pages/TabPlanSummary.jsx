@@ -16,6 +16,8 @@ import {
   TabPanel,
 } from "@chakra-ui/react";
 
+import VoteShareSeatSharePlot from '../graphs/VoteSeatSharePlotPlanSpecific'
+
 const TabPlanSummary = (props) => {
 
   let summary_stats = [];
@@ -73,7 +75,8 @@ const TabPlanSummary = (props) => {
         <hr />
 
         {/* Seat/Vote share chart */}
-        <img src="/3.jpg" />
+        
+<VoteShareSeatSharePlot />
 
       </div>
 
