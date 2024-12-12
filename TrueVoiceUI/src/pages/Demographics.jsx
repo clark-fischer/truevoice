@@ -6,6 +6,7 @@ import {
   Text,
  
   TabPanel,
+  Button,
 } from "@chakra-ui/react";
 
 const styles = {
@@ -130,10 +131,15 @@ const Demographics = (props) => {
 
           <br />
           <br />
-          <Text fontSize="lg" >
+          {/* <Text fontSize="lg" >
             Estimated Vote Split (D/R): 0.5
-          </Text>
+          </Text> */}
+          <br />
+          <br />
+          <Button onClick={() => location.reload() } >Reset Page!</Button>
         </div>
+
+        
       </div>
     </TabPanel>
   );

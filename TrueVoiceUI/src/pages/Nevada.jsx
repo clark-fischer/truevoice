@@ -254,7 +254,7 @@ export default function State() {
     },
     {
       title: "Hide",
-      image: "/n.jpeg",
+      image: "/hide.png",
       path: "http://localhost:8080/NV/SMD/NULL"
     },
   ]
