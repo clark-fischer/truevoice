@@ -13,17 +13,12 @@ export default function Footer() {
         >
           <Text fontSize="sm">&copy; {new Date().getFullYear()} TrueVoice</Text>
           <Stack direction="row" spacing={6}>
-            <Link
-              href="/profile"
-              _hover={{ textDecoration: "none", color: "gray.400" }}
-            >
-              About Us
-            </Link>
+          <p>Data was sourced from <Link href="https://redistrictingdatahub.org/">https://redistrictingdatahub.org/</Link>, <Link href="https://ballotpedia.org//">https://ballotpedia.org/</Link></p>
           </Stack>
         </Stack>
         <Divider mt={6} />
         <Text textAlign="center" mt={6} fontSize="xs" color="gray.500">
-          CSE416: GUI Deliverable 1
+          CSE416: FINAL PROJECT!! :)
         </Text>
       </Box>
     </footer>
