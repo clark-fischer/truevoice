@@ -91,7 +91,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
               text: `Average Seat Share: ${averageSeatShare}%<br>Vote Share: ${voteShare}%`,
               showarrow: false,
               font: {
-                size: 9,
+                size: 12,
               },
               align: 'left',
               bgcolor: 'white',

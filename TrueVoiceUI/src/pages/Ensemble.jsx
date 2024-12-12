@@ -27,6 +27,19 @@ const PlotComparison = () => {
     );
 };
 
+const OnTop = () => {
+    return (
+      <Row>
+        <Col md={6}>
+          <OpportunityRepresentativesPlot  height={300} fontSize={9} />
+        </Col>
+        <Col md={6}>
+          <OpportunityDistrictsPlot  height={300} fontSize={9} />
+        </Col>
+      </Row>
+    );
+  };
+  
 
 const PlotCarousel = () => {
     const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -35,6 +48,7 @@ const PlotCarousel = () => {
         <OpportunityRepresentativesPlot />,
         <OpportunityDistrictsPlot />,
         <PlotComparison />,
+        <OnTop />,
         <SMDBoxAndWhiskerPlot fips="NV" electionType="SMD" />
     ];
 
