@@ -30,7 +30,8 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 
-import nv_race_by_district from "../datafiles/precinct.json"
+import nv_smd from "../datafiles/nv_smd.json";
+import nv_precinct from "../datafiles/nv_precinct.json"
 import TabPlanSummary from "./TabPlanSummary";
 import Ensemble from "./Ensemble";
 
