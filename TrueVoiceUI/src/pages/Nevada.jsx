@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SideBySideImages from './SideBySideImages';
+import VoteSeatSharePlotPlanSpecific from '../graphs/VoteSeatSharePlotPlanSpecific';
 
 import {
   Box,
@@ -135,7 +136,12 @@ export default function State() {
     function formatNumberWithCommas(number) {
       return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
+    function roundToDecimalPlaces(num, decimalPlaces) {
+      const factor = Math.pow(10, decimalPlaces);
+      return Math.round(num * factor) / factor;
+    }
 
+    console.log(roundToDecimalPlaces(1.23456, 2)); // Outputs: 1.23
     const updateInfo = () => {
       // // Update district number and representative
       document.getElementById("selected-district").innerText = `District: ${districtno}`;
@@ -154,8 +160,28 @@ export default function State() {
       let sum_data = (electionType === "SMD") ? smd_summary : mmd_summary;
       const result = sum_data.interesting_plans_summary.find(item => item.characteristic === characteristic).districts_summary.find(item => item.districtId === districtno);
 
+      for (const [key, value] of Object.entries(result)) {
+        const element = document.getElementById(key);
+        if (element) {
+          element.innerText = roundToDecimalPlaces(result.democratsPercentage, 2);;
+        }
+      }
 
-      document.getElementById("pert_stats").innerText = result.democratsPercentage;
+      // "districtId": 1,
+      //               "democratsPercentage": 0.5367958419322786,
+      //               "republicanPercentage": 0.4632041580677214,
+      //               "totalRepresentatives": 3,
+      //               "totalPopulation": 1842069,
+      //               "opportunityThreshold": 0.3333333333333333,
+      //               "isOpportunityDistrict": false,
+
+      document.getElementById("democratsPercentage").innerText = `${roundToDecimalPlaces(result.democratsPercentage, 2)}/${roundToDecimalPlaces(result.republicanPercentage, 2)}`;
+      document.getElementById("totalRepresentatives").innerText = `${result.totalRepresentatives}`;
+      document.getElementById("totalPopulation").innerText = `${formatNumberWithCommas(result.totalPopulation)}`;
+      document.getElementById("opportunityThreshold").innerText = `${roundToDecimalPlaces(result.opportunityThreshold, 2)}`;
+      document.getElementById("isOpportunityDistrict").innerText = result.isOpportunityDistrict ? "Yes" : "No";
+
+      // document.getElementById("pert_stats").innerText = 
     };
 
     // Attach event handler
@@ -183,7 +209,7 @@ export default function State() {
     } else {
       setRaceStats(d_r_stats);
     }
-    
+
   }
 
 
@@ -191,10 +217,10 @@ export default function State() {
     return (feature) => {
 
       // if (raceStats.length > 100) {
-        const tractId = feature.properties.GEOID; // assuming GEOID links to your data  
+      const tractId = feature.properties.GEOID; // assuming GEOID links to your data  
       // }
-      
-      
+
+
 
       // console.log(feature)
       // console.log(raceStats)
@@ -334,6 +360,13 @@ export default function State() {
     { id: "race--other", label: "other", hex: 'brown', checked: 0 },
   ]);
 
+  const rm = (json) => JSON.stringify(json, (key, value) => {
+    return key === "districts_summary" ? undefined : value;
+  });
+
+  let smd_compr = rm(smd_summary.interesting_plans_summary.find((item) => item.characteristic == "ENACTED")).toString()
+  let mmd_compr = rm(mmd_summary.interesting_plans_summary.find((item) => item.characteristic == "FAIR")).toString()
+
   const toggle_map = (index) => {
     const nextRaces = raceCheckBoxes.map((c, i) => {
 
@@ -389,7 +422,7 @@ export default function State() {
                   })
                 }
 
-                
+
               </MapContainer>
             </div>
 
@@ -409,16 +442,20 @@ export default function State() {
 
             <TabPanels key={1}>
 
+
               <Demographics setRaceMap={setRaceMap} state={state} raceCheckBoxes={raceCheckBoxes} setRaceCheckBoxes={setRaceCheckBoxes} toggle_map={toggle_map} />
-              <TabPanel padding={0}>
-                <div style={styles.controlsContainer}>
-                  <SideBySideImages
-                    image1='2.jpg'
-                    image2='3.jpg'
-                    alt1="First placeholder"
-                    alt2="Second placeholder"
-                  />
+
+
+              <TabPanel >
+                  {/* <br /> */}
+                {/* <Center> */}
+                <ComparisonTable data1={smd_compr} data2={mmd_compr} />
+                {/* </Center> */}
+                <br />
+                <div style={{margin:"10px"}}>
+                <VoteSeatSharePlotPlanSpecific fips={state} characteristic={characteristic} electionType={electionType} />
                 </div>
+
               </TabPanel >
               <TabPlanSummary planData={planData} />
               <TabStatePlans plan_options={plan_options} setGeoJsonData={setGeoJsonData} setPlanData={setPlanData} />
@@ -431,3 +468,33 @@ export default function State() {
     </>
   );
 }
+
+const ComparisonTable = ({ data1, data2 }) => {
+  data1 = JSON.parse(data1);
+  data2 = JSON.parse(data2);
+
+  const getAlignmentStyle = (value) => ({
+    textAlign: typeof value === 'number' ? 'right' : 'left',
+  });
+
+  return (
+    <table border="1" style={{ borderCollapse: 'collapse', width: '65%', margin: '10px 30px' }}>
+      <thead>
+        <tr>
+          <th style={{ textAlign: 'left' }} >Comparison</th>
+          <th style={{ textAlign: 'left' }}>SMD</th>
+          <th style={{ textAlign: 'left' }}>MMD</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.keys(data1).map((key) => (
+          <tr key={key}>
+            <td style={{ textAlign: 'left' }}>{key}</td>
+            <td style={getAlignmentStyle(data1[key])}>{data1[key]}</td>
+            <td style={getAlignmentStyle(data2[key])}>{data2[key]}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};

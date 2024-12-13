@@ -155,16 +155,46 @@ const Demographics = (props) => {
               </tbody>
             </table>
 
-            <div style={{ borderLeft: "solid 1px white" }}>
+            {/* <div style={{ borderLeft: "solid 1px white" }}>
               <Text fontWeight="bold" fontSize="lg" >Elected Reps</Text>
               <Text style={{ color: "blue" }} fontSize="lg" >Dina Titus</Text>
               <Text style={{ color: "red" }} fontSize="lg" >Anot Rep</Text>
               <Text style={{ color: "blue" }} fontSize="lg" >Ran Dom</Text>
               <Text style={{ color: "red" }} fontSize="lg" >Rep Five</Text>
               <Text style={{ color: "red" }} fontSize="lg" >Dom Ran</Text>
-            </div>
+            </div> */}
 
-            <div id="pert_stats">hello pert</div>
+            <table style={{ width: '50%', borderCollapse: 'collapse' }}>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: 'left', fontWeight: 'bold', fontSize: 'large' }} colSpan="2"> Statisitcs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Dem/Rep Split:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="democratsPercentage"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>District Pop:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="totalPopulation"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Reps for Dist.:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="totalRepresentatives"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Opt. Threshold:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="opportunityThreshold"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Is Opt. Dist?</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="isOpportunityDistrict"></span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            
             
           </div>
 
