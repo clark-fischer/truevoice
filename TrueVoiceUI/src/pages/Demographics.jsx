@@ -4,7 +4,7 @@
 import {
 
   Text,
- 
+
   TabPanel,
   Button,
 } from "@chakra-ui/react";
@@ -53,6 +53,13 @@ const styles = {
   },
 };
 
+
+import nv_district_map from "../datafiles/nv_smd.json"
+import nv_precinct_map from "../datafiles/nv_precinct.json"
+
+import co_district_map from "../datafiles/nv_smd.json"
+import co_precinct_map from "../datafiles/nv_precinct.json"
+
 const Demographics = (props) => {
 
   let raceCheckBoxes = props.raceCheckBoxes;
@@ -72,12 +79,12 @@ const Demographics = (props) => {
         </legend>
 
         {/* mapping the checkboxes */}
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div style={{ width: "120%", display: "flex", justifyContent: "space-between" }}>
           <div>
-            <input id="district-based" name="race-map-type" type="radio" />
+            <input onClick={() => props.setRaceMap(props.state == "NV" ? nv_district_map : co_district_map, true)} id="district-based" name="race-map-type" type="radio" />
             <label htmlFor="district-based" style={{ paddingLeft: "5px" }}>District Based</label>
             <br />
-            <input id="precinct-based" name="race-map-type" type="radio" />
+            <input onClick={() => props.setRaceMap(props.state == "NV" ? nv_precinct_map : co_precinct_map, false)} id="precinct-based" name="race-map-type" type="radio" />
             <label htmlFor="precinct-based" style={{ paddingLeft: "5px" }}>Precinct Based</label>
 
           </div>
@@ -88,7 +95,7 @@ const Demographics = (props) => {
                 <div key={race.id}>
                   <input id={race.id} type="checkbox" onChange={() => props.toggle_map(i)} />
                   <label htmlFor={race.id} style={{ paddingLeft: "5px" }}>
-                    {race.label}
+                    {race.label} <span style={{ color: race.hex }} >(in {race.hex})</span>
                   </label>
                   <br />
                 </div>
@@ -111,14 +118,36 @@ const Demographics = (props) => {
 
 
           <div style={{ marginLeft: "10px", display: "flex", gap: "90px" }}>
-            <div >
-              <Text fontWeight="bold" fontSize="lg">Demographics</Text>
-              <Text fontSize="lg">White: <span id="race--white2"></span></Text>
-              <Text fontSize="lg">Black: <span id="race--black2"></span></Text>
-              <Text fontSize="lg">Asian: <span id="race--asian2"></span></Text>
-              <Text fontSize="lg">Hispanic: <span id="race--hispanic2"></span></Text>
-              <Text fontSize="lg">Other: <span id="race--other2"></span></Text>
-            </div>
+            <table style={{ width: '50%', borderCollapse: 'collapse' }}>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: 'left', fontWeight: 'bold', fontSize: 'large' }} colSpan="2">Demographics</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>White:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="race--white2"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Black:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="race--black2"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Asian:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="race--asian2"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Hispanic:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="race--hispanic2"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Other:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="race--other2"></span></td>
+                </tr>
+              </tbody>
+            </table>
+
             <div style={{ borderLeft: "solid 1px white" }}>
               <Text fontWeight="bold" fontSize="lg" >Elected Reps</Text>
               <Text style={{ color: "blue" }} fontSize="lg" >Dina Titus</Text>
@@ -136,10 +165,10 @@ const Demographics = (props) => {
           </Text> */}
           <br />
           <br />
-          <Button onClick={() => location.reload() } >Reset Page!</Button>
+          <Button onClick={() => location.reload()} >Reset Page!</Button>
         </div>
 
-        
+
       </div>
     </TabPanel>
   );

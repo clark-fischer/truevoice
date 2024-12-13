@@ -30,7 +30,8 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import nv_4mmd from "../datafiles/nv_4mmd.json";
 
-import nv_race_by_district from "../datafiles/precinct.json"
+import nv_district_map from "../datafiles/nv_smd.json"
+import nv_precinct_map from "../datafiles/nv_precinct.json"
 import TabPlanSummary from "./TabPlanSummary";
 import Ensemble from "./Ensemble";
 
@@ -93,19 +94,23 @@ export default function State() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const plan = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
+        const planResp = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
 
-        setGeoJsonData(plan.data);
-        setPlanData(plan.data.crs.properties);
+        setGeoJsonData(planResp.data);
+        setPlanData(planResp.data.crs.properties);
 
         const raceResp = await axios.get("http://localhost:8080/NV/PRECINCT/HEATMAP");
-        setRaceStats(raceResp.data.precincts)
+        setP_r_stats(raceResp.data.precincts)
+
+        const race2Resp = await axios.get("http://localhost:8080/NV/SMD/HEATMAP");
+        setD_r_stats(race2Resp.data.districts)
 
         // this sucks -- change to css later
         document.getElementById("district-button0").style.color = "blue";
         document.getElementById("district-button0").style.fontWeight = "bold";
 
       } catch (err) {
+        console.log("inital error");
         console.log(err);
       }
     };
@@ -113,13 +118,20 @@ export default function State() {
     fetchData(); // Call the function
   }, []);
 
+  const [p_r_stats, setP_r_stats] = React.useState(null);
+  const [d_r_stats, setD_r_stats] = React.useState(null);
   const eachDistrict = (feature, layer) => {
     const { districtno, demographics } = feature.properties; // Destructure for cleaner code
+    console.log(feature.properties);  
+
+    function formatNumberWithCommas(number) {
+      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
 
     const updateInfo = () => {
-      // Update district number and representative
-      document.getElementById("selected-district").innerText = `District ${districtno}`;
-      document.getElementById("selected-rep").innerText = `Rep. ${stateRepresentives[districtno - 1] || "Unknown"}`;
+      // // Update district number and representative
+      document.getElementById("selected-district").innerText = `District: ${districtno}`;
+      // document.getElementById("selected-rep").innerText = `Rep. ${stateRepresentives[districtno - 1] || "Unknown"}`;
 
       // Loop through demographics to update race information
       const raceMapping = {
@@ -127,7 +139,8 @@ export default function State() {
       };
 
       for (const [key, id] of Object.entries(raceMapping)) {
-        document.getElementById(id).innerText = `${demographics[key] || 0}`;
+        // console.log(key, id )
+        document.getElementById(id).innerText = `${formatNumberWithCommas(demographics[key] || 0)}`;
       }
     };
 
@@ -137,16 +150,32 @@ export default function State() {
 
   const [raceStats, setRaceStats] = React.useState(null);
   const [geoJsonData, setGeoJsonData] = React.useState(null);
+  const [raceMap, setRaceMap2] = React.useState(null);
   const [planData, setPlanData] = React.useState(null);
+
+  const setRaceMap = (data, p_or_d) => {
+    setRaceMap2(data);
+    if (!p_or_d) {
+      setRaceStats(p_r_stats);
+    } else {
+      setRaceStats(d_r_stats);
+    }
+    
+  }
 
 
   function buildHeatmap(i) {
     return (feature) => {
-      const tractId = feature.properties.GEOID; // assuming GEOID links to your data
+
+      // if (raceStats.length > 100) {
+        const tractId = feature.properties.GEOID; // assuming GEOID links to your data  
+      // }
+      
+      
+
+      // console.log(feature)
+      // console.log(raceStats)
       const data = raceStats[tractId];
-      // console.log(feature);
-      // console.log(tractId);
-      // console.log(data)
       const percentage = data[raceCheckBoxes[i]["label"]];
 
       return {
@@ -278,7 +307,7 @@ export default function State() {
     { id: "race--white", label: "white", hex: 'blue', checked: 0 },
     { id: "race--black", label: "black", hex: 'red', checked: 0 },
     { id: "race--asian", label: "asian", hex: 'green', checked: 0 },
-    { id: "race--hispanic", label: "hispanic", hex: 'yellow', checked: 0 },
+    { id: "race--hispanic", label: "hispanic", hex: 'gold', checked: 0 },
     { id: "race--other", label: "other", hex: 'brown', checked: 0 },
   ]);
 
@@ -321,23 +350,23 @@ export default function State() {
                   attribution='&copy; <a href="https://stadiamaps.com/" target="_blank">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>'
                   url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
                 />
+                <GeoJSON
+                  data={geoJsonData}
+                  onEachFeature={eachDistrict}
+                />
 
                 {
                   raceCheckBoxes.map((race, race_index) => {
 
                     return race["checked"] ? <GeoJSON
-                      data={nv_race_by_district}
+                      data={raceMap}
                       style={buildHeatmap(race_index)}
                       key={race_index * 10 + race["checked"]}
                     /> : <></>
                   })
                 }
 
-                <GeoJSON
-                  data={geoJsonData}
-
-                  onEachFeature={eachDistrict}
-                />
+                
               </MapContainer>
             </div>
 
@@ -357,7 +386,7 @@ export default function State() {
 
             <TabPanels key={1}>
 
-              <Demographics raceCheckBoxes={raceCheckBoxes} setRaceCheckBoxes={setRaceCheckBoxes} toggle_map={toggle_map} />
+              <Demographics setRaceMap={setRaceMap} state={"NV"} raceCheckBoxes={raceCheckBoxes} setRaceCheckBoxes={setRaceCheckBoxes} toggle_map={toggle_map} />
               <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
                   <SideBySideImages
