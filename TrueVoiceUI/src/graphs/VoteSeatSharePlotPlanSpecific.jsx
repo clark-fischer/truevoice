@@ -98,7 +98,7 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionT
     },[fips, electionType, characteristic]);
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column" }}>
           <h2 style={{ marginBottom: "10px" }}>{title || `${fips} ${electionType} ${characteristic}: Vote-Seat Share`}</h2>
     
           <LineChart width={600} height={350} data={demData}>

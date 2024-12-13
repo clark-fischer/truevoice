@@ -16,8 +16,8 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
         setData(response.data);
       } catch (err) {
         console.error("Error fetching data:", err);
-        // setError(err);
-        setError("Loading extra long...");
+        setError(err);
+        // setError("Loading extra long...");
       }
     };
 

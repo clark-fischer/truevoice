@@ -16,10 +16,10 @@ const PlotComparison = () => {
         < div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
 
             <div>
-                <OpportunityRepresentativesPlot width={400} height={600} fontSize={9}/>
+                <OpportunityRepresentativesPlot  fips={"NV"} electionType={"MMD"} width={400} height={600} fontSize={9}/>
             </div>
             <div>
-                <OpportunityDistrictsPlot width={400} height={600} fontSize={9} />
+                <OpportunityDistrictsPlot electionType={"SMD"}  width={400} height={600} fontSize={9} />
             </div>
         </div >
 
@@ -27,18 +27,18 @@ const PlotComparison = () => {
     );
 };
 
-const OnTop = () => {
-    return (
-      <Row>
-        <Col md={6}>
-          <OpportunityRepresentativesPlot  height={300} fontSize={9} />
-        </Col>
-        <Col md={6}>
-          <OpportunityDistrictsPlot  height={300} fontSize={9} />
-        </Col>
-      </Row>
-    );
-  };
+// const OnTop = () => {
+//     return (
+//       <Row>
+//         <Col md={6}>
+//           <OpportunityRepresentativesPlot  height={300} fontSize={9} />
+//         </Col>
+//         <Col md={6}>
+//           <OpportunityDistrictsPlot  height={300} fontSize={9} />
+//         </Col>
+//       </Row>
+//     );
+//   };
   
 
 const PlotCarousel = (props) => {
@@ -46,10 +46,11 @@ const PlotCarousel = (props) => {
     const super_props = props.super_props;
 
     const plots = [
+        
         <OpportunityRepresentativesPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
         <OpportunityDistrictsPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
         <PlotComparison fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
-        <OnTop />,
+        // <OnTop />,
         <SMDBoxAndWhiskerPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />
     ];
 
