@@ -1,0 +1,170 @@
+{
+    "fips": "CO",
+    "electionType": "MMD",
+    "interesting_plans_summary": [
+        {
+            "characteristic": "AVERAGE",
+            "partyWinner": "DEMOCRAT",
+            "totalDistricts": 2,
+            "totalPopulation": 5019116,
+            "safeDistricts": 1,
+            "totalRepresentative": 8,
+            "totalOpportunityDistricts": 1,
+            "districts_summary": [
+                {
+                    "districtId": 1,
+                    "democratsPercentage": 0.5367958419322786,
+                    "republicanPercentage": 0.4632041580677214,
+                    "totalRepresentatives": 3,
+                    "totalPopulation": 1842069,
+                    "opportunityThreshold": 0.3333333333333333,
+                    "isOpportunityDistrict": false,
+                    "white": 1393148,
+                    "black": 15798,
+                    "asian": 34191,
+                    "hispanic": 354292,
+                    "other": 44640,
+                    "partyWinner": "DEMOCRAT"
+                },
+                {
+                    "districtId": 2,
+                    "democratsPercentage": 0.5649340699649704,
+                    "republicanPercentage": 0.4350659300350296,
+                    "totalRepresentatives": 5,
+                    "totalPopulation": 3177047,
+                    "opportunityThreshold": 0.2,
+                    "isOpportunityDistrict": true,
+                    "white": 2126542,
+                    "black": 171601,
+                    "asian": 99910,
+                    "hispanic": 682942,
+                    "other": 96052,
+                    "partyWinner": "DEMOCRAT"
+                }
+            ]
+        },
+        {
+            "characteristic": "DEMFAVORED",
+            "partyWinner": "DEMOCRAT",
+            "totalDistricts": 2,
+            "totalPopulation": 5019116,
+            "safeDistricts": 2,
+            "totalRepresentative": 8,
+            "totalOpportunityDistricts": 0,
+            "districts_summary": [
+                {
+                    "districtId": 1,
+                    "democratsPercentage": 0.4785340182014641,
+                    "republicanPercentage": 0.5214659817985359,
+                    "totalRepresentatives": 3,
+                    "totalPopulation": 1863766,
+                    "opportunityThreshold": 0.3333333333333333,
+                    "isOpportunityDistrict": false,
+                    "white": 1325997,
+                    "black": 23036,
+                    "asian": 34495,
+                    "hispanic": 433698,
+                    "other": 46540,
+                    "partyWinner": "REPUBLICAN"
+                },
+                {
+                    "districtId": 2,
+                    "democratsPercentage": 0.5968716063147922,
+                    "republicanPercentage": 0.4031283936852078,
+                    "totalRepresentatives": 5,
+                    "totalPopulation": 3155350,
+                    "opportunityThreshold": 0.2,
+                    "isOpportunityDistrict": false,
+                    "white": 2193693,
+                    "black": 164363,
+                    "asian": 99606,
+                    "hispanic": 603536,
+                    "other": 94152,
+                    "partyWinner": "DEMOCRAT"
+                }
+            ]
+        },
+        {
+            "characteristic": "FAIR",
+            "partyWinner": "DEMOCRAT",
+            "totalDistricts": 2,
+            "totalPopulation": 5019116,
+            "safeDistricts": 1,
+            "totalRepresentative": 8,
+            "totalOpportunityDistricts": 1,
+            "districts_summary": [
+                {
+                    "districtId": 1,
+                    "democratsPercentage": 0.5725999316706526,
+                    "republicanPercentage": 0.4274000683293474,
+                    "totalRepresentatives": 3,
+                    "totalPopulation": 1914967,
+                    "opportunityThreshold": 0.3333333333333333,
+                    "isOpportunityDistrict": false,
+                    "white": 1252261,
+                    "black": 153554,
+                    "asian": 69175,
+                    "hispanic": 372776,
+                    "other": 67201,
+                    "partyWinner": "DEMOCRAT"
+                },
+                {
+                    "districtId": 2,
+                    "democratsPercentage": 0.5431775388424686,
+                    "republicanPercentage": 0.45682246115753145,
+                    "totalRepresentatives": 5,
+                    "totalPopulation": 3104149,
+                    "opportunityThreshold": 0.2,
+                    "isOpportunityDistrict": true,
+                    "white": 2267429,
+                    "black": 33845,
+                    "asian": 64926,
+                    "hispanic": 664458,
+                    "other": 73491,
+                    "partyWinner": "DEMOCRAT"
+                }
+            ]
+        },
+        {
+            "characteristic": "REPFAVORED",
+            "partyWinner": "DEMOCRAT",
+            "totalDistricts": 2,
+            "totalPopulation": 5019116,
+            "safeDistricts": 1,
+            "totalRepresentative": 8,
+            "totalOpportunityDistricts": 1,
+            "districts_summary": [
+                {
+                    "districtId": 1,
+                    "democratsPercentage": 0.5740491533026676,
+                    "republicanPercentage": 0.4259508466973324,
+                    "totalRepresentatives": 3,
+                    "totalPopulation": 1821061,
+                    "opportunityThreshold": 0.3333333333333333,
+                    "isOpportunityDistrict": false,
+                    "white": 1214859,
+                    "black": 116890,
+                    "asian": 62392,
+                    "hispanic": 366862,
+                    "other": 60058,
+                    "partyWinner": "DEMOCRAT"
+                },
+                {
+                    "districtId": 2,
+                    "democratsPercentage": 0.5429390665160306,
+                    "republicanPercentage": 0.45706093348396937,
+                    "totalRepresentatives": 5,
+                    "totalPopulation": 3198055,
+                    "opportunityThreshold": 0.2,
+                    "isOpportunityDistrict": true,
+                    "white": 2304831,
+                    "black": 70509,
+                    "asian": 71709,
+                    "hispanic": 670372,
+                    "other": 80634,
+                    "partyWinner": "DEMOCRAT"
+                }
+            ]
+        }
+    ]
+}

@@ -101,7 +101,7 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionT
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h2 style={{ marginBottom: "10px" }}>{title || `${fips} ${electionType} ${characteristic}: Vote-Seat Share`}</h2>
     
-          <LineChart width={1200} height={600} data={demData}>
+          <LineChart width={600} height={350} data={demData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               type="number"

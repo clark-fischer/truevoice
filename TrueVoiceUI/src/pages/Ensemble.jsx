@@ -41,15 +41,16 @@ const OnTop = () => {
   };
   
 
-const PlotCarousel = () => {
+const PlotCarousel = (props) => {
     const [currentIndex, setCurrentIndex] = React.useState(0);
+    const super_props = props.super_props;
 
     const plots = [
-        <OpportunityRepresentativesPlot />,
-        <OpportunityDistrictsPlot />,
-        <PlotComparison />,
+        <OpportunityRepresentativesPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
+        <OpportunityDistrictsPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
+        <PlotComparison fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
         <OnTop />,
-        <SMDBoxAndWhiskerPlot fips="NV" electionType="SMD" />
+        <SMDBoxAndWhiskerPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />
     ];
 
     const handlePrev = () => {
@@ -82,7 +83,7 @@ const Ensemble = (props) => {
 
 
 
-            <PlotCarousel />
+            <PlotCarousel super_props={props}/>
 
 
         </TabPanel>

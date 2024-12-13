@@ -15,7 +15,8 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
         //const response = await axios.get(`http://localhost:8080/NV/SMD/BOXWHIS`);
         setData(response.data);
       } catch (err) {
-        setError(err);
+        // setError(err);
+        setError("Loading extra long...");
       }
     };
 
