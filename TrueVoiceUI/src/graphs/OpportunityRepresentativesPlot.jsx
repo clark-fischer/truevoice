@@ -12,11 +12,12 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
       try {
 
         //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
-        const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+        const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
         setData(response.data);
       } catch (err) {
         console.error("Error fetching data:", err);
-        setError(err);
+        // setError(err);
+        setError("Loading extra long...");
       }
     };
 

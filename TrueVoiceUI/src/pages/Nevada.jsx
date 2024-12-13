@@ -88,8 +88,16 @@ const styles = {
   },
 };
 
+// import co_mmd_summary from "../datafiles/ensemble_summary/co_mmd_summary_data_plan_specific.json"
+import mmd_summary from "../datafiles/ensemble_summary/nv_mmd_summary_data_plan_specific.json"
+
+// import co_smd_summary from "../datafiles/ensemble_summary/co_smd_summary_data_plan_specific.json"
+import smd_summary from "../datafiles/ensemble_summary/nv_smd_summary_data_plan_specific.json"
+
 
 export default function State() {
+
+  const state = "NV";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -122,7 +130,7 @@ export default function State() {
   const [d_r_stats, setD_r_stats] = React.useState(null);
   const eachDistrict = (feature, layer) => {
     const { districtno, demographics } = feature.properties; // Destructure for cleaner code
-    console.log(feature.properties);  
+    // console.log(feature  .properties);  
 
     function formatNumberWithCommas(number) {
       return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -142,6 +150,12 @@ export default function State() {
         // console.log(key, id )
         document.getElementById(id).innerText = `${formatNumberWithCommas(demographics[key] || 0)}`;
       }
+
+      let sum_data = (electionType === "SMD") ? smd_summary : mmd_summary;
+      const result = sum_data.interesting_plans_summary.find(item => item.characteristic === characteristic).districts_summary.find(item => item.districtId === districtno);
+
+
+      document.getElementById("pert_stats").innerText = result.democratsPercentage;
     };
 
     // Attach event handler
@@ -149,9 +163,18 @@ export default function State() {
   };
 
   const [raceStats, setRaceStats] = React.useState(null);
-  const [geoJsonData, setGeoJsonData] = React.useState(null);
+  const [geoJsonData, setGeoJsonData2] = React.useState(null);
+  const [characteristic, setCharacteristic] = React.useState(null);
+  const [electionType, setElectionType] = React.useState(null);
   const [raceMap, setRaceMap2] = React.useState(null);
   const [planData, setPlanData] = React.useState(null);
+
+  const setGeoJsonData = (data) => {
+    setGeoJsonData2(data);
+
+    setElectionType(data.crs.properties.electionType);
+    setCharacteristic(data.crs.properties.characteristic);
+  }
 
   const setRaceMap = (data, p_or_d) => {
     setRaceMap2(data);
@@ -386,7 +409,7 @@ export default function State() {
 
             <TabPanels key={1}>
 
-              <Demographics setRaceMap={setRaceMap} state={"NV"} raceCheckBoxes={raceCheckBoxes} setRaceCheckBoxes={setRaceCheckBoxes} toggle_map={toggle_map} />
+              <Demographics setRaceMap={setRaceMap} state={state} raceCheckBoxes={raceCheckBoxes} setRaceCheckBoxes={setRaceCheckBoxes} toggle_map={toggle_map} />
               <TabPanel padding={0}>
                 <div style={styles.controlsContainer}>
                   <SideBySideImages
@@ -399,7 +422,7 @@ export default function State() {
               </TabPanel >
               <TabPlanSummary planData={planData} />
               <TabStatePlans plan_options={plan_options} setGeoJsonData={setGeoJsonData} setPlanData={setPlanData} />
-              <Ensemble />
+              <Ensemble state={state} characteristic={characteristic} electionType={electionType} />
 
             </TabPanels>
           </Tabs>

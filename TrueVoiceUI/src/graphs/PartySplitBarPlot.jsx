@@ -16,7 +16,9 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
                 setData(response.data);
 
             }catch (err){
-                setError(err)
+                // setError(err)
+                setError("Loading extra long...");
+
                 }
 
         };

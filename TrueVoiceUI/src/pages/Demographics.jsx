@@ -60,6 +60,13 @@ import nv_precinct_map from "../datafiles/nv_precinct.json"
 import co_district_map from "../datafiles/nv_smd.json"
 import co_precinct_map from "../datafiles/nv_precinct.json"
 
+import co_mmd_summary from "../datafiles/ensemble_summary/co_mmd_summary_data_plan_specific.json"
+import nv_mmd_summary from "../datafiles/ensemble_summary/nv_mmd_summary_data_plan_specific.json"
+
+import co_smd_summary from "../datafiles/ensemble_summary/co_smd_summary_data_plan_specific.json"
+import nv_smd_summary from "../datafiles/ensemble_summary/nv_smd_summary_data_plan_specific.json"
+
+
 const Demographics = (props) => {
 
   let raceCheckBoxes = props.raceCheckBoxes;
@@ -156,6 +163,9 @@ const Demographics = (props) => {
               <Text style={{ color: "red" }} fontSize="lg" >Rep Five</Text>
               <Text style={{ color: "red" }} fontSize="lg" >Dom Ran</Text>
             </div>
+
+            <div id="pert_stats">hello pert</div>
+            
           </div>
 
           <br />

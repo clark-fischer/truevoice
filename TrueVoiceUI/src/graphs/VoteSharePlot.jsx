@@ -128,7 +128,9 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
 
         
       } catch (err) {
-        setError(err);
+        // setError(err);
+        setError("Loading extra long...");
+
       }
     };
 
