@@ -63,9 +63,8 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Colorado from "./pages/Colorado";
 import Nevada from "./pages/Nevada";
-
-
-
+import EnsembleBoxAndWhiskerPlot from "./graphs/EnsembleBoxAndWhiskerPlot";
+import OpportunityDistrictsPlot from "./graphs/OpportunityDistrictPlot";
 
 //router and routes
 const router = createBrowserRouter(
@@ -75,6 +74,7 @@ const router = createBrowserRouter(
       <Route path="profile" element={<Profile />} />
       <Route path="colorado" element={<Colorado />} />
       <Route path="nevada" element={<Nevada />} />
+      <Route path="box" element={<OpportunityDistrictsPlot fips={'NV'} electionType={'SMD'} />} />
       
 
     </Route>
