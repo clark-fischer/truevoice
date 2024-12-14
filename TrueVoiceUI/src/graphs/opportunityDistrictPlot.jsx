@@ -14,7 +14,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
 
             try{
                 //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
-                const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+                const response = await axios.get(`http://localhost:8080/NV/${electionType}/BAR`);
                 setData(response.data);
 
             }catch (err){

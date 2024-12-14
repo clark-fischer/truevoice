@@ -1,4 +1,4 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, Button } from "@chakra-ui/react";
 //For Nav Buttons
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -85,7 +85,7 @@ const Navbar = () => {
           gap: "16px",
         }}
       >
-        <button
+        {/* <button
           style={{
             padding: "8px 16px",
             backgroundColor: "#3B82F6",
@@ -96,8 +96,8 @@ const Navbar = () => {
           }}
         >
           Sign In
-        </button>
-        <button
+        </button> */}
+        <Button
           style={{
             padding: "8px 16px",
             backgroundColor: "transparent",
@@ -106,9 +106,11 @@ const Navbar = () => {
             borderRadius: "6px",
             cursor: "pointer",
           }}
+
+          onClick={() => window.location.reload()} 
         >
-          Register
-        </button>
+          Reset Page
+        </Button>
       </div>
     </nav>
   );

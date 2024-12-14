@@ -137,9 +137,19 @@ export default function State() {
   };
 
   const [raceStats, setRaceStats] = React.useState(null);
-  const [geoJsonData, setGeoJsonData] = React.useState(null);
+  const [geoJsonData, setGeoJsonData2] = React.useState(null);
+  const [characteristic, setCharacteristic] = React.useState(null);
+  const [electionType, setElectionType] = React.useState(null);
+  const [raceMap, setRaceMap2] = React.useState(null);
   const [planData, setPlanData] = React.useState(null);
 
+  const setGeoJsonData = (data) => {
+    setGeoJsonData2(data);
+
+    setElectionType(data.crs.properties.electionType);
+    setCharacteristic(data.crs.properties.characteristic);
+  };
+  
 
   function buildHeatmap(i) {
     return (feature) => {
@@ -202,7 +212,8 @@ export default function State() {
           console.log(err);
         }
 
-        document.getElementById("district-button0").innerHTML = "SMD (" + map.title + ")";
+        const smd_title = map.title !== undefined ? "(" + map.title + ")" : "(Enacted)";
+        document.getElementById("district-button0").innerHTML = "SMD" + smd_title ;
       };
 
       fetchData(); // Call the function
@@ -286,12 +297,18 @@ export default function State() {
   const toggle_map = (index) => {
     const nextRaces = raceCheckBoxes.map((c, i) => {
 
+
+
       const copy = { ...c };
 
       if (i === index) {
         // Increment the clicked counter
-        copy.checked = !copy.checked;
+        copy.checked = 1;
+      } else {
+        // Reset all other counters
+        copy.checked = 0;
       }
+
 
       return copy;
     });
@@ -371,7 +388,7 @@ export default function State() {
               </TabPanel >
               <TabPlanSummary planData={planData} />
               <TabStatePlans plan_options={plan_options} setGeoJsonData={setGeoJsonData} setPlanData={setPlanData} />
-              <Ensemble />
+              <Ensemble state={"CO"} characteristic={characteristic} electionType={electionType} />
 
             </TabPanels>
           </Tabs>
