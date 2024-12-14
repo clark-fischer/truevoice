@@ -245,12 +245,12 @@ export default function State() {
       path: "http://localhost:8080/CO/SMD/ENACTED"
     },
     {
-      title: "Dem Favored",
+      title: "Democratic Favored",
       image: "/dem_co.png",
       path: "http://localhost:8080/CO/SMD/DEMFAVORED"
     },
     {
-      title: "Repb Favored",
+      title: "Republican Favored",
       image: "/rep_co.png",
       path: "http://localhost:8080/CO/SMD/REPFAVORED"
     },

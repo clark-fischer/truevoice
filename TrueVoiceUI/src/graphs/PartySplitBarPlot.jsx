@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
 
-function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, characteristic }) {
+function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, characteristic, height, width }) {
 
     const [data, setData] = useState(null);
     const [error,setError] = useState(null);
@@ -12,7 +12,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
 
             try{
                 //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
-                const response = await axios.get(`http://localhost:8080/NV/SMD/BAR`);
+                const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
                 setData(response.data);
 
             }catch (err){
@@ -113,8 +113,8 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
           t: 50,
           b: 50,
         },
-        width: 800,
-        height: 600,
+        width: width,
+        height: height,
       };
 
       return (
