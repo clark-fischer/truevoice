@@ -179,13 +179,17 @@ const ElectoralResultsTable = ({ fips, characteristic }) => {
       .sort((a, b) => b.votes - a.votes);
   };
 
+  function formatNumberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   // Render a single table
   const renderTable = (candidates, numWinners) => {
     const rows = candidates.map((candidate, index) => (
       <tr key={candidate.key}>
         <td>{candidate.candidate}</td>
         <td>{candidate.party}</td>
-        <td>{candidate.votes}</td>
+        <td>{formatNumberWithCommas(candidate.votes)}</td>
         <td>{index < numWinners ? "Win" : "Lose"}</td>
       </tr>
     ));
