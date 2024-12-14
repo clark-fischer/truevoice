@@ -46,40 +46,74 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionT
             rep_df.push({ x: 1 - totalDemVoteShare, y: 1 - totalDemSeatShare });
     
             // Simulation logic: upward increments
-            for (let i = 0; i < 50; i++) {
-                let increments = Array(5).fill().map(() => 0.01 + (Math.floor(seed() * 10) - 5) / 100);
-                const avgIncrement = increments.reduce((a, b) => a + b, 0) / increments.length;
-      
-                simulation = simulation.map((d) => ({
+            for (let i = 0; i < 50; i++) { 
+              let allResults = []; // Store all 100 simulation results
+            
+              // Run 100 simulations per iteration
+              for (let j = 0; j < 30; j++) {
+                const Increment = 0.01 + 0.01 * i + (Math.floor(seed() * 10) - 5) / 100;
+            
+                let currentSimulation = simulation.map((d) => ({
                   ...d,
-                  demVoteShare: Math.min(1, Math.max(0, d.demVoteShare + avgIncrement)),
-                  repVoteShare: Math.min(1, Math.max(0, d.repVoteShare - avgIncrement)),
+                  demVoteShare: Math.min(1, Math.max(0, d.demVoteShare + Increment)),
+                  repVoteShare: Math.min(1, Math.max(0, d.repVoteShare - Increment)),
                 }));
-      
-                const avgDemVoteShare = simulation.reduce((sum, d) => sum + d.demVoteShare * d.totalVotes, 0) / totalVotes;
-                const avgDemSeatShare = simulation.filter((d) => d.demVoteShare > 0.5).length / simulation.length;
-      
-                dem_df.push({ x: avgDemVoteShare, y: avgDemSeatShare });
-                rep_df.push({ x: 1 - avgDemVoteShare, y: 1 - avgDemSeatShare });
+            
+                const avgDemVoteShare =
+                  currentSimulation.reduce((sum, d) => sum + d.demVoteShare * d.totalVotes, 0) / totalVotes;
+            
+                const avgDemSeatShare =
+                  currentSimulation.filter((d) => d.demVoteShare > 0.5).length / currentSimulation.length;
+            
+                // Store results for this single simulation
+                allResults.push({ avgDemVoteShare, avgDemSeatShare });
               }
+            
+              // Aggregate results after 100 simulations
+              const aggregatedDemVoteShare =
+                allResults.reduce((sum, r) => sum + r.avgDemVoteShare, 0) / allResults.length;
+            
+              const aggregatedDemSeatShare =
+                allResults.reduce((sum, r) => sum + r.avgDemSeatShare, 0) / allResults.length;
+            
+              dem_df.push({ x: aggregatedDemVoteShare, y: aggregatedDemSeatShare });
+              rep_df.push({ x: 1 - aggregatedDemVoteShare, y: 1 - aggregatedDemSeatShare });
+            }            
 
             // Simulation logic: downward increments
-            for (let i = 0; i < 50; i++) {
-                let increments = Array(5).fill().map(() => -0.01 + (Math.floor(seed() * 10) - 5) / 100);
-                const avgIncrement = increments.reduce((a, b) => a + b, 0) / increments.length;
-      
-                simulation = simulation.map((d) => ({
+            for (let i = 0; i < 50; i++) { 
+              let allResults = []; // Store all 100 simulation results
+            
+              // Run 100 simulations per iteration
+              for (let j = 0; j < 30; j++) {
+                const Increment = -0.01 - 0.01 * i + (Math.floor(seed() * 10) - 5) / 100;
+            
+                let currentSimulation = simulation.map((d) => ({
                   ...d,
-                  demVoteShare: Math.min(1, Math.max(0, d.demVoteShare + avgIncrement)),
-                  repVoteShare: Math.min(1, Math.max(0, d.repVoteShare - avgIncrement)),
+                  demVoteShare: Math.min(1, Math.max(0, d.demVoteShare + Increment)),
+                  repVoteShare: Math.min(1, Math.max(0, d.repVoteShare - Increment)),
                 }));
-      
-                const avgDemVoteShare = simulation.reduce((sum, d) => sum + d.demVoteShare * d.totalVotes, 0) / totalVotes;
-                const avgDemSeatShare = simulation.filter((d) => d.demVoteShare > 0.5).length / simulation.length;
-      
-                dem_df.push({ x: avgDemVoteShare, y: avgDemSeatShare });
-                rep_df.push({ x: 1 - avgDemVoteShare, y: 1 - avgDemSeatShare });
+            
+                const avgDemVoteShare =
+                  currentSimulation.reduce((sum, d) => sum + d.demVoteShare * d.totalVotes, 0) / totalVotes;
+            
+                const avgDemSeatShare =
+                  currentSimulation.filter((d) => d.demVoteShare > 0.5).length / currentSimulation.length;
+            
+                // Store results for this single simulation
+                allResults.push({ avgDemVoteShare, avgDemSeatShare });
               }
+            
+              // Aggregate results after 100 simulations
+              const aggregatedDemVoteShare =
+                allResults.reduce((sum, r) => sum + r.avgDemVoteShare, 0) / allResults.length;
+            
+              const aggregatedDemSeatShare =
+                allResults.reduce((sum, r) => sum + r.avgDemSeatShare, 0) / allResults.length;
+            
+              dem_df.push({ x: aggregatedDemVoteShare, y: aggregatedDemSeatShare });
+              rep_df.push({ x: 1 - aggregatedDemVoteShare, y: 1 - aggregatedDemSeatShare });
+            }
 
             
               setDemData(dem_df.sort((a, b) => a.x - b.x));
