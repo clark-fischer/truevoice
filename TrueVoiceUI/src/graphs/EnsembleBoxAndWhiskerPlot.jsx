@@ -3,10 +3,10 @@ import Plot from 'react-plotly.js';
 import axios from 'axios';
 
 
-function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType}) {
+function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType, width, height, comparisonBasis, setComparisonBasis}) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-  const [comparisonBasis, setComparisonBasis] = useState("hispanic"); // hispanic is default selection
+   // hispanic is default selection
 
   useEffect(() => {
     const fetchData = async () => {
@@ -84,28 +84,20 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
       showlegend: false,
     },
   ];
+
+  function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <label style={{ marginBottom: "10px" }}>
-        Select Comparison Basis:
-        <select
-          value={comparisonBasis}
-          onChange={(e) => setComparisonBasis(e.target.value)}
-          style={{ marginLeft: "10px", padding: "5px" }}
-        >
-          <option value="hispanic">Hispanic</option>
-          <option value="black">Black</option>
-          <option value="asian">Asian</option>
-          <option value="white">White</option>
-        </select>
-      </label>
+      
 
       <Plot
         data={traces}
         layout={{
-          title: title || `${fips} ${electionType} Ensemble: Box & Whisker Plot for ${comparisonBasis} Population Percent`,
+          title: title || `${electionType}: Box & Whisker Plot for ${capitalizeFirstLetter(comparisonBasis)} Population %`,
           xaxis: {
-            title: x_label || "Bins",
+            title: x_label || "Indexed Districts",
             tickmode: "array",
             tickvals: xPositions,
             ticktext: bins,
@@ -114,8 +106,8 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
             title: y_label || "Population Percent (%)",
             zeroline: false,
           },
-          height: 555,
-          width: 700,
+          height: height,
+          width: width,
           showlegend: true,
         }}
         config={{ responsive: true }}

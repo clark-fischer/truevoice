@@ -8,24 +8,27 @@ import { Row, Col } from 'react-bootstrap';
 
 import {
     Button,
+    Center,
     TabPanel,
 } from "@chakra-ui/react";
 
-const PlotComparison = () => {
+const PlotComparison = ({ plot1, plot2 }) => {
     return (
         < div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
 
             <div>
-                <OpportunityDistrictsPlot  fips={"NV"} electionType={"MMD"} width={400} height={600} fontSize={9}/>
+                {plot1}
             </div>
             <div>
-                <OpportunityDistrictsPlot electionType={"SMD"}  width={400} height={600} fontSize={9} />
+                {plot2}
             </div>
         </div >
 
 
     );
 };
+
+
 
 // const OnTop = () => {
 //     return (
@@ -39,19 +42,66 @@ const PlotComparison = () => {
 //       </Row>
 //     );
 //   };
-  
+
+
+
 
 const PlotCarousel = (props) => {
+    const [comparisonBasis, setComparisonBasis] = React.useState("hispanic");
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const super_props = props.super_props;
 
     const plots = [
-        
-        <OpportunityRepresentativesPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
-        <OpportunityDistrictsPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
-        <PlotComparison fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />,
+
+        <PlotComparison
+            plot1={
+                <OpportunityRepresentativesPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
+            }
+            plot2={
+                <OpportunityRepresentativesPlot fips={super_props.state} electionType={"SMD"} width={400} height={600} fontSize={9} />
+            }
+        />,
+
+        <PlotComparison
+            plot1={
+                <OpportunityDistrictsPlot fips={"NV"} electionType={"MMD"} width={400} height={600} fontSize={9} />
+            }
+            plot2={
+                <OpportunityDistrictsPlot electionType={"SMD"} width={400} height={600} fontSize={9} />
+            }
+        />,
+
+        <>
+
+            <Center>
+            <label style={{ marginBottom: "-5px" }}>
+                Select Comparison Basis:
+                <select
+                    value={comparisonBasis}
+                    onChange={(e) => setComparisonBasis(e.target.value)}
+                    style={{ marginLeft: "10px", padding: "5px" }}
+                >
+                    <option value="hispanic">Hispanic</option>
+                    <option value="black">Black</option>
+                    <option value="asian">Asian</option>
+                    <option value="white">White</option>
+                </select>
+            </label>
+            </Center>
+
+            <PlotComparison
+                plot1={
+                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={"NV"} electionType={"MMD"} width={500} height={600} fontSize={9} />
+                }
+                plot2={
+                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={"NV"} electionType={"SMD"} width={500} height={600} fontSize={9} />
+                }
+            /></>,
+
+        // <SMDBoxAndWhiskerPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />
+
         // <OnTop />,
-        <SMDBoxAndWhiskerPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />
+
     ];
 
     const handlePrev = () => {
@@ -66,11 +116,11 @@ const PlotCarousel = (props) => {
         <div>
             {plots[currentIndex]}
             < div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-            <Button onClick={handlePrev}>Previous</Button>
-            
-            <Button onClick={handleNext}>Next</Button>
+                <Button onClick={handlePrev}>Previous</Button>
+
+                <Button onClick={handleNext}>Next</Button>
             </div>
-            
+
         </div>
     );
 };
@@ -84,7 +134,7 @@ const Ensemble = (props) => {
 
 
 
-            <PlotCarousel super_props={props}/>
+            <PlotCarousel super_props={props} />
 
 
         </TabPanel>

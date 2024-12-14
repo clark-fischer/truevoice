@@ -17,6 +17,9 @@ import {
 } from "@chakra-ui/react";
 
 import VoteShareSeatSharePlot from '../graphs/VoteSeatSharePlotPlanSpecific'
+import FRAResult from '../components/FRAresults';
+// 
+// import FRAResults from './FRAresults'
 
 const TabPlanSummary = (props) => {
 
@@ -111,7 +114,7 @@ const TabPlanSummary = (props) => {
 
         {/* Seat/Vote share chart */}
 
-        <VoteShareSeatSharePlot fips={props.state} characteristic={props.characteristic} electionType={props.electionType} />
+        <FRAResult fips="NV" characteristic="FAIR"></FRAResult> 
 
       </div>
 
