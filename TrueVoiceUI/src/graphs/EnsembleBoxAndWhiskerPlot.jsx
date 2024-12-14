@@ -27,7 +27,13 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
   if (!data) return <div>Loading...</div>;
 
   const sortedBoxes = data.boxes;
-  const bins = sortedBoxes.map((box) => box["binNo"]); // Bin labels
+  const bins = sortedBoxes.map((box) => {
+    if (electionType === "MMD" && box.totalRepresentatives) {
+      return `${box["binNo"]} (${box.totalRepresentatives} reps)`;
+    }
+    return box["binNo"];
+  });
+  //onst bins = sortedBoxes.map((box) => box["binNo"]); // Bin labels
 
   const minValues = sortedBoxes.map((box) => box[comparisonBasis]["min"]);
   const q1Values = sortedBoxes.map((box) => box[comparisonBasis]["q1"]);
@@ -81,6 +87,15 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
       type: "bar",
       width: 0.5, 
       marker: { color: "blue", opacity: 0.7, line: { color: "black", width: 1.5 } },
+      hovertext: sortedBoxes.map(
+        (box) =>
+          `Min: ${box[comparisonBasis]["min"]}<br>` +
+          `Q1: ${box[comparisonBasis]["q1"]}<br>` +
+          `Median: ${box[comparisonBasis]["median"]}<br>` +
+          `Q3: ${box[comparisonBasis]["q3"]}<br>` +
+          `Max: ${box[comparisonBasis]["max"]}`
+      ),
+      hoverinfo: "text",
       showlegend: false,
     },
   ];
@@ -90,12 +105,25 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
 }
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-      
+      <label style={{ marginBottom: "10px" }}>
+        Select Comparison Basis:
+        <select
+          value={comparisonBasis}
+          onChange={(e) => setComparisonBasis(e.target.value)}
+          style={{ marginLeft: "10px", padding: "5px" }}
+        >
+          <option value="hispanic">Hispanic</option>
+          <option value="black">Black</option>
+          <option value="asian">Asian</option>
+          <option value="white">White</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
 
       <Plot
         data={traces}
         layout={{
-          title: title || `${electionType}: Box & Whisker Plot for ${capitalizeFirstLetter(comparisonBasis)} Population %`,
+          title: title || `${electionType} Ensemble: Box & Whisker Plot for ${comparisonBasis} Population Percent`,
           xaxis: {
             title: x_label || "Indexed Districts",
             tickmode: "array",

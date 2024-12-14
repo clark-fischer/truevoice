@@ -5,6 +5,7 @@
     "boxes": [
         {
             "binNo": "Bin 1",
+            "totalRepresentatives": 3,
             "white": {
                 "min": 57.92094812513838,
                 "q1": 65.33268246759472,
@@ -48,6 +49,7 @@
         },
         {
             "binNo": "Bin 2",
+            "totalRepresentatives": 5,
             "white": {
                 "min": 70.1815874227083,
                 "q1": 71.3953037950167,
