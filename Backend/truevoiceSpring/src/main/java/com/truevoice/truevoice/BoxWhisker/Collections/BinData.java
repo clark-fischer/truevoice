@@ -13,4 +13,5 @@ public class BinData {
     private DemographicData black;
     private DemographicData asian;
     private DemographicData hispanic;
+    private DemographicData other;
 }
