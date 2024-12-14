@@ -92,8 +92,8 @@ const TabStatePlans = (props) => {
                                         console.log(err);
                                     }
 
-                                    const smd_title = item.title !== undefined ? " (" + item.title + ")" : " (Enacted)";
-                                    document.getElementById("district-button0").innerHTML = "SMD" + smd_title;
+                                    // const smd_title = item.title !== undefined ? " (" + item.title + ")" : " (Enacted)";
+                                    // document.getElementById("district-button0").innerHTML = "SMD" + smd_title;
                                 };
 
                                 fetchData(); // Call the function

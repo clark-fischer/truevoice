@@ -376,13 +376,13 @@ export default function State() {
   const renderDistrictButtons = () => {
     const districtMaps = [
       {
-        label: "SMD (Enacted)",
+        label: "SMD Mode",
         path: "http://localhost:8080/NV/SMD/ENACTED",
         tooltip: "These are Nevada's districts, as of 2024.",
         planOptions: plan_options_smd,
       },
       {
-        label: "MMD (FRA official)",
+        label: "MMD Mode",
         path: "http://localhost:8080/NV/MMD/AVERAGE",
         tooltip: "This would be the official prescription of the FRA.",
         planOptions: plan_options_mmd,
@@ -417,8 +417,8 @@ export default function State() {
           console.log(err);
         }
 
-        const smd_title = map.title !== undefined ? "(" + map.title + ")" : " (Enacted)";
-        document.getElementById("district-button0").innerHTML = "SMD" + smd_title;
+        // const smd_title = map.title !== undefined ? "(" +  +map.title ")" : " (Enacted)";
+        // document.getElementById("district-button0").innerHTML = "SMD" + smd_title;
       };
 
       fetchData(); // Call the function
@@ -442,6 +442,32 @@ export default function State() {
       </Tooltip>
     ));
   };
+
+  const CustomLegend = ({ text }) => {
+    const map = useMap();
+  
+    useEffect(() => {
+      const legend = L.control({ position: "bottomleft" }); // Change position to bottomleft
+  
+      legend.onAdd = () => {
+        const div = L.DomUtil.create("div", "custom-legend");
+        div.innerHTML = `
+          <div style="display: flex; align-items: center; font-size: 14px; padding: 5px; background: white; border: 1px solid #ccc; border-radius: 4px;">
+            <span>Displaying ${text} Plan</span>
+          </div>
+        `;
+        return div;
+      };
+  
+      legend.addTo(map);
+  
+      return () => map.removeControl(legend); // Cleanup on unmount
+    }, [map, text]);
+  
+    return null;
+  };
+  
+
 
   const plan_options_smd = [
     {
@@ -589,6 +615,8 @@ export default function State() {
                         /> </> : <></>
                   })
                 }
+
+                <CustomLegend text={characteristic} />
 
 
               </MapContainer>
