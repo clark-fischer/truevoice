@@ -193,14 +193,15 @@ const ElectoralResultsTable = ({ fips, characteristic }) => {
         <td>{index < numWinners ? "Win" : "Lose"}</td>
       </tr>
     ));
+
     return (
       <table border="1" style={{ margin: "20px 0", width: "100%" }}>
         <thead>
-          <tr>
-            <th>Candidate</th>
-            <th>Party</th>
-            <th>Votes</th>
-            <th>Result</th>
+          <tr style={{fontWeight: "bold"}}>
+            <td>Candidate</td>
+            <td>Party</td>
+            <td>Votes</td>
+            <td>Result</td>
           </tr>
         </thead>
         <tbody>{rows}</tbody>

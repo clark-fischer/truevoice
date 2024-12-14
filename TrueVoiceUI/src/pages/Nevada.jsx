@@ -400,7 +400,7 @@ export default function State() {
 
       // Highlight the selected button
       const selectedButton = document.getElementById(`district-button${index}`);
-      selectedButton.style.color = "white";
+      selectedButton.style.color = "black";
       selectedButton.style.fontWeight = "bold";
       selectedButton.style.backgroundColor = "lightgreen";
 
@@ -450,12 +450,12 @@ export default function State() {
       path: "http://localhost:8080/NV/SMD/ENACTED"
     },
     {
-      title: "Dem Favored",
+      title: "Democratic Favored",
       image: "/dem.jpeg",
       path: "http://localhost:8080/NV/SMD/DEMFAVORED"
     },
     {
-      title: "Repb Favored",
+      title: "Republican Favored",
       image: "/rep.jpeg",
       path: "http://localhost:8080/NV/SMD/REPFAVORED"
     },
@@ -602,10 +602,10 @@ export default function State() {
 
             <TabList>
               <Tab key={1}>Demographics</Tab>
-              <Tab key={4}>SMD vs. MMD</Tab>
-              <Tab key={2}>Plans</Tab>
-              <Tab key={3}>State</Tab>
-              <Tab key={5}>Ensemble</Tab>
+              <Tab key={4}>Delete</Tab>
+              <Tab key={2}>Plan Summary</Tab>
+              <Tab key={3}>Select State</Tab>
+              <Tab key={5}>SMD vs. MMD</Tab>
             </TabList>
 
             <TabPanels key={1}>
