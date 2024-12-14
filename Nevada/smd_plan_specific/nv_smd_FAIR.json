@@ -5,8 +5,8 @@
     "characteristic": "FAIR",
     "democratsSeats": 3,
     "republicanSeats": 1,
-    "demTotalVotes": 1345913,
-    "repTotalVotes": 1414853,
+    "demTotalVotes": 1574060,
+    "repTotalVotes": 1655624,
     "bias": 0.0,
     "symmetry": 0.25,
     "responsiveness": 11.4063,
@@ -15,25 +15,25 @@
             "districtId": 1,
             "demVoteShare": 0.496627232280155,
             "repVoteShare": 0.503372767719845,
-            "totalVotes": 581232
+            "totalVotes": 669556
         },
         {
             "districtId": 2,
             "demVoteShare": 0.516401171157759,
             "repVoteShare": 0.48359882884224104,
-            "totalVotes": 748387
+            "totalVotes": 924186
         },
         {
             "districtId": 3,
             "demVoteShare": 0.5021355817362644,
             "repVoteShare": 0.4978644182637356,
-            "totalVotes": 572859
+            "totalVotes": 643853
         },
         {
             "districtId": 4,
             "demVoteShare": 0.5267185405992999,
             "repVoteShare": 0.4732814594007001,
-            "totalVotes": 858288
+            "totalVotes": 992089
         }
     ]
 }
