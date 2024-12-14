@@ -71,6 +71,10 @@ const Demographics = (props) => {
 
   let raceCheckBoxes = props.raceCheckBoxes;
 
+  function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
+
   return (
     <TabPanel padding={0}>
 
@@ -82,7 +86,7 @@ const Demographics = (props) => {
             marginBottom: "10px",
           }}
         >
-          Overlay Ethnicity Data
+          Overlay Heatmap Data
         </legend>
 
         {/* mapping the checkboxes */}
@@ -91,8 +95,14 @@ const Demographics = (props) => {
             <input onClick={() => props.setRaceMap(props.state == "NV" ? nv_district_map : co_district_map, true)} id="district-based" name="race-map-type" type="radio" />
             <label htmlFor="district-based" style={{ paddingLeft: "5px" }}>District Based</label>
             <br />
-            <input onClick={() => props.setRaceMap(props.state == "NV" ? nv_precinct_map : co_precinct_map, false)} id="precinct-based" name="race-map-type" type="radio" />
+            <input onClick={() => props.setRaceMap(props.state == "NV" ? nv_precinct_map : co_precinct_map, false)} id="precinct-based" name="race-map-type" type="radio"  />
             <label htmlFor="precinct-based" style={{ paddingLeft: "5px" }}>Precinct Based</label>
+            <br />
+            <input onClick={() => {props.setRaceMap(props.state == "NV" ? nv_precinct_map : co_precinct_map, false); const radios2 = document.getElementsByName("racebtns"); radios2.forEach(radio => radio.disabled = true);}} id="hidemap" name="race-map-type" type="radio" />
+            <label htmlFor="hidemap" style={{ paddingLeft: "5px" }}>Hide</label>
+
+            
+            
 
           </div>
 
@@ -100,9 +110,9 @@ const Demographics = (props) => {
             {
               raceCheckBoxes.map((race, i) => (
                 <div key={race.id}>
-                  <input id={race.id} type="checkbox" onChange={() => props.toggle_map(i)} />
+                  <input id={race.id} type="radio" name="racebtns"  onChange={() => props.toggle_map(i)} />
                   <label htmlFor={race.id} style={{ paddingLeft: "5px" }}>
-                    {race.label} <span style={{ color: race.hex }} >(in {race.hex})</span>
+                    {capitalizeFirstLetter(race.label)} <span style={{ color: race.hex }} >(in {race.hex})</span>
                   </label>
                   <br />
                 </div>
@@ -164,31 +174,31 @@ const Demographics = (props) => {
               <Text style={{ color: "red" }} fontSize="lg" >Dom Ran</Text>
             </div> */}
 
-            <table style={{ width: '50%', borderCollapse: 'collapse' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
               <thead>
                 <tr>
-                  <th style={{ textAlign: 'left', fontWeight: 'bold', fontSize: 'large' }} colSpan="2"> Statisitcs</th>
+                  <th style={{ textAlign: 'left', fontWeight: 'bold', fontSize: 'large' }} colSpan="2"> Statistics</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Dem/Rep Split:</td>
+                {/* <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Dem./Rep. Split:</td>
                   <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="democratsPercentage"></span></td>
-                </tr>
+                </tr> */}
                 <tr>
-                  <td style={{ textAlign: 'left', fontSize: 'large' }}>District Pop:</td>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>District Population:</td>
                   <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="totalPopulation"></span></td>
                 </tr>
                 <tr>
-                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Reps for Dist.:</td>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Representative per District:</td>
                   <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="totalRepresentatives"></span></td>
                 </tr>
                 <tr>
-                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Opt. Threshold:</td>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Opportunity Threshold:</td>
                   <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="opportunityThreshold"></span></td>
                 </tr>
                 <tr>
-                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Is Opt. Dist?</td>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Is Opportunity District?</td>
                   <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="isOpportunityDistrict"></span></td>
                 </tr>
               </tbody>
@@ -205,7 +215,7 @@ const Demographics = (props) => {
           </Text> */}
           <br />
           <br />
-          <Button onClick={() => location.reload()} >Reset Page!</Button>
+          {/* <Button onClick={() => location.reload()} >Reset Page!</Button> */}
         </div>
 
 

@@ -97,9 +97,14 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionT
         fetchData();
     },[fips, electionType, characteristic]);
 
+    function capitalizeFirstLetter(str) {
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  }
+  
+
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <h2 style={{ marginBottom: "10px" }}>{title || `${fips} ${electionType} ${characteristic}: Vote-Seat Share`}</h2>
+          <h2 style={{ marginBottom: "10px" }}>{title || `${electionType} ${characteristic ? capitalizeFirstLetter(characteristic) : "loading..."}: Vote-Seat Share`}</h2>
     
           <LineChart width={600} height={350} data={demData}>
             <CartesianGrid strokeDasharray="3 3" />

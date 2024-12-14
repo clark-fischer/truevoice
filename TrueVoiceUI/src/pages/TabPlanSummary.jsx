@@ -61,13 +61,48 @@ const TabPlanSummary = (props) => {
 
         {/* Display boxes */}
         {
-          <div style={{ display: 'grid', gap: '10px' }}>
-            {Object.entries(summary_stats).map(([key, value]) => (
+          <div style={{ display: 'grid', gap: '6px' }}>
+            {/* {Object.entries(summary_stats).map(([key, value]) => (
               <div key={key} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
                 <h2>{key}:</h2>
                 <span>{value}</span>
               </div>
-            ))}
+            ))} */}
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
+              <h2>SMD or MMD?</h2>
+              <span>{summary_stats.electionType}</span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
+              <h2>Type of Interesting Plan:</h2>
+              <span>{summary_stats.characteristic}</span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
+              <h2>Number of Districts:</h2>
+              <span>{summary_stats.noOfDistricts}</span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
+              <h2>Number of Opportunity Districts:</h2>
+              <span>{summary_stats.oppDistricts}</span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
+              <h2>Number of Safe Districts:</h2>
+              <span>{summary_stats.safeDistricts}</span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
+              <h2>Democratic/Republican Party Split:</h2>
+              <span id="partysplit"></span>
+            </div>
+
+
+
+
+
           </div>
         }
 
@@ -75,8 +110,8 @@ const TabPlanSummary = (props) => {
         <hr />
 
         {/* Seat/Vote share chart */}
-        
-<VoteShareSeatSharePlot />
+
+        <VoteShareSeatSharePlot fips={props.state} characteristic={props.characteristic} electionType={props.electionType} />
 
       </div>
 

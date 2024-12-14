@@ -16,7 +16,7 @@ const PlotComparison = () => {
         < div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
 
             <div>
-                <OpportunityRepresentativesPlot  fips={"NV"} electionType={"MMD"} width={400} height={600} fontSize={9}/>
+                <OpportunityDistrictsPlot  fips={"NV"} electionType={"MMD"} width={400} height={600} fontSize={9}/>
             </div>
             <div>
                 <OpportunityDistrictsPlot electionType={"SMD"}  width={400} height={600} fontSize={9} />
