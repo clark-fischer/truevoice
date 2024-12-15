@@ -8,7 +8,7 @@ import {
 
   TabPanel,
   Button,
-  Button,
+  // Button,
 } from "@chakra-ui/react";
 
 const styles = {

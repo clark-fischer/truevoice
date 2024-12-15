@@ -630,7 +630,7 @@ export default function State() {
 
             <TabList>
               <Tab key={1}>Demographics</Tab>
-              <Tab key={4}>Delete</Tab>
+              <Tab key={4}>Vote Seat Share</Tab>
               <Tab key={2}>Plan Summary</Tab>
               <Tab key={3}>Select State</Tab>
               <Tab key={5}>SMD vs. MMD</Tab>
@@ -645,11 +645,11 @@ export default function State() {
               <TabPanel >
                 {/* <br /> */}
                 {/* <Center> */}
-                <ComparisonTable data1={smd_compr} data2={mmd_compr} />
+                {/* <ComparisonTable data1={smd_compr} data2={mmd_compr} /> */}
                 {/* </Center> */}
                 <br />
                 <div style={{ margin: "10px" }}>
-                  <VoteSeatSharePlotPlanSpecific fips={state} characteristic={characteristic} electionType={electionType} />
+                  <VoteSeatSharePlotPlanSpecific fips={state} characteristic={characteristic} electionType={electionType} width={300} />
                 </div>
 
               </TabPanel >

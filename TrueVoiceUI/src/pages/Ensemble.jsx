@@ -54,24 +54,25 @@ const PlotCarousel = (props) => {
 
     const plots = [
 
-        <PlotComparison
+        <><PlotComparison
             plot1={
                 <OpportunityRepresentativesPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
             }
             plot2={
                 <OpportunityRepresentativesPlot fips={super_props.state} electionType={"SMD"} width={400} height={600} fontSize={9} />
             }
-        />,
+        /></>,
 
-        <PlotComparison
+        <><PlotComparison
             plot1={
                 <OpportunityDistrictsPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
             }
             plot2={
-                <OpportunityDistrictsPlot electionType={"SMD"} width={400} height={600} fontSize={9} />
+                <OpportunityDistrictsPlot fips={super_props.state} electionType={"SMD"} width={400} height={600} fontSize={9} />
             }
-        />,
+        /></>,
 
+        <>
         <PlotComparison
             plot1={
                 <PartySplitBarPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
@@ -79,7 +80,7 @@ const PlotCarousel = (props) => {
             plot2={
                 <PartySplitBarPlot electionType={"SMD"} width={400} height={600} fontSize={9} />
             }
-        />,
+        /> </>,
 
 
 
