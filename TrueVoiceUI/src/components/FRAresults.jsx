@@ -197,7 +197,7 @@ const ElectoralResultsTable = ({ fips, characteristic }) => {
     return (
       <table border="1" style={{ margin: "20px 0", width: "100%" }}>
         <thead>
-          <tr style={{fontWeight: "bold"}}>
+          <tr style={{ fontWeight: "bold" }}>
             <td>Candidate</td>
             <td>Party</td>
             <td>Votes</td>
@@ -223,8 +223,8 @@ const ElectoralResultsTable = ({ fips, characteristic }) => {
 
     return (
       <div>
-        {renderTable(firstTableCandidates, 5)}
-        {renderTable(secondTableCandidates, 3)}
+        {renderTable(firstTableCandidates, 3)}
+        {renderTable(secondTableCandidates, 5)}
       </div>
     );
   }

@@ -52,9 +52,67 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
       },
     },
   };
+  const conditionalAnnotations = [];
 
+  if (electionType === "MMD" && fips === "NV") {
+    conditionalAnnotations.push({
+      x: 1,
+      y: 0.94,
+      xref: "paper",
+      yref: "paper",
+      text: "Minority: Hispanic<br>Threshold: 25%",
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+    });
+  } else if (electionType === "MMD" && fips === "CO") {
+    conditionalAnnotations.push({
+      x: 1,
+      y: 0.92,
+      xref: "paper",
+      yref: "paper",
+      text: "Minority: Hispanic<br>Threshold: 20% (5 reps)",
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+    });
+    conditionalAnnotations.push({
+      x: 1,
+      y: 0.92,
+      xref: "paper",
+      yref: "paper",
+      text: "Minority: Hispanic<br>Threshold: 33% (3 reps)",
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+    });
+  } else if (electionType === "SMD" && (fips === "NV" || fips === "CO")) {
+    conditionalAnnotations.push({
+      x: 1,
+      y: 0.935,
+      xref: "paper",
+      yref: "paper",
+      text: "Minority: Hispanic<br>Threshold: 50%",
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+    });
+  }
+  const baseAnnotations = [
+    {
+      x: 1,
+      y: 1,
+      xref: "paper",
+      yref: "paper",
+      text: `Democrat Average Seat Share: ${averageSeatShare}%<br>Democrat Vote Share: ${voteShare}%`,
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+      
+    },
+  ];
   const layout = {
-    title: title || `${data.electionType} Ensemble Summary: Opportunity Representatives`,
+    title: title || `${data.electionType} - Opportunity Representatives`,
     font: {
       size: fontSize, 
   },
@@ -68,7 +126,7 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
       linewidth: 2, 
     },
     yaxis: {
-      title: y_label || 'Frequency',
+      title: y_label || 'Number of Plans',
       tickmode: 'linear', 
       dtick: 500,
       showline: true,
@@ -78,30 +136,14 @@ function OpportunityRepresentativesPlot({ title, x_label, y_label, fips, electio
         size: 12, 
     },
     },
-    annotations: [
-      {
-        x: 1,
-        y: 0.97,
-        xref: 'paper',
-        yref: 'paper',
-        text: `Average Seat Share: ${averageSeatShare}%<br>Vote Share: ${voteShare}%`,
-        showarrow: false,
-        font: {
-          size: 12,
-        },
-        align: 'left',
-        bgcolor: 'white',
-        bordercolor: 'black',
-        borderwidth: 1,
-      },
-    ],
+    annotations: [...baseAnnotations, ...conditionalAnnotations],
     bargap: 0.1,
-    // margin: {
-    //   l: 50,
-    //   r: 50,
-    //   t: 50,
-    //   b: 50,
-    // },
+     margin: {
+      l: 50,
+      r: 50,
+      t: 50,
+      b: 60,
+   },
     width: width,
     height: height,
   };
