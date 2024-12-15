@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 //opp representative
-function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, height=600, width=800, fontSize=14}) {
+function OpportunityDistrictsPlot({title ,x_label, y_label, fips='NV', electionType, height=600, width=800, fontSize=14}) {
 
     const [data, setData] = useState(null);
     const [error,setError] = useState(null);
@@ -14,7 +14,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
 
             try{
                 //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
-                const response = await axios.get(`http://localhost:8080/NV/${electionType}/BAR`);
+                const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
                 setData(response.data);
 
             }catch (err){
@@ -28,6 +28,8 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
   
     if(error) return <div>Error: {error.message}</div>;
     if(!data) return <div>Loading...</div>;
+   
+
 
     const opportunityDistricts = data.barData.map((d) => d.opportunityDistricts);
     //const totalDistricts = data.totalDistricts;
@@ -35,8 +37,8 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
     const maxFrequency = Math.max(...opportunityDistricts.map((d) => d.frequency || 0)); 
     const dtickValue = Math.ceil(maxFrequency / 5);
 
-    const averageSeatShare = Number(data.democratAvgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
-    const voteShare = Number(data.democratAvgVoteShare * 100).toFixed(2).replace(/\.00$/, '');
+    const averageSeatShare = (data.democratAvgSeatShare * 100).toFixed(1);
+    const voteShare = (data.democratAvgVoteShare * 100).toFixed(1);
     console.log(opportunityDistricts);
     const trace = {
         x: opportunityDistricts,
@@ -54,16 +56,75 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
           },
         },
       };
+
+    const conditionalAnnotations = [];
+
+  if (electionType === "MMD" && fips === "NV") {
+    conditionalAnnotations.push({
+      x: 1,
+      y: 0.94,
+      xref: "paper",
+      yref: "paper",
+      text: "Minority: Hispanic<br>Threshold: 25%",
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+    });
+  } else if (electionType === "MMD" && fips === "CO") {
+    conditionalAnnotations.push({
+      x: 1,
+      y: 0.92,
+      xref: "paper",
+      yref: "paper",
+      text: "Minority: Hispanic<br>Threshold: 20% (5 reps)",
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+    });
+    conditionalAnnotations.push({
+      x: 1,
+      y: 0.92,
+      xref: "paper",
+      yref: "paper",
+      text: "Minority: Hispanic<br>Threshold: 33% (3 reps)",
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+    });
+  } else if (electionType === "SMD" && (fips === "NV" || fips === "CO")) {
+    conditionalAnnotations.push({
+      x: 1,
+      y: 0.935,
+      xref: "paper",
+      yref: "paper",
+      text: "Minority: Hispanic<br>Threshold: 50%",
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+    });
+  }
+  const baseAnnotations = [
+    {
+      x: 1,
+      y: 1,
+      xref: "paper",
+      yref: "paper",
+      text: `Democrat Average Seat Share: ${averageSeatShare}%<br>Democrat Vote Share: ${voteShare}%`,
+      showarrow: false,
+      font: { size: 12 },
+      align: "right",
+      
+    },
+  ];
+
     
       const layout = {
-        title: title || `${data.electionType} Ensemble summary: Opportunity Districts` ,
+        title: title || `${data.electionType} - Opportunity Districts` ,
         font: {
             size: fontSize, 
         },
         xaxis: {
           title: x_label || 'Number of Opportunity Districts',
-          tickmode: 'linear',
-          
           range: [0 - 0.5, totalDistricts + 0.5],
           tickmode: 'linear', 
           dtick: 1,
@@ -73,7 +134,7 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
 
         },
         yaxis: {
-          title: y_label || 'Count.',
+          title: y_label || 'Number of Plans',
           dtick: dtickValue,
           showline: true,
           linecolor: 'black', 
@@ -82,30 +143,14 @@ function OpportunityDistrictsPlot({title ,x_label, y_label, fips, electionType, 
             size: 12, 
         },
         },
-        annotations: [
-            {
-              x: 1,
-              y: 0.97,
-              xref: 'paper',
-              yref: 'paper',
-              text: `Average Seat Share: ${averageSeatShare}%<br>Vote Share: ${voteShare}%`,
-              showarrow: false,
-              font: {
-                size: 12,
-              },
-              align: 'left',
-              bgcolor: 'white',
-              bordercolor: 'black',
-              borderwidth: 1,
-            },
-          ],
+        annotations: [...baseAnnotations, ...conditionalAnnotations],
         bargap: 0.1, 
-        // margin: {
-        //   l: 50,
-        //   r: 50,
-        //   t: 50,
-        //   b: 50,
-        // },
+        margin: {
+          l: 50,
+          r: 50,
+          t: 50,
+          b: 60,
+         },
         width: width,
         height: height,
       };

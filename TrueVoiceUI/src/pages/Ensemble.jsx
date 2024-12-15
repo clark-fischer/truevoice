@@ -5,6 +5,7 @@ import OpportunityRepresentativesPlot from '../graphs/OpportunityRepresentatives
 import OpportunityDistrictsPlot from '../graphs/OpportunityDistrictPlot';
 import PartySplitBarPlot from "../graphs/PartySplitBarPlot";
 import SMDBoxAndWhiskerPlot from '../graphs/EnsembleBoxAndWhiskerPlot';
+import PartySplitBarPlot from '../graphs/PartySplitBarPlot';
 import { Row, Col } from 'react-bootstrap';
 
 import {
@@ -15,7 +16,7 @@ import {
 
 const PlotComparison = ({ plot1, plot2 }) => {
     return (
-        < div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+        < div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr'  }}>
 
             <div>
                 {plot1}
@@ -56,19 +57,28 @@ const PlotCarousel = (props) => {
 
         <PlotComparison
             plot1={
-                <OpportunityRepresentativesPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
+                <OpportunityRepresentativesPlot fips={super_props.state} electionType={"MMD"} width={500} height={600} fontSize={10} />
             }
             plot2={
-                <OpportunityRepresentativesPlot fips={super_props.state} electionType={"SMD"} width={400} height={600} fontSize={9} />
+                <OpportunityRepresentativesPlot fips={super_props.state} electionType={"SMD"} width={500} height={600} fontSize={10} />
             }
         />,
 
         <PlotComparison
             plot1={
-                <OpportunityDistrictsPlot fips={"NV"} electionType={"MMD"} width={400} height={600} fontSize={9} />
+                <OpportunityDistrictsPlot fips={"NV"} electionType={"MMD"} width={500} height={600} fontSize={10} />
             }
             plot2={
-                <OpportunityDistrictsPlot electionType={"SMD"} width={400} height={600} fontSize={9} />
+                <OpportunityDistrictsPlot fips={"NV"} electionType={"SMD"} width={500} height={600} fontSize={10} />
+            }
+        />,
+
+        <PlotComparison
+            plot1={
+                <PartySplitBarPlot fips={"NV"} electionType={"MMD"} width={500} height={600} fontSize={10} />
+            }
+            plot2={
+                <PartySplitBarPlot fips={"NV"} electionType={"SMD"} width={500} height={600} fontSize={10} />
             }
         />,
 
@@ -88,27 +98,28 @@ const PlotCarousel = (props) => {
         <>
 
             <Center>
-                <label style={{ marginBottom: "-5px" }}>
-                    Select Comparison Basis:
-                    <select
-                        value={comparisonBasis}
-                        onChange={(e) => setComparisonBasis(e.target.value)}
-                        style={{ marginLeft: "10px", padding: "5px" }}
-                    >
-                        <option value="hispanic">Hispanic</option>
-                        <option value="black">Black</option>
-                        <option value="asian">Asian</option>
-                        <option value="white">White</option>
-                    </select>
-                </label>
+            <label style={{ marginBottom: "0px" }}>
+                Select Comparison Basis:
+                <select
+                    value={comparisonBasis}
+                    onChange={(e) => setComparisonBasis(e.target.value)}
+                    style={{ marginLeft: "0px", padding: "5px" }}
+                >
+                    <option value="hispanic">Hispanic</option>
+                    <option value="black">Black</option>
+                    <option value="asian">Asian</option>
+                    <option value="white">White</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
             </Center>
 
             <PlotComparison
                 plot1={
-                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={"NV"} electionType={"MMD"} width={500} height={600} fontSize={9} />
+                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={"NV"} electionType={"MMD"} width={500} height={600} fontSize={14} />
                 }
                 plot2={
-                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={"NV"} electionType={"SMD"} width={500} height={600} fontSize={9} />
+                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={"NV"} electionType={"SMD"} width={500} height={600} fontSize={14} />
                 }
             /></>,
 

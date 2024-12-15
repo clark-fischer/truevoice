@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
 
-function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, characteristic, height, width }) {
+function PartySplitBarPlot({title ,x_label, y_label, fips, electionType,width=500, height=600, fontSize=10 }) {
 
     const [data, setData] = useState(null);
     const [error,setError] = useState(null);
@@ -13,6 +13,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
             try{
                 //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
                 const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
+
                 setData(response.data);
 
             }catch (err){
@@ -24,7 +25,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
         };
         fetchData();
 
-    }, [fips, electionType, characteristic]);
+    }, [fips, electionType]);
 
     if(error) return <div>Error: {error.message}</div>;
     if(!data) return <div>Loading...</div>;
@@ -64,9 +65,9 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
       ];
     
       const layout = {
-        title: title || `${data.electionType} Ensemble Summary: Distribution of Vote Share by Party`,
+        title: title || `${data.electionType} - Distribution of Vote Share by Party`,
         font: {
-          size: 14,
+          size: fontSize,
         },
         xaxis: {
           title: x_label || 'Democrat Points Advantage',
@@ -78,7 +79,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
           linewidth: 2,
         },
         yaxis: {
-          title: y_label || 'Frequency',
+          title: y_label || 'Number of Plans',
           tickmode: 'linear',
           dtick: 500, // Adjust dynamically if needed
           showline: true,
@@ -91,7 +92,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
         annotations: [
           {
             x: 1,
-            y: 0.97,
+            y: 1.02,
             xref: 'paper',
             yref: 'paper',
             text: `Average Seat Share: ${averageSeatShare}%<br>Vote Share: ${voteShare}%`,
@@ -99,9 +100,8 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
             font: {
               size: 12,
             },
-            align: 'left',
-            bgcolor: 'white',
-            bordercolor: 'black',
+            align: 'right',
+           
             borderwidth: 1,
           },
         ],
@@ -109,7 +109,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType, charact
         bargap: 0.1,
         margin: {
           l: 50,
-          r: 50,
+          r: 30,
           t: 50,
           b: 50,
         },

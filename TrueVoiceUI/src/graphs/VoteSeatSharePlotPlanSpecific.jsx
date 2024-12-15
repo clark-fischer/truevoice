@@ -3,15 +3,22 @@ import axios from 'axios';
 import seedrandom from "seedrandom";
 import "chart.js/auto";
 
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ReferenceLine } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ReferenceLine,ReferenceDot, Text } from "recharts";
 ///{fips}/{electionType}/{characteristic}/SEATVOTE
 function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionType, characteristic}){
 
     
     const [demData, setDemData] = useState([]);
     const [repData, setRepData] = useState([]);
-    //const [annotations, setAnnotations] = useState({ bias: 0, symmetry: 0, responsiveness: 0 });
-    //<p>Bias: {annotations.bias} | Symmetry: {annotations.symmetry} | Responsiveness: {annotations.responsiveness}</p>
+    const [annotations, setAnnotations] = useState({ 
+      bias: 0,
+      symmetry: 0, 
+      responsiveness: 0,
+      demVoteShare: 0,
+      demSeatShare: 0,
+      repVoteShare: 0,
+      repSeatShare: 0 });
+    
 
     
 
@@ -20,11 +27,20 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionT
             try{
                 const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}/SEATVOTE`);
             //const response = await axios.get(f`http://localhost:8080/${fips}/${electionType}/${characteristic}/SEATVOTE`);
+            const barResponse = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
+            
             const simulationData = response.data.curveData;
             const seed = seedrandom("42");
 
-            //setAnnotations({ bias: response.data.bias.toFixed(2), symmetry: response.data.symmetry.toFixed(2), responsiveness: response.data.responsiveness.toFixed(2) });
-
+            setAnnotations({
+              bias: parseFloat(response.data.bias.toFixed(2)),
+              symmetry: parseFloat(response.data.symmetry.toFixed(2)),
+              responsiveness: parseFloat(response.data.responsiveness.toFixed(2)),
+              demVoteShare: parseFloat(barResponse.data.democratAvgVoteShare.toFixed(2)),
+              demSeatShare: parseFloat(barResponse.data.democratAvgSeatShare.toFixed(2)),
+              repVoteShare: parseFloat(barResponse.data.republicanAvgVoteShare.toFixed(2)),
+              repSeatShare: parseFloat(barResponse.data.republicanAvgSeatShare.toFixed(2))
+            });
             
             
              
@@ -138,35 +154,80 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionT
 
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <h2 style={{ marginBottom: "10px" }}>{title || `${electionType} ${characteristic ? capitalizeFirstLetter(characteristic) : "loading..."}: Vote-Seat Share`}</h2>
-    
-          <LineChart width={600} height={350} data={demData}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis
-              type="number"
-              domain={[0, 1]}
-              dataKey="x"
-              tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
-              label={{ value: x_label || "Vote Share (%)", position: "insideBottom", offset: -5 }}
-            />
-            <YAxis
-              domain={[0, 1]}
-              tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
-              label={{ value: y_label || "Seat Share (%)", angle: -90, position: "insideLeft" }}
-    
-            />
-            <Tooltip
-              formatter={(value, name) => [`${(value * 100).toFixed(2)}%`, name]}
-              labelFormatter={(label) => `Vote Share: ${(label * 100).toFixed(0)}%`}
-              wrapperStyle={{ backgroundColor: "#f9f9f9", border: "1px solid #ccc", padding: "10px" }}
-              cursor={{ stroke: "gray", strokeWidth: 1 }}
-            />
-            <Legend />
-            <Line type="monotone" dataKey="y" name="Republican" data={repData} stroke="red" strokeWidth={3} dot={false} isAnimationActive={false} />
-            <Line type="monotone" dataKey="y" name="Democrat" data={demData} stroke="blue" strokeWidth={3} dot={false} isAnimationActive={false} />
-            <ReferenceLine x={0.5} stroke="gray" strokeDasharray="3 3" />
-            <ReferenceLine y={0.5} stroke="gray" strokeDasharray="3 3" />
-          </LineChart>
+          
+          <h2 style={{ marginBottom: "10px" }}>{title || `${electionType} - ${characteristic ? capitalizeFirstLetter(characteristic) : "loading..."} Vote-Seat Share`}</h2>
+          <div style={{ position: "relative" }}>
+
+            <LineChart width={800} height={380} data={demData}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                type="number"
+                domain={[0, 1]}
+                dataKey="x"
+                tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
+                label={{ value: x_label || "Vote Share (%)", position: "insideBottom", offset: -5 }}
+              />
+              <YAxis
+                domain={[0, 1]}
+                tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
+                label={{ value: y_label || "Seat Share (%)", angle: -90, position: "insideLeft" }}
+      
+              />
+              <Tooltip
+                formatter={(value, name) => [`${(value * 100).toFixed(2)}%`, name]}
+                labelFormatter={(label) => `Vote Share: ${(label * 100).toFixed(0)}%`}
+                wrapperStyle={{ backgroundColor: "#f9f9f9", border: "1px solid #ccc", padding: "10px" }}
+                cursor={{ stroke: "gray", strokeWidth: 1 }}
+              />
+              <Legend />
+              <Line type="monotone" dataKey="y" name="Republican" data={repData} stroke="red" strokeWidth={3} dot={false} isAnimationActive={false} />
+              <Line type="monotone" dataKey="y" name="Democrat" data={demData} stroke="blue" strokeWidth={3} dot={false} isAnimationActive={false} />
+              
+              <ReferenceDot
+                  x={annotations.demVoteShare}
+                  y={annotations.demSeatShare}
+                  r={6}
+                  fill="blue"
+                  stroke="white"
+                  label={{ position: "top", fill: "blue" }}
+                  />
+              <ReferenceDot
+                  x={annotations.repVoteShare}
+                  y={annotations.repSeatShare}
+                  r={6}
+                  fill="red"
+                  stroke="white"
+                  label={{  position: "top", fill: "red" }}
+                    />
+      
+            </LineChart>
+
+              <div style={{
+                      position: "absolute",
+                      top: "10px",
+                      left: "70px",
+                      padding: "8px",
+                      borderRadius: "4px",
+                      fontSize: "12px",
+                     
+                    }}>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <div style={{ backgroundColor: "blue", width: 10, height: 10, marginRight: 5 }}></div>
+                        <strong>{electionType} Ensemble Dem </strong> 
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        <div style={{ backgroundColor: "red", width: 10, height: 10, marginRight: 5 }}></div>
+                        <strong>{electionType} Ensemble Rep </strong> 
+                      </div>
+
+                      <div><strong>Partisian Bias:</strong> {annotations.bias}</div>
+                      <div><strong>Symmetry:</strong> {annotations.symmetry}</div>
+                      <div><strong>Responsiveness:</strong> {annotations.responsiveness}</div>
+            </div>
+            
+          </div>
+
+          
         </div>
       );
 
