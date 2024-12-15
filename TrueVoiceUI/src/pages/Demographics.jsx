@@ -57,14 +57,10 @@ const styles = {
 import nv_district_map from "../datafiles/nv_smd.json"
 import nv_precinct_map from "../datafiles/nv_precinct.json"
 
-import co_district_map from "../datafiles/nv_smd.json"
+import co_district_map from "../datafiles/co_smd.json"
 import co_precinct_map from "../datafiles/nv_precinct.json"
 
-import co_mmd_summary from "../datafiles/ensemble_summary/co_mmd_summary_data_plan_specific.json"
-import nv_mmd_summary from "../datafiles/ensemble_summary/nv_mmd_summary_data_plan_specific.json"
 
-import co_smd_summary from "../datafiles/ensemble_summary/co_smd_summary_data_plan_specific.json"
-import nv_smd_summary from "../datafiles/ensemble_summary/nv_smd_summary_data_plan_specific.json"
 
 
 const Demographics = (props) => {

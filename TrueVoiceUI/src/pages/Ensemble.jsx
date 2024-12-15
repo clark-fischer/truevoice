@@ -65,7 +65,7 @@ const PlotCarousel = (props) => {
 
         <PlotComparison
             plot1={
-                <OpportunityDistrictsPlot fips={"NV"} electionType={"MMD"} width={400} height={600} fontSize={9} />
+                <OpportunityDistrictsPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
             }
             plot2={
                 <OpportunityDistrictsPlot electionType={"SMD"} width={400} height={600} fontSize={9} />
@@ -74,7 +74,7 @@ const PlotCarousel = (props) => {
 
         <PlotComparison
             plot1={
-                <PartySplitBarPlot fips={"NV"} electionType={"MMD"} width={400} height={600} fontSize={9} />
+                <PartySplitBarPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
             }
             plot2={
                 <PartySplitBarPlot electionType={"SMD"} width={400} height={600} fontSize={9} />
@@ -105,10 +105,10 @@ const PlotCarousel = (props) => {
 
             <PlotComparison
                 plot1={
-                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={"NV"} electionType={"MMD"} width={500} height={600} fontSize={9} />
+                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={super_props.state} electionType={"MMD"} width={500} height={600} fontSize={9} />
                 }
                 plot2={
-                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={"NV"} electionType={"SMD"} width={500} height={600} fontSize={9} />
+                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={super_props.state} electionType={"SMD"} width={500} height={600} fontSize={9} />
                 }
             /></>,
 
