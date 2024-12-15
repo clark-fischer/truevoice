@@ -240,7 +240,7 @@ export default function State() {
     let sum_data = (data.electionType === "SMD") ? smd_summary : mmd_summary;
     const split = sum_data.interesting_plans_summary.find(item => item.characteristic === data.characteristic).districts_summary.filter(obj => obj.partyWinner === "REPUBLICAN").length;
     const split2 = sum_data.interesting_plans_summary.find(item => item.characteristic === data.characteristic).districts_summary.filter(obj => obj.partyWinner === "DEMOCRAT").length;
-    document.getElementById("partysplit").innerText = `${split} and  ${split2}`;
+    document.getElementById("partysplit").innerText = `${split2} and  ${split}`;
 
     setPlanData2(data);
   }
@@ -336,7 +336,7 @@ export default function State() {
   const buildStyle = (feature) => {
     return {
       color: "black",
-      weight: 3,
+      weight: 2,
       fillOpacity: 0,
 
 
@@ -504,13 +504,31 @@ export default function State() {
 
   const plan_options_mmd = [
     {
-      title: "MMD",
+      title: "Average",
       image: "/dem_co.png",
       path: "http://localhost:8080/CO/MMD/AVERAGE",
     },
+
+    {
+      title: "Fair",
+      image: "/dem_co.png",
+      path: "http://localhost:8080/CO/MMD/FAIR",
+    },
+
+    {
+      title: "Democratic Favored",
+      image: "/dem_co.png",
+      path: "http://localhost:8080/CO/MMD/DEMFAVORED",
+    },
+
+    {
+      title: "Republican Favored",
+      image: "/rep_co.png",
+      path: "http://localhost:8080/CO/MMD/REPFAVORED",
+    },
     {
       title: "Hide",
-      image: "/dem_co.png",
+      image: "/hide.png",
       path: "http://localhost:8080/CO/SMD/NULL"
     },
   ]
@@ -664,39 +682,3 @@ export default function State() {
     </>
   );
 }
-
-const ComparisonTable = ({ data1, data2 }) => {
-  data1 = JSON.parse(data1);
-  data2 = JSON.parse(data2);
-
-  const getAlignmentStyle = (value) => ({
-    textAlign: typeof value === 'number' ? 'left' : 'left',
-  });
-
-  // formatNumberWithCommas
-
-  return (
-    <table border="1" style={{ borderCollapse: 'collapse', width: '85%', margin: '5px 5px' }}>
-      <thead>
-        <tr style={{
-          fontSize: "18px",
-          fontWeight: "bold",
-          marginBottom: "5px",
-        }}>
-          <th style={{ textAlign: 'left' }} >Comparison</th>
-          <th style={{ textAlign: 'left' }}>SMD</th>
-          <th style={{ textAlign: 'left' }}>MMD</th>
-        </tr>
-      </thead>
-      <tbody>
-        {Object.keys(data1).map((key) => (
-          <tr key={key}>
-            <td style={{ textAlign: 'left' }}>{key}</td>
-            <td style={getAlignmentStyle(data1[key])}>{data1[key]}</td>
-            <td style={getAlignmentStyle(data2[key])}>{data2[key]}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-};

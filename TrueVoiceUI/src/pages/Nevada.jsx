@@ -240,7 +240,7 @@ export default function State() {
     let sum_data = (data.electionType === "SMD") ? smd_summary : mmd_summary;
     const split = sum_data.interesting_plans_summary.find(item => item.characteristic === data.characteristic).districts_summary.filter(obj => obj.partyWinner === "REPUBLICAN").length;
     const split2 = sum_data.interesting_plans_summary.find(item => item.characteristic === data.characteristic).districts_summary.filter(obj => obj.partyWinner === "DEMOCRAT").length;
-    document.getElementById("partysplit").innerText = `${split} and  ${split2}`;
+    document.getElementById("partysplit").innerText = `${split2} and  ${split}`;
 
     setPlanData2(data);
   }

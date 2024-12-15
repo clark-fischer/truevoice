@@ -48,7 +48,7 @@ const styles = {
   controlsContainer: {
     padding: "20px",
     // background: "#f8f8f8",
-    width: "600px",
+    width: "800px",
     // height: "100px",
     // border: "1px solid red",
     boxSizing: "border-box",
