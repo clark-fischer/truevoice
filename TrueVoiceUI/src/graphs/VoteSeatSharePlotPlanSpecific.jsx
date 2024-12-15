@@ -5,7 +5,7 @@ import "chart.js/auto";
 
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ReferenceLine,ReferenceDot, Text } from "recharts";
 ///{fips}/{electionType}/{characteristic}/SEATVOTE
-function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionType, characteristic}){
+function VoteSeatSharePlotPlanSpecific({width, title, x_label, y_label, fips, electionType, characteristic}){
 
     
     const [demData, setDemData] = useState([]);
@@ -158,7 +158,7 @@ function VoteSeatSharePlotPlanSpecific({title, x_label, y_label, fips, electionT
           <h2 style={{ marginBottom: "10px" }}>{title || `${electionType} - ${characteristic ? capitalizeFirstLetter(characteristic) : "loading..."} Vote-Seat Share`}</h2>
           <div style={{ position: "relative" }}>
 
-            <LineChart width={800} height={380} data={demData}>
+            <LineChart width={700} height={380} data={demData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis
                 type="number"

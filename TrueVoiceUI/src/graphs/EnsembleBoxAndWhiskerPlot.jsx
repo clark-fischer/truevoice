@@ -27,7 +27,6 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
   if (!data) return <div>Loading...</div>;
 
   const sortedBoxes = data.boxes;
-
   const bins = sortedBoxes.map((box) => {
     if (electionType === "MMD" && box.totalRepresentatives) {
       return `${box["binNo"]} (${box.totalRepresentatives} reps)`;
@@ -107,7 +106,6 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
 
-
       <Plot
         data={traces}
         layout={{
@@ -122,7 +120,6 @@ function EnsembleBoxAndWhiskerPlot({ title, x_label, y_label, fips, electionType
             title: y_label || "Population Percent (%)",
             zeroline: false,
           },
-
           height: height,
           width: width,
           showlegend: true,

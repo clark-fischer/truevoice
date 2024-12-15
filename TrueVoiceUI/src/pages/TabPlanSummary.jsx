@@ -113,8 +113,10 @@ const TabPlanSummary = (props) => {
         <hr />
 
         {/* Seat/Vote share chart */}
-
-        <FRAResult fips="NV" characteristic="FAIR"></FRAResult> 
+        {
+          summary_stats.electionType === "MMD" ? <FRAResult fips={props.state} characteristic="FAIR"></FRAResult>  :<></>
+        }
+        
 
       </div>
 

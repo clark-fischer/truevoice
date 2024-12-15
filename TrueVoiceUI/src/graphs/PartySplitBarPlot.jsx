@@ -13,7 +13,6 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType,width=50
             try{
                 //const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/${characteristic}`);
                 const response = await axios.get(`http://localhost:8080/${fips}/${electionType}/BAR`);
-
                 setData(response.data);
 
             }catch (err){

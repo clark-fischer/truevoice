@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 //opp representative
-function OpportunityDistrictsPlot({title ,x_label, y_label, fips='NV', electionType, height=600, width=800, fontSize=14}) {
+function OpportunityDistrictsPlot({title ,x_label, y_label, fips='NULL', electionType, height=600, width=800, fontSize=14}) {
 
     const [data, setData] = useState(null);
     const [error,setError] = useState(null);
