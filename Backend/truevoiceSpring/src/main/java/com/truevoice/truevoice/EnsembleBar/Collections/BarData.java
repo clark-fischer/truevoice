@@ -13,5 +13,7 @@ public class BarData {
     private int opportunityDistricts;
     private double democratsPercentage;
     private double republicanPercentage;
+    private int democratsSeatsPercentage;
+    private int republicanSeatsPercentage;
 }
 
