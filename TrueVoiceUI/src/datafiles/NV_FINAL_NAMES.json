@@ -1,0 +1,201 @@
+{
+  "fips": "NV",
+  "electionType": "SMD",
+  "interesting_plans_summary": [
+    {
+      "characteristic": "AVERAGE",
+      "partyWinner": "DEMOCRAT",
+      "totalDistricts": 4,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 213060.12106172385,
+          "loserVote": 182828.85293827613,
+          "winner_name": "Mark Robertson",
+          "loser_name": "Dina Titus"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 267877.0413498596,
+          "loserVote": 223480.33165014032,
+          "winner_name": "Greg Kidd",
+          "loser_name": "Mark Amodei"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 186835.43048342192,
+          "loserVote": 137359.53151657808,
+          "winner_name": "Susie Lee",
+          "loser_name": "Drew Johnson"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 179455.21267941644,
+          "loserVote": 162581.48232058354,
+          "winner_name": "John Lee",
+          "loser_name": "Steven Horsford"
+        }
+      ]
+    },
+    {
+      "characteristic": "DEMFAVORED",
+      "partyWinner": "DEMOCRAT",
+      "totalDistricts": 4,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 199315.39722970803,
+          "loserVote": 94648.71477029196,
+          "winner_name": "Dina Titus",
+          "loser_name": "Mark Robertson"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 256047.8177814058,
+          "loserVote": 235432.21021859415,
+          "winner_name": "Mark Amodei",
+          "loser_name": "Greg Kidd"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 192918.72208454908,
+          "loserVote": 157748.5559154509,
+          "winner_name": "Susie Lee",
+          "loser_name": "Drew Johnson"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 230154.88481591907,
+          "loserVote": 187211.7011840809,
+          "winner_name": "John Lee",
+          "loser_name": "Steven Horsford"
+        }
+      ]
+    },
+    {
+      "characteristic": "FAIR",
+      "partyWinner": "DEMOCRAT",
+      "totalDistricts": 4,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 162114.4395513091,
+          "loserVote": 159941.99644869086,
+          "winner_name": "Mark Robertson",
+          "loser_name": "Dina Titus"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 229557.60246121782,
+          "loserVote": 214975.86353878217,
+          "winner_name": "Greg Kidd",
+          "loser_name": "Mark Amodei"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 155508.02184037436,
+          "loserVote": 154185.2711596256,
+          "winner_name": "Susie Lee",
+          "loser_name": "Drew Johnson"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 251347.35337804168,
+          "loserVote": 225847.45562195833,
+          "winner_name": "Steven Horsford",
+          "loser_name": "John Lee"
+        }
+      ]
+    },
+    {
+      "characteristic": "REPFAVORED",
+      "partyWinner": "DEMOCRAT",
+      "totalDistricts": 4,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 157339.80164166295,
+          "loserVote": 125462.70535833703,
+          "winner_name": "Mark Robertson",
+          "loser_name": "Dina Titus"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 270750.1671293654,
+          "loserVote": 205676.96587063462,
+          "winner_name": "Greg Kidd",
+          "loser_name": "Mark Amodei"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 223614.94466411296,
+          "loserVote": 191335.09733588703,
+          "winner_name": "Susie Lee",
+          "loser_name": "Drew Johnson"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 201585.8811348996,
+          "loserVote": 177712.4408651004,
+          "winner_name": "John Lee",
+          "loser_name": "Steven Horsford"
+        }
+      ]
+    },
+    {
+      "characteristic": "ENACTED",
+      "partyWinner": "DEMOCRAT",
+      "totalDistricts": 4,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 213153.44214967507,
+          "loserVote": 126278.6378503249,
+          "winner_name": "Dina Titus",
+          "loser_name": "Mark Robertson"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 206370.83227146367,
+          "loserVote": 205526.7837285363,
+          "winner_name": "Greg Kidd",
+          "loser_name": "Mark Amodei"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 200113.50409099995,
+          "loserVote": 184668.21790900003,
+          "winner_name": "Susie Lee",
+          "loser_name": "Drew Johnson"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 230154.88481591907,
+          "loserVote": 187211.7011840809,
+          "winner_name": "John Lee",
+          "loser_name": "Steven Horsford"
+        }
+      ]
+    }
+  ]
+}

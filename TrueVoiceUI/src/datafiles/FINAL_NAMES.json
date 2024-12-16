@@ -1,0 +1,356 @@
+{
+  "fips": "CO",
+  "electionType": "SMD",
+  "interesting_plans_summary": [
+    {
+      "characteristic": "AVERAGE",
+      "totalDistricts": 8,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 173386.84298109866,
+          "loserVote": 119068.85301890137,
+          "winner_name": "Jennifer Qualteri",
+          "loser_name": "Diana DeGette"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 192945.15754967212,
+          "loserVote": 113345.54145032786,
+          "winner_name": "Joe Neguse",
+          "loser_name": "Marshall Dawson"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 152838.0669583291,
+          "loserVote": 141483.4280416709,
+          "winner_name": "Lauren Boebert",
+          "loser_name": "Adam Frisch"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 187637.3396246366,
+          "loserVote": 89933.8113753634,
+          "winner_name": "Ken Buck",
+          "loser_name": "Ike McCorkle"
+        },
+        {
+          "districtId": 5,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 182972.00533687795,
+          "loserVote": 128070.49266312204,
+          "winner_name": "Doug Lamborn",
+          "loser_name": "David Torres"
+        },
+        {
+          "districtId": 6,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 168237.05998443803,
+          "loserVote": 119820.85301556194,
+          "winner_name": "Steve Monahan",
+          "loser_name": "Jason Crow"
+        },
+        {
+          "districtId": 7,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 187873.66895171054,
+          "loserVote": 146691.17204828942,
+          "winner_name": "Erik Aadland",
+          "loser_name": "Brittany Pettersen"
+        },
+        {
+          "districtId": 8,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 228616.2932450597,
+          "loserVote": 81274.20975494028,
+          "winner_name": "Yadira Caraveo",
+          "loser_name": "Barbara Kirkmeyer"
+        }
+      ]
+    },
+    {
+      "characteristic": "DEMFAVORED",
+      "totalDistricts": 8,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 164333.4523294769,
+          "loserVote": 147727.3226705231,
+          "winner_name": "Diana DeGette",
+          "loser_name": "Jennifer Qualteri"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 160869.7253742174,
+          "loserVote": 152407.49862578258,
+          "winner_name": "Joe Neguse",
+          "loser_name": "Marshall Dawson"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 228533.52639370135,
+          "loserVote": 62007.30860629865,
+          "winner_name": "Lauren Boebert",
+          "loser_name": "Adam Frisch"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 143871.41635627975,
+          "loserVote": 142515.98364372025,
+          "winner_name": "Ken Buck",
+          "loser_name": "Ike McCorkle"
+        },
+        {
+          "districtId": 5,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 141828.6362772488,
+          "loserVote": 136320.1957227512,
+          "winner_name": "Doug Lamborn",
+          "loser_name": "David Torres"
+        },
+        {
+          "districtId": 6,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 198305.30653008795,
+          "loserVote": 136125.33546991204,
+          "winner_name": "Jason Crow",
+          "loser_name": "Steve Monahan"
+        },
+        {
+          "districtId": 7,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 162293.48591937465,
+          "loserVote": 106650.93008062536,
+          "winner_name": "Erik Aadland",
+          "loser_name": "Brittany Pettersen"
+        },
+        {
+          "districtId": 8,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 188091.68479226236,
+          "loserVote": 142312.98720773763,
+          "winner_name": "Yadira Caraveo",
+          "loser_name": "Barbara Kirkmeyer"
+        }
+      ]
+    },
+    {
+      "characteristic": "FAIR",
+      "totalDistricts": 8,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 179239.6914407416,
+          "loserVote": 125751.3455592584,
+          "winner_name": "Jennifer Qualteri",
+          "loser_name": "Diana DeGette"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 143179.39510026466,
+          "loserVote": 143163.27189973532,
+          "winner_name": "Marshall Dawson",
+          "loser_name": "Joe Neguse"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 167989.71037953513,
+          "loserVote": 166148.48362046486,
+          "winner_name": "Adam Frisch",
+          "loser_name": "Lauren Boebert"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 148073.2255953106,
+          "loserVote": 125774.02340468939,
+          "winner_name": "Ken Buck",
+          "loser_name": "Ike McCorkle"
+        },
+        {
+          "districtId": 5,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 190339.14001379075,
+          "loserVote": 130334.42098620924,
+          "winner_name": "Doug Lamborn",
+          "loser_name": "David Torres"
+        },
+        {
+          "districtId": 6,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 199362.1618182786,
+          "loserVote": 116861.66818172138,
+          "winner_name": "Jason Crow",
+          "loser_name": "Steve Monahan"
+        },
+        {
+          "districtId": 7,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 219793.98976919407,
+          "loserVote": 58872.39823080592,
+          "winner_name": "Brittany Pettersen",
+          "loser_name": "Erik Aadland"
+        },
+        {
+          "districtId": 8,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 156494.8120730807,
+          "loserVote": 142817.05792691925,
+          "winner_name": "Barbara Kirkmeyer",
+          "loser_name": "Yadira Caraveo"
+        }
+      ]
+    },
+    {
+      "characteristic": "REPFAVORED",
+      "totalDistricts": 8,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 193870.19012392178,
+          "loserVote": 87456.12787607822,
+          "winner_name": "Diana DeGette",
+          "loser_name": "Jennifer Qualteri"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 164663.08951357295,
+          "loserVote": 126873.89648642705,
+          "winner_name": "Marshall Dawson",
+          "loser_name": "Joe Neguse"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 172151.59254499292,
+          "loserVote": 124490.24645500707,
+          "winner_name": "Adam Frisch",
+          "loser_name": "Lauren Boebert"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 259643.29647065356,
+          "loserVote": 73362.14252934638,
+          "winner_name": "Ken Buck",
+          "loser_name": "Ike McCorkle"
+        },
+        {
+          "districtId": 5,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 165425.50955599523,
+          "loserVote": 152511.16144400474,
+          "winner_name": "David Torres",
+          "loser_name": "Doug Lamborn"
+        },
+        {
+          "districtId": 6,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 159600.92472263688,
+          "loserVote": 151588.27827736316,
+          "winner_name": "Steve Monahan",
+          "loser_name": "Jason Crow"
+        },
+        {
+          "districtId": 7,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 189874.72562379364,
+          "loserVote": 99247.15937620634,
+          "winner_name": "Brittany Pettersen",
+          "loser_name": "Erik Aadland"
+        },
+        {
+          "districtId": 8,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 151401.94489453264,
+          "loserVote": 142034.51010546734,
+          "winner_name": "Barbara Kirkmeyer",
+          "loser_name": "Yadira Caraveo"
+        }
+      ]
+    },
+    {
+      "characteristic": "ENACTED",
+      "totalDistricts": 8,
+      "districts_summary": [
+        {
+          "districtId": 1,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 234137.2067989488,
+          "loserVote": 56137.15420105117,
+          "winner_name": "Diana DeGette",
+          "loser_name": "Jennifer Qualteri"
+        },
+        {
+          "districtId": 2,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 209604.0068422061,
+          "loserVote": 94529.40715779389,
+          "winner_name": "Joe Neguse",
+          "loser_name": "Marshall Dawson"
+        },
+        {
+          "districtId": 3,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 185006.34286615823,
+          "loserVote": 148617.66213384175,
+          "winner_name": "Adam Frisch",
+          "loser_name": "Lauren Boebert"
+        },
+        {
+          "districtId": 4,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 179818.7474532149,
+          "loserVote": 106778.3685467851,
+          "winner_name": "Ike McCorkle",
+          "loser_name": "Ken Buck"
+        },
+        {
+          "districtId": 5,
+          "partyWinner": "REPUBLICAN",
+          "winnerVote": 172045.00255745443,
+          "loserVote": 123156.24144254555,
+          "winner_name": "David Torres",
+          "loser_name": "Doug Lamborn"
+        },
+        {
+          "districtId": 6,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 178418.3351120513,
+          "loserVote": 127970.0068879487,
+          "winner_name": "Jason Crow",
+          "loser_name": "Steve Monahan"
+        },
+        {
+          "districtId": 7,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 179079.32645717158,
+          "loserVote": 133574.0405428284,
+          "winner_name": "Brittany Pettersen",
+          "loser_name": "Erik Aadland"
+        },
+        {
+          "districtId": 8,
+          "partyWinner": "DEMOCRAT",
+          "winnerVote": 148503.47498920638,
+          "loserVote": 136834.8640107936,
+          "winner_name": "Yadira Caraveo",
+          "loser_name": "Barbara Kirkmeyer"
+        }
+      ]
+    }
+  ]
+}

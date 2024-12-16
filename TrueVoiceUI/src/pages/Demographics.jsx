@@ -60,7 +60,7 @@ import nv_district_map from "../datafiles/nv_smd.json"
 import nv_precinct_map from "../datafiles/nv_precinct.json"
 
 import co_district_map from "../datafiles/co_smd.json"
-import co_precinct_map from "../datafiles/nv_precinct.json"
+import co_precinct_map from "../datafiles/co_precinct.json"
 
 
 
@@ -198,6 +198,15 @@ const Demographics = (props) => {
                 <tr>
                   <td style={{ textAlign: 'left', fontSize: 'large' }}>Is Opportunity District?</td>
                   <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="isOpportunityDistrict"></span></td>
+                </tr>
+
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }}>Won by:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="wonBy"></span></td>
+                </tr>
+                <tr>
+                  <td style={{ textAlign: 'left', fontSize: 'large' }} id="hello">Lost by:</td>
+                  <td style={{ textAlign: 'right', fontSize: 'large' }}><span id="lostBy"></span></td>
                 </tr>
               </tbody>
             </table>

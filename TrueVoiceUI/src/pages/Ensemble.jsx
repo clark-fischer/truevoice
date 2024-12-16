@@ -5,7 +5,7 @@ import OpportunityRepresentativesPlot from '../graphs/OpportunityRepresentatives
 import OpportunityDistrictsPlot from '../graphs/OpportunityDistrictPlot';
 import PartySplitBarPlot from "../graphs/PartySplitBarPlot";
 import SMDBoxAndWhiskerPlot from '../graphs/EnsembleBoxAndWhiskerPlot';
-import { Row, Col } from 'react-bootstrap';
+// import { Row, Col } from 'react-bootstrap';
 
 import {
     Button,
@@ -78,7 +78,7 @@ const PlotCarousel = (props) => {
                 <PartySplitBarPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
             }
             plot2={
-                <PartySplitBarPlot electionType={"SMD"} width={400} height={600} fontSize={9} />
+                <PartySplitBarPlot fips={super_props.state} electionType={"SMD"} width={400} height={600} fontSize={9} />
             }
         /> </>,
 
@@ -113,7 +113,7 @@ const PlotCarousel = (props) => {
                 }
             /></>,
 
-        <PrettyTable />,
+        <PrettyTable key={1} state={super_props.state} />,
 
         // <SMDBoxAndWhiskerPlot fips={super_props.state} characteristic={super_props.characteristic} electionType={super_props.electionType} />
 
@@ -167,19 +167,19 @@ import nv_mmd_summary from "../datafiles/ensemble_summary/nv_mmd_summary_data_pl
 
 import co_smd_summary from "../datafiles/ensemble_summary/co_smd_summary_data_plan_specific.json"
 import nv_smd_summary from "../datafiles/ensemble_summary/nv_smd_summary_data_plan_specific.json"
-import { m } from 'framer-motion';
+// import { m } from 'framer-motion';
 
-function PrettyTable({state="NV"}) {
+function PrettyTable({state}) {
     const sty1 = { border: "1px solid black", padding: "10px", backgroundColor: "#f2f2f2" };
     const sty2 = { border: "1px solid black", padding: "10px" };
 
     React.useEffect(() => {
         const fetchData = async () => {
             try {
-                let smd = await axios.get("http://localhost:8080/NV/SMD/ENACTED");
+                let smd = await axios.get(`http://localhost:8080/${state}/SMD/ENACTED`);
                 smd = smd.data;
 
-                let mmd = await axios.get("http://localhost:8080/NV/MMD/AVERAGE");
+                let mmd = await axios.get(`http://localhost:8080/${state}/MMD/AVERAGE`);
                 mmd = mmd.data;
 
                 
@@ -198,16 +198,18 @@ function PrettyTable({state="NV"}) {
                 document.querySelector(".smd_vs").innerText = `${smd.voteShare}`;
                 document.querySelector(".mmd_vs").innerText = `${mmd.voteShare}`;
 
-                document.querySelector(".smd_seat").innerText = `${smd.seatShare}`;
-                document.querySelector(".mmd_seat").innerText = `${mmd.seatShare}`;
+                // document.querySelector(".smd_seat").innerText = `${smd.seatShare}`;
+                // document.querySelector(".mmd_seat").innerText = `${mmd.seatShare}`;
                 
 
                 function sumDemocratRepresentatives(districtsSummary) {
                     return districtsSummary
-                        .filter(district => district.partyWinner === "DEMOCRAT")
+                        .filter(district => district.partyWinner === "REPUBLICAN")
                         .reduce((total, district) => total + district.totalRepresentatives, 0);
                 }
-                const split = smd.districts_summary.filter(obj => obj.partyWinner === "REPUBLICAN").length;
+                
+                const split = smd.districts_summary.filter(obj => obj.partyWinner === "DEMOCRAT").length;
+
                 const split2 = sumDemocratRepresentatives(mmd.districts_summary)
 
                 document.querySelector(".smd_dr_split").innerText = `${split} and ${smd.districts_summary.length - split}`;
@@ -248,9 +250,9 @@ function PrettyTable({state="NV"}) {
                     <td style={sty2}><div className="mmd_vs"></div></td>
                 </tr>
                 <tr>
-                    <td style={sty2}>Seat Share</td>
-                    <td style={sty2}><div className="smd_seat"></div></td>
-                    <td style={sty2}><div className="mmd_seat"></div></td>
+                    <td style={sty2}>Type of Plan</td>
+                    <td style={sty2}><div className="smd_seat">Enacted</div></td>
+                    <td style={sty2}><div className="mmd_seat">Accurate</div></td>
                 </tr>
             </tbody>
         </table>

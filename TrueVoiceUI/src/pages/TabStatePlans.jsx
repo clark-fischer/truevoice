@@ -55,9 +55,12 @@ const TabStatePlans = (props) => {
     };
 
 
-    const [selectedBoxes, setSelectedBoxes] = useState([false, false, false, false]);
+    const [selectedBoxes, setSelectedBoxes] = useState([true, false, false, false, false, false]);
 
-    // const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
+    const [overlaySelectedBoxes, setOverlaySelectedBoxes] = [props.overlaySelectedBoxes, props.setOverlaySelectedBoxes];
+    
+
+    const s = props.state == "NV" ? ".jpeg" : "_co.png"
 
     return (
         <TabPanel padding={0} >
@@ -79,7 +82,7 @@ const TabStatePlans = (props) => {
                             overflow="hidden"
                             p={5}
                             onClick={() => {
-                                setSelectedBoxes([index === 0, index === 1, index === 2, index === 3])
+                                setSelectedBoxes([index === 0, index === 1, index === 2, index === 3, index === 4, index === 5])
                                 const fetchData = async () => {
                                     try {
                                         const response = await axios.get(item.path);
@@ -119,7 +122,7 @@ const TabStatePlans = (props) => {
 
                 <hr />
 
-                {/* <div style={{ margin: "20px 0 0 10px" }}>
+                 <div style={{ margin: "20px 0 0 10px" }}>
                     Overlay additional plans below:
                 </div>
 
@@ -141,6 +144,7 @@ const TabStatePlans = (props) => {
                             onClick={() => {
                                 const updatedOverlayBoxes = [...overlaySelectedBoxes];
                                 updatedOverlayBoxes[index] = !updatedOverlayBoxes[index];
+                                console.log(updatedOverlayBoxes);
                                 setOverlaySelectedBoxes(updatedOverlayBoxes);
                             }}
                             style={{
@@ -152,14 +156,14 @@ const TabStatePlans = (props) => {
                             <Heading size="sd">{title}</Heading>
                             <Center>
                                 <img
-                                    src={index === 0 ? "/dem.jpeg" : "/rep.jpeg"}
+                                    src={index === 1 ? `/rep${s}` : `/dem${s}`}
                                     style={{ width: "45px" }}
                                     alt={title}
                                 />
                             </Center>
                         </Box>
                     ))}
-                </div> */}
+                </div> 
 
 
             </div>

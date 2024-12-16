@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SideBySideImages from './SideBySideImages';
 import VoteSeatSharePlotPlanSpecific from '../graphs/VoteSeatSharePlotPlanSpecific';
-
+import FINAL_NAMES from "../datafiles/FINAL_NAMES.json"
 import {
   Box,
   Container,
@@ -204,6 +204,38 @@ export default function State() {
       document.getElementById("opportunityThreshold").innerText = `${roundToDecimalPlaces(result.opportunityThreshold, 2)}`;
       document.getElementById("isOpportunityDistrict").innerText = result.isOpportunityDistrict ? "Yes" : "No";
 
+      const f = geoJsonData.features.find(obj => obj.properties.districtno === districtno);
+
+      if (electionType == "SMD") {
+        document.getElementById("hello").style.display = "block"
+        document.getElementById("lostBy").style.display = "block"
+        let final_d = FINAL_NAMES.interesting_plans_summary.find(obj => obj.characteristic === characteristic).districts_summary.find(obj => obj.districtId === districtno);
+
+        const winner = final_d.partyWinner === "DEMOCRAT" ? "(D)" : "(R)";
+        const los = final_d.partyWinner === "DEMOCRAT" ? "(R)": "(D)" ;
+        const by_how_much = (f.properties.demRatio) * (result.totalPopulation);
+
+        document.getElementById("wonBy").innerText = `${final_d.winner_name} ${winner} \n by ${formatNumberWithCommas(Math.floor(final_d.winnerVote))} votes `;
+
+        document.getElementById("lostBy").innerText = `${final_d.loser_name} ${los} \n by ${formatNumberWithCommas(Math.floor(final_d.loserVote))} votes `;
+
+        
+
+      } if (electionType == "MMD") {
+        document.getElementById("hello").style.display = "none"
+        document.getElementById("lostBy").style.display = "none"
+
+        const formattedData = Object.entries(f.properties.electionResult)
+        .map(([key, value]) => {
+          const party = key.startsWith("D") ? "Democratic" : "Republican";
+          return `${party}: ${formatNumberWithCommas(value)}`;
+        })
+        .join("\n");
+        document.getElementById("wonBy").innerText = formattedData
+
+        // .properties.electionResult = result.partyWinner;
+      }
+
       // document.getElementById("pert_stats").innerText = 
     };
 
@@ -237,10 +269,15 @@ export default function State() {
 
   const setPlanData = (data) => {
 
-    let sum_data = (data.electionType === "SMD") ? smd_summary : mmd_summary;
-    const split = sum_data.interesting_plans_summary.find(item => item.characteristic === data.characteristic).districts_summary.filter(obj => obj.partyWinner === "REPUBLICAN").length;
-    const split2 = sum_data.interesting_plans_summary.find(item => item.characteristic === data.characteristic).districts_summary.filter(obj => obj.partyWinner === "DEMOCRAT").length;
-    document.getElementById("partysplit").innerText = `${split2} and  ${split}`;
+    // let sum_data = (data.electionType === "SMD") ? smd_summary : mmd_summary;
+    // const split = sum_data.interesting_plans_summary.find(item => item.characteristic === data.characteristic).districts_summary.filter(obj => obj.partyWinner === "REPUBLICAN").length;
+    // const split2 = sum_data.interesting_plans_summary.find(item => item.characteristic === data.characteristic).districts_summary.filter(obj => obj.partyWinner === "DEMOCRAT").length;
+    // document.getElementById("partysplit").innerText = `${split2} and  ${split}`;
+
+
+    
+
+
 
     setPlanData2(data);
   }
@@ -252,6 +289,33 @@ export default function State() {
 
     setElectionType(data.crs.properties.electionType);
     setCharacteristic(data.crs.properties.characteristic);
+
+
+    let demsWon = 0;
+    if (data.crs.properties.electionType === "SMD") {
+      demsWon = data.features.reduce(
+        (count, feature) => count + (feature.properties.demRatio > 0.5 ? 1 : 0),
+        0
+      );
+    } else {
+
+      for(let i = 0; i < data.features.length; i++) {
+        const f = data.features[i];
+        console.log(f)
+        for (let j = 0; j < Object.keys(f.properties.electionResult).length; j++) {
+          console.log(Object.keys(f.properties.electionResult));
+          if (Object.keys(f.properties.electionResult)[j].startsWith("D")) {
+            demsWon++;
+          }
+        }
+      
+        
+      }
+    }
+
+    const split = data.crs.properties.fips == "NV" ? 4 : 8;
+    
+    document.getElementById("partysplit").innerText = `${demsWon} and  ${split - demsWon}`;
   }
 
   const setRaceMap = (data, p_or_d) => {
@@ -304,8 +368,11 @@ export default function State() {
   }
   
 
+  function scaleValue(value, max) {
+    return (value / max) * 80;
+}
 
-  function buildHeatmap(i) {
+   function buildHeatmap(i) {
     // setMaxValue(100)
 
     return (feature) => {
@@ -316,10 +383,10 @@ export default function State() {
 
 
 
-      // console.log(feature)
-      // console.log(raceStats)
       const data = raceStats[tractId];
-      const percentage = data[raceCheckBoxes[i]["label"]];
+      let maxValue = findMaxPercentage(raceStats, raceCheckBoxes[i].label)
+      let percentage = data[raceCheckBoxes[i]["label"]];
+      percentage = scaleValue(percentage, maxValue)
       
 
       return {
@@ -543,6 +610,9 @@ export default function State() {
     { id: "race--other", label: "other", hex: 'brown', checked: 0 },
   ]);
 
+  const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
+
+
   const rm = (json) => JSON.stringify(json, (key, value) => {
     return key === "districts_summary" ? undefined : value;
   });
@@ -650,7 +720,7 @@ export default function State() {
               <Tab key={1}>Demographics</Tab>
               <Tab key={4}>Vote Seat Share</Tab>
               <Tab key={2}>Plan Summary</Tab>
-              <Tab key={3}>Select State</Tab>
+              <Tab key={3}>Select Plan</Tab>
               <Tab key={5}>SMD vs. MMD</Tab>
             </TabList>
 
@@ -672,7 +742,9 @@ export default function State() {
 
               </TabPanel >
               <TabPlanSummary planData={planData} state={state} characteristic={characteristic} electionType={electionType} />
-              <TabStatePlans plan_options={plan_options} setGeoJsonData={setGeoJsonData} setPlanData={setPlanData} />
+              <TabStatePlans overlaySelectedBoxes={overlaySelectedBoxes} setOverlaySelectedBoxes={setOverlaySelectedBoxes} state={state} plan_options={plan_options} setGeoJsonData={setGeoJsonData} setPlanData={setPlanData} />
+
+  
               <Ensemble state={state} characteristic={characteristic} electionType={electionType} />
 
             </TabPanels>

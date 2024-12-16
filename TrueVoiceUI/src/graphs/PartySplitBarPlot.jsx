@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import Plot from 'react-plotly.js';
 import axios from 'axios';
@@ -36,6 +37,10 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType,width=50
     const below50 = diffValues.filter((val) => val < 0);
     const above50 = diffValues.filter((val) => val >= 0);
 
+
+    const maxAbs = Math.max(...diffValues.map(Math.abs));
+    const xRange = [-maxAbs, maxAbs];   
+
     
     const averageSeatShare = Number(data.democratAvgSeatShare * 100).toFixed(2).replace(/\.00$/, '');
     const voteShare = Number(data.democratAvgVoteShare * 100).toFixed(2).replace(/\.00$/, '');
@@ -70,7 +75,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType,width=50
         },
         xaxis: {
           title: x_label || 'Democrat Points Advantage',
-          range: [-0.7, 0.7], 
+          range: xRange, 
           tickmode: 'linear',
           dtick: 0.1, // Adjust tick spacing for better granularity
           showline: true,

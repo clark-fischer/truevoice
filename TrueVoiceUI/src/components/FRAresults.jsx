@@ -184,7 +184,7 @@ const ElectoralResultsTable = ({ fips, characteristic }) => {
   }
 
   // Render a single table
-  const renderTable = (candidates, numWinners) => {
+  const renderTable = (candidates, numWinners, n) => {
     const rows = candidates.map((candidate, index) => (
       <tr key={candidate.key}>
         <td>{candidate.candidate}</td>
@@ -195,10 +195,10 @@ const ElectoralResultsTable = ({ fips, characteristic }) => {
     ));
 
     return (
-      <table border="1" style={{ margin: "20px 0", width: "100%" }}>
+      <table border="1" style={{  width: "100%" }}>
         <thead>
           <tr style={{ fontWeight: "bold" }}>
-            <td>Candidate</td>
+            <td>Candidates (District {n})</td>
             <td>Party</td>
             <td>Votes</td>
             <td>Result</td>
@@ -223,15 +223,17 @@ const ElectoralResultsTable = ({ fips, characteristic }) => {
 
     return (
       <div>
-        {renderTable(firstTableCandidates, 3)}
-        {renderTable(secondTableCandidates, 5)}
+        {/* <p style={{fontWeight: "bold"}}>District 1</p> */}
+        {renderTable(firstTableCandidates, 3, 1)}
+        {/* <p style={{fontWeight: "bold"}}>District 2</p> */}
+        {renderTable(secondTableCandidates, 5, 2)}
       </div>
     );
   }
 
   if (fips === "NV") {
     const candidates = getCandidatesSorted(currentData["1"]);
-    return <div>{renderTable(candidates, 4)}</div>;
+    return <div>{renderTable(candidates, 4, 1)}</div>;
   }
 
   return <div>Invalid data structure.</div>;

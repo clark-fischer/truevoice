@@ -1,26 +1,27 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { Line } from "react-chartjs-2";
 import * as d3 from "d3";
-import { 
-    Chart as ChartJS,
-    CategoryScale, 
-    LinearScale, 
-    PointElement, 
-    LineElement, 
-    Title, 
-    Tooltip, 
-    Legend,
-    Filler, 
-  } from "chart.js";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+} from "chart.js";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 import axios from 'axios';
 
 
-function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, plan, characteristic}) {
+function VoteShareSeatSharePlot({ title, x_label, y_label, fips, electionType, plan, characteristic }) {
   const [chartData, setChartData] = useState(null);
   const [error, setError] = useState(null)
-  
+
   const aggregateDuplicates = (voteShare, seatShare) => {
     const aggregated = {};
     voteShare.forEach((vote, idx) => {
@@ -60,11 +61,16 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/NV/SMD/SEATVOTE');
-        //const response = await axios.get(f`http://localhost:8080/${fips}/${electionType}/${characteristic}/SEATVOTE`);
-        
+        // const response = await axios.get('http://localhost:8080/NV/SMD/SEATVOTE');
+
+        let response;
+        if (fips === "SMD") {
+          response = await axios.get(`http://localhost:8080/${fips}/${electionType}/ENACTED/SEATVOTE`);
+        } else {
+          response = await axios.get(f`http://localhost:8080/${fips}/${electionType}/AVERAGE/SEATVOTE`);
+        }
         const data = response.data;
-        
+
 
 
         const bias = data.bias;
@@ -73,19 +79,19 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
 
         const demData = data.curveData.map((entry) => [entry.demVoteShare, entry.demSeatShare]);
         const repData = data.curveData.map((entry) => [entry.repVoteShare, entry.repSeatShare]);
-  
+
         const sortedDem = demData.sort((a, b) => a[0] - b[0]);
         const sortedRep = repData.sort((a, b) => a[0] - b[0]);
-  
+
         const demVoteShare = sortedDem.map((d) => d[0]);
         const demSeatShare = sortedDem.map((d) => d[1]);
         const repVoteShare = sortedRep.map((r) => r[0]);
         const repSeatShare = sortedRep.map((r) => r[1]);
-        
+
         const demClean = aggregateDuplicates(demVoteShare, demSeatShare);
         const repClean = aggregateDuplicates(repVoteShare, repSeatShare);
-        
-        
+
+
 
         const interpolate = (x, y) => {
           const line = d3
@@ -95,7 +101,7 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
             .curve(d3.curveBasis); // Smooth spline curve
           return { x: x, y: y, path: line(x.map((_, i) => i)) };
         };
-  
+
         const demSmooth = interpolate(demClean.voteShare, demClean.seatShare);
         const repSmooth = interpolate(repClean.voteShare, repClean.seatShare);
 
@@ -103,7 +109,7 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
         console.log("Republicans Data:", repClean);
 
         setChartData({
-          
+
           datasets: [
             {
               label: "Democrats",
@@ -126,10 +132,10 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
           ],
         });
 
-        
+
       } catch (err) {
-        // setError(err);
-        setError("Loading extra long...");
+        setError(err);
+        // setError("Loading extra long...");
 
       }
     };
@@ -163,7 +169,7 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
       legend: {
         display: true,
         position: "top",
-        
+
       },
     },
   };
@@ -175,8 +181,8 @@ function VoteShareSeatSharePlot({ title, x_label, y_label , fips, electionType, 
       {chartData ? <Line data={chartData} options={options} /> : <p>Loading...</p>}
     </div>
   );
-  }
-  
+}
+
 
 
 export default VoteShareSeatSharePlot;
