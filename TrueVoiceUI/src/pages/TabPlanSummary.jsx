@@ -27,7 +27,7 @@ const TabPlanSummary = (props) => {
 
   if (props.planData != null) {
     summary_stats = props.planData;
-    delete summary_stats["fips"]
+    //  summary_stats["fips"]
     delete summary_stats["name"]
   }
 
@@ -75,6 +75,11 @@ const TabPlanSummary = (props) => {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
               <h2>SMD or MMD:</h2>
               <span>{summary_stats.electionType}</span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>
+              <h2>Vote Share (D% to R%):</h2>
+              <span>{summary_stats["fips"] == "NV" ? "52.6% to 47.3%" : "55.3% to 44.7%"}</span>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center' }}>

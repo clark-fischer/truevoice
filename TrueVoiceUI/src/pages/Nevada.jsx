@@ -496,10 +496,10 @@ export default function State() {
   const [maps, setMaps] = useState({});
 
   const urls = [
-    'http://localhost:8080/NV/SMD/DEMFAVORED',
-    'http://localhost:8080/NV/SMD/REPFAVORED',
-    'http://localhost:8080/NV/SMD/AVERAGE',
-    'http://localhost:8080/NV/SMD/FAIR'
+    `http://localhost:8080/${state}/${electionType}/DEMFAVORED`,
+     `http://localhost:8080/${state}/${electionType}/REPFAVORED`,
+      `http://localhost:8080/${state}/${electionType}/AVERAGE`,
+      `http://localhost:8080/${state}/${electionType}/FAIR`,
   ];
 
   const line_colors = {

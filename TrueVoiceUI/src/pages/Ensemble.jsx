@@ -54,6 +54,33 @@ const PlotCarousel = (props) => {
 
     const plots = [
 
+        <>
+
+        <Center>
+            <label style={{ marginBottom: "-5px" }}>
+                Select Comparison Basis:
+                <select
+                    value={comparisonBasis}
+                    onChange={(e) => setComparisonBasis(e.target.value)}
+                    style={{ marginLeft: "10px", padding: "5px" }}
+                >
+                    <option value="hispanic">Hispanic</option>
+                    <option value="black">Black</option>
+                    <option value="asian">Asian</option>
+                    <option value="white">White</option>
+                </select>
+            </label>
+        </Center>
+
+        <PlotComparison
+            plot1={
+                <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={super_props.state} electionType={"MMD"} width={500} height={600} fontSize={9} />
+            }
+            plot2={
+                <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={super_props.state} electionType={"SMD"} width={500} height={600} fontSize={9} />
+            }
+        /></>,
+
         <><PlotComparison
             plot1={
                 <OpportunityRepresentativesPlot fips={super_props.state} electionType={"MMD"} width={400} height={600} fontSize={9} />
@@ -86,32 +113,7 @@ const PlotCarousel = (props) => {
 
 
 
-        <>
-
-            <Center>
-                <label style={{ marginBottom: "-5px" }}>
-                    Select Comparison Basis:
-                    <select
-                        value={comparisonBasis}
-                        onChange={(e) => setComparisonBasis(e.target.value)}
-                        style={{ marginLeft: "10px", padding: "5px" }}
-                    >
-                        <option value="hispanic">Hispanic</option>
-                        <option value="black">Black</option>
-                        <option value="asian">Asian</option>
-                        <option value="white">White</option>
-                    </select>
-                </label>
-            </Center>
-
-            <PlotComparison
-                plot1={
-                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={super_props.state} electionType={"MMD"} width={500} height={600} fontSize={9} />
-                }
-                plot2={
-                    <SMDBoxAndWhiskerPlot comparisonBasis={comparisonBasis} setComparisonBasis={setComparisonBasis} fips={super_props.state} electionType={"SMD"} width={500} height={600} fontSize={9} />
-                }
-            /></>,
+       
 
         <PrettyTable key={1} state={super_props.state} />,
 
@@ -213,7 +215,7 @@ function PrettyTable({state}) {
                 const split2 = sumDemocratRepresentatives(mmd.districts_summary)
 
                 document.querySelector(".smd_dr_split").innerText = `${split} and ${smd.districts_summary.length - split}`;
-                document.querySelector(".mmd_dr_split").innerText = `${split2} and ${smd.districts_summary.length - split2}`;
+                // document.querySelector(".mmd_dr_split").innerText = `${split2} and ${smd.districts_summary.length - split2}`;
 
             } catch (err) {
                 console.log("inital error");
@@ -236,8 +238,8 @@ function PrettyTable({state}) {
             <tbody>
                 <tr>
                     <td style={sty2}>Democratic/Republican Splits</td>
-                    <td style={sty2}><div className="smd_dr_split"></div></td>
-                    <td style={sty2}><div className="mmd_dr_split"></div></td>
+                    <td style={sty2}><div className="smd_dr_split">{state == "CO" ? "5 and 3" : "2 and 2"}</div></td>
+                    <td style={sty2}><div className="mmd_dr_split"> {state == "CO" ? "5 and 3" : "2 and 2"} </div></td>
                 </tr>
                 <tr>
                     <td style={sty2}># of Opportunity Representatives</td>
@@ -246,13 +248,13 @@ function PrettyTable({state}) {
                 </tr>
                 <tr>
                     <td style={sty2}>Vote Share</td>
-                    <td style={sty2}><div className="smd_vs"></div></td>
-                    <td style={sty2}><div className="mmd_vs"></div></td>
+                    <td style={sty2}><div className="smd_vs">{state == "NV" ? "52.6% to 47.3%" : "55.3% to 44.7%"}</div></td>
+                    <td style={sty2}><div className="mmd_vs">{state == "NV" ? "52.6% to 47.3%" : "55.3% to 44.7%"}</div></td>
                 </tr>
                 <tr>
                     <td style={sty2}>Type of Plan</td>
                     <td style={sty2}><div className="smd_seat">Enacted</div></td>
-                    <td style={sty2}><div className="mmd_seat">Accurate</div></td>
+                    <td style={sty2}><div className="mmd_seat">Average</div></td>
                 </tr>
             </tbody>
         </table>

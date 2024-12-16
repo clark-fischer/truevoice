@@ -610,7 +610,44 @@ export default function State() {
     { id: "race--other", label: "other", hex: 'brown', checked: 0 },
   ]);
 
-  const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
+   const [overlaySelectedBoxes, setOverlaySelectedBoxes] = useState([false, false, false, false]);
+    const [maps, setMaps] = useState({});
+  
+    const urls = [
+      `http://localhost:8080/${state}/${electionType}/DEMFAVORED`,
+     `http://localhost:8080/${state}/${electionType}/REPFAVORED`,
+      `http://localhost:8080/${state}/${electionType}/AVERAGE`,
+      `http://localhost:8080/${state}/${electionType}/FAIR`,
+    ];
+  
+    const line_colors = {
+      DEMFAVORED: { color: 'blue', dashArray: '4 4', weight: 2, fillOpacity: 0 },
+      REPFAVORED: { color: 'red', dashArray: '4 4', weight: 2, fillOpacity: 0 },
+      AVERAGE: { color: 'green', dashArray: '', weight: 2, fillOpacity: 0 },
+      FAIR: { color: 'purple', dashArray: '', weight: 2, fillOpacity: 0 }
+  
+    };
+  
+    useEffect(() => {
+      overlaySelectedBoxes.forEach((isSelected, index) => {
+        if (isSelected && !maps[index]) {
+          fetch(urls[index])
+            .then((response) => response.json())
+            .then((data) => {
+              setMaps((prevMaps) => ({ ...prevMaps, [index]: data }));
+            })
+            .catch((error) => console.error(`Error fetching GeoJSON for index ${index}:`, error));
+        }
+      });
+    }, [overlaySelectedBoxes, maps]);
+    
+  
+    // for (let i = 0; i < 4; i++) {
+    //   const overlay = overlaySelectedBoxes[i];
+    //   if (overlay) {
+  
+    //   }
+    // }
 
 
   const rm = (json) => JSON.stringify(json, (key, value) => {
@@ -705,6 +742,15 @@ export default function State() {
                 }
 
                 <CustomLegend text={characteristic} />
+
+                {Object.entries(maps).map(([index, geoJson]) => {
+                          const type = urls[index].split('/').pop(); // Get the type from the URL
+                          return (
+                            overlaySelectedBoxes[index] && (
+                              <GeoJSON key={index} data={geoJson} style={line_colors[type]} />
+                            )
+                          );
+                        })}
 
 
               </MapContainer>

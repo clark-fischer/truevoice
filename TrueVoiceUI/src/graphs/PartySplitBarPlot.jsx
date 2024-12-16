@@ -30,7 +30,7 @@ function PartySplitBarPlot({title ,x_label, y_label, fips, electionType,width=50
     if(error) return <div>Error: {error.message}</div>;
     if(!data) return <div>Loading...</div>;
 
-    const diffValues = data.barData.map((d) => (d.democratsPercentage - d.republicanPercentage) * 10
+    const diffValues = data.barData.map((d) => (d.democratsSeatsPercentage - d.republicanSeatsPercentage) * 10
     );
 
     
