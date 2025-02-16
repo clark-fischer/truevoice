@@ -115,10 +115,33 @@ cd truevoice
   Dive into simulation results, view district boundaries, and explore demographic information as well as voting patterns.
 
 - **API Endpoints:**  
-  The backend exposes RESTful endpoints such as:
-  - `/api/districts` — Retrieves district data.
-  - `/api/simulations` — Retrieves simulation results.
-  - Additional endpoints may be documented in the API documentation.
+
+The backend exposes RESTful endpoints structured as follows:  
+
+```
+/{state}/{district_type}/{data_type}
+```
+
+Where:  
+- **`{state}`** → `NV` (Nevada) or `CO` (Colorado)  
+- **`{district_type}`** → `SMD` (Single-Member District) or `MMD` (Multi-Member District)  
+- **`{data_type}`** (depends on request type):  
+  - **Geographical Data:** `ENACTED`, `AVERAGE`, `REPFAVORED`, `DEMFAVORED`, `FAIR`  
+  - **Charts & Visualizations:** `BOXWHIS`, `BAR`, `SEATVOTE`  
+
+### **Example API Requests**  
+- Retrieve the **GeoJSON for Nevada's average MMD plan:**  
+  ```
+  GET /NV/MMD/AVERAGE
+  ```
+- Retrieve a **summary bar chart for Colorado's SMD plan:**  
+  ```
+  GET /CO/SMD/BAR
+  ```
+
+For additional endpoints and data formats, refer to the backend code or contact the development team.
+
+  
 
 ## Future Plans
 
